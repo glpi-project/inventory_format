@@ -35,6 +35,7 @@
         "PORTS",
         "PRINTERS",
         "PROCESSES",
+        "REMOTE_MGMT",
         "SLOTS",
         "SOFTWARES",
         "SOUNDS",
@@ -83,11 +84,27 @@
         "BATTERIES": {
           "type": "object",
           "required": [
+            "CAPACITY",
             "CHEMISTRY",
+            "DATE",
             "MANUFACTURER",
-            "SERIAL"
+            "NAME",
+            "SERIAL",
+            "VOLTAGE"
           ],
           "properties": {
+            "CAPACITY": {
+              "type": "string",
+              "examples": [
+                "43.7456 Wh"
+              ]
+            },
+            "DATE": {
+              "type": "string",
+              "examples": [
+                "10/11/2015"
+              ]
+            },
             "CHEMISTRY": {
               "type": "string",
               "examples": [
@@ -100,8 +117,20 @@
                 "TOSHIBA"
               ]
             },
+            "NAME": {
+              "type": "string",
+              "examples": [
+                "DELL JHXPY53"
+              ]
+            },
             "SERIAL": {
               "type": "string"
+            },
+            "VOLTAGE": {
+              "type": "string",
+              "examples": [
+                "8.614 V"
+              ]
             }
           }
         },
@@ -198,6 +227,7 @@
               "PCICLASS",
               "PCISLOT",
               "PRODUCTID",
+              "REV",
               "TYPE",
               "VENDORID"
             ],
@@ -244,6 +274,12 @@
                   "0a04"
                 ]
               },
+              "REV": {
+                "type": "string",
+                "examples": [
+                  "08"
+                ]
+              },
               "TYPE": {
                 "type": "string",
                 "examples": [
@@ -271,6 +307,7 @@
             "MANUFACTURER",
             "MODEL",
             "NAME",
+            "SERIAL",
             "SPEED",
             "STEPPING",
             "THREAD"
@@ -328,6 +365,12 @@
               "type": "string",
               "examples": [
                 "Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz"
+              ]
+            },
+            "SERIAL": {
+              "type": "string",
+              "examples": [
+                "To Be Filled By O.E.M."
               ]
             },
             "SPEED": {
@@ -854,8 +897,13 @@
             "required": [
               "DESCRIPTION",
               "MANAGEMENT",
+              "IPADDRESS",
+              "IPMASK",
+              "IPSUBNET",
+              "MACADDR",
               "STATUS",
-              "TYPE"
+              "TYPE",
+              "VIRTUALDEV"
             ],
             "properties": {
               "DESCRIPTION": {
@@ -870,6 +918,30 @@
                   "1"
                 ]
               },
+              "IPADDRESS": {
+                "type": "string",
+                "examples": [
+                  "127.0.0.1"
+                ]
+              },
+              "IPMASK": {
+                "type": "string",
+                "examples": [
+                  "255.0.0.0"
+                ]
+              },
+              "IPSUBNET": {
+                "type": "string",
+                "examples": [
+                  "127.0.0.0"
+                ]
+              },
+              "MACADDR": {
+                "type": "string",
+                "examples": [
+                  "00:00:00:00:00:00"
+                ]
+              },
               "STATUS": {
                 "type": "string",
                 "examples": [
@@ -879,7 +951,14 @@
               "TYPE": {
                 "type": "string",
                 "examples": [
-                  "ethernet"
+                  "ethernet",
+                  "loopback"
+                ]
+              },
+              "VIRTUALDEV": {
+                "type": "string",
+                "examples": [
+                  "1"
                 ]
               }
             }
@@ -1069,6 +1148,7 @@
             "required": [
               "CAPTION",
               "DESCRIPTION",
+              "NAME",
               "TYPE"
             ],
             "properties": {
@@ -1084,10 +1164,17 @@
                   "None"
                 ]
               },
+              "NAME": {
+                "type": "string",
+                "examples": [
+                  "JUSB1"
+                ]
+              },
               "TYPE": {
                 "type": "string",
                 "examples": [
-                  "Other"
+                  "Other",
+                  "USB"
                 ]
               }
             }
@@ -1194,10 +1281,32 @@
             }
           }
         },
+        "REMOTE_MGMT": {
+          "type": "object",
+          "required": [
+            "ID",
+            "TYPE"
+          ],
+          "properties": {
+            "ID": {
+              "type": "string",
+              "examples": [
+                "700873443"
+              ]
+            },
+            "TYPE": {
+              "type": "string",
+              "examples": [
+                "teamviewer"
+              ]
+            }
+          }
+        },
         "SLOTS": {
           "type": "object",
           "required": [
             "DESCRIPTION",
+              "DESIGNATION",
             "NAME",
             "STATUS"
           ],
@@ -1205,9 +1314,16 @@
             "DESCRIPTION": {
               "type": "string",
               "examples": [
-                "Other"
+                  "x16 PCI Express",
+                  "Other"
               ]
             },
+              "DESIGNATION": {
+                "type": "string",
+                "examples": [
+                  "0"
+                ]
+              },
             "NAME": {
               "type": "string",
               "examples": [
@@ -1300,10 +1416,17 @@
           "items": {
             "type": "object",
             "required": [
+            "DESCRIPTION",
               "MANUFACTURER",
               "NAME"
             ],
             "properties": {
+            "DESCRIPTION": {
+              "type": "string",
+              "examples": [
+                "rev 21"
+              ]
+            },
               "MANUFACTURER": {
                 "type": "string",
                 "examples": [
@@ -1384,6 +1507,7 @@
           "items": {
             "type": "object",
             "required": [
+              "CAPTION",
               "CLASS",
               "MANUFACTURER",
               "PRODUCTID",
@@ -1391,6 +1515,12 @@
               "VENDORID"
             ],
             "properties": {
+              "CAPTION": {
+                "type": "string",
+                "examples": [
+                  "3.0 root hub"
+                ]
+              },
               "CLASS": {
                 "type": "string",
                 "examples": [
@@ -1447,6 +1577,7 @@
         "VERSIONPROVIDER": {
           "type": "object",
           "required": [
+            "COMMENTS",
             "NAME",
             "PERL_ARGS",
             "PERL_CONFIG",
@@ -1458,6 +1589,16 @@
             "VERSION"
           ],
           "properties": {
+            "COMMENTS": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "examples": [
+                  "Platform  : linux buildvm-14.phx2.fedoraproject.org 4.16.6-302.fc28.x86_64 1 smp wed may 2 00:07:06 utc 2018 x86_64 x86_64 x86_64 gnulinux ",
+                  "Build date: Tue Jul 10 11:21:41 2018 GMT"
+                ]
+              }
+            },
             "NAME": {
               "type": "string",
               "examples": [
@@ -1536,6 +1677,7 @@
           "items": {
             "type": "object",
             "required": [
+              "IMAGE",
               "MEMORY",
               "NAME",
               "STATUS",
@@ -1545,6 +1687,12 @@
               "VMTYPE"
             ],
             "properties": {
+            "IMAGE": {
+              "type": "string",
+              "examples": [
+                "redash/redash"
+              ]
+            },
               "MEMORY": {
                 "type": "integer",
                 "examples": [
