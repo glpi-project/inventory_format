@@ -100,10 +100,7 @@
               ]
             },
             "enabled": {
-              "type": "boolean",
-              "examples": [
-                "1"
-              ]
+              "type": "boolean"
             },
             "guid": {
               "type": "string",
@@ -118,10 +115,7 @@
               ]
             },
             "uptodate": {
-              "type": "boolean",
-              "examples": [
-                "1"
-              ]
+              "type": "boolean"
             },
             "version": {
               "type": "string",
@@ -164,39 +158,36 @@
                 "voltage"
             ],
             "properties": {
-                "capacity": {
+              "capacity": {
                 "type": "string",
                 "title": "Battery capacity, in mWh",
                 "examples": [
                     "43.7456 Wh"
                 ]
-                },
-                "date": {
+              },
+              "date": {
                 "type": "string",
-                "title": "Manufacturing ddate in DD/MM/YYYY format",
-                "examples": [
-                    "10/11/2015"
-                ]
-                },
-                "chemistry": {
+                "format": "date"
+              },
+              "chemistry": {
                 "type": "string",
                 "examples": [
                     "Li-ION"
                 ]
-                },
-                "manufacturer": {
+              },
+              "manufacturer": {
                 "type": "string",
                 "examples": [
                     "TOSHIBA"
                 ]
-                },
-                "name": {
+              },
+              "name": {
                 "type": "string",
                 "examples": [
                     "DELL JHXPY53"
                 ]
-                },
-                "serial": {
+              },
+              "serial": {
                 "type": "string"
                 },
                 "voltage": {
@@ -204,7 +195,7 @@
                 "examples": [
                     "8.614 V"
                 ]
-                }
+              }
             }
           }
         },
@@ -229,10 +220,7 @@
             },
             "bdate": {
               "type": "string",
-              "title": "BIOS release date, in MM/DD/YYYY format",
-              "examples": [
-                "07/25/2014"
-              ]
+              "format": "date"
             },
             "bmanufacturer": {
               "type": "string",
@@ -589,7 +577,7 @@
               },
               "createdate": {
                 "type": "string",
-                "title": "Creation date in DD/MM/YYYY format"
+                "format": "date"
               },
               "label": {
                 "type": "string"
@@ -691,9 +679,7 @@
             },
             "datelastloggeduser": {
               "type": "string",
-              "examples": [
-                "Thu Jun 8 07:41"
-              ]
+              "format": "date"
             },
             "defaultgateway": {
               "type": "string",
@@ -909,10 +895,7 @@
                 ]
               },
               "id": {
-                "type": "string",
-                "examples": [
-                  "0"
-                ]
+                "type": "string"
               },
               "login": {
                 "type": "string",
@@ -1740,7 +1723,7 @@
               "pid": {
                 "type": "integer",
                 "examples": [
-                  "1"
+                  "1567"
                 ]
               },
               "started": {
@@ -1879,10 +1862,7 @@
               },
               "installdate": {
                 "type": "string",
-                "title": "Creation date in DD/MM/YYYY format",
-                "examples": [
-                  "26/10/2016"
-                ]
+                "format": "date"
               },
               "name": {
                 "type": "string",
@@ -2123,10 +2103,7 @@
                 ]
               },
               "subclass": {
-                "type": "string",
-                "examples": [
-                  "0"
-                ]
+                "type": "string"
               },
               "vendorid": {
                 "type": "string",
