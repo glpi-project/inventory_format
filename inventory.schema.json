@@ -2207,7 +2207,7 @@
                 "examples": [
                   "off"
                 ],
-                "pattern: "^running|blocked|idle|paused|shutdown|crashed|dying|off)$"
+                "pattern": "^(running|blocked|idle|paused|shutdown|crashed|dying|off)$"
               },
               "subsystem": {
                 "type": "string",
@@ -2268,7 +2268,7 @@
                 "type": "string"
               },
               "components": {
-                "$comment": "What type of element is this? Would need examples."
+                "$comment": "What type of element is this? Would need examples.",
                 "type": "string"
               },
               "trial": {
