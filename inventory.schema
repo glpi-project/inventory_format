@@ -501,7 +501,7 @@
             },
             "ETIME": {
               "type": "integer",
-              "title": "Time needed to run the inventory",
+              "title": "Time (secondds) needed to run the inventory",
               "default": "",
               "examples": [
                 "3"
@@ -520,7 +520,7 @@
               ]
             },
             "MEMORY": {
-              "type": "string",
+              "type": "integer",
               "examples": [
                 "7908"
               ]
@@ -538,7 +538,7 @@
               ]
             },
             "SWAP": {
-              "type": "string",
+              "type": "integer",
               "default": "",
               "examples": [
                 "7935"
@@ -782,7 +782,7 @@
                 ]
               },
               "NUMSLOTS": {
-                "type": "string",
+                "type": "integer",
                 "examples": [
                   "1"
                 ]
@@ -843,10 +843,7 @@
               ]
             },
             "SERIAL": {
-              "type": "string",
-              "examples": [
-                "00000000"
-              ]
+              "type": "string"
             }
           }
         },
@@ -983,7 +980,7 @@
                   "examples": [
                     "+0200"
                   ],
-                  "pattern": "^(.*)$"
+                  "pattern": "^(+|-)(\\d){4}$"
                 }
               }
             },
@@ -1165,7 +1162,7 @@
                 ]
               },
               "PID": {
-                "type": "string",
+                "type": "integer",
                 "examples": [
                   "1"
                 ]
@@ -1189,7 +1186,7 @@
                 ]
               },
               "VIRTUALMEMORY": {
-                "type": "string",
+                "type": "integer",
                 "examples": [
                   "215324"
                 ]
@@ -1254,7 +1251,7 @@
                 ]
               },
               "FILESIZE": {
-                "type": "string",
+                "type": "integer",
                 "examples": [
                   "1373517"
                 ]
@@ -1342,7 +1339,7 @@
               ]
             },
             "DISKSIZE": {
-              "type": "string",
+              "type": "integer",
               "examples": [
                 "250059"
               ]
@@ -1549,7 +1546,7 @@
             ],
             "properties": {
               "MEMORY": {
-                "type": "string",
+                "type": "integer",
                 "examples": [
                   "1048"
                 ]
@@ -1579,7 +1576,7 @@
                 ]
               },
               "VCPU": {
-                "type": "string",
+                "type": "integer",
                 "examples": [
                   "1"
                 ]
@@ -1613,25 +1610,25 @@
               ]
             },
             "FREE": {
-              "type": "string",
+              "type": "integer",
               "examples": [
                 "4"
               ]
             },
             "LV_COUNT": {
-              "type": "string",
+              "type": "integer",
               "examples": [
                 "3"
               ]
             },
             "PV_COUNT": {
-              "type": "string",
+              "type": "integer",
               "examples": [
                 "1"
               ]
             },
             "SIZE": {
-              "type": "string",
+              "type": "integer",
               "examples": [
                 "255529"
               ]
