@@ -82,7 +82,6 @@
         },
         "BATTERIES": {
           "type": "object",
-          "title": "The Batteries Schema",
           "required": [
             "CHEMISTRY",
             "MANUFACTURER",
@@ -191,7 +190,6 @@
           "type": "array",
           "items": {
             "type": "object",
-            "title": "The Items Schema",
             "required": [
               "CAPTION",
               "DRIVER",
