@@ -16,6 +16,7 @@
         "accesslog",
         "ACCOUNTINFO",
         "BATTERIES",
+        "ANTIVIRUS",
         "BIOS",
         "CONTROLLERS",
         "CPUS",
@@ -45,7 +46,8 @@
         "VERSIONCLIENT",
         "VERSIONPROVIDER",
         "VIRTUALMACHINES",
-        "VOLUME_GROUPS"
+        "VOLUME_GROUPS",
+        "VIDEOS"
       ],
       "properties": {
         "accesslog": {
@@ -78,6 +80,55 @@
             },
             "KEYVALUE": {
               "type": "string"
+            }
+          }
+        },
+        "ANTIVIRUS": {
+          "type": "object",
+          "required": [
+            "COMPANY",
+            "ENABLED",
+            "GUID",
+            "NAME",
+            "UPTODATE",
+            "VERSION"
+          ],
+          "properties": {
+            "COMPANY": {
+              "type": "string",
+              "examples": [
+                "Microsoft Corporation"
+              ]
+            },
+            "ENABLED": {
+              "type": "string",
+              "examples": [
+                "1"
+              ]
+            },
+            "GUID": {
+              "type": "string",
+              "examples": [
+                "{641105E6-77ED-3F35-A304-765193BCB75F}"
+              ]
+            },
+            "NAME": {
+              "type": "string",
+              "examples": [
+                "Microsoft Security Essentials"
+              ]
+            },
+            "UPTODATE": {
+              "type": "string",
+              "examples": [
+                "1"
+              ]
+            },
+            "VERSION": {
+              "type": "string",
+              "examples": [
+                "4.3.216.0"
+              ]
             }
           }
         },
@@ -224,6 +275,7 @@
               "DRIVER",
               "MANUFACTURER",
               "NAME",
+              "PCISUBSYSTEMID",
               "PCICLASS",
               "PCISLOT",
               "PRODUCTID",
@@ -254,6 +306,12 @@
                 "type": "string",
                 "examples": [
                   "Haswell-ULT DRAM Controller"
+                ]
+              },
+              "PCISUBSYSTEMID": {
+                "type": "string",
+                "examples": [
+                  "0000:0000"
                 ]
               },
               "PCICLASS": {
@@ -300,6 +358,7 @@
           "required": [
             "ARCH",
             "CORE",
+            "DESCRIPTION",
             "EXTERNAL_CLOCK",
             "FAMILYNAME",
             "FAMILYNUMBER",
@@ -323,6 +382,12 @@
               "type": "integer",
               "examples": [
                 "2"
+              ]
+            },
+            "DESCRIPTION": {
+              "type": "string",
+              "examples": [
+                "Intel64 Family 6 Model 47 Stepping 2"
               ]
             },
             "EXTERNAL_CLOCK": {
@@ -398,6 +463,9 @@
           "items": {
             "type": "object",
             "required": [
+              "DESCRIPTION",
+              "LETTER",
+              "SYSTEMDRIVE",
               "FILESYSTEM",
               "FREE",
               "SERIAL",
@@ -406,6 +474,21 @@
               "VOLUMN"
             ],
             "properties": {
+              "DESCRIPTION": {
+                "type": "string",
+                "examples": [
+                  "Lecteur de disquettes 3 ½ pouces"
+                ]
+              },
+              "LETTER": {
+                "type": "string",
+                "examples": [
+                  "A:"
+                ]
+              },
+              "SYSTEMDRIVE": {
+                "type": "object",
+              },
               "FILESYSTEM": {
                 "type": "string",
                 "examples": [
@@ -473,9 +556,16 @@
         "FIREWALL": {
           "type": "object",
           "required": [
+            "PROFILE",
             "STATUS"
           ],
           "properties": {
+              "PROFILE": {
+                "type": "string",
+                "examples": [
+                  "PublicProfile"
+                ]
+              },
             "STATUS": {
               "type": "string",
               "examples": [
@@ -898,9 +988,14 @@
               "DESCRIPTION",
               "MANAGEMENT",
               "IPADDRESS",
+              "IPDHCP",
+              "IPGATEWAY",
               "IPMASK",
               "IPSUBNET",
               "MACADDR",
+              "PCIID",
+              "PNPDEVICEID",
+              "SPEED",
               "STATUS",
               "TYPE",
               "VIRTUALDEV"
@@ -924,6 +1019,18 @@
                   "127.0.0.1"
                 ]
               },
+              "IPDHCP": {
+                "type": "string",
+                "examples": [
+                  "172.28.200.22"
+                ]
+              },
+              "IPGATEWAY": {
+                "type": "string",
+                "examples": [
+                  "172.28.211.1"
+                ]
+              },
               "IPMASK": {
                 "type": "string",
                 "examples": [
@@ -940,6 +1047,24 @@
                 "type": "string",
                 "examples": [
                   "00:00:00:00:00:00"
+                ]
+              },
+              "PCIID": {
+                "type": "string",
+                "examples": [
+                  "8086:100E:001E:8086"
+                ]
+              },
+              "PNPDEVICEID": {
+                "type": "string",
+                "examples": [
+                  "PCI\\VEN_8086&DEV_100E&SUBSYS_001E8086&REV_02\\3&267A616A&0&18"
+                ]
+              },
+              "SPEED": {
+                "type": "string",
+                "examples": [
+                  "1000"
                 ]
               },
               "STATUS": {
@@ -972,11 +1097,13 @@
             "DNS_DOMAIN",
             "FQDN",
             "FULL_NAME",
+            "INSTALL_DATE",
             "HOSTID",
             "KERNEL_NAME",
             "KERNEL_VERSION",
             "NAME",
             "SSH_KEY",
+            "SERVICE_PACK",
             "TIMEZONE",
             "VERSION"
           ],
@@ -1017,6 +1144,12 @@
                 "007f0100"
               ]
             },
+            "INSTALL_DATE": {
+              "type": "string",
+              "examples": [
+                "2013-08-09 12:00:21"
+              ]
+            },
             "KERNEL_NAME": {
               "type": "string",
               "examples": [
@@ -1039,6 +1172,12 @@
               "type": "string",
               "examples": [
                 "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgGz/LeCPvEeLKgqfDaG0EywPb0dgjSwW9JuAV2YMOcSX8PbyUuX+DxIth9OOjfQqFF/TRY1UshKMjVoQxKk1HzKiE9bk1FOgxmkhwjQWmRU64DcBqZqxkDNgqgz3YPzR7W46O3AuMOKsm/9lv4biwLd32ENPdezloiUrsS05OtzBbZWtlPCu0+t2MwhDAodF7rphf2Cj8ygNjavmFheFupRp3M7LxtyUhLPfp23t1ddT3U4iJtioW1PsWzxdkBD5wbrZ5THMjhhKP1/HjMUP8GSo1Jj0nDGu8m0qZq10pcVZxr5ZZ10QRqnpbgV1tYCTaVklzKFRZEiO2myGAWryD"
+              ]
+            },
+            "SERVICE_PACK": {
+              "type": "string",
+              "examples": [
+                "Service Pack 1"
               ]
             },
             "TIMEZONE": {
@@ -1186,7 +1325,12 @@
             "DESCRIPTION",
             "DRIVER",
             "NAME",
-            "PORT"
+            "NETWORK",
+            "PORT",
+            "PRINTPROCESSOR",
+            "RESOLUTION",
+            "SHARED",
+            "STATUS"
           ],
           "properties": {
             "DESCRIPTION": {
@@ -1207,10 +1351,40 @@
                 "Deskjet-2540"
               ]
             },
+            "NETWORK": {
+              "type": "string",
+              "examples": [
+                "0"
+              ]
+            },
             "PORT": {
               "type": "string",
               "examples": [
                 "Deskjet-2540"
+              ]
+            },
+            "PRINTPROCESSOR": {
+              "type": "string",
+              "examples": [
+                "winprint"
+              ]
+            },
+            "RESOLUTION": {
+              "type": "string",
+              "examples": [
+                "200x200"
+              ]
+            },
+            "SHARED": {
+              "type": "string",
+              "examples": [
+                "0"
+              ]
+            },
+            "STATUS": {
+              "type": "string",
+              "examples": [
+                "Idle"
               ]
             }
           }
@@ -1347,10 +1521,13 @@
               "COMMENTS",
               "FILESIZE",
               "FROM",
+              "GUID",
               "INSTALLDATE",
               "NAME",
               "PUBLISHER",
               "SYSTEM_CATEGORY",
+              "UNINSTALL_STRING",
+              "URL_INFO_ABOUT",
               "VERSION"
             ],
             "properties": {
@@ -1378,6 +1555,12 @@
                   "rpm"
                 ]
               },
+              "GUID": {
+                "type": "string",
+                "examples": [
+                  "0980-9176-5329-7814"
+                ]
+              },
               "INSTALLDATE": {
                 "type": "string",
                 "examples": [
@@ -1402,6 +1585,18 @@
                   "Development/Libraries"
                 ]
               },
+              "UNINSTALL_STRING": {
+                "type": "string",
+                "examples": [
+                  "\"C:\\Program Files\\Barracuda\\SSL VPN Agent\\uninstall.exe\""
+                ]
+              },
+              "URL_INFO_ABOUT": {
+                "type": "string",
+                "examples": [
+                  "http://www.barracuda.com"
+                ]
+              },
               "VERSION": {
                 "type": "string",
                 "examples": [
@@ -1416,11 +1611,18 @@
           "items": {
             "type": "object",
             "required": [
+            "CAPTION",
             "DESCRIPTION",
               "MANUFACTURER",
               "NAME"
             ],
             "properties": {
+            "CAPTION": {
+              "type": "string",
+              "examples": [
+                "Périphérique High Definition Audio"
+              ]
+            },
             "DESCRIPTION": {
               "type": "string",
               "examples": [
@@ -1448,9 +1650,13 @@
             "DESCRIPTION",
             "DISKSIZE",
             "FIRMWARE",
+            "INTERFACE",
             "MANUFACTURER",
             "MODEL",
             "NAME",
+              "SCSI_COID",
+              "SCSI_LUN",
+              "SCSI_UNID",
             "SERIAL",
             "TYPE"
           ],
@@ -1473,6 +1679,12 @@
                 "0101"
               ]
             },
+              "INTERFACE": {
+                "type": "string",
+                "examples": [
+                  "IDE"
+                ]
+              },
             "MANUFACTURER": {
               "type": "string",
               "examples": [
@@ -1491,6 +1703,24 @@
                 "sda"
               ]
             },
+              "SCSI_COID": {
+                "type": "string",
+                "examples": [
+                  "2"
+                ]
+              },
+              "SCSI_LUN": {
+                "type": "string",
+                "examples": [
+                  "0"
+                ]
+              },
+              "SCSI_UNID": {
+                "type": "string",
+                "examples": [
+                  "0"
+                ]
+              },
             "SERIAL": {
               "type": "object"
             },
@@ -1510,6 +1740,7 @@
               "CAPTION",
               "CLASS",
               "MANUFACTURER",
+            "NAME",
               "PRODUCTID",
               "SUBCLASS",
               "VENDORID"
@@ -1533,6 +1764,12 @@
                   "Intel Corp."
                 ]
               },
+            "NAME": {
+              "type": "string",
+              "examples": [
+                "SCR335 SmartCard Reader"
+              ]
+            },
               "PRODUCTID": {
                 "type": "string",
                 "examples": [
@@ -1557,9 +1794,16 @@
         "USERS": {
           "type": "object",
           "required": [
+            "DOMAIN",
             "LOGIN"
           ],
           "properties": {
+            "DOMAIN": {
+              "type": "string",
+              "examples": [
+                "AD"
+              ]
+            },
             "LOGIN": {
               "type": "string",
               "examples": [
@@ -1668,6 +1912,20 @@
               "type": "string",
               "examples": [
                 "2.3.20"
+              ]
+            }
+          }
+        },
+        "VIDEOS": {
+          "type": "object",
+          "required": [
+            "NAME"
+          ],
+          "properties": {
+            "NAME": {
+              "type": "string",
+              "examples": [
+                "VirtualBox Graphics Adapter"
               ]
             }
           }
