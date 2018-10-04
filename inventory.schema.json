@@ -13,40 +13,7 @@
     "content": {
       "type": "object",
       "required": [
-        "versionclient",
-        "accesslog",
-        "accountinfo",
-        "batteries",
-        "antivirus",
-        "bios",
-        "controllers",
-        "cpus",
-        "drives",
-        "envs",
-        "firewall",
-        "hardware",
-        "inputs",
-        "local_groups",
-        "local_users",
-        "physical_volumes",
-        "volume_groups",
-        "logical_volumes",
-        "memories",
-        "monitors",
-        "networks",
-        "operatingsystem",
-        "ports",
-        "printers",
-        "processes",
-        "remote_mgmt",
-        "slots",
-        "softwares",
-        "sounds",
-        "storages",
-        "usbdevices",
-        "users",
-        "virtualmachines",
-        "videos"
+        "versionclient"
       ],
       "properties": {
         "accesslog": {
@@ -84,14 +51,6 @@
         },
         "antivirus": {
           "type": "object",
-          "required": [
-            "company",
-            "enabled",
-            "guid",
-            "name",
-            "uptodate",
-            "version"
-          ],
           "properties": {
             "company": {
               "type": "string",
@@ -151,10 +110,8 @@
             "required": [
                 "capacity",
                 "chemistry",
-                "date",
                 "manufacturer",
                 "name",
-                "serial",
                 "voltage"
             ],
             "properties": {
@@ -189,8 +146,8 @@
               },
               "serial": {
                 "type": "string"
-                },
-                "voltage": {
+              },
+              "voltage": {
                 "type": "string",
                 "examples": [
                     "8.614 V"
@@ -202,17 +159,8 @@
         "bios": {
           "type": "object",
           "required": [
-            "assettag",
-            "bdate",
             "bmanufacturer",
-            "bversion",
-            "mmanufacturer",
-            "mmodel",
-            "msn",
-            "skunumber",
-            "smanufacturer",
-            "smodel",
-            "ssn"
+            "bversion"
           ],
           "properties": {
             "assettag": {
@@ -296,17 +244,7 @@
           "items": {
             "type": "object",
             "required": [
-              "caption",
-              "driver",
-              "manufacturer",
-              "name",
-              "pcisubsystemid",
-              "pciclass",
-              "pcislot",
-              "productid",
-              "rev",
-              "type",
-              "vendorid"
+              "name"
             ],
             "properties": {
               "caption": {
@@ -384,19 +322,7 @@
             "type": "object",
             "required": [
                 "arch",
-                "core",
-                "description",
-                "external_clock",
-                "familyname",
-                "familynumber",
-                "id",
-                "manufacturer",
-                "model",
-                "name",
-                "serial",
-                "speed",
-                "stepping",
-                "thread"
+                "name"
             ],
             "properties": {
               "arch": {
@@ -505,16 +431,6 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": [
-              "description",
-              "systemdrive",
-              "filesystem",
-              "free",
-              "serial",
-              "total",
-              "TYPE",
-              "volumn"
-            ],
             "properties": {
               "description": {
                 "type": "string",
@@ -646,23 +562,6 @@
         },
         "hardware": {
           "type": "object",
-          "required": [
-            "archname",
-            "chassis_type",
-            "datelastloggeduser",
-            "defaultgateway",
-            "dns",
-            "etime",
-            "ipaddr",
-            "lastloggeduser",
-            "memory",
-            "name",
-            "oscomments",
-            "swap",
-            "uuid",
-            "vmsystem",
-            "workgroup"
-          ],
           "properties": {
             "archname": {
               "type": "string",
@@ -797,11 +696,6 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": [
-              "caption",
-              "description",
-              "type"
-            ],
             "properties": {
               "caption": {
                 "type": "string",
@@ -921,7 +815,6 @@
         "physical_volumes": {
           "type": "object",
           "required": [
-            "attr",
             "device",
             "format",
             "free",
@@ -994,7 +887,6 @@
         "volume_groups": {
           "type": "object",
           "required": [
-            "attr",
             "free",
             "lv_count",
             "pv_count",
@@ -1061,10 +953,8 @@
           "items": {
             "type": "object",
             "required": [
-              "attr",
               "lv_name",
               "lv_uuid",
-              "seg_count",
               "size",
               "vg_uuid"
             ],
@@ -1119,11 +1009,7 @@
             "required": [
               "capacity",
               "caption",
-              "description",
               "manufacturer",
-              "memorycorrection",
-              "numslots",
-              "serialnumber",
               "speed",
               "type"
             ],
@@ -1203,10 +1089,7 @@
             "type": "object",
             "required": [
                 "base64",
-                "caption",
-                "description",
-                "manufacturer",
-                "serial"
+                "caption"
             ],
             "properties": {
               "base64": {
@@ -1264,18 +1147,10 @@
             "type": "object",
             "required": [
               "description",
-              "management",
-              "ipaddress",
-              "ipdhcp",
-              "ipgateway",
-              "ipmask",
-              "ipsubnet",
               "macaddr",
-              "pciid",
               "speed",
               "status",
-              "type",
-              "virtualdev"
+              "type"
             ],
             "properties": {
               "description": {
@@ -1429,18 +1304,8 @@
           "type": "object",
           "required": [
             "arch",
-            "boot_time",
-            "dns_domain",
-            "fqdn",
             "full_name",
-            "install_date",
-            "hostid",
-            "kernel_name",
-            "kernel_version",
             "name",
-            "ssh_key",
-            "service_pack",
-            "timezone",
             "version"
           ],
           "properties": {
@@ -1573,8 +1438,6 @@
           "items": {
             "type": "object",
             "required": [
-              "caption",
-              "description",
               "name",
               "type"
             ],
@@ -1610,15 +1473,8 @@
         "printers": {
           "type": "object",
           "required": [
-            "description",
-            "driver",
             "name",
-            "network",
-            "port",
-            "printprocessor",
-            "resolution",
-            "shared",
-            "status"
+            "network"
           ],
           "properties": {
             "description": {
@@ -1683,7 +1539,7 @@
               "type": "string"
             },
             "serial": {
-              "tyupe": "string"
+              "type": "string"
             }
           }
         },
@@ -1693,13 +1549,8 @@
             "type": "object",
             "required": [
               "cmd",
-              "cpuusage",
-              "mem",
               "pid",
-              "started",
-              "tty",
-              "user",
-              "virtualmemory"
+              "user"
             ],
             "properties": {
               "cmd": {
@@ -1815,17 +1666,8 @@
           "items": {
             "type": "object",
             "required": [
-              "arch",
-              "comments",
-              "filesize",
-              "from",
-              "guid",
-              "installdate",
               "name",
-              "publisher",
               "system_category",
-              "uninstall_string",
-              "url_info_about",
               "version"
             ],
             "properties": {
@@ -1933,8 +1775,6 @@
           "items": {
             "type": "object",
             "required": [
-              "caption",
-              "description",
               "manufacturer",
               "name"
             ],
@@ -1969,17 +1809,11 @@
         "storages": {
           "type": "object",
           "required": [
-            "description",
             "disksize",
-            "firmware",
             "interface",
             "manufacturer",
             "model",
             "name",
-            "scsi_coid",
-            "scsi_lun",
-            "scsi_unid",
-            "serial",
             "type"
           ],
           "properties": {
@@ -2063,13 +1897,8 @@
           "items": {
             "type": "object",
             "required": [
-              "caption",
-              "class",
               "manufacturer",
-              "name",
-              "productid",
-              "subclass",
-              "vendorid"
+              "name"
             ],
             "properties": {
               "caption": {
@@ -2120,7 +1949,6 @@
         "users": {
           "type": "object",
           "required": [
-            "domain",
             "login"
           ],
           "properties": {
@@ -2172,8 +2000,6 @@
           "items": {
             "type": "object",
             "required": [
-              "image",
-              "memory",
               "name",
               "status",
               "subsystem",
