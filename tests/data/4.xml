@@ -1,0 +1,1529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REQUEST>
+  <CONTENT>
+    <ACCESSLOG>
+      <LOGDATE>2018-07-03 16:11:11</LOGDATE>
+    </ACCESSLOG>
+    <BATTERIES/>
+    <BIOS>
+      <BVERSION>IM151.0217.B00</BVERSION>
+      <SMANUFACTURER>Apple Inc.</SMANUFACTURER>
+      <SMODEL>iMac15,1</SMODEL>
+      <SSN>C02NG5A5FY11</SSN>
+    </BIOS>
+    <CPUS>
+      <CORE>4</CORE>
+      <FAMILYNUMBER>6</FAMILYNUMBER>
+      <MANUFACTURER>Intel</MANUFACTURER>
+      <MODEL>60</MODEL>
+      <NAME>Intel(R) Core(TM) i5-4690 CPU @ 3.50GHz</NAME>
+      <SPEED>3500</SPEED>
+      <STEPPING>3</STEPPING>
+      <THREAD>4</THREAD>
+    </CPUS>
+    <DRIVES>
+      <FILESYSTEM>hfs</FILESYSTEM>
+      <FREE>251733</FREE>
+      <TOTAL>1057333</TOTAL>
+      <TYPE>/</TYPE>
+      <VOLUMN>/dev/disk2</VOLUMN>
+    </DRIVES>
+    <ENVS>
+      <KEY>SUDO_GID</KEY>
+      <VAL>0</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>LOGNAME</KEY>
+      <VAL>root</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>SHELL</KEY>
+      <VAL>/bin/sh</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>SUDO_USER</KEY>
+      <VAL>root</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>USER</KEY>
+      <VAL>root</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>MAIL</KEY>
+      <VAL>/var/mail/root</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>SUDO_UID</KEY>
+      <VAL>0</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>TERM</KEY>
+      <VAL>unknown</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>HOME</KEY>
+      <VAL>/var/root</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>SUDO_COMMAND</KEY>
+      <VAL>./bin/perl ./bin/fusioninventory-agent --daemon --no-fork</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>USERNAME</KEY>
+      <VAL>root</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>PATH</KEY>
+      <VAL>/usr/bin:/bin:/usr/sbin:/sbin</VAL>
+    </ENVS>
+    <FIREWALL>
+      <STATUS>off</STATUS>
+    </FIREWALL>
+    <HARDWARE>
+      <ARCHNAME>darwin-thread-multi-2level</ARCHNAME>
+      <CHECKSUM>66304</CHECKSUM>
+      <DATELASTLOGGEDUSER>Tue Jun 26 09:23</DATELASTLOGGEDUSER>
+      <DESCRIPTION>x86_64/1529606993</DESCRIPTION>
+      <DNS>172.28.200.20</DNS>
+      <ETIME>15</ETIME>
+      <IPADDR>172.28.212.66</IPADDR>
+      <LASTLOGGEDUSER>mariem</LASTLOGGEDUSER>
+      <NAME>iMac de Marie</NAME>
+      <OSCOMMENTS>Darwin Kernel Version 17.6.0: Tue May  8 15:22:16 PDT 2018; root:xnu-4570.61.1~1/RELEASE_X86_64</OSCOMMENTS>
+      <OSNAME>macOS</OSNAME>
+      <OSVERSION>10.13.5 (17F77)</OSVERSION>
+      <PROCESSORN>1</PROCESSORN>
+      <PROCESSORS>3500</PROCESSORS>
+      <PROCESSORT>Intel(R) Core(TM) i5-4690 CPU @ 3.50GHz</PROCESSORT>
+      <USERID>com</USERID>
+      <UUID>B3D6B8E4-15CC-54BB-BCE9-44E153556DDF</UUID>
+      <VMSYSTEM>Physical</VMSYSTEM>
+      <WORKGROUP>local</WORKGROUP>
+    </HARDWARE>
+    <LOCAL_GROUPS>
+      <ID>0</ID>
+      <MEMBER>root</MEMBER>
+      <MEMBER>root</MEMBER>
+      <NAME>wheel</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>1</ID>
+      <MEMBER>root</MEMBER>
+      <MEMBER>daemon</MEMBER>
+      <NAME>daemon</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>2</ID>
+      <MEMBER>root</MEMBER>
+      <NAME>kmem</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>3</ID>
+      <MEMBER>root</MEMBER>
+      <NAME>sys</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>4</ID>
+      <MEMBER>root</MEMBER>
+      <MEMBER>_uucp</MEMBER>
+      <NAME>tty</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>5</ID>
+      <MEMBER>root</MEMBER>
+      <NAME>operator</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>6</ID>
+      <MEMBER>_teamsserver</MEMBER>
+      <MEMBER>_cyrus</MEMBER>
+      <MEMBER>_dovecot</MEMBER>
+      <NAME>mail</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>8</ID>
+      <MEMBER>root</MEMBER>
+      <NAME>procview</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>9</ID>
+      <MEMBER>root</MEMBER>
+      <NAME>procmod</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>13</ID>
+      <MEMBER>_taskgated</MEMBER>
+      <MEMBER>_taskgated</MEMBER>
+      <NAME>_taskgated</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>20</ID>
+      <MEMBER>root</MEMBER>
+      <NAME>staff</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>29</ID>
+      <MEMBER>root</MEMBER>
+      <MEMBER>_jabber</MEMBER>
+      <MEMBER>_postfix</MEMBER>
+      <MEMBER>_cyrus</MEMBER>
+      <MEMBER>_calendar</MEMBER>
+      <MEMBER>_dovecot</MEMBER>
+      <NAME>certusers</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>30</ID>
+      <MEMBER>_calendar</MEMBER>
+      <MEMBER>_jabber</MEMBER>
+      <MEMBER>_postfix</MEMBER>
+      <NAME>_keytabusers</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>33</ID>
+      <MEMBER>_appstore</MEMBER>
+      <MEMBER>_appstore</MEMBER>
+      <NAME>_appstore</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>70</ID>
+      <MEMBER>_devicemgr</MEMBER>
+      <MEMBER>_teamsserver</MEMBER>
+      <MEMBER>_www</MEMBER>
+      <NAME>_www</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>71</ID>
+      <MEMBER>_eppc</MEMBER>
+      <MEMBER>_eppc</MEMBER>
+      <NAME>_eppc</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>80</ID>
+      <MEMBER>root</MEMBER>
+      <NAME>admin</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>93</ID>
+      <MEMBER>_teamsserver</MEMBER>
+      <MEMBER>_calendar</MEMBER>
+      <NAME>_calendar</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>94</ID>
+      <MEMBER>_devicemgr</MEMBER>
+      <MEMBER>_teamsserver</MEMBER>
+      <NAME>_teamsserver</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>200</ID>
+      <MEMBER>_softwareupdate</MEMBER>
+      <MEMBER>_softwareupdate</MEMBER>
+      <NAME>_softwareupdate</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>207</ID>
+      <MEMBER>_locationd</MEMBER>
+      <NAME>_detachedsig</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>209</ID>
+      <MEMBER>_teamsserver</MEMBER>
+      <NAME>_odchpass</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>216</ID>
+      <MEMBER>_devicemgr</MEMBER>
+      <MEMBER>_calendar</MEMBER>
+      <MEMBER>_teamsserver</MEMBER>
+      <MEMBER>_xserverdocs</MEMBER>
+      <MEMBER>_postgres</MEMBER>
+      <NAME>_postgres</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>221</ID>
+      <MEMBER>_teamsserver</MEMBER>
+      <MEMBER>_devicemgr</MEMBER>
+      <MEMBER>_webauthserver</MEMBER>
+      <NAME>_webauthserver</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>224</ID>
+      <MEMBER>_warmd</MEMBER>
+      <MEMBER>_warmd</MEMBER>
+      <NAME>_warmd</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>250</ID>
+      <MEMBER>_analyticsd</MEMBER>
+      <MEMBER>_networkd</MEMBER>
+      <MEMBER>_timed</MEMBER>
+      <NAME>_analyticsusers</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>263</ID>
+      <MEMBER>_analyticsd</MEMBER>
+      <MEMBER>_analyticsd</MEMBER>
+      <NAME>_analyticsd</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>265</ID>
+      <MEMBER>_fpsd</MEMBER>
+      <MEMBER>_fpsd</MEMBER>
+      <NAME>_fpsd</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>-2</ID>
+      <LOGIN>nobody</LOGIN>
+      <NAME>Unprivileged User</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/root</HOME>
+      <ID>0</ID>
+      <LOGIN>root</LOGIN>
+      <NAME>System Administrator</NAME>
+      <SHELL>/bin/sh</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/root</HOME>
+      <ID>1</ID>
+      <LOGIN>daemon</LOGIN>
+      <NAME>System Services</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/spool/uucp</HOME>
+      <ID>4</ID>
+      <LOGIN>_uucp</LOGIN>
+      <NAME>Unix to Unix Copy Protocol</NAME>
+      <SHELL>/usr/sbin/uucico</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>13</ID>
+      <LOGIN>_taskgated</LOGIN>
+      <NAME>Task Gate Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/networkd</HOME>
+      <ID>24</ID>
+      <LOGIN>_networkd</LOGIN>
+      <NAME>Network Services</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>25</ID>
+      <LOGIN>_installassistant</LOGIN>
+      <NAME>Install Assistant</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/spool/cups</HOME>
+      <ID>26</ID>
+      <LOGIN>_lp</LOGIN>
+      <NAME>Printing Services</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/spool/postfix</HOME>
+      <ID>27</ID>
+      <LOGIN>_postfix</LOGIN>
+      <NAME>Postfix Mail Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>31</ID>
+      <LOGIN>_scsd</LOGIN>
+      <NAME>Service Configuration Service</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>32</ID>
+      <LOGIN>_ces</LOGIN>
+      <NAME>Certificate Enrollment Service</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>33</ID>
+      <LOGIN>_appstore</LOGIN>
+      <NAME>Mac App Store Service</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>54</ID>
+      <LOGIN>_mcxalr</LOGIN>
+      <NAME>MCX AppLaunch</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>55</ID>
+      <LOGIN>_appleevents</LOGIN>
+      <NAME>AppleEvents Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/geod</HOME>
+      <ID>56</ID>
+      <LOGIN>_geod</LOGIN>
+      <NAME>Geo Services Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>58</ID>
+      <LOGIN>_serialnumberd</LOGIN>
+      <NAME>Serial Number Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>59</ID>
+      <LOGIN>_devdocs</LOGIN>
+      <NAME>Developer Documentation</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>60</ID>
+      <LOGIN>_sandbox</LOGIN>
+      <NAME>Seatbelt</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>65</ID>
+      <LOGIN>_mdnsresponder</LOGIN>
+      <NAME>mDNSResponder</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>67</ID>
+      <LOGIN>_ard</LOGIN>
+      <NAME>Apple Remote Desktop</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/Library/WebServer</HOME>
+      <ID>70</ID>
+      <LOGIN>_www</LOGIN>
+      <NAME>World Wide Web Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>71</ID>
+      <LOGIN>_eppc</LOGIN>
+      <NAME>Apple Events User</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>72</ID>
+      <LOGIN>_cvs</LOGIN>
+      <NAME>CVS Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>73</ID>
+      <LOGIN>_svn</LOGIN>
+      <NAME>SVN Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>74</ID>
+      <LOGIN>_mysql</LOGIN>
+      <NAME>MySQL Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>75</ID>
+      <LOGIN>_sshd</LOGIN>
+      <NAME>sshd Privilege separation</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>76</ID>
+      <LOGIN>_qtss</LOGIN>
+      <NAME>QuickTime Streaming Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/imap</HOME>
+      <ID>77</ID>
+      <LOGIN>_cyrus</LOGIN>
+      <NAME>Cyrus Administrator</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>78</ID>
+      <LOGIN>_mailman</LOGIN>
+      <NAME>Mailman List Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>79</ID>
+      <LOGIN>_appserver</LOGIN>
+      <NAME>Application Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/virusmails</HOME>
+      <ID>82</ID>
+      <LOGIN>_clamav</LOGIN>
+      <NAME>ClamAV Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/virusmails</HOME>
+      <ID>83</ID>
+      <LOGIN>_amavisd</LOGIN>
+      <NAME>AMaViS Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>84</ID>
+      <LOGIN>_jabber</LOGIN>
+      <NAME>Jabber XMPP Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>87</ID>
+      <LOGIN>_appowner</LOGIN>
+      <NAME>Application Owner</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>88</ID>
+      <LOGIN>_windowserver</LOGIN>
+      <NAME>WindowServer</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>89</ID>
+      <LOGIN>_spotlight</LOGIN>
+      <NAME>Spotlight</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>91</ID>
+      <LOGIN>_tokend</LOGIN>
+      <NAME>Token Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/securityagent</HOME>
+      <ID>92</ID>
+      <LOGIN>_securityagent</LOGIN>
+      <NAME>SecurityAgent</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>93</ID>
+      <LOGIN>_calendar</LOGIN>
+      <NAME>Calendar</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/teamsserver</HOME>
+      <ID>94</ID>
+      <LOGIN>_teamsserver</LOGIN>
+      <NAME>TeamsServer</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>95</ID>
+      <LOGIN>_update_sharing</LOGIN>
+      <NAME>Update Sharing</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>96</ID>
+      <LOGIN>_installer</LOGIN>
+      <NAME>Installer</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>97</ID>
+      <LOGIN>_atsserver</LOGIN>
+      <NAME>ATS Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>98</ID>
+      <LOGIN>_ftp</LOGIN>
+      <NAME>FTP Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>99</ID>
+      <LOGIN>_unknown</LOGIN>
+      <NAME>Unknown User</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/softwareupdate</HOME>
+      <ID>200</ID>
+      <LOGIN>_softwareupdate</LOGIN>
+      <NAME>Software Update Service</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>202</ID>
+      <LOGIN>_coreaudiod</LOGIN>
+      <NAME>Core Audio Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>203</ID>
+      <LOGIN>_screensaver</LOGIN>
+      <NAME>Screensaver</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/locationd</HOME>
+      <ID>205</ID>
+      <LOGIN>_locationd</LOGIN>
+      <NAME>Location Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>208</ID>
+      <LOGIN>_trustevaluationagent</LOGIN>
+      <NAME>Trust Evaluation Agent</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>210</ID>
+      <LOGIN>_timezone</LOGIN>
+      <NAME>AutoTimeZoneDaemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>211</ID>
+      <LOGIN>_lda</LOGIN>
+      <NAME>Local Delivery Agent</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>212</ID>
+      <LOGIN>_cvmsroot</LOGIN>
+      <NAME>CVMS Root</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/lockdown</HOME>
+      <ID>213</ID>
+      <LOGIN>_usbmuxd</LOGIN>
+      <NAME>iPhone OS Device Helper</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>214</ID>
+      <LOGIN>_dovecot</LOGIN>
+      <NAME>Dovecot Administrator</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>215</ID>
+      <LOGIN>_dpaudio</LOGIN>
+      <NAME>DP Audio</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>216</ID>
+      <LOGIN>_postgres</LOGIN>
+      <NAME>PostgreSQL Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>217</ID>
+      <LOGIN>_krbtgt</LOGIN>
+      <NAME>Kerberos Ticket Granting Ticket</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>218</ID>
+      <LOGIN>_kadmin_admin</LOGIN>
+      <NAME>Kerberos Admin Service</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>219</ID>
+      <LOGIN>_kadmin_changepw</LOGIN>
+      <NAME>Kerberos Change Password Service</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>220</ID>
+      <LOGIN>_devicemgr</LOGIN>
+      <NAME>Device Management Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>221</ID>
+      <LOGIN>_webauthserver</LOGIN>
+      <NAME>Web Auth Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>222</ID>
+      <LOGIN>_netbios</LOGIN>
+      <NAME>NetBIOS</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>224</ID>
+      <LOGIN>_warmd</LOGIN>
+      <NAME>Warm Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>227</ID>
+      <LOGIN>_dovenull</LOGIN>
+      <NAME>Dovecot Authentication</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>228</ID>
+      <LOGIN>_netstatistics</LOGIN>
+      <NAME>Network Statistics Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>229</ID>
+      <LOGIN>_avbdeviced</LOGIN>
+      <NAME>Ethernet AVB Device Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>230</ID>
+      <LOGIN>_krb_krbtgt</LOGIN>
+      <NAME>Open Directory Kerberos Ticket Granting Ticket</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>231</ID>
+      <LOGIN>_krb_kadmin</LOGIN>
+      <NAME>Open Directory Kerberos Admin Service</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>232</ID>
+      <LOGIN>_krb_changepw</LOGIN>
+      <NAME>Open Directory Kerberos Change Password Service</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>233</ID>
+      <LOGIN>_krb_kerberos</LOGIN>
+      <NAME>Open Directory Kerberos</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>234</ID>
+      <LOGIN>_krb_anonymous</LOGIN>
+      <NAME>Open Directory Kerberos Anonymous</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>235</ID>
+      <LOGIN>_assetcache</LOGIN>
+      <NAME>Asset Cache Service</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>236</ID>
+      <LOGIN>_coremediaiod</LOGIN>
+      <NAME>Core Media IO Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>239</ID>
+      <LOGIN>_launchservicesd</LOGIN>
+      <NAME>_launchservicesd</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>240</ID>
+      <LOGIN>_iconservices</LOGIN>
+      <NAME>IconServices</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>241</ID>
+      <LOGIN>_distnote</LOGIN>
+      <NAME>DistNote</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/nsurlsessiond</HOME>
+      <ID>242</ID>
+      <LOGIN>_nsurlsessiond</LOGIN>
+      <NAME>NSURLSession Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/nsurlstoraged</HOME>
+      <ID>243</ID>
+      <LOGIN>_nsurlstoraged</LOGIN>
+      <NAME>NSURLStorage Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>244</ID>
+      <LOGIN>_displaypolicyd</LOGIN>
+      <NAME>Display Policy Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/astris</HOME>
+      <ID>245</ID>
+      <LOGIN>_astris</LOGIN>
+      <NAME>Astris Services</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>246</ID>
+      <LOGIN>_krbfast</LOGIN>
+      <NAME>Kerberos FAST Account</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>247</ID>
+      <LOGIN>_gamecontrollerd</LOGIN>
+      <NAME>Game Controller Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/setup</HOME>
+      <ID>248</ID>
+      <LOGIN>_mbsetupuser</LOGIN>
+      <NAME>Setup User</NAME>
+      <SHELL>/bin/bash</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/ondemand</HOME>
+      <ID>249</ID>
+      <LOGIN>_ondemand</LOGIN>
+      <NAME>On Demand Resource Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>251</ID>
+      <LOGIN>_xserverdocs</LOGIN>
+      <NAME>macOS Server Documents Service</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>252</ID>
+      <LOGIN>_wwwproxy</LOGIN>
+      <NAME>WWW Proxy</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/ma</HOME>
+      <ID>253</ID>
+      <LOGIN>_mobileasset</LOGIN>
+      <NAME>MobileAsset User</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/findmydevice</HOME>
+      <ID>254</ID>
+      <LOGIN>_findmydevice</LOGIN>
+      <NAME>Find My Device Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/datadetectors</HOME>
+      <ID>257</ID>
+      <LOGIN>_datadetectors</LOGIN>
+      <NAME>DataDetectors</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>258</ID>
+      <LOGIN>_captiveagent</LOGIN>
+      <NAME>captiveagent</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>259</ID>
+      <LOGIN>_ctkd</LOGIN>
+      <NAME>ctkd Account</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/applepay</HOME>
+      <ID>260</ID>
+      <LOGIN>_applepay</LOGIN>
+      <NAME>applepay Account</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/hidd</HOME>
+      <ID>261</ID>
+      <LOGIN>_hidd</LOGIN>
+      <NAME>HID Service User</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/cmiodalassistants</HOME>
+      <ID>262</ID>
+      <LOGIN>_cmiodalassistants</LOGIN>
+      <NAME>CoreMedia IO Assistants User</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/analyticsd</HOME>
+      <ID>263</ID>
+      <LOGIN>_analyticsd</LOGIN>
+      <NAME>Analytics Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/fpsd</HOME>
+      <ID>265</ID>
+      <LOGIN>_fpsd</LOGIN>
+      <NAME>FPS Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/timed</HOME>
+      <ID>266</ID>
+      <LOGIN>_timed</LOGIN>
+      <NAME>Time Sync Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <MEMORIES>
+      <CAPACITY>4096</CAPACITY>
+      <CAPTION>Status: OK</CAPTION>
+      <DESCRIPTION>8KTF51264HZ-1G6E2</DESCRIPTION>
+      <NUMSLOTS>0</NUMSLOTS>
+      <SERIALNUMBER>0xFB9D50EB</SERIALNUMBER>
+      <SPEED>1600</SPEED>
+      <TYPE>DDR3</TYPE>
+    </MEMORIES>
+    <MEMORIES>
+      <CAPTION>Status: Empty</CAPTION>
+      <DESCRIPTION>Empty</DESCRIPTION>
+      <NUMSLOTS>1</NUMSLOTS>
+      <SERIALNUMBER>Empty</SERIALNUMBER>
+      <TYPE>Empty</TYPE>
+    </MEMORIES>
+    <MEMORIES>
+      <CAPACITY>4096</CAPACITY>
+      <CAPTION>Status: OK</CAPTION>
+      <DESCRIPTION>8KTF51264HZ-1G6E2</DESCRIPTION>
+      <NUMSLOTS>0</NUMSLOTS>
+      <SERIALNUMBER>0xFB9D50EC</SERIALNUMBER>
+      <SPEED>1600</SPEED>
+      <TYPE>DDR3</TYPE>
+    </MEMORIES>
+    <MEMORIES>
+      <CAPTION>Status: Empty</CAPTION>
+      <DESCRIPTION>Empty</DESCRIPTION>
+      <NUMSLOTS>1</NUMSLOTS>
+      <SERIALNUMBER>Empty</SERIALNUMBER>
+      <TYPE>Empty</TYPE>
+    </MEMORIES>
+    <MONITORS>
+      <CAPTION>iMac</CAPTION>
+      <DESCRIPTION>iMac</DESCRIPTION>
+    </MONITORS>
+    <NETWORKS>
+      <DESCRIPTION>lo0</DESCRIPTION>
+      <IPADDRESS>127.0.0.1</IPADDRESS>
+      <IPADDRESS6>fe80::1</IPADDRESS6>
+      <IPMASK>255.0.0.0</IPMASK>
+      <IPSUBNET>127.0.0.0</IPSUBNET>
+      <MTU>16384</MTU>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>gif0</DESCRIPTION>
+      <MTU>1280</MTU>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>stf0</DESCRIPTION>
+      <MTU>1280</MTU>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>XHC20</DESCRIPTION>
+      <MTU>0</MTU>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>en2</DESCRIPTION>
+      <MACADDR>0a:00:00:13:12:60</MACADDR>
+      <MTU>1500</MTU>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>en3</DESCRIPTION>
+      <MACADDR>0a:00:00:13:12:61</MACADDR>
+      <MTU>1500</MTU>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>en0</DESCRIPTION>
+      <IPADDRESS>172.28.212.66</IPADDRESS>
+      <IPADDRESS6>fe80::4bb:1c15:b774:df49</IPADDRESS6>
+      <IPMASK>255.255.255.0</IPMASK>
+      <IPSUBNET>172.28.212.0</IPSUBNET>
+      <MACADDR>0c:4d:e9:cd:a4:c8</MACADDR>
+      <MTU>1500</MTU>
+      <STATUS>Up</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>en1</DESCRIPTION>
+      <MACADDR>88:63:df:b8:00:2d</MACADDR>
+      <MTU>1500</MTU>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>p2p0</DESCRIPTION>
+      <MACADDR>0a:63:df:b8:00:2d</MACADDR>
+      <MTU>2304</MTU>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>awdl0</DESCRIPTION>
+      <MACADDR>9e:30:b0:0f:bf:4a</MACADDR>
+      <MTU>1484</MTU>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>bridge0</DESCRIPTION>
+      <MACADDR>0a:00:00:13:12:60</MACADDR>
+      <MTU>1500</MTU>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>utun0</DESCRIPTION>
+      <IPADDRESS6>fe80::dd47:c574:e7c7:a2c5</IPADDRESS6>
+      <MTU>2000</MTU>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>utun1</DESCRIPTION>
+      <IPADDRESS6>fe80::ed21:5ca0:d06f:711f</IPADDRESS6>
+      <MTU>2000</MTU>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <OPERATINGSYSTEM>
+      <ARCH>i386</ARCH>
+      <BOOT_TIME>2018-06-21 20:49:53</BOOT_TIME>
+      <DNS_DOMAIN/>  <FQDN>iMac-de-Marie.local</FQDN>
+      <FULL_NAME>macOS</FULL_NAME>
+      <KERNEL_NAME>darwin</KERNEL_NAME>
+      <KERNEL_VERSION>17.6.0</KERNEL_VERSION>
+      <NAME>MacOSX</NAME>
+      <SSH_KEY>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5CsAzJ+M6VsX5k8LYEIEGoNmSQHx2sGfwtITbLmaVIo1AuWu0bK7jMATuGqEh99wVre6mF2F9TluJqAKb5ePHsW3dqyOMN32bMnzSoge1/MhYY1NDoyt2C/Fo4SPUTNlEi5X4blDqEPW/FdUII76cZiGR0K/zruqx55wfOvw3ColLcMIlb0F7xEaasgIUCt9QbOpyh2uuQCNaKyXL43Hc0QNRqJA1gWZgDOgOr0MEd40hfCsCMzX7PFvmxK85oGA3JfBGD9USU20ytj0f2q5DH14uwaLVKZJny4HLK0OZpb6CbFX3YrW/9DoEBsXIxA40C9G/QdWShkdhP+Ea8CQL</SSH_KEY>
+      <TIMEZONE>
+        <NAME>Europe/Paris</NAME>
+        <OFFSET>+0200</OFFSET>
+      </TIMEZONE>
+      <VERSION>10.13.5 (17F77)</VERSION>
+    </OPERATINGSYSTEM>
+    <PROCESSES>
+      <CMD>/sbin/launchd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.2</MEM>
+      <PID>1</PID>
+      <STARTED>2018-06-21 20:49</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4331080</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/sbin/syslogd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>64</PID>
+      <STARTED>2018-06-21 20:50</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4305532</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/libexec/UserEventAgent (System)</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.2</MEM>
+      <PID>65</PID>
+      <STARTED>2018-06-21 20:50</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4333416</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/PrivateFrameworks/Uninstall.framework/Resources/uninstalld</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>68</PID>
+      <STARTED>2018-06-21 20:50</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4296532</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/libexec/kextd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.2</MEM>
+      <PID>69</PID>
+      <STARTED>2018-06-21 20:50</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4364684</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/Support/fseventsd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.1</MEM>
+      <PID>70</PID>
+      <STARTED>2018-06-21 20:50</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4399380</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/PrivateFrameworks/MediaRemote.framework/Support/mediaremoted</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.1</MEM>
+      <PID>72</PID>
+      <STARTED>2018-06-21 20:50</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4332284</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/sbin/systemstats --daemon</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.1</MEM>
+      <PID>74</PID>
+      <STARTED>2018-06-21 20:50</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4333996</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/CoreServices/appleeventsd --server</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>76</PID>
+      <STARTED>2018-06-21 20:50</STARTED>
+      <TTY>??</TTY>
+      <USER>_appleevents</USER>
+      <VIRTUALMEMORY>4333148</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/libexec/configd</CMD>
+      <CPUUSAGE>0.1</CPUUSAGE>
+      <MEM>0.1</MEM>
+      <PID>77</PID>
+      <STARTED>2018-06-21 20:50</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4336392</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/CoreServices/powerd.bundle/powerd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.1</MEM>
+      <PID>78</PID>
+      <STARTED>2018-06-21 20:50</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4331140</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/bin/sh /opt/fusioninventory-agent/run.sh</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>79</PID>
+      <STARTED>2018-06-21 20:50</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4287792</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/Applications/TeamViewer.app/Contents/MacOS/TeamViewer_Service -Module Full</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.1</MEM>
+      <PID>81</PID>
+      <STARTED>2018-06-21 20:50</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4378812</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/libexec/keybagd -t 15</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>83</PID>
+      <STARTED>2018-06-21 20:50</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4305064</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/libexec/logd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.5</MEM>
+      <PID>84</PID>
+      <STARTED>2018-06-21 20:50</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4434188</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/libexec/warmd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.1</MEM>
+      <PID>87</PID>
+      <STARTED>2018-06-21 20:50</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4371100</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Support/mds</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>1.1</MEM>
+      <PID>88</PID>
+      <STARTED>2018-06-21 20:50</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4484924</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/CoreServices/iconservicesd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>93</PID>
+      <STARTED>2018-06-21 20:50</STARTED>
+      <TTY>??</TTY>
+      <USER>_iconservices</USER>
+      <VIRTUALMEMORY>4332848</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/sbin/ocspd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.1</MEM>
+      <PID>17115</PID>
+      <STARTED>2018-07-03 13:39</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4330664</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.4</MEM>
+      <PID>17180</PID>
+      <STARTED>2018-07-03 15:17</STARTED>
+      <TTY>??</TTY>
+      <USER>mariem</USER>
+      <VIRTUALMEMORY>4320684</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.2</MEM>
+      <PID>17202</PID>
+      <STARTED>2018-07-03 15:47</STARTED>
+      <TTY>??</TTY>
+      <USER>mariem</USER>
+      <VIRTUALMEMORY>4330552</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.2</MEM>
+      <PID>17203</PID>
+      <STARTED>2018-07-03 15:47</STARTED>
+      <TTY>??</TTY>
+      <USER>mariem</USER>
+      <VIRTUALMEMORY>4330552</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.2</MEM>
+      <PID>17204</PID>
+      <STARTED>2018-07-03 15:47</STARTED>
+      <TTY>??</TTY>
+      <USER>mariem</USER>
+      <VIRTUALMEMORY>4315540</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/PrivateFrameworks/AOSKit.framework/Versions/A/XPCServices/com.apple.iCloudHelper.xpc/Contents/MacOS/com.apple.iCloudHelper</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.2</MEM>
+      <PID>17212</PID>
+      <STARTED>2018-07-03 15:55</STARTED>
+      <TTY>??</TTY>
+      <USER>mariem</USER>
+      <VIRTUALMEMORY>4331708</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/Frameworks/QuickLook.framework/Resources/quicklookd.app/Contents/MacOS/quicklookd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.2</MEM>
+      <PID>17228</PID>
+      <STARTED>2018-07-03 16:09</STARTED>
+      <TTY>??</TTY>
+      <USER>mariem</USER>
+      <VIRTUALMEMORY>4850464</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/Frameworks/QuickLook.framework/Resources/quicklookd.app/Contents/MacOS/quicklookd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.2</MEM>
+      <PID>17229</PID>
+      <STARTED>2018-07-03 16:10</STARTED>
+      <TTY>??</TTY>
+      <USER>com</USER>
+      <VIRTUALMEMORY>4850628</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>fusioninventory-agent: task Inventory</CMD>
+      <CPUUSAGE>24.5</CPUUSAGE>
+      <MEM>0.2</MEM>
+      <PID>17230</PID>
+      <STARTED>2018-07-03 16:11</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>646128</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>sh -c ps -A -o user,pid,pcpu,pmem,vsz,tty,etime,command 2&gt;/dev/null</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>17235</PID>
+      <STARTED>2018-07-03 16:11</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4268336</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>ps -A -o user,pid,pcpu,pmem,vsz,tty,etime,command</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>17236</PID>
+      <STARTED>2018-07-03 16:11</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>4268324</VIRTUALMEMORY>
+    </PROCESSES>
+    <REMOTE_MGMT>
+      <ID>456333693</ID>
+      <TYPE>teamviewer</TYPE>
+    </REMOTE_MGMT>
+    <SOFTWARES>
+      <COMMENTS>[Intel]</COMMENTS>
+      <INSTALLDATE>13/06/2016</INSTALLDATE>
+      <NAME>CORE_1_0_32</NAME>
+      <PUBLISHER>Adobe UnInstaller 3.7.0.271, Copyright 2009-2016 Adobe Systems Incorporated. All rights reserved.</PUBLISHER>
+      <SYSTEM_CATEGORY>Library/Application Support</SYSTEM_CATEGORY>
+      <USERNAME/>
+      <VERSION>3.7.0.271</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Intel]</COMMENTS>
+      <INSTALLDATE>15/04/2015</INSTALLDATE>
+      <NAME>Alfred 2</NAME>
+      <SYSTEM_CATEGORY>Applications</SYSTEM_CATEGORY>
+      <USERNAME/>
+      <VERSION>2.7.1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Intel]</COMMENTS>
+      <INSTALLDATE>21/06/2018</INSTALLDATE>
+      <NAME>TextEdit</NAME>
+      <SYSTEM_CATEGORY>Applications</SYSTEM_CATEGORY>
+      <USERNAME/>
+      <VERSION>1.13</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Intel]</COMMENTS>
+      <INSTALLDATE>27/07/2017</INSTALLDATE>
+      <NAME>ManagedClient</NAME>
+      <SYSTEM_CATEGORY>System/Library</SYSTEM_CATEGORY>
+      <USERNAME/>
+      <VERSION>10.3</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Intel]</COMMENTS>
+      <INSTALLDATE>25/10/2017</INSTALLDATE>
+      <NAME>HP Fax Archive</NAME>
+      <PUBLISHER>HP Fax Archive, Â© Copyright 2010-2017 HP Development Company, L.P.</PUBLISHER>
+      <SYSTEM_CATEGORY>Library/Printers</SYSTEM_CATEGORY>
+      <USERNAME/>
+      <VERSION>5.37.1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Intel]</COMMENTS>
+      <INSTALLDATE>23/11/2016</INSTALLDATE>
+      <NAME>Wondershare Helper Compact</NAME>
+      <SYSTEM_CATEGORY>Library/Application Support</SYSTEM_CATEGORY>
+      <USERNAME>mariem</USERNAME>
+      <VERSION>2.6.2</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Intel]</COMMENTS>
+      <INSTALLDATE>16/07/2017</INSTALLDATE>
+      <NAME>Service de reÌsumeÌ</NAME>
+      <PUBLISHER>Summary Service Version  2</PUBLISHER>
+      <SYSTEM_CATEGORY>System/Library</SYSTEM_CATEGORY>
+      <USERNAME/>
+      <VERSION>2.0</VERSION>
+    </SOFTWARES>
+    <STORAGES>
+      <DESCRIPTION>APPLE HDD ST1000DM003</DESCRIPTION>
+      <DISKSIZE>953869</DISKSIZE>
+      <FIRMWARE>AP14</FIRMWARE>
+      <INTERFACE>SERIAL-ATA</INTERFACE>
+      <MANUFACTURER>Apple</MANUFACTURER>
+      <MODEL>HDD ST1000DM003</MODEL>
+      <NAME>disk0</NAME>
+      <SERIAL>S4Y15P5F</SERIAL>
+      <SERIALNUMBER>S4Y15P5F</SERIALNUMBER>
+      <TYPE>Disk drive</TYPE>
+    </STORAGES>
+    <STORAGES>
+      <DESCRIPTION>APPLE SSD SD0128F</DESCRIPTION>
+      <DISKSIZE>115712</DISKSIZE>
+      <FIRMWARE>A223821</FIRMWARE>
+      <INTERFACE>SERIAL-ATA</INTERFACE>
+      <MANUFACTURER>Apple</MANUFACTURER>
+      <MODEL>SSD SD0128F</MODEL>
+      <NAME>disk1</NAME>
+      <SERIAL>1431AR409174</SERIAL>
+      <SERIALNUMBER>1431AR409174</SERIALNUMBER>
+      <TYPE>Disk drive</TYPE>
+    </STORAGES>
+    <STORAGES>
+      <DESCRIPTION>spcardreader</DESCRIPTION>
+      <FIRMWARE>0x0001</FIRMWARE>
+      <MANUFACTURER>0x14e4</MANUFACTURER>
+      <MODEL>spcardreader</MODEL>
+      <NAME>spcardreader</NAME>
+      <SERIAL/>
+      <SERIALNUMBER/>
+      <TYPE>Card reader</TYPE>
+    </STORAGES>
+    <STORAGES>
+      <DESCRIPTION>JMS56x Series</DESCRIPTION>
+      <DISKSIZE/>
+      <FIRMWARE>1.06</FIRMWARE>
+      <INTERFACE>USB</INTERFACE>
+      <MANUFACTURER>JMicron</MANUFACTURER>
+      <MODEL>JMS56x Series</MODEL>
+      <NAME>JMS56x Series</NAME>
+      <SERIAL>00000000000000000000</SERIAL>
+      <SERIALNUMBER>00000000000000000000</SERIALNUMBER>
+      <TYPE>Disk drive</TYPE>
+    </STORAGES>
+    <USERS>
+      <LOGIN>mariem</LOGIN>
+    </USERS>
+    <USERS>
+      <LOGIN>com</LOGIN>
+    </USERS>
+    <VERSIONCLIENT>FusionInventory-Agent_v2.3.21-1</VERSIONCLIENT>
+    <VERSIONPROVIDER>
+      <COMMENTS>FusionInventory agent based on 2.3.21 sources supported by Teclib</COMMENTS>
+      <COMMENTS>FusionInventory agent built on runner-5548eebd-project-346-concurrent-0, Tue Aug  1 09:31:36 UTC 2017</COMMENTS>
+      <NAME>FusionInventory</NAME>
+      <PERL_EXE>./bin/perl</PERL_EXE>
+      <PERL_VERSION>v5.24.1</PERL_VERSION>
+      <PROGRAM>fusioninventory-agent: task Inventory</PROGRAM>
+      <VERSION>2.3.21-1</VERSION>
+    </VERSIONPROVIDER>
+    <VIDEOS>
+      <CHIPSET>AMD Radeon R9 M290X</CHIPSET>
+      <NAME>AMD Radeon R9 M290X</NAME>
+      <RESOLUTION>5120x2880Retina</RESOLUTION>
+    </VIDEOS>
+  </CONTENT>
+  <DEVICEID>iMac-de-Marie.local-2017-06-12-09-24-14</DEVICEID>
+  <QUERY>INVENTORY</QUERY>
+</REQUEST>

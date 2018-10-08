@@ -1,0 +1,1735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REQUEST>
+  <CONTENT>
+    <ACCESSLOG>
+      <LOGDATE>2017-06-09 09:00:49</LOGDATE>
+    </ACCESSLOG>
+    <ACCOUNTINFO>
+      <KEYNAME>TAG</KEYNAME>
+      <KEYVALUE>teclib</KEYVALUE>
+    </ACCOUNTINFO>
+    <BATTERIES>
+      <CHEMISTRY>Li-ION</CHEMISTRY>
+      <MANUFACTURER>TOSHIBA</MANUFACTURER>
+      <SERIAL>0000000000</SERIAL>
+    </BATTERIES>
+    <BIOS>
+      <ASSETTAG>0000000000</ASSETTAG>
+      <BDATE>07/25/2014</BDATE>
+      <BMANUFACTURER>TOSHIBA</BMANUFACTURER>
+      <BVERSION>Version 3.70</BVERSION>
+      <MMANUFACTURER>TOSHIBA</MMANUFACTURER>
+      <MMODEL>PORTEGE Z30-A</MMODEL>
+      <MSN>C0366791B0E970WU</MSN>
+      <SKUNUMBER>PT243E</SKUNUMBER>
+      <SMANUFACTURER>TOSHIBA</SMANUFACTURER>
+      <SMODEL>PORTEGE Z30-A</SMODEL>
+      <SSN>9E113232I</SSN>
+    </BIOS>
+    <CONTROLLERS>
+      <CAPTION>Haswell-ULT DRAM Controller</CAPTION>
+      <DRIVER>hsw_uncore</DRIVER>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>Haswell-ULT DRAM Controller</NAME>
+      <PCICLASS>0600</PCICLASS>
+      <PCISLOT>00:00.0</PCISLOT>
+      <PRODUCTID>0a04</PRODUCTID>
+      <TYPE>Host bridge</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>Haswell-ULT Integrated Graphics Controller</CAPTION>
+      <DRIVER>i915</DRIVER>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>Haswell-ULT Integrated Graphics Controller</NAME>
+      <PCICLASS>0300</PCICLASS>
+      <PCISLOT>00:02.0</PCISLOT>
+      <PRODUCTID>0a16</PRODUCTID>
+      <TYPE>VGA compatible controller</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>Haswell-ULT HD Audio Controller</CAPTION>
+      <DRIVER>snd_hda_intel</DRIVER>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>Haswell-ULT HD Audio Controller</NAME>
+      <PCICLASS>0403</PCICLASS>
+      <PCISLOT>00:03.0</PCISLOT>
+      <PRODUCTID>0a0c</PRODUCTID>
+      <TYPE>Audio device</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>8 Series USB xHCI HC</CAPTION>
+      <DRIVER>xhci_hcd</DRIVER>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>8 Series USB xHCI HC</NAME>
+      <PCICLASS>0c03</PCICLASS>
+      <PCISLOT>00:14.0</PCISLOT>
+      <PRODUCTID>9c31</PRODUCTID>
+      <REV>04</REV>
+      <TYPE>USB controller</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>8 Series HECI #0</CAPTION>
+      <DRIVER>mei_me</DRIVER>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>8 Series HECI #0</NAME>
+      <PCICLASS>0780</PCICLASS>
+      <PCISLOT>00:16.0</PCISLOT>
+      <PRODUCTID>9c3a</PRODUCTID>
+      <REV>04</REV>
+      <TYPE>Communication controller</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>Ethernet Connection I218-V</CAPTION>
+      <DRIVER>e1000e</DRIVER>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>Ethernet Connection I218-V</NAME>
+      <PCICLASS>0200</PCICLASS>
+      <PCISLOT>00:19.0</PCISLOT>
+      <PRODUCTID>1559</PRODUCTID>
+      <REV>04</REV>
+      <TYPE>Ethernet controller</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>8 Series HD Audio Controller</CAPTION>
+      <DRIVER>snd_hda_intel</DRIVER>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>8 Series HD Audio Controller</NAME>
+      <PCICLASS>0403</PCICLASS>
+      <PCISLOT>00:1b.0</PCISLOT>
+      <PRODUCTID>9c20</PRODUCTID>
+      <REV>04</REV>
+      <TYPE>Audio device</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>8 Series PCI Express Root Port 6</CAPTION>
+      <DRIVER>pcieport</DRIVER>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>8 Series PCI Express Root Port 6</NAME>
+      <PCICLASS>0604</PCICLASS>
+      <PCISLOT>00:1c.0</PCISLOT>
+      <PRODUCTID>9c1a</PRODUCTID>
+      <TYPE>PCI bridge</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>8 Series PCI Express Root Port 3</CAPTION>
+      <DRIVER>pcieport</DRIVER>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>8 Series PCI Express Root Port 3</NAME>
+      <PCICLASS>0604</PCICLASS>
+      <PCISLOT>00:1c.2</PCISLOT>
+      <PRODUCTID>9c14</PRODUCTID>
+      <TYPE>PCI bridge</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>8 Series USB EHCI #1</CAPTION>
+      <DRIVER>ehci</DRIVER>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>8 Series USB EHCI #1</NAME>
+      <PCICLASS>0c03</PCICLASS>
+      <PCISLOT>00:1d.0</PCISLOT>
+      <PRODUCTID>9c26</PRODUCTID>
+      <REV>04</REV>
+      <TYPE>USB controller</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>8 Series LPC Controller</CAPTION>
+      <DRIVER>lpc_ich</DRIVER>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>8 Series LPC Controller</NAME>
+      <PCICLASS>0601</PCICLASS>
+      <PCISLOT>00:1f.0</PCISLOT>
+      <PRODUCTID>9c43</PRODUCTID>
+      <REV>04</REV>
+      <TYPE>ISA bridge</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>8 Series SATA Controller 1 [AHCI mode]</CAPTION>
+      <DRIVER>ahci</DRIVER>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>8 Series SATA Controller 1 [AHCI mode]</NAME>
+      <PCICLASS>0106</PCICLASS>
+      <PCISLOT>00:1f.2</PCISLOT>
+      <PRODUCTID>9c03</PRODUCTID>
+      <REV>04</REV>
+      <TYPE>SATA controller</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>RTS5227 PCI Express Card Reader</CAPTION>
+      <DRIVER>rtsx_pci</DRIVER>
+      <MANUFACTURER>Realtek Semiconductor Co., Ltd.</MANUFACTURER>
+      <NAME>RTS5227 PCI Express Card Reader</NAME>
+      <PCICLASS>ff00</PCICLASS>
+      <PCISLOT>01:00.0</PCISLOT>
+      <PRODUCTID>5227</PRODUCTID>
+      <REV>01</REV>
+      <TYPE>Unassigned class</TYPE>
+      <VENDORID>10ec</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>Wireless 3160</CAPTION>
+      <DRIVER>iwlwifi</DRIVER>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>Wireless 3160</NAME>
+      <PCICLASS>0280</PCICLASS>
+      <PCISLOT>02:00.0</PCISLOT>
+      <PRODUCTID>08b3</PRODUCTID>
+      <REV>83</REV>
+      <TYPE>Network controller</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CPUS>
+      <ARCH>i386</ARCH>
+      <CORE>2</CORE>
+      <EXTERNAL_CLOCK>100</EXTERNAL_CLOCK>
+      <FAMILYNAME>Core i5</FAMILYNAME>
+      <FAMILYNUMBER>6</FAMILYNUMBER>
+      <ID>51 06 04 00 FF FB EB BF</ID>
+      <MANUFACTURER>Intel</MANUFACTURER>
+      <MODEL>69</MODEL>
+      <NAME>Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz</NAME>
+      <SPEED>1700</SPEED>
+      <STEPPING>1</STEPPING>
+      <THREAD>4</THREAD>
+    </CPUS>
+    <DRIVES>
+      <FILESYSTEM>ext4</FILESYSTEM>
+      <FREE>7914</FREE>
+      <SERIAL>444ea44f-6801-4ad2-9778-0321c2079dab</SERIAL>
+      <TOTAL>150268</TOTAL>
+      <TYPE>/</TYPE>
+      <VOLUMN>/dev/mapper/fedora-root</VOLUMN>
+    </DRIVES>
+    <DRIVES>
+      <FILESYSTEM>ext4</FILESYSTEM>
+      <FREE>277</FREE>
+      <SERIAL>2075753f-412c-412a-832c-e0de6ffa7c67</SERIAL>
+      <TOTAL>476</TOTAL>
+      <TYPE>/boot</TYPE>
+      <VOLUMN>/dev/sda1</VOLUMN>
+    </DRIVES>
+    <DRIVES>
+      <FILESYSTEM>ext4</FILESYSTEM>
+      <FREE>68968</FREE>
+      <SERIAL>bfa948a3-4eec-4a1c-9bc7-02c0824d4d07</SERIAL>
+      <TOTAL>181527</TOTAL>
+      <TYPE>/home</TYPE>
+      <VOLUMN>/dev/mapper/fedora-home</VOLUMN>
+    </DRIVES>
+    <ENVS>
+      <KEY>TERM</KEY>
+      <VAL>xterm</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>KDEDIRS</KEY>
+      <VAL>/usr</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>LANG</KEY>
+      <VAL>fr_FR.UTF-8</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>MODULEPATH</KEY>
+      <VAL>/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>SSH_ASKPASS</KEY>
+      <VAL>/usr/libexec/openssh/gnome-ssh-askpass</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>_</KEY>
+      <VAL>/usr/bin/fusioninventory-agent</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>LOADEDMODULES</KEY>
+      <VAL/>
+    </ENVS>
+    <ENVS>
+      <KEY>HOME</KEY>
+      <VAL>/root</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>SHLVL</KEY>
+      <VAL>1</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>LESSOPEN</KEY>
+      <VAL>||/usr/bin/lesspipe.sh %s</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>PATH</KEY>
+      <VAL>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>USER</KEY>
+      <VAL>root</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>LOGNAME</KEY>
+      <VAL>root</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>MODULESHOME</KEY>
+      <VAL>/usr/share/Modules</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>XDG_DATA_DIRS</KEY>
+      <VAL>/root/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>OLDPWD</KEY>
+      <VAL>/root</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>CVS_RSH</KEY>
+      <VAL>ssh</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>HISTSIZE</KEY>
+      <VAL>50000</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>MAIL</KEY>
+      <VAL>/var/spool/mail/root</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>LS_COLORS</KEY>
+      <VAL>rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.m4a=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.oga=01;36:*.opus=01;36:*.spx=01;36:*.xspf=01;36:</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>HOSTNAME</KEY>
+      <VAL>LF014</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>HISTCONTROL</KEY>
+      <VAL>ignoredups</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>PWD</KEY>
+      <VAL>/root</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>REPORTTIME</KEY>
+      <VAL>60</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>SHELL</KEY>
+      <VAL>/bin/zsh</VAL>
+    </ENVS>
+    <FIREWALL>
+      <STATUS>on</STATUS>
+    </FIREWALL>
+    <HARDWARE>
+      <ARCHNAME>x86_64-linux-thread-multi</ARCHNAME>
+      <CHASSIS_TYPE>Notebook</CHASSIS_TYPE>
+      <CHECKSUM>1</CHECKSUM>
+      <DATELASTLOGGEDUSER>Thu Jun 8 07:41</DATELASTLOGGEDUSER>
+      <DEFAULTGATEWAY>192.168.1.1</DEFAULTGATEWAY>
+      <DNS>172.28.200.20/172.21.201.241/192.168.1.1</DNS>
+      <ETIME>3</ETIME>
+      <IPADDR>192.168.1.103/192.168.124.1/192.168.11.96</IPADDR>
+      <LASTLOGGEDUSER>johan</LASTLOGGEDUSER>
+      <MEMORY>7908</MEMORY>
+      <NAME>LF014</NAME>
+      <OSCOMMENTS>#1 SMP Thu May 25 19:03:07 UTC 2017</OSCOMMENTS>
+      <OSNAME>Fedora release 25 (Twenty Five)</OSNAME>
+      <OSVERSION>4.11.3-200.fc25.x86_64</OSVERSION>
+      <PROCESSORN>1</PROCESSORN>
+      <PROCESSORS>1700</PROCESSORS>
+      <PROCESSORT>Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz</PROCESSORT>
+      <SWAP>7935</SWAP>
+      <USERID>johan</USERID>
+      <UUID>0055ADC9-1D3A-E411-8043-B05D95113232</UUID>
+      <VMSYSTEM>Physical</VMSYSTEM>
+      <WINPRODID>ID-1000010051</WINPRODID>
+      <WORKGROUP>ad.crosoft.com</WORKGROUP>
+    </HARDWARE>
+    <INPUTS>
+      <CAPTION>AT Translated Set 2 keyboard</CAPTION>
+      <DESCRIPTION>AT Translated Set 2 keyboard</DESCRIPTION>
+      <TYPE>sysrq</TYPE>
+    </INPUTS>
+    <INPUTS>
+      <CAPTION>MOSART Semi. 2.4G Keyboard Mouse</CAPTION>
+      <DESCRIPTION>MOSART Semi. 2.4G Keyboard Mouse</DESCRIPTION>
+      <TYPE>sysrq</TYPE>
+    </INPUTS>
+    <INPUTS>
+      <CAPTION>MOSART Semi. 2.4G Keyboard Mouse</CAPTION>
+      <DESCRIPTION>MOSART Semi. 2.4G Keyboard Mouse</DESCRIPTION>
+      <TYPE>Keyboard</TYPE>
+    </INPUTS>
+    <INPUTS>
+      <CAPTION>Video Bus</CAPTION>
+      <DESCRIPTION>Video Bus</DESCRIPTION>
+      <TYPE>Keyboard</TYPE>
+    </INPUTS>
+    <INPUTS>
+      <CAPTION>AlpsPS/2 ALPS DualPoint Stick</CAPTION>
+      <DESCRIPTION>AlpsPS/2 ALPS DualPoint Stick</DESCRIPTION>
+      <TYPE>Pointing</TYPE>
+    </INPUTS>
+    <INPUTS>
+      <CAPTION>AlpsPS/2 ALPS DualPoint TouchPad</CAPTION>
+      <DESCRIPTION>AlpsPS/2 ALPS DualPoint TouchPad</DESCRIPTION>
+      <TYPE>Pointing</TYPE>
+    </INPUTS>
+    <INPUTS>
+      <CAPTION>Toshiba input device</CAPTION>
+      <DESCRIPTION>Toshiba input device</DESCRIPTION>
+      <TYPE>Keyboard</TYPE>
+    </INPUTS>
+    <LOCAL_GROUPS>
+      <ID>10</ID>
+      <MEMBER>teclib</MEMBER>
+      <MEMBER>builder</MEMBER>
+      <MEMBER>jsuis@ad.crosoft.com</MEMBER>
+      <MEMBER>john</MEMBER>
+      <NAME>wheel</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>12</ID>
+      <MEMBER>postfix</MEMBER>
+      <MEMBER>mail</MEMBER>
+      <NAME>mail</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>36</ID>
+      <MEMBER>qemu</MEMBER>
+      <NAME>kvm</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>135</ID>
+      <MEMBER>builder</MEMBER>
+      <NAME>mock</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_USERS>
+      <HOME>/root</HOME>
+      <ID>0</ID>
+      <LOGIN>root</LOGIN>
+      <NAME>root</NAME>
+      <SHELL>/bin/zsh</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/bin</HOME>
+      <ID>1</ID>
+      <LOGIN>bin</LOGIN>
+      <NAME>bin</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/sbin</HOME>
+      <ID>2</ID>
+      <LOGIN>daemon</LOGIN>
+      <NAME>daemon</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/adm</HOME>
+      <ID>3</ID>
+      <LOGIN>adm</LOGIN>
+      <NAME>adm</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/spool/lpd</HOME>
+      <ID>4</ID>
+      <LOGIN>lp</LOGIN>
+      <NAME>lp</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/sbin</HOME>
+      <ID>5</ID>
+      <LOGIN>sync</LOGIN>
+      <NAME>sync</NAME>
+      <SHELL>/bin/sync</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/sbin</HOME>
+      <ID>6</ID>
+      <LOGIN>shutdown</LOGIN>
+      <NAME>shutdown</NAME>
+      <SHELL>/sbin/shutdown</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/sbin</HOME>
+      <ID>7</ID>
+      <LOGIN>halt</LOGIN>
+      <NAME>halt</NAME>
+      <SHELL>/sbin/halt</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/spool/mail</HOME>
+      <ID>8</ID>
+      <LOGIN>mail</LOGIN>
+      <NAME>mail</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/root</HOME>
+      <ID>11</ID>
+      <LOGIN>operator</LOGIN>
+      <NAME>operator</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/usr/games</HOME>
+      <ID>12</ID>
+      <LOGIN>games</LOGIN>
+      <NAME>games</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/ftp</HOME>
+      <ID>14</ID>
+      <LOGIN>ftp</LOGIN>
+      <NAME>FTP User</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/</HOME>
+      <ID>99</ID>
+      <LOGIN>nobody</LOGIN>
+      <NAME>Nobody</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/lib/avahi-autoipd</HOME>
+      <ID>170</ID>
+      <LOGIN>avahi-autoipd</LOGIN>
+      <NAME>Avahi IPv4LL Stack</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/usr/share/httpd</HOME>
+      <ID>48</ID>
+      <LOGIN>apache</LOGIN>
+      <NAME>Apache</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/</HOME>
+      <ID>999</ID>
+      <LOGIN>systemd-timesync</LOGIN>
+      <NAME>systemd Time Synchronization</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/</HOME>
+      <ID>998</ID>
+      <LOGIN>systemd-network</LOGIN>
+      <NAME>systemd Network Management</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/</HOME>
+      <ID>997</ID>
+      <LOGIN>systemd-resolve</LOGIN>
+      <NAME>systemd Resolver</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/</HOME>
+      <ID>996</ID>
+      <LOGIN>systemd-bus-proxy</LOGIN>
+      <NAME>systemd Bus Proxy</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/</HOME>
+      <ID>81</ID>
+      <LOGIN>dbus</LOGIN>
+      <NAME>System message bus</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/</HOME>
+      <ID>995</ID>
+      <LOGIN>polkitd</LOGIN>
+      <NAME>User for polkitd</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/lib/geoclue</HOME>
+      <ID>994</ID>
+      <LOGIN>geoclue</LOGIN>
+      <NAME>User for geoclue</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/lib/colord</HOME>
+      <ID>993</ID>
+      <LOGIN>colord</LOGIN>
+      <NAME>User for colord</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/etc/abrt</HOME>
+      <ID>173</ID>
+      <LOGIN>abrt</LOGIN>
+      <NAME/>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/run/saslauthd</HOME>
+      <ID>992</ID>
+      <LOGIN>saslauth</LOGIN>
+      <NAME>Saslauthd user</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/lib/chrony</HOME>
+      <ID>991</ID>
+      <LOGIN>chrony</LOGIN>
+      <NAME/>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/proc</HOME>
+      <ID>172</ID>
+      <LOGIN>rtkit</LOGIN>
+      <NAME>RealtimeKit</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/run/avahi-daemon</HOME>
+      <ID>70</ID>
+      <LOGIN>avahi</LOGIN>
+      <NAME>Avahi mDNS/DNS-SD Stack</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/etc/openvpn</HOME>
+      <ID>990</ID>
+      <LOGIN>openvpn</LOGIN>
+      <NAME>OpenVPN</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/</HOME>
+      <ID>113</ID>
+      <LOGIN>usbmuxd</LOGIN>
+      <NAME>usbmuxd user</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/</HOME>
+      <ID>107</ID>
+      <LOGIN>qemu</LOGIN>
+      <NAME>qemu user</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/etc/unbound</HOME>
+      <ID>989</ID>
+      <LOGIN>unbound</LOGIN>
+      <NAME>Unbound DNS resolver</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/</HOME>
+      <ID>75</ID>
+      <LOGIN>radvd</LOGIN>
+      <NAME>radvd user</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/lib/rpcbind</HOME>
+      <ID>32</ID>
+      <LOGIN>rpc</LOGIN>
+      <NAME>Rpcbind Daemon</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/run/pulse</HOME>
+      <ID>171</ID>
+      <LOGIN>pulse</LOGIN>
+      <NAME>PulseAudio System Daemon</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/lib/setroubleshoot</HOME>
+      <ID>988</ID>
+      <LOGIN>setroubleshoot</LOGIN>
+      <NAME/>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/lib/gdm</HOME>
+      <ID>42</ID>
+      <LOGIN>gdm</LOGIN>
+      <NAME/>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/</HOME>
+      <ID>987</ID>
+      <LOGIN>nm-openvpn</LOGIN>
+      <NAME>Default user for running openvpn spawned by NetworkManager</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/lib/nfs</HOME>
+      <ID>29</ID>
+      <LOGIN>rpcuser</LOGIN>
+      <NAME>RPC Service User</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/lib/nfs</HOME>
+      <ID>65534</ID>
+      <LOGIN>nfsnobody</LOGIN>
+      <NAME>Anonymous NFS User</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/run/gnome-initial-setup/</HOME>
+      <ID>986</ID>
+      <LOGIN>gnome-initial-setup</LOGIN>
+      <NAME/>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/</HOME>
+      <ID>985</ID>
+      <LOGIN>nm-openconnect</LOGIN>
+      <NAME>NetworkManager user for OpenConnect</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty/sshd</HOME>
+      <ID>74</ID>
+      <LOGIN>sshd</LOGIN>
+      <NAME>Privilege-separated SSH</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/</HOME>
+      <ID>72</ID>
+      <LOGIN>tcpdump</LOGIN>
+      <NAME/>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/home/teclib</HOME>
+      <ID>1000</ID>
+      <LOGIN>teclib</LOGIN>
+      <NAME>teclib</NAME>
+      <SHELL>/bin/bash</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/home/builder</HOME>
+      <ID>1001</ID>
+      <LOGIN>builder</LOGIN>
+      <NAME/>
+      <SHELL>/bin/zsh</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/lib/mysql</HOME>
+      <ID>27</ID>
+      <LOGIN>mysql</LOGIN>
+      <NAME>MySQL Server</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/lib/pgsql</HOME>
+      <ID>26</ID>
+      <LOGIN>postgres</LOGIN>
+      <NAME>PostgreSQL Server</NAME>
+      <SHELL>/bin/bash</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/usr/share/tomcat</HOME>
+      <ID>91</ID>
+      <LOGIN>tomcat</LOGIN>
+      <NAME>Apache Tomcat</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/lib/nginx</HOME>
+      <ID>984</ID>
+      <LOGIN>nginx</LOGIN>
+      <NAME>Nginx web server</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/home/johan</HOME>
+      <ID>1002</ID>
+      <LOGIN>johan</LOGIN>
+      <NAME/>
+      <SHELL>/bin/zsh</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/dev/null</HOME>
+      <ID>59</ID>
+      <LOGIN>tss</LOGIN>
+      <NAME>Account used by the trousers package to sandbox the tcsd daemon</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/</HOME>
+      <ID>977</ID>
+      <LOGIN>systemd-coredump</LOGIN>
+      <NAME>systemd Core Dumper</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/usr/share/sane</HOME>
+      <ID>976</ID>
+      <LOGIN>saned</LOGIN>
+      <NAME>SANE scanner daemon user</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/lib/mongodb</HOME>
+      <ID>184</ID>
+      <LOGIN>mongodb</LOGIN>
+      <NAME>MongoDB Database Server</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/lib/redis</HOME>
+      <ID>975</ID>
+      <LOGIN>redis</LOGIN>
+      <NAME>Redis Server</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/tmp</HOME>
+      <ID>974</ID>
+      <LOGIN>epmd</LOGIN>
+      <NAME>Erlang Port Mapper Daemon</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/lib/rabbitmq</HOME>
+      <ID>973</ID>
+      <LOGIN>rabbitmq</LOGIN>
+      <NAME>RabbitMQ messaging server</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/home/hacluster</HOME>
+      <ID>189</ID>
+      <LOGIN>hacluster</LOGIN>
+      <NAME>cluster user</NAME>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/spool/postfix</HOME>
+      <ID>89</ID>
+      <LOGIN>postfix</LOGIN>
+      <NAME/>
+      <SHELL>/sbin/nologin</SHELL>
+    </LOCAL_USERS>
+    <LOGICAL_VOLUMES>
+      <ATTR>-wi-ao----</ATTR>
+      <LV_NAME>home</LV_NAME>
+      <LV_UUID>BskNPA-2ece-cWgR-cLon-iFjr-EH2e-c6Cg39</LV_UUID>
+      <SEG_COUNT>1</SEG_COUNT>
+      <SIZE>193516</SIZE>
+      <VG_UUID>tZSsF8-wsLg-ZoAt-jjFY-GwGn-y2q3-QOP60c</VG_UUID>
+    </LOGICAL_VOLUMES>
+    <LOGICAL_VOLUMES>
+      <ATTR>-wi-ao----</ATTR>
+      <LV_NAME>root</LV_NAME>
+      <LV_UUID>IbvF0K-RmS0-HmVo-KnGi-dmd7-9qh4-Lp3u1j</LV_UUID>
+      <SEG_COUNT>1</SEG_COUNT>
+      <SIZE>53687</SIZE>
+      <VG_UUID>tZSsF8-wsLg-ZoAt-jjFY-GwGn-y2q3-QOP60c</VG_UUID>
+    </LOGICAL_VOLUMES>
+    <LOGICAL_VOLUMES>
+      <ATTR>-wi-ao----</ATTR>
+      <LV_NAME>swap</LV_NAME>
+      <LV_UUID>207sOP-NeuZ-NEwU-H0n7-eqaI-kcdd-b0qb26</LV_UUID>
+      <SEG_COUNT>1</SEG_COUNT>
+      <SIZE>8321</SIZE>
+      <VG_UUID>tZSsF8-wsLg-ZoAt-jjFY-GwGn-y2q3-QOP60c</VG_UUID>
+    </LOGICAL_VOLUMES>
+    <MEMORIES>
+      <CAPACITY>8192</CAPACITY>
+      <CAPTION>DIMM0</CAPTION>
+      <DESCRIPTION>DIMM</DESCRIPTION>
+      <MANUFACTURER>Samsung</MANUFACTURER>
+      <MEMORYCORRECTION>None</MEMORYCORRECTION>
+      <NUMSLOTS>1</NUMSLOTS>
+      <SERIALNUMBER>23853943</SERIALNUMBER>
+      <SPEED>1600 MT/s</SPEED>
+      <TYPE>DDR3</TYPE>
+    </MEMORIES>
+    <MEMORIES>
+      <CAPTION>DIMM2</CAPTION>
+      <DESCRIPTION>DIMM</DESCRIPTION>
+      <MEMORYCORRECTION>None</MEMORYCORRECTION>
+      <NUMSLOTS>2</NUMSLOTS>
+    </MEMORIES>
+    <MONITORS>
+      <BASE64>AP///////wANrlUTAAAAAAsXAQSVHRF4AlPVmFhSkCchUFQAAAABAQEBAQEBAQEBAQEBAQEB2h1W4lAAIDBELUcAJaUQAAAYAAAA/gBOMTMzQkdFLUVBQQogAAAA/gBDTU4KICAgICAgICAgAAAA/gBOMTMzQkdFLUVBQQogAGw=</BASE64>
+      <CAPTION>N133BGE-EAA CMN N133BGE-EAA</CAPTION>
+      <DESCRIPTION>11/2013</DESCRIPTION>
+      <MANUFACTURER>CMN</MANUFACTURER>
+      <SERIAL>00000000</SERIAL>
+    </MONITORS>
+    <NETWORKS>
+      <DESCRIPTION>bmc</DESCRIPTION>
+      <MANAGEMENT>1</MANAGEMENT>
+      <STATUS>Down</STATUS>
+      <TYPE>ethernet</TYPE>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>lo</DESCRIPTION>
+      <IPADDRESS>127.0.0.1</IPADDRESS>
+      <IPMASK>255.0.0.0</IPMASK>
+      <IPSUBNET>127.0.0.0</IPSUBNET>
+      <MACADDR>00:00:00:00:00:00</MACADDR>
+      <STATUS>Up</STATUS>
+      <TYPE>loopback</TYPE>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>lo</DESCRIPTION>
+      <IPADDRESS6>::1</IPADDRESS6>
+      <IPMASK6>fff0::</IPMASK6>
+      <IPSUBNET6>::</IPSUBNET6>
+      <MACADDR>00:00:00:00:00:00</MACADDR>
+      <STATUS>Up</STATUS>
+      <TYPE>loopback</TYPE>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>enp0s25</DESCRIPTION>
+      <DRIVER>e1000e</DRIVER>
+      <IPADDRESS>192.168.1.103</IPADDRESS>
+      <IPGATEWAY>192.168.1.1</IPGATEWAY>
+      <IPMASK>255.255.255.0</IPMASK>
+      <IPSUBNET>192.168.1.0</IPSUBNET>
+      <MACADDR>b8:6b:23:e0:5c:91</MACADDR>
+      <PCIID>8086:1559:1179:0001</PCIID>
+      <PCISLOT>0000:00:19.0</PCISLOT>
+      <SPEED>100</SPEED>
+      <STATUS>Up</STATUS>
+      <TYPE>ethernet</TYPE>
+      <VIRTUALDEV>0</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>enp0s25</DESCRIPTION>
+      <DRIVER>e1000e</DRIVER>
+      <IPADDRESS6>fe80::dd76:c250:1435:8e89</IPADDRESS6>
+      <IPMASK6>ffff:ffff:ffff:ffff::</IPMASK6>
+      <IPSUBNET6>fe80::</IPSUBNET6>
+      <MACADDR>b8:6b:23:e0:5c:81</MACADDR>
+      <PCIID>8086:1559:1179:0001</PCIID>
+      <PCISLOT>0000:00:19.0</PCISLOT>
+      <SPEED>100</SPEED>
+      <STATUS>Up</STATUS>
+      <TYPE>ethernet</TYPE>
+      <VIRTUALDEV>0</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>wlp2s0</DESCRIPTION>
+      <DRIVER>iwlwifi</DRIVER>
+      <MACADDR>ae:ed:e7:56:9d:a0</MACADDR>
+      <PCIID>8086:08B3:8086:8170</PCIID>
+      <PCISLOT>0000:02:00.0</PCISLOT>
+      <STATUS>Down</STATUS>
+      <TYPE>wifi</TYPE>
+      <VIRTUALDEV>0</VIRTUALDEV>
+      <WIFI_MODE>Managed</WIFI_MODE>
+      <WIFI_VERSION>802.11</WIFI_VERSION>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>virbr0</DESCRIPTION>
+      <IPADDRESS>192.168.124.1</IPADDRESS>
+      <IPMASK>255.255.255.0</IPMASK>
+      <IPSUBNET>192.168.124.0</IPSUBNET>
+      <MACADDR>52:54:0b:74:5e:f1</MACADDR>
+      <SLAVES/>
+      <STATUS>Up</STATUS>
+      <TYPE>bridge</TYPE>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>virbr0-nic</DESCRIPTION>
+      <MACADDR>52:54:c0:74:5e:f1</MACADDR>
+      <SPEED>10</SPEED>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>tun0</DESCRIPTION>
+      <IPADDRESS>192.168.11.96</IPADDRESS>
+      <IPMASK>255.255.255.0</IPMASK>
+      <IPSUBNET>192.168.11.0</IPSUBNET>
+      <SPEED>10</SPEED>
+      <STATUS>Up</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>tun0</DESCRIPTION>
+      <IPADDRESS6>fe80::3d05:f5d:a260:423b</IPADDRESS6>
+      <IPMASK6>ffff:ffff:ffff:ffff::</IPMASK6>
+      <IPSUBNET6>fe80::</IPSUBNET6>
+      <SPEED>10</SPEED>
+      <STATUS>Up</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <OPERATINGSYSTEM>
+      <ARCH>x86_64</ARCH>
+      <BOOT_TIME>2017-06-08 07:06:47</BOOT_TIME>
+      <DNS_DOMAIN>ad.crosoft.com</DNS_DOMAIN>
+      <FQDN>LF014.ad.crosoft.com</FQDN>
+      <FULL_NAME>Fedora release 25 (Twenty Five)</FULL_NAME>
+      <HOSTID>007f0100</HOSTID>
+      <KERNEL_NAME>linux</KERNEL_NAME>
+      <KERNEL_VERSION>4.11.3-200.fc25.x86_64</KERNEL_VERSION>
+      <NAME>Fedora</NAME>
+      <SSH_KEY>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgGz/LeCPvEeLKgqfDaG0EywPb0dgjSwW9JuAV2YMOcSX8PbyUuX+DxIth9OOjfQqFF/TRY1UshKMjVoQxKk1HzKiE9bk1FOgxmkhwjQWmRU64DcBqZqxkDNgqgz3YPzR7W46O3AuMOKsm/9lv4biwLd32ENPdezloiUrsS05OtzBbZWtlPCu0+t2MwhDAodF7rphf2Cj8ygNjavmFheFupRp3M7LxtyUhLPfp23t1ddT3U4iJtioW1PsWzxdkBD5wbrZ5THMjhhKP1/HjMUP8GSo1Jj0nDGu8m0qZq10pcVZxr5ZZ10QRqnpbgV1tYCTaVklzKFRZEiO2myGAWryD</SSH_KEY>
+      <TIMEZONE>
+        <NAME>CEST</NAME>
+        <OFFSET>+0200</OFFSET>
+      </TIMEZONE>
+      <VERSION>25</VERSION>
+    </OPERATINGSYSTEM>
+    <PHYSICAL_VOLUMES>
+      <ATTR>a--</ATTR>
+      <DEVICE>/dev/mapper/luks-cb6a71cc-593e-4490-9c75-3e4d652ed366</DEVICE>
+      <FORMAT>lvm2</FORMAT>
+      <FREE>4</FREE>
+      <PE_SIZE>4</PE_SIZE>
+      <PV_PE_COUNT>60923</PV_PE_COUNT>
+      <PV_UUID>1CmGuH-0Vwr-H3O6-dhgy-wEHS-P2jC-NuhuPS</PV_UUID>
+      <SIZE>255529</SIZE>
+      <VG_UUID>tZSsF8-wsLg-ZoAt-jjFY-GwGn-y2q3-QOP60c</VG_UUID>
+    </PHYSICAL_VOLUMES>
+    <PORTS>
+      <CAPTION>DB-15 female</CAPTION>
+      <DESCRIPTION>None</DESCRIPTION>
+      <TYPE>Other</TYPE>
+    </PORTS>
+    <PORTS>
+      <CAPTION>RJ-45</CAPTION>
+      <DESCRIPTION>None</DESCRIPTION>
+      <TYPE>Network Port</TYPE>
+    </PORTS>
+    <PORTS>
+      <CAPTION>Access Bus (USB)</CAPTION>
+      <DESCRIPTION>None</DESCRIPTION>
+      <TYPE>USB</TYPE>
+    </PORTS>
+    <PORTS>
+      <CAPTION>Access Bus (USB)</CAPTION>
+      <DESCRIPTION>None</DESCRIPTION>
+      <TYPE>USB</TYPE>
+    </PORTS>
+    <PORTS>
+      <CAPTION>Access Bus (USB)</CAPTION>
+      <DESCRIPTION>None</DESCRIPTION>
+      <TYPE>USB</TYPE>
+    </PORTS>
+    <PORTS>
+      <CAPTION>Mini Jack (headphones)</CAPTION>
+      <DESCRIPTION>None</DESCRIPTION>
+      <TYPE>Other</TYPE>
+    </PORTS>
+    <PORTS>
+      <CAPTION>Other</CAPTION>
+      <DESCRIPTION>None</DESCRIPTION>
+      <TYPE>Video Port</TYPE>
+    </PORTS>
+    <PORTS>
+      <CAPTION>Other</CAPTION>
+      <DESCRIPTION>None</DESCRIPTION>
+      <TYPE>Other</TYPE>
+    </PORTS>
+    <PRINTERS>
+      <DESCRIPTION>Deskjet-2540</DESCRIPTION>
+      <DRIVER>HP Deskjet 2540 Series, hpcups 3.17.4</DRIVER>
+      <NAME>Deskjet-2540</NAME>
+      <PORT>Deskjet-2540</PORT>
+    </PRINTERS>
+    <PROCESSES>
+      <CMD>/usr/lib/systemd/systemd --switched-root --system --deserialize 24</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.1</MEM>
+      <PID>1</PID>
+      <STARTED>2017-06-08 07:06</STARTED>
+      <TTY>?</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>215324</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>[kthreadd]</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>2</PID>
+      <STARTED>2017-06-08 07:06</STARTED>
+      <TTY>?</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>0</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>[kworker/0:0H]</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>4</PID>
+      <STARTED>2017-06-08 07:06</STARTED>
+      <TTY>?</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>0</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>[mm_percpu_wq]</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>6</PID>
+      <STARTED>2017-06-08 07:06</STARTED>
+      <TTY>?</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>0</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>[ksoftirqd/0]</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>7</PID>
+      <STARTED>2017-06-08 07:06</STARTED>
+      <TTY>?</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>0</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>[rcu_sched]</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>8</PID>
+      <STARTED>2017-06-08 07:06</STARTED>
+      <TTY>?</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>0</VIRTUALMEMORY>
+    </PROCESSES>
+    <SLOTS>
+      <DESCRIPTION>Other</DESCRIPTION>
+      <NAME>SD CARD</NAME>
+      <STATUS>used</STATUS>
+    </SLOTS>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Java XML parser</COMMENTS>
+      <FILESIZE>1373517</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>26/10/2016</INSTALLDATE>
+      <NAME>xerces-j2</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Libraries</SYSTEM_CATEGORY>
+      <VERSION>2.11.0-24.fc24</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>Modules for PHP script using system process interfaces</COMMENTS>
+      <FILESIZE>92299</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>08/06/2017</INSTALLDATE>
+      <NAME>php71-php-process</NAME>
+      <PUBLISHER>Remi Collet</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Languages</SYSTEM_CATEGORY>
+      <VERSION>7.1.6-1.fc25.remi</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Nette NEON: parser and generator for Nette Object Notation</COMMENTS>
+      <FILESIZE>21254</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>16/01/2017</INSTALLDATE>
+      <NAME>php-nette-neon</NAME>
+      <PUBLISHER>Remi Collet</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Libraries</SYSTEM_CATEGORY>
+      <VERSION>2.4.1-1.fc25.remi</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>Font rendering capabilities for complex non-Roman writing systems</COMMENTS>
+      <FILESIZE>242503</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>03/01/2017</INSTALLDATE>
+      <NAME>graphite2</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Tools</SYSTEM_CATEGORY>
+      <VERSION>1.3.6-1.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Free Bengali script font</COMMENTS>
+      <FILESIZE>144668</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>26/10/2016</INSTALLDATE>
+      <NAME>lohit-bengali-fonts</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>User Interface/X</SYSTEM_CATEGORY>
+      <VERSION>2.91.3-2.fc24</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Java components interfaces</COMMENTS>
+      <FILESIZE>123992</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>03/01/2017</INSTALLDATE>
+      <NAME>avalon-framework</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Unspecified</SYSTEM_CATEGORY>
+      <VERSION>4.3-16.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Common files of naver-nanum-fonts</COMMENTS>
+      <FILESIZE>44935</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>26/10/2016</INSTALLDATE>
+      <NAME>naver-nanum-fonts-common</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Unspecified</SYSTEM_CATEGORY>
+      <VERSION>3.020-16.20140930.fc24</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>semanage python bindings for libsemanage</COMMENTS>
+      <FILESIZE>377978</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>20/04/2017</INSTALLDATE>
+      <NAME>libsemanage-python</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Libraries</SYSTEM_CATEGORY>
+      <VERSION>2.5-9.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Jetty asynchronous API</COMMENTS>
+      <FILESIZE>23934</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>03/01/2017</INSTALLDATE>
+      <NAME>jetty8-continuation</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Unspecified</SYSTEM_CATEGORY>
+      <VERSION>8.1.17-5.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>Python interface to libcurl for Python 3</COMMENTS>
+      <FILESIZE>913865</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>06/06/2017</INSTALLDATE>
+      <NAME>python3-pycurl</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Unspecified</SYSTEM_CATEGORY>
+      <VERSION>7.43.0-6.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>A Custom MutableSet that remembers its order</COMMENTS>
+      <FILESIZE>22169</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>03/01/2017</INSTALLDATE>
+      <NAME>python3-ordered-set</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Unspecified</SYSTEM_CATEGORY>
+      <VERSION>2.0.0-4.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>i686</ARCH>
+      <COMMENTS>The GNU libc libraries</COMMENTS>
+      <FILESIZE>15106995</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>03/01/2017</INSTALLDATE>
+      <NAME>glibc</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>System Environment/Libraries</SYSTEM_CATEGORY>
+      <VERSION>2.24-4.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>Open Geographic Datastore Interface</COMMENTS>
+      <FILESIZE>721041</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>03/01/2017</INSTALLDATE>
+      <NAME>ogdi</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Applications/Engineering</SYSTEM_CATEGORY>
+      <VERSION>3.2.0-0.26.beta2.fc24</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>Printer Drivers Package</COMMENTS>
+      <FILESIZE>23889276</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>26/10/2016</INSTALLDATE>
+      <NAME>gutenprint</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Unspecified</SYSTEM_CATEGORY>
+      <VERSION>5.2.11-2.fc24</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>CUPS printing system - libraries</COMMENTS>
+      <FILESIZE>895556</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>15/05/2017</INSTALLDATE>
+      <NAME>cups-libs</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Unspecified</SYSTEM_CATEGORY>
+      <VERSION>2.2.0-9.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>A text mode system configuration tool</COMMENTS>
+      <FILESIZE>148882</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>26/10/2016</INSTALLDATE>
+      <NAME>setuptool</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Applications/System</SYSTEM_CATEGORY>
+      <VERSION>1.19.11-11.fc24</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>Library for managing media art caches</COMMENTS>
+      <FILESIZE>92711</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>09/03/2017</INSTALLDATE>
+      <NAME>libmediaart</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Unspecified</SYSTEM_CATEGORY>
+      <VERSION>1.9.1-1.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>Utilities for manipulating .desktop files</COMMENTS>
+      <FILESIZE>242959</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>03/01/2017</INSTALLDATE>
+      <NAME>desktop-file-utils</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Tools</SYSTEM_CATEGORY>
+      <VERSION>0.23-2.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Central Authentication Service client library in php</COMMENTS>
+      <FILESIZE>398115</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>12/04/2017</INSTALLDATE>
+      <NAME>php-pear-CAS</NAME>
+      <PUBLISHER>Remi Collet</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Libraries</SYSTEM_CATEGORY>
+      <VERSION>1.3.5-1.fc25.remi</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>Phone anywhere in the whole world by using the Internet</COMMENTS>
+      <FILESIZE>8468191</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>03/01/2017</INSTALLDATE>
+      <NAME>linphone</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Unspecified</SYSTEM_CATEGORY>
+      <VERSION>3.6.1-15.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Data for kbd package</COMMENTS>
+      <FILESIZE>2454699</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>26/10/2016</INSTALLDATE>
+      <NAME>kbd-misc</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>System Environment/Base</SYSTEM_CATEGORY>
+      <VERSION>2.0.3-3.fc24</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>Command line interface utils for libnl3</COMMENTS>
+      <FILESIZE>717478</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>24/04/2017</INSTALLDATE>
+      <NAME>libnl3-cli</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Libraries</SYSTEM_CATEGORY>
+      <VERSION>3.2.29-3.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>A wrapper for the libglade library for use with PyGTK</COMMENTS>
+      <FILESIZE>24288</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>03/01/2017</INSTALLDATE>
+      <NAME>pygtk2-libglade</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Languages</SYSTEM_CATEGORY>
+      <VERSION>2.24.0-15.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Aether SPI</COMMENTS>
+      <FILESIZE>34337</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>26/10/2016</INSTALLDATE>
+      <NAME>aether-spi</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Unspecified</SYSTEM_CATEGORY>
+      <VERSION>1.0.2-4.fc24</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>A module for PHP applications which use XML</COMMENTS>
+      <FILESIZE>450079</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>07/06/2017</INSTALLDATE>
+      <NAME>php56-php-xml</NAME>
+      <PUBLISHER>Remi Collet</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Languages</SYSTEM_CATEGORY>
+      <VERSION>5.6.30-1.fc25.remi</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>Friendly distributed version control system</COMMENTS>
+      <FILESIZE>30662956</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>02/02/2017</INSTALLDATE>
+      <NAME>bzr</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Tools</SYSTEM_CATEGORY>
+      <VERSION>2.7.0-15.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Turns dates in to human readable format, e.g '3 minutes ago'</COMMENTS>
+      <FILESIZE>57754</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>03/01/2017</INSTALLDATE>
+      <NAME>python3-humanize</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Unspecified</SYSTEM_CATEGORY>
+      <VERSION>0.5.1-5.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Common Container Interface</COMMENTS>
+      <FILESIZE>3872</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>06/03/2017</INSTALLDATE>
+      <NAME>php-psr-container</NAME>
+      <PUBLISHER>Remi Collet</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Libraries</SYSTEM_CATEGORY>
+      <VERSION>1.0.0-1.fc25.remi</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>Devel libraries &amp; headers for liblzma</COMMENTS>
+      <FILESIZE>205025</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>26/10/2016</INSTALLDATE>
+      <NAME>xz-devel</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Libraries</SYSTEM_CATEGORY>
+      <VERSION>5.2.2-2.fc24</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>Libraries to handle compiled objects</COMMENTS>
+      <FILESIZE>746079</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>15/05/2017</INSTALLDATE>
+      <NAME>elfutils-libs</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Tools</SYSTEM_CATEGORY>
+      <VERSION>0.169-1.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Apache UIMA Addons components</COMMENTS>
+      <FILESIZE>6351156</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>16/01/2017</INSTALLDATE>
+      <NAME>uima-addons</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Unspecified</SYSTEM_CATEGORY>
+      <VERSION>2.3.1-7.fc24</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Java EE: Annotation API v1.1</COMMENTS>
+      <FILESIZE>33018</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>26/10/2016</INSTALLDATE>
+      <NAME>geronimo-annotation</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Unspecified</SYSTEM_CATEGORY>
+      <VERSION>1.0-18.fc24</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Transparently speed up functions by caching return values</COMMENTS>
+      <FILESIZE>83283</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>13/03/2017</INSTALLDATE>
+      <NAME>perl-Memoize</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Libraries</SYSTEM_CATEGORY>
+      <VERSION>1.03-385.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Perl termcap interface</COMMENTS>
+      <FILESIZE>29823</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>03/01/2017</INSTALLDATE>
+      <NAME>perl-Term-Cap</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Libraries</SYSTEM_CATEGORY>
+      <VERSION>1.17-365.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>A built-package format for Python</COMMENTS>
+      <FILESIZE>325286</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>22/05/2017</INSTALLDATE>
+      <NAME>python3-wheel</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Unspecified</SYSTEM_CATEGORY>
+      <VERSION>0.30.0a0-2.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>A password-checking library</COMMENTS>
+      <FILESIZE>210008</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>03/01/2017</INSTALLDATE>
+      <NAME>cracklib</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>System Environment/Libraries</SYSTEM_CATEGORY>
+      <VERSION>2.9.6-4.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Read and write lzma compressed data</COMMENTS>
+      <FILESIZE>138487</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>20/02/2017</INSTALLDATE>
+      <NAME>perl-IO-Compress-Lzma</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Libraries</SYSTEM_CATEGORY>
+      <VERSION>2.069-3.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Snappy compression library</COMMENTS>
+      <FILESIZE>93065</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>03/01/2017</INSTALLDATE>
+      <NAME>dain-snappy</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Unspecified</SYSTEM_CATEGORY>
+      <VERSION>0.4-2.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>Plexus Build API</COMMENTS>
+      <FILESIZE>25212</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>26/10/2016</INSTALLDATE>
+      <NAME>plexus-build-api</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Unspecified</SYSTEM_CATEGORY>
+      <VERSION>0.0.7-16.fc24</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>Standard PHP module provides tidy library support</COMMENTS>
+      <FILESIZE>54049</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>08/06/2017</INSTALLDATE>
+      <NAME>php70-php-tidy</NAME>
+      <PUBLISHER>Remi Collet</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Languages</SYSTEM_CATEGORY>
+      <VERSION>7.0.20-1.fc25.remi</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>noarch</ARCH>
+      <COMMENTS>World Timezone Definitions for Python</COMMENTS>
+      <FILESIZE>190188</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>06/03/2017</INSTALLDATE>
+      <NAME>pytz</NAME>
+      <PUBLISHER>Fedora Project</PUBLISHER>
+      <SYSTEM_CATEGORY>Development/Languages</SYSTEM_CATEGORY>
+      <VERSION>2016.6.1-1.fc25</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>DTS Coherent Acoustics decoder library</COMMENTS>
+      <FILESIZE>206785</FILESIZE>
+      <FROM>rpm</FROM>
+      <INSTALLDATE>03/01/2017</INSTALLDATE>
+      <NAME>libdca</NAME>
+      <PUBLISHER>RPM Fusion</PUBLISHER>
+      <SYSTEM_CATEGORY>System Environment/Libraries</SYSTEM_CATEGORY>
+      <VERSION>0.0.5-9.fc25</VERSION>
+    </SOFTWARES>
+    <SOUNDS>
+      <MANUFACTURER>Intel Corporation Haswell-ULT HD Audio Controller</MANUFACTURER>
+      <NAME>Audio device</NAME>
+    </SOUNDS>
+    <SOUNDS>
+      <DESCRIPTION>rev 04</DESCRIPTION>
+      <MANUFACTURER>Intel Corporation 8 Series HD Audio Controller</MANUFACTURER>
+      <NAME>Audio device</NAME>
+    </SOUNDS>
+    <STORAGES>
+      <DESCRIPTION>SATA</DESCRIPTION>
+      <DISKSIZE>250059</DISKSIZE>
+      <FIRMWARE>0101</FIRMWARE>
+      <MANUFACTURER>Toshiba</MANUFACTURER>
+      <MODEL>TOSHIBATHNSNJ25</MODEL>
+      <NAME>sda</NAME>
+      <SERIALNUMBER/>  <TYPE>disk</TYPE>
+    </STORAGES>
+    <USBDEVICES>
+      <CLASS>9</CLASS>
+      <MANUFACTURER>Intel Corp.</MANUFACTURER>
+      <PRODUCTID>8000</PRODUCTID>
+      <SUBCLASS>0</SUBCLASS>
+      <VENDORID>8087</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CAPTION>3.0 root hub</CAPTION>
+      <CLASS>9</CLASS>
+      <MANUFACTURER>Linux Foundation</MANUFACTURER>
+      <PRODUCTID>0003</PRODUCTID>
+      <SUBCLASS>0</SUBCLASS>
+      <VENDORID>1d6b</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CLASS>14</CLASS>
+      <MANUFACTURER>Chicony Electronics Co., Ltd</MANUFACTURER>
+      <PRODUCTID>b3b2</PRODUCTID>
+      <SERIAL>0x0001</SERIAL>
+      <SUBCLASS>2</SUBCLASS>
+      <VENDORID>04f2</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CAPTION>OZ776 CCID Smartcard Reader</CAPTION>
+      <CLASS>11</CLASS>
+      <MANUFACTURER>O2 Micro, Inc.</MANUFACTURER>
+      <PRODUCTID>7772</PRODUCTID>
+      <SUBCLASS>0</SUBCLASS>
+      <VENDORID>0b97</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CAPTION>Oz776 1.1 Hub</CAPTION>
+      <CLASS>9</CLASS>
+      <MANUFACTURER>O2 Micro, Inc.</MANUFACTURER>
+      <PRODUCTID>7761</PRODUCTID>
+      <SUBCLASS>0</SUBCLASS>
+      <VENDORID>0b97</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CAPTION>Hub</CAPTION>
+      <CLASS>9</CLASS>
+      <MANUFACTURER>Genesys Logic, Inc.</MANUFACTURER>
+      <PRODUCTID>0608</PRODUCTID>
+      <SUBCLASS>0</SUBCLASS>
+      <VENDORID>05e3</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CAPTION>Unifying Receiver</CAPTION>
+      <CLASS>3</CLASS>
+      <MANUFACTURER>Logitech, Inc.</MANUFACTURER>
+      <PRODUCTID>c52b</PRODUCTID>
+      <SUBCLASS>0</SUBCLASS>
+      <VENDORID>046d</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CAPTION>Wireless Keyboard/Mouse</CAPTION>
+      <CLASS>3</CLASS>
+      <MANUFACTURER>Creative Labs</MANUFACTURER>
+      <PRODUCTID>4101</PRODUCTID>
+      <SUBCLASS>1</SUBCLASS>
+      <VENDORID>062a</VENDORID>
+    </USBDEVICES>
+    <USERS>
+      <LOGIN>johan</LOGIN>
+    </USERS>
+    <VERSIONCLIENT>FusionInventory-Agent_v2.3.20</VERSIONCLIENT>
+    <VERSIONPROVIDER>
+      <NAME>FusionInventory</NAME>
+      <PERL_ARGS>--debug --debug</PERL_ARGS>
+      <PERL_CONFIG>gccversion: 6.3.1 20161221 (Red Hat 6.3.1-1)</PERL_CONFIG>
+      <PERL_CONFIG>defines: use64bitall use64bitint usedl usedtrace useithreads uselargefiles usemallocwrap usemultiplicity usemymalloc=n usenm=false useopcode useperlio useposix useshrplib usesitecustomize usethreads usevendorprefix usevfork=false</PERL_CONFIG>
+      <PERL_EXE>/usr/bin/perl</PERL_EXE>
+      <PERL_INC>/usr/share/fusioninventory/lib:/usr/local/lib64/perl5:/usr/local/share/perl5:/usr/lib64/perl5/vendor_perl:/usr/share/perl5/vendor_perl:/usr/lib64/perl5:/usr/share/perl5:.</PERL_INC>
+      <PERL_MODULE>LWP @ 6.15</PERL_MODULE>
+      <PERL_MODULE>LWP::Protocol @ 6.15</PERL_MODULE>
+      <PERL_MODULE>IO::Socket @ 1.38</PERL_MODULE>
+      <PERL_MODULE>IO::Socket::SSL @ 2.038</PERL_MODULE>
+      <PERL_MODULE>IO::Socket::INET @ 1.35</PERL_MODULE>
+      <PERL_MODULE>Net::SSLeay @ 1.78</PERL_MODULE>
+      <PERL_MODULE>Net::SSLeay uses OpenSSL 1.0.2k-fips  26 Jan 2017</PERL_MODULE>
+      <PERL_MODULE>Net::HTTPS @ 6.15</PERL_MODULE>
+      <PERL_MODULE>HTTP::Status @ 6.11</PERL_MODULE>
+      <PERL_MODULE>HTTP::Response @ 6.11</PERL_MODULE>
+      <PERL_VERSION>v5.24.1</PERL_VERSION>
+      <PROGRAM>/usr/bin/fusioninventory-agent</PROGRAM>
+      <VERSION>2.3.20</VERSION>
+    </VERSIONPROVIDER>
+    <VIRTUALMACHINES>
+      <MEMORY>1048</MEMORY>
+      <NAME>centos7.0</NAME>
+      <STATUS>off</STATUS>
+      <SUBSYSTEM>kvm</SUBSYSTEM>
+      <UUID>c37f7ce8-af95-4676-b454-0959f2c5e162</UUID>
+      <VCPU>1</VCPU>
+      <VMTYPE>libvirt</VMTYPE>
+    </VIRTUALMACHINES>
+    <VIRTUALMACHINES>
+      <MEMORY>2097</MEMORY>
+      <NAME>fedora23</NAME>
+      <STATUS>off</STATUS>
+      <SUBSYSTEM>kvm</SUBSYSTEM>
+      <UUID>358f16bf-6794-4f63-8947-150b807a2294</UUID>
+      <VCPU>1</VCPU>
+      <VMTYPE>libvirt</VMTYPE>
+    </VIRTUALMACHINES>
+    <VIRTUALMACHINES>
+      <MEMORY>4194</MEMORY>
+      <NAME>win8.1</NAME>
+      <STATUS>off</STATUS>
+      <SUBSYSTEM>kvm</SUBSYSTEM>
+      <UUID>fcb505ed-0ffa-419e-a5a0-fd20bed80f1e</UUID>
+      <VCPU>2</VCPU>
+      <VMTYPE>libvirt</VMTYPE>
+    </VIRTUALMACHINES>
+    <VOLUME_GROUPS>
+      <ATTR>wz--n-</ATTR>
+      <FREE>4</FREE>
+      <LV_COUNT>3</LV_COUNT>
+      <PV_COUNT>1</PV_COUNT>
+      <SIZE>255529</SIZE>
+      <VG_EXTENT_SIZE>4.19</VG_EXTENT_SIZE>
+      <VG_NAME>fedora</VG_NAME>
+      <VG_UUID>tZSsF8-wsLg-ZoAt-jjFY-GwGn-y2q3-QOP60c</VG_UUID>
+    </VOLUME_GROUPS>
+  </CONTENT>
+  <DEVICEID>LF014-2016-06-13-14-03-53</DEVICEID>
+  <QUERY>INVENTORY</QUERY>
+</REQUEST>

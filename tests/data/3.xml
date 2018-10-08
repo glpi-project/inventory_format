@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<REQUEST>
+  <CONTENT>
+    <ACCESSLOG>
+      <LOGDATE>2016-09-07 09:28:29</LOGDATE>
+    </ACCESSLOG>
+    <BIOS>
+      <BVERSION>IM51.0090.B09</BVERSION>
+      <SMANUFACTURER>Apple Computer, Inc.</SMANUFACTURER>
+      <SMODEL>iMac5,1</SMODEL>
+      <SSN>W87051UGVUV</SSN>
+    </BIOS>
+    <CPUS>
+      <CORE>2</CORE>
+      <FAMILYNUMBER>6</FAMILYNUMBER>
+      <MANUFACTURER>Intel</MANUFACTURER>
+      <MODEL>15</MODEL>
+      <NAME>Intel Core 2 Duo</NAME>
+      <SPEED>2160</SPEED>
+      <STEPPING>6</STEPPING>
+      <THREAD>2</THREAD>
+    </CPUS>
+    <DRIVES>
+      <FILESYSTEM>Journaled HFS+</FILESYSTEM>
+      <FREE>55540</FREE>
+      <LABEL>Disque dur</LABEL>
+      <SERIAL>530685C5-EA05-3626-9C24-50DEB9D8E0C3</SERIAL>
+      <TOTAL>80400</TOTAL>
+      <TYPE>/Volumes/Disque</TYPE>
+      <VOLUMN>/dev/disk0s2</VOLUMN>
+    </DRIVES>
+    <DRIVES>
+      <FILESYSTEM>Journaled HFS+</FILESYSTEM>
+      <FREE>26022</FREE>
+      <LABEL>osx106</LABEL>
+      <SERIAL>43B5177F-39A0-32D3-821B-C945C338E8E1</SERIAL>
+      <TOTAL>42900</TOTAL>
+      <TYPE>/</TYPE>
+      <VOLUMN>/dev/disk1s3</VOLUMN>
+    </DRIVES>
+    <DRIVES>
+      <FILESYSTEM>Journaled HFS+</FILESYSTEM>
+      <FREE>15400</FREE>
+      <LABEL>105</LABEL>
+      <SERIAL>423210F6-94D2-34FD-A135-9A9126161CE6</SERIAL>
+      <TOTAL>32200</TOTAL>
+      <TYPE>/Volumes/105</TYPE>
+      <VOLUMN>/dev/disk1s2</VOLUMN>
+    </DRIVES>
+    <ENVS>
+      <KEY>TERM</KEY>
+      <VAL>xterm-color</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>LOGNAME</KEY>
+      <VAL>root</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>SUDO_UID</KEY>
+      <VAL>501</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>SSH_AUTH_SOCK</KEY>
+      <VAL>/tmp/launch-znkTIO/Listeners</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>LANG</KEY>
+      <VAL>fr_FR.UTF-8</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>USER</KEY>
+      <VAL>root</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>__CF_USER_TEXT_ENCODING</KEY>
+      <VAL>0x0:0:1</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>HOME</KEY>
+      <VAL>/Users/teclib</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>SUDO_COMMAND</KEY>
+      <VAL>/bin/sh local.sh</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>PWD</KEY>
+      <VAL>/opt/fusioninventory-agent</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>_</KEY>
+      <VAL>./bin/perl</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>SHLVL</KEY>
+      <VAL>1</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>SHELL</KEY>
+      <VAL>/bin/bash</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>PATH</KEY>
+      <VAL>/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>SUDO_GID</KEY>
+      <VAL>20</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>USERNAME</KEY>
+      <VAL>root</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>SUDO_USER</KEY>
+      <VAL>teclib</VAL>
+    </ENVS>
+    <HARDWARE>
+      <ARCHNAME>darwin-thread-multi-2level</ARCHNAME>
+      <CHECKSUM>131071</CHECKSUM>
+      <DATELASTLOGGEDUSER>Sep  7 09:24   still</DATELASTLOGGEDUSER>
+      <DESCRIPTION>i386/46-08-06 06:55:16</DESCRIPTION>
+      <DNS>172.28.220.1</DNS>
+      <ETIME>24</ETIME>
+      <IPADDR>172.28.220.124</IPADDR>
+      <LASTLOGGEDUSER>teclib</LASTLOGGEDUSER>
+      <NAME>MacBook-de-teclib</NAME>
+      <OSCOMMENTS>Darwin Kernel Version 10.8.0: Tue Jun  7 16:33:36 PDT 2011; root:xnu-1504.15.3~1/RELEASE_I386</OSCOMMENTS>
+      <OSNAME>Mac OS X</OSNAME>
+      <OSVERSION>10.6.8 (10K549)</OSVERSION>
+      <PROCESSORN>1</PROCESSORN>
+      <PROCESSORS>2160</PROCESSORS>
+      <PROCESSORT>Intel Core 2 Duo</PROCESSORT>
+      <USERID>teclib</USERID>
+      <UUID>00000000-0000-1000-8000-0017F2D11432</UUID>
+      <VMSYSTEM>Physical</VMSYSTEM>
+      <WORKGROUP>local</WORKGROUP>
+    </HARDWARE>
+    <LOCAL_GROUPS>
+      <ID>0</ID>
+      <MEMBER>root</MEMBER>
+      <MEMBER>root</MEMBER>
+      <NAME>wheel</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>1</ID>
+      <MEMBER>root</MEMBER>
+      <MEMBER>daemon</MEMBER>
+      <NAME>daemon</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>2</ID>
+      <MEMBER>root</MEMBER>
+      <NAME>kmem</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>3</ID>
+      <MEMBER>root</MEMBER>
+      <NAME>sys</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>4</ID>
+      <MEMBER>root</MEMBER>
+      <MEMBER>_uucp</MEMBER>
+      <NAME>tty</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>5</ID>
+      <MEMBER>root</MEMBER>
+      <NAME>operator</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>8</ID>
+      <MEMBER>root</MEMBER>
+      <NAME>procview</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>9</ID>
+      <MEMBER>root</MEMBER>
+      <NAME>procmod</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>20</ID>
+      <MEMBER>root</MEMBER>
+      <NAME>staff</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>29</ID>
+      <MEMBER>root</MEMBER>
+      <MEMBER>_jabber</MEMBER>
+      <MEMBER>_postfix</MEMBER>
+      <MEMBER>_cyrus</MEMBER>
+      <MEMBER>_calendar</MEMBER>
+      <MEMBER>_dovecot</MEMBER>
+      <NAME>certusers</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>30</ID>
+      <MEMBER>_calendar</MEMBER>
+      <MEMBER>_jabber</MEMBER>
+      <MEMBER>_postfix</MEMBER>
+      <NAME>_keytabusers</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>80</ID>
+      <MEMBER>root</MEMBER>
+      <NAME>admin</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>93</ID>
+      <MEMBER>_teamsserver</MEMBER>
+      <MEMBER>_calendar</MEMBER>
+      <NAME>_calendar</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>-2</ID>
+      <LOGIN>nobody</LOGIN>
+      <NAME>Unprivileged User</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/root</HOME>
+      <ID>0</ID>
+      <LOGIN>root</LOGIN>
+      <NAME>System Administrator</NAME>
+      <SHELL>/bin/sh</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/root</HOME>
+      <ID>1</ID>
+      <LOGIN>daemon</LOGIN>
+      <NAME>System Services</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/spool/uucp</HOME>
+      <ID>4</ID>
+      <LOGIN>_uucp</LOGIN>
+      <NAME>Unix to Unix Copy Protocol</NAME>
+      <SHELL>/usr/sbin/uucico</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/spool/cups</HOME>
+      <ID>26</ID>
+      <LOGIN>_lp</LOGIN>
+      <NAME>Printing Services</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/spool/postfix</HOME>
+      <ID>27</ID>
+      <LOGIN>_postfix</LOGIN>
+      <NAME>Postfix Mail Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>54</ID>
+      <LOGIN>_mcxalr</LOGIN>
+      <NAME>MCX AppLaunch</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/pcast/agent</HOME>
+      <ID>55</ID>
+      <LOGIN>_pcastagent</LOGIN>
+      <NAME>Podcast Producer Agent</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/pcast/server</HOME>
+      <ID>56</ID>
+      <LOGIN>_pcastserver</LOGIN>
+      <NAME>Podcast Producer Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>58</ID>
+      <LOGIN>_serialnumberd</LOGIN>
+      <NAME>Serial Number Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>59</ID>
+      <LOGIN>_devdocs</LOGIN>
+      <NAME>Developer Documentation</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>60</ID>
+      <LOGIN>_sandbox</LOGIN>
+      <NAME>Seatbelt</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>65</ID>
+      <LOGIN>_mdnsresponder</LOGIN>
+      <NAME>mDNSResponder</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>67</ID>
+      <LOGIN>_ard</LOGIN>
+      <NAME>Apple Remote Desktop</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/Library/WebServer</HOME>
+      <ID>70</ID>
+      <LOGIN>_www</LOGIN>
+      <NAME>World Wide Web Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>71</ID>
+      <LOGIN>_eppc</LOGIN>
+      <NAME>Apple Events User</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>72</ID>
+      <LOGIN>_cvs</LOGIN>
+      <NAME>CVS Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>73</ID>
+      <LOGIN>_svn</LOGIN>
+      <NAME>SVN Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>74</ID>
+      <LOGIN>_mysql</LOGIN>
+      <NAME>MySQL Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>75</ID>
+      <LOGIN>_sshd</LOGIN>
+      <NAME>sshd Privilege separation</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>76</ID>
+      <LOGIN>_qtss</LOGIN>
+      <NAME>QuickTime Streaming Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/imap</HOME>
+      <ID>77</ID>
+      <LOGIN>_cyrus</LOGIN>
+      <NAME>Cyrus Administrator</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>78</ID>
+      <LOGIN>_mailman</LOGIN>
+      <NAME>Mailman List Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>79</ID>
+      <LOGIN>_appserver</LOGIN>
+      <NAME>Application Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/virusmails</HOME>
+      <ID>82</ID>
+      <LOGIN>_clamav</LOGIN>
+      <NAME>ClamAV Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/virusmails</HOME>
+      <ID>83</ID>
+      <LOGIN>_amavisd</LOGIN>
+      <NAME>AMaViS Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>84</ID>
+      <LOGIN>_jabber</LOGIN>
+      <NAME>Jabber XMPP Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/xgrid/controller</HOME>
+      <ID>85</ID>
+      <LOGIN>_xgridcontroller</LOGIN>
+      <NAME>Xgrid Controller</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/xgrid/agent</HOME>
+      <ID>86</ID>
+      <LOGIN>_xgridagent</LOGIN>
+      <NAME>Xgrid Agent</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>87</ID>
+      <LOGIN>_appowner</LOGIN>
+      <NAME>Application Owner</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>88</ID>
+      <LOGIN>_windowserver</LOGIN>
+      <NAME>WindowServer</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>89</ID>
+      <LOGIN>_spotlight</LOGIN>
+      <NAME>Spotlight</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>91</ID>
+      <LOGIN>_tokend</LOGIN>
+      <NAME>Token Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>92</ID>
+      <LOGIN>_securityagent</LOGIN>
+      <NAME>SecurityAgent</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>93</ID>
+      <LOGIN>_calendar</LOGIN>
+      <NAME>Calendar</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/teamsserver</HOME>
+      <ID>94</ID>
+      <LOGIN>_teamsserver</LOGIN>
+      <NAME>TeamsServer</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>95</ID>
+      <LOGIN>_update_sharing</LOGIN>
+      <NAME>Update Sharing</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>96</ID>
+      <LOGIN>_installer</LOGIN>
+      <NAME>Installer</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>97</ID>
+      <LOGIN>_atsserver</LOGIN>
+      <NAME>ATS Server</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>98</ID>
+      <LOGIN>_ftp</LOGIN>
+      <NAME>FTP Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>99</ID>
+      <LOGIN>_unknown</LOGIN>
+      <NAME>Unknown User</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>200</ID>
+      <LOGIN>_softwareupdate</LOGIN>
+      <NAME>Software Update Service</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>202</ID>
+      <LOGIN>_coreaudiod</LOGIN>
+      <NAME>Core Audio Daemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>203</ID>
+      <LOGIN>_screensaver</LOGIN>
+      <NAME>Screensaver</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty/usr/bin/false</HOME>
+      <ID>205</ID>
+      <LOGIN>_locationd</LOGIN>
+      <NAME>Location Daemon</NAME>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty/usr/bin/false</HOME>
+      <ID>206</ID>
+      <LOGIN>_carddav</LOGIN>
+      <NAME>CardDAV Service</NAME>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>208</ID>
+      <LOGIN>_trustevaluationagent</LOGIN>
+      <NAME>Trust Evaluation Agent</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>210</ID>
+      <LOGIN>_timezone</LOGIN>
+      <NAME>AutoTimeZoneDaemon</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>211</ID>
+      <LOGIN>_lda</LOGIN>
+      <NAME>Local Delivery Agent</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>212</ID>
+      <LOGIN>_cvmsroot</LOGIN>
+      <NAME>CVMS Root</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/db/lockdown</HOME>
+      <ID>213</ID>
+      <LOGIN>_usbmuxd</LOGIN>
+      <NAME>iPhone OS Device Helper</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <HOME>/var/empty</HOME>
+      <ID>214</ID>
+      <LOGIN>_dovecot</LOGIN>
+      <NAME>Dovecot Administrator</NAME>
+      <SHELL>/usr/bin/false</SHELL>
+    </LOCAL_USERS>
+    <MEMORIES>
+      <CAPACITY>2000</CAPACITY>
+      <CAPTION>Status: OK</CAPTION>
+      <DESCRIPTION></DESCRIPTION>
+      <NUMSLOTS>0</NUMSLOTS>
+      <SERIALNUMBER>0x3D0E44F2</SERIALNUMBER>
+      <SPEED>667</SPEED>
+      <TYPE>DDR2 SDRAM</TYPE>
+    </MEMORIES>
+    <MEMORIES>
+      <CAPACITY>2000</CAPACITY>
+      <CAPTION>Status: OK</CAPTION>
+      <DESCRIPTION></DESCRIPTION>
+      <NUMSLOTS>1</NUMSLOTS>
+      <SERIALNUMBER>0x23225E01</SERIALNUMBER>
+      <SPEED>667</SPEED>
+      <TYPE>DDR2 SDRAM</TYPE>
+    </MEMORIES>
+    <MONITORS>
+      <CAPTION>iMac</CAPTION>
+      <DESCRIPTION>iMac</DESCRIPTION>
+    </MONITORS>
+    <NETWORKS>
+      <DESCRIPTION>lo0</DESCRIPTION>
+      <IPADDRESS>127.0.0.1</IPADDRESS>
+      <IPADDRESS6>fe80::1</IPADDRESS6>
+      <IPMASK>255.0.0.0</IPMASK>
+      <IPSUBNET>127.0.0.0</IPSUBNET>
+      <MTU>16384</MTU>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>gif0</DESCRIPTION>
+      <MTU>1280</MTU>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>stf0</DESCRIPTION>
+      <MTU>1280</MTU>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>en0</DESCRIPTION>
+      <MACADDR>00:17:f2:d1:14:32</MACADDR>
+      <MTU>1500</MTU>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>en1</DESCRIPTION>
+      <IPADDRESS>172.28.220.124</IPADDRESS>
+      <IPADDRESS6>fe80::219:e3ff:fedb:64d2</IPADDRESS6>
+      <IPMASK>255.255.255.0</IPMASK>
+      <IPSUBNET>172.28.220.0</IPSUBNET>
+      <MACADDR>00:19:e3:db:64:d2</MACADDR>
+      <MTU>1500</MTU>
+      <STATUS>Up</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>fw0</DESCRIPTION>
+      <MACADDR>00:19:e3:ff:fe:71</MACADDR>
+      <MTU>2030</MTU>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <OPERATINGSYSTEM>
+      <ARCH>i386</ARCH>
+      <BOOT_TIME>2016-09-07 09:18:43</BOOT_TIME>
+      <DNS_DOMAIN />  <FQDN>MacBook-de-teclib.local</FQDN>
+      <FULL_NAME>Mac OS X</FULL_NAME>
+      <KERNEL_NAME>darwin</KERNEL_NAME>
+      <KERNEL_VERSION>10.8.0</KERNEL_VERSION>
+      <NAME>MacOSX</NAME>
+      <SSH_KEY>ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAxgqfElTLl3UcEJKcEwLN831ZUn6pWI50Atu7TSyvs/JR5JTdOhzNSA9MgE7pFGBEQ6gUqYcmz18h/1jMPadKl6FnD32w63HpkynmSZzHh2sSkUccdsHhkEYJ1JhWPzKIX1sydGL/hAXR+0ho8VrMcZi/GrxqJxsgj2AAx18VvRPaaujYz24c0YXRHUQ7Zh1TKBySAHewwCmyq2dc2tlwrw4nESufFmBDdXcnhJ4fcsaBE+uYcBBWg1i+ztMsZyUTf1/BxPx1z9wtjduT8J6XKbMh6+jYoFqTwWeoPs8IobVrjBMF1Hq9XzzhT1+NtJuBsKARUca9MkFVGy0t+LhJKw==</SSH_KEY>
+      <VERSION>10.6.8 (10K549)</VERSION>
+    </OPERATINGSYSTEM>
+    <PROCESSES>
+      <CMD>/sbin/launchd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>1</PID>
+      <STARTED>2016-09-07 09:18</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>2456836</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/libexec/kextd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.1</MEM>
+      <PID>10</PID>
+      <STARTED>2016-09-07 09:18</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>2447700</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/sbin/DirectoryService</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.1</MEM>
+      <PID>11</PID>
+      <STARTED>2016-09-07 09:18</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>2452712</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/sbin/notifyd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>12</PID>
+      <STARTED>2016-09-07 09:18</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>2444624</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/sbin/diskarbitrationd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>13</PID>
+      <STARTED>2016-09-07 09:18</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>2446968</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/libexec/configd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.1</MEM>
+      <PID>14</PID>
+      <STARTED>2016-09-07 09:18</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>2474796</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/sbin/syslogd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>15</PID>
+      <STARTED>2016-09-07 09:18</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>2457256</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/sbin/blued</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.1</MEM>
+      <PID>16</PID>
+      <STARTED>2016-09-07 09:18</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>2462484</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/sbin/distnoted</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>17</PID>
+      <STARTED>2016-09-07 09:18</STARTED>
+      <TTY>??</TTY>
+      <USER>daemon</USER>
+      <VIRTUALMEMORY>2446820</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/sbin/mDNSResponder -launchd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>18</PID>
+      <STARTED>2016-09-07 09:19</STARTED>
+      <TTY>??</TTY>
+      <USER>_mdnsresponder</USER>
+      <VIRTUALMEMORY>2459440</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/sbin/securityd -i</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.1</MEM>
+      <PID>22</PID>
+      <STARTED>2016-09-07 09:19</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>2459440</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/sbin/ntpd -c /private/etc/ntp-restrict.conf -n -g -p /var/run/ntpd.pid -f /var/db/ntp.drift</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>34</PID>
+      <STARTED>2016-09-07 09:19</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>2435284</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/PrivateFrameworks/MobileDevice.framework/Versions/A/Resources/usbmuxd -launchd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.1</MEM>
+      <PID>37</PID>
+      <STARTED>2016-09-07 09:19</STARTED>
+      <TTY>??</TTY>
+      <USER>_usbmuxd</USER>
+      <VIRTUALMEMORY>2460920</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/CoreServices/RemoteManagement/AppleVNCServer.bundle/Contents/Support/RFBRegisterMDNS</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>41</PID>
+      <STARTED>2016-09-07 09:19</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>2444888</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Support/mds</CMD>
+      <CPUUSAGE>0.2</CPUUSAGE>
+      <MEM>0.6</MEM>
+      <PID>43</PID>
+      <STARTED>2016-09-07 09:19</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>2689888</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow console</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.2</MEM>
+      <PID>44</PID>
+      <STARTED>2016-09-07 09:19</STARTED>
+      <TTY>??</TTY>
+      <USER>teclib</USER>
+      <VIRTUALMEMORY>2609496</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/sbin/KernelEventAgent</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>45</PID>
+      <STARTED>2016-09-07 09:19</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>2445904</VIRTUALMEMORY>
+    </PROCESSES>
+    <PROCESSES>
+      <CMD>/usr/libexec/hidd</CMD>
+      <CPUUSAGE>0.0</CPUUSAGE>
+      <MEM>0.0</MEM>
+      <PID>47</PID>
+      <STARTED>2016-09-07 09:19</STARTED>
+      <TTY>??</TTY>
+      <USER>root</USER>
+      <VIRTUALMEMORY>2438648</VIRTUALMEMORY>
+    </PROCESSES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2006-08-20 12:06</INSTALLDATE>
+      <NAME>ContentIndexing</NAME>
+      <VERSION>1.2.1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2015-05-02 14:25</INSTALLDATE>
+      <NAME>SystemUIServer_1</NAME>
+      <PUBLISHER>SystemUIServer version 1.5.5, Copyright 2000-2009 Apple Computer, Inc.</PUBLISHER>
+      <VERSION>1.5.5</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2006-08-20 05:52</INSTALLDATE>
+      <NAME>Image Events_0</NAME>
+      <VERSION>1.1.1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2016-09-04 09:55</INSTALLDATE>
+      <NAME>Saturn</NAME>
+      <VERSION>4.5.0</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Intel]</COMMENTS>
+      <INSTALLDATE>2016-08-23 20:15</INSTALLDATE>
+      <NAME>Expansion Slot Utility</NAME>
+      <VERSION>1.0.1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2016-08-23 20:15</INSTALLDATE>
+      <NAME>Type6Camera_0</NAME>
+      <PUBLISHER>3.0.3, © Copyright 2002-2005 Apple Computer Inc., all rights reserved.</PUBLISHER>
+      <VERSION>3.0.3</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2009-07-18 08:22</INSTALLDATE>
+      <NAME>SyncServer</NAME>
+      <PUBLISHER>© 2002-2003 Apple</PUBLISHER>
+      <VERSION>5.2</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2015-05-02 19:02</INSTALLDATE>
+      <NAME>MallocDebug_1</NAME>
+      <VERSION>1.7.1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Intel]</COMMENTS>
+      <INSTALLDATE>2009-04-07 02:42</INSTALLDATE>
+      <NAME>Grapher_0</NAME>
+      <VERSION>2.1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2015-05-02 14:25</INSTALLDATE>
+      <NAME>Image Capture Extension_1</NAME>
+      <PUBLISHER>4.0.4, © Copyright 2000-2009 Apple Inc., all rights reserved.</PUBLISHER>
+      <VERSION>4.0.4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2009-08-01 08:05</INSTALLDATE>
+      <NAME>IncompatibleAppDisplay</NAME>
+      <VERSION>305</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2006-08-20 13:53</INSTALLDATE>
+      <NAME>ARDAgent_0</NAME>
+      <PUBLISHER>2.2.1</PUBLISHER>
+      <VERSION>2.2.1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2015-05-02 14:25</INSTALLDATE>
+      <NAME>AppleFileServer_1</NAME>
+      <PUBLISHER>4.0.4</PUBLISHER>
+      <VERSION>4.0.4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2007-09-24 08:02</INSTALLDATE>
+      <NAME>ColorSyncScripting_0</NAME>
+      <PUBLISHER>Copyright 2006 Apple Computer, Inc.</PUBLISHER>
+      <VERSION>4.5</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2016-09-04 09:55</INSTALLDATE>
+      <NAME>Property List Editor</NAME>
+      <VERSION>2.2</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2006-08-20 14:29</INSTALLDATE>
+      <NAME>License</NAME>
+      <PUBLISHER>License</PUBLISHER>
+      <VERSION>1.0.2</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2016-08-23 20:15</INSTALLDATE>
+      <NAME>Assistant réglages Bluetooth_0</NAME>
+      <PUBLISHER>1.9.5, © Copyright 2007 Apple Inc.</PUBLISHER>
+      <VERSION>1.9.5</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Intel]</COMMENTS>
+      <INSTALLDATE>2009-08-01 08:01</INSTALLDATE>
+      <NAME>rcd</NAME>
+      <PUBLISHER>2.6</PUBLISHER>
+      <VERSION>2.6</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2007-09-11 00:23</INSTALLDATE>
+      <NAME>Build profile info web page_0</NAME>
+    </SOFTWARES>
+    <SOFTWARES>
+      <INSTALLDATE>2009-07-08 08:56</INSTALLDATE>
+      <NAME>Build Applet</NAME>
+      <PUBLISHER>2.6.0a0, (c) 2004 Python Software Foundation.</PUBLISHER>
+      <VERSION>2.6.0</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[PowerPC]</COMMENTS>
+      <INSTALLDATE>2007-01-23 07:19</INSTALLDATE>
+      <NAME>Rename profile</NAME>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2016-08-23 20:15</INSTALLDATE>
+      <NAME>BluetoothUIServer_0</NAME>
+      <PUBLISHER>1.9.5, © Copyright 2007 Apple Inc.</PUBLISHER>
+      <VERSION>1.9.5</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Intel]</COMMENTS>
+      <INSTALLDATE>2009-05-19 08:05</INSTALLDATE>
+      <NAME>SleepX</NAME>
+      <VERSION>2.7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2009-07-12 07:23</INSTALLDATE>
+      <NAME>SpeechSynthesisServer_0</NAME>
+      <VERSION>3.10.35</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2015-05-02 14:25</INSTALLDATE>
+      <NAME>Image Capture Web Server_1</NAME>
+      <PUBLISHER>4.0, © Copyright 2003-2006 Apple Computer Inc., all rights reserved.</PUBLISHER>
+      <VERSION>4.0</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Intel]</COMMENTS>
+      <INSTALLDATE>2009-07-31 09:23</INSTALLDATE>
+      <NAME>Dashcode</NAME>
+      <VERSION>3.0</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2015-05-02 14:25</INSTALLDATE>
+      <NAME>Type5Camera_1</NAME>
+      <PUBLISHER>4.0, © Copyright 2001-2006 Apple Computer Inc., all rights reserved.</PUBLISHER>
+      <VERSION>4.0</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2007-09-11 00:23</INSTALLDATE>
+      <NAME>Embed specific profile_0</NAME>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2006-08-20 12:07</INSTALLDATE>
+      <NAME>IM Plugin Converter</NAME>
+      <PUBLISHER>IM Plugin Converter 1.7</PUBLISHER>
+      <VERSION>1.7</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2016-08-23 20:15</INSTALLDATE>
+      <NAME>dotmacfx_0</NAME>
+      <VERSION>1.2.1</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2015-05-02 14:25</INSTALLDATE>
+      <NAME>Mail_1</NAME>
+      <VERSION>3.6</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2016-09-04 09:55</INSTALLDATE>
+      <NAME>ObjectAlloc</NAME>
+      <VERSION>3.4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Intel]</COMMENTS>
+      <INSTALLDATE>2009-07-15 07:51</INSTALLDATE>
+      <NAME>Aperçu</NAME>
+      <PUBLISHER>5.0.1, Copyright 2002-2009 Apple Inc.</PUBLISHER>
+      <VERSION>5.0.3</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2016-08-23 20:15</INSTALLDATE>
+      <NAME>Livre des polices_0</NAME>
+      <PUBLISHER>2.0.2, © Copyright Apple Computer Inc. 2003-2005</PUBLISHER>
+      <VERSION>2.0.3</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2015-05-02 14:25</INSTALLDATE>
+      <NAME>Utilitaire RAID_0</NAME>
+      <PUBLISHER>RAID Utility 1.0 (57), Copyright © 2007-2009 Apple Inc.</PUBLISHER>
+      <VERSION>1.0.3</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2008-09-25 17:56</INSTALLDATE>
+      <NAME>Agent de la borne d’accès AirPort_0</NAME>
+      <VERSION>1.5</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <INSTALLDATE>2015-05-02 19:02</INSTALLDATE>
+      <NAME>Build Applet_1</NAME>
+      <PUBLISHER>2.5.0a0, (c) 2004 Python Software Foundation.</PUBLISHER>
+      <VERSION>2.5.0</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2009-07-08 08:56</INSTALLDATE>
+      <NAME>Python Launcher_0</NAME>
+      <PUBLISHER>2.5.4, © 001-2006 Python Software Foundation</PUBLISHER>
+      <VERSION>2.5.4</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2016-08-23 20:15</INSTALLDATE>
+      <NAME>rcd_0</NAME>
+      <PUBLISHER>1.6</PUBLISHER>
+      <VERSION>1.6</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <COMMENTS>[Universal]</COMMENTS>
+      <INSTALLDATE>2015-05-02 19:02</INSTALLDATE>
+      <NAME>Thread Viewer_0</NAME>
+      <PUBLISHER>Thread Viewer</PUBLISHER>
+      <VERSION>1.4</VERSION>
+    </SOFTWARES>
+    <SOUNDS>
+      <DESCRIPTION>Intel High Definition Audio</DESCRIPTION>
+      <MANUFACTURER>Intel High Definition Audio</MANUFACTURER>
+      <NAME>Intel High Definition Audio</NAME>
+    </SOUNDS>
+    <USBDEVICES>
+      <CLASS>0</CLASS>
+      <NAME>Apple Extended USB Keyboard</NAME>
+      <PRODUCTID>0x20c</PRODUCTID>
+      <SUBCLASS>0</SUBCLASS>
+      <VENDORID>0x5ac</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CLASS>0</CLASS>
+      <NAME>Apple Optical USB Mouse</NAME>
+      <PRODUCTID>0x304</PRODUCTID>
+      <SUBCLASS>0</SUBCLASS>
+      <VENDORID>0x5ac</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CLASS>0</CLASS>
+      <NAME>IR Receiver</NAME>
+      <PRODUCTID>0x8240</PRODUCTID>
+      <SUBCLASS>0</SUBCLASS>
+      <VENDORID>0x5ac</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CLASS>224</CLASS>
+      <NAME>Bluetooth USB Host Controller</NAME>
+      <PRODUCTID>0x8206</PRODUCTID>
+      <SUBCLASS>1</SUBCLASS>
+      <VENDORID>0x5ac</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CLASS>0</CLASS>
+      <NAME>External USB 3.0</NAME>
+      <PRODUCTID>0xa00c</PRODUCTID>
+      <SERIAL>20150123045944</SERIAL>
+      <SUBCLASS>0</SUBCLASS>
+      <VENDORID>0x480</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CLASS>255</CLASS>
+      <NAME>Built-in iSight</NAME>
+      <PRODUCTID>0x8501</PRODUCTID>
+      <SUBCLASS>255</SUBCLASS>
+      <VENDORID>0x5ac</VENDORID>
+    </USBDEVICES>
+    <USERS>
+      <LOGIN>teclib</LOGIN>
+    </USERS>
+    <VERSIONCLIENT>FusionInventory-Agent_v2.3.18</VERSIONCLIENT>
+    <VIDEOS>
+      <CHIPSET>ATY,RadeonX1600</CHIPSET>
+      <MEMORY>128</MEMORY>
+      <NAME>ATI Radeon X1600</NAME>
+      <RESOLUTION>1680x1050</RESOLUTION>
+    </VIDEOS>
+  </CONTENT>
+  <DEVICEID>MacBook-de-teclib.local-2016-09-07-09-27-48</DEVICEID>
+  <QUERY>INVENTORY</QUERY>
+</REQUEST>
