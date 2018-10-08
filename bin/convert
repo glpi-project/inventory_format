@@ -1,0 +1,30 @@
+#!/usr/bin/env php
+<?php
+
+require_once 'vendor/autoload.php';
+require_once 'lib/php/Converter.php';
+
+
+if (count($argv) !== 2) {
+   die("usage: ".$argv[0]." /path/to/file\n");
+}
+
+$json_path = $argv[1];
+if (parse_url($json_path, PHP_URL_SCHEME) == null) {
+    if ($json_path{0} == '/') {
+        //absolute path
+        $json_path = 'file://' . $json_path;
+    } else {
+        //relative path: make absolute
+        $json_path = 'file://' . getcwd() . '/' . $json_path;
+    }
+}
+
+if (!file_exists($json_path)) {
+    echo "File does not exists!\n";
+    die(1);
+}
+
+$converter = new Glpi\Inventory\Converter;
+$json = $converter->convert(file_get_contents($json_path));
+$converter->validate($json);
