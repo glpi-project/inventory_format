@@ -96,12 +96,6 @@
               "type": "string",
               "title": "Signatures base version"
             },
-            "32engine_version": {
-              "type": "string"
-            },
-            "64engine_version": {
-              "type": "string"
-            }
           }
         },
         "batteries": {
