@@ -589,7 +589,7 @@
             },
             "etime": {
               "type": "integer",
-              "title": "Time (secondds) needed to run the inventory",
+              "title": "Time (seconds) needed to run the inventory",
               "default": "",
               "examples": [
                 "3"
@@ -1011,7 +1011,7 @@
             "properties": {
               "capacity": {
                 "type": "integer",
-                "title": "Memory capcitu in MB",
+                "title": "Memory capacity in MB",
                 "examples": [
                   "8192"
                 ]
