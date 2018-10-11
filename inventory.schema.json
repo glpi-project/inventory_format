@@ -1,5 +1,29 @@
 {
-  "definitions": {},
+  "definitions": {
+    "datetime": {
+      "type": "string",
+      "examples": [
+        "2018-10-11 04:55:07"
+      ],
+      "pattern": "^[0-9]{4}-(01|02|03|04|05|06|07|08|09|10|11|12)-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}$"
+    },
+    "date": {
+      "type": "string",
+      "examples": [
+        "31/12/2018",
+        "01/01/2018"
+      ],
+      "pattern": "^[0-9]{2}/(01|02|03|04|05|06|07|08|09|10|11|12)/[0-9]{4}$"
+    },
+    "biosdate": {
+      "type": "string",
+      "examples": [
+        "12/31/2018",
+        "01/01/2018"
+      ],
+      "pattern": "^(01|02|03|04|05|06|07|08|09|10|11|12)/[0-9]{2}/[0-9]{4}$"
+    }
+  },
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://glpi-project.org/inventory.json",
   "type": "object",
@@ -24,12 +48,11 @@
           ],
           "properties": {
             "logdate": {
-              "type": "string",
               "examples": [
                 "2018-10-11 04:55:07"
               ],
-              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}$"
-            },
+              "$ref": "#/definitions/datetime"
+             },
             "userid": {
               "type": "string"
             }
@@ -87,9 +110,8 @@
               ]
             },
             "expiration": {
-                "type": "string",
                 "title": "License expiration date",
-                "format": "date"
+                "$ref": "#/definitions/date"
             },
             "base_creation": {
                 "$comment": "What type is it? A date?",
@@ -121,8 +143,7 @@
                 ]
               },
               "date": {
-                "type": "string",
-                "format": "date"
+                "$ref": "#/definitions/date"
               },
               "chemistry": {
                 "type": "string",
@@ -165,8 +186,7 @@
               "type": "string"
             },
             "bdate": {
-              "type": "string",
-              "format": "date"
+              "$ref": "#/definitions/biosdate"
             },
             "bmanufacturer": {
               "type": "string",
@@ -490,8 +510,7 @@
                 ]
               },
               "createdate": {
-                "type": "string",
-                "format": "date"
+                "type": "string"
               },
               "label": {
                 "type": "string"
@@ -569,8 +588,7 @@
               ]
             },
             "datelastloggeduser": {
-              "type": "string",
-              "format": "date"
+              "type": "string"
             },
             "defaultgateway": {
               "type": "string",
@@ -1309,11 +1327,10 @@
               ]
             },
             "boot_time": {
-              "type": "string",
               "examples": [
                 "2017-06-08 07:06:47"
               ],
-              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}$"
+              "$ref": "#/definitions/datetime"
             },
             "dns_domain": {
               "type": "string",
@@ -1342,11 +1359,10 @@
               ]
             },
             "install_date": {
-              "type": "string",
               "examples": [
                 "2013-08-09 12:00:21"
               ],
-              "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}$"
+              "$ref": "#/definitions/datetime"
             },
             "kernel_name": {
               "type": "string",
@@ -1571,11 +1587,10 @@
                 ]
               },
               "started": {
-                "type": "string",
                 "examples": [
                   "2017-06-08 07:06"
                 ],
-                "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}$"
+                "$ref": "#/definitions/datetime"
               },
               "tty": {
                 "type": "string",
@@ -1696,8 +1711,7 @@
                 ]
               },
               "installdate": {
-                "type": "string",
-                "format": "date"
+                "$ref": "#/definitions/date"
               },
               "name": {
                 "type": "string",
@@ -2097,8 +2111,7 @@
                 "type": "string"
               },
               "activation_date": {
-                "type": "string",
-                "format": "date"
+                "$ref": "#/definitions/datetime"
               },
               "productid": {
                 "type": "string"
@@ -2150,8 +2163,7 @@
                 "type": "string"
               },
               "date": {
-                "type": "string",
-                "format": "date"
+                "$ref": "#/definitions/date"
               },
               "manufacturer": {
                 "type": "string"
