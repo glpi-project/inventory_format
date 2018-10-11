@@ -1873,7 +1873,7 @@
               "type": "string"
             },
             "serial": {
-              "type": "object"
+              "type": "string"
             },
             "type": {
               "type": "string",
