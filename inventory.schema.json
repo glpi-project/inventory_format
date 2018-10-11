@@ -992,7 +992,7 @@
                 ]
               },
               "vg_name": {
-                "ype": "string"
+                "type": "string"
               }
             }
           }
