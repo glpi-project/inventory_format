@@ -558,12 +558,6 @@
         "hardware": {
           "type": "object",
           "properties": {
-            "archname": {
-              "type": "string",
-              "examples": [
-                "x86_64-linux-thread-multi"
-              ]
-            },
             "chassis_type": {
               "type": "string",
               "title": "Computer chassis format, ie 'Notebook', 'Laptop', 'Server', etc.",
