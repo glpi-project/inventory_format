@@ -2082,7 +2082,7 @@
               "name": {
                 "type": "string"
               },
-              "fulname": {
+              "fullname": {
                 "type": "string"
               },
               "key": {
