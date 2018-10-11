@@ -645,9 +645,10 @@
             "vmsystem": {
               "type": "string",
               "examples": [
-                "Physical"
+                "Physical",
+                "Docker",
+                "lxc"
               ],
-              "pattern": "^(Physical|Xen|VirtualBox|Virtual Machine|VMware|QEMU|SolarisZone|VServer|OpenVZ|BSDJail|Parallels|Hyper-V|AIX_LPAR)$"
             },
             "workgroup": {
               "type": "string",
