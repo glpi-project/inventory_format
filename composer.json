@@ -1,0 +1,20 @@
+{
+    "name": "glpi-project/inventory_format",
+    "description": "GLPI Inventory format lib",
+    "keywords": ["automatic inventory", "GLPI"],
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Teclib'",
+            "email": "glpi@teclib.com",
+            "homepage": "https://teclib.com"
+        }
+    ],
+    "support" : {
+        "source": "https://github.com/glpi-project/inventory_format",
+        "issues": "https://github.com/glpi-project/inventory_format/issues"
+    },
+    "require": {
+        "seld/jsonlint": "^1.7"
+    }
+}

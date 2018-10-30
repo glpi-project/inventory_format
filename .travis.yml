@@ -1,0 +1,22 @@
+language: php
+sudo: required
+
+before_script:
+  - composer install
+
+script:
+  - ./vendor/bin/jsonlint -q inventory.schema.json
+
+php:
+  - 7.0
+  - 7.1
+  - 7.2
+  - 7.3
+  - nightly
+matrix:
+  allow_failures:
+    - php: nightly
+
+cache:
+  directories:
+    - $HOME/.composer/cache
