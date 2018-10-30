@@ -120,7 +120,7 @@
             "base_version": {
               "type": "string",
               "title": "Signatures base version"
-            },
+            }
           }
         },
         "batteries": {
@@ -663,7 +663,7 @@
                 "Physical",
                 "Docker",
                 "lxc"
-              ],
+              ]
             },
             "workgroup": {
               "type": "string",
