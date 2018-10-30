@@ -77,49 +77,52 @@
           }
         },
         "antivirus": {
-          "type": "object",
-          "properties": {
-            "company": {
-              "type": "string",
-              "examples": [
-                "Microsoft Corporation"
-              ]
-            },
-            "enabled": {
-              "type": "boolean"
-            },
-            "guid": {
-              "type": "string",
-              "examples": [
-                "{641105E6-77ED-3F35-A304-765193BCB75F}"
-              ]
-            },
-            "name": {
-              "type": "string",
-              "examples": [
-                "Microsoft Security Essentials"
-              ]
-            },
-            "uptodate": {
-              "type": "boolean"
-            },
-            "version": {
-              "type": "string",
-              "examples": [
-                "4.3.216.0"
-              ]
-            },
-            "expiration": {
-                "title": "License expiration date",
-                "$ref": "#/definitions/date"
-            },
-            "base_creation": {
-                "$comment": "What type is it? A date?",
-                "type": "string"
-            },
-            "base_version": {
-              "type": "string",
-              "title": "Signatures base version"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "company": {
+                "type": "string",
+                "examples": [
+                  "Microsoft Corporation"
+                ]
+              },
+              "enabled": {
+                "type": "boolean"
+              },
+              "guid": {
+                "type": "string",
+                "examples": [
+                  "{641105E6-77ED-3F35-A304-765193BCB75F}"
+                ]
+              },
+              "name": {
+                "type": "string",
+                "examples": [
+                  "Microsoft Security Essentials"
+                ]
+              },
+              "uptodate": {
+                "type": "boolean"
+              },
+              "version": {
+                "type": "string",
+                "examples": [
+                  "4.3.216.0"
+                ]
+              },
+              "expiration": {
+                  "title": "License expiration date",
+                  "$ref": "#/definitions/date"
+              },
+              "base_creation": {
+                  "$comment": "What type is it? A date?",
+                  "type": "string"
+              },
+              "base_version": {
+                "type": "string",
+                "title": "Signatures base version"
+              }
             }
           }
         },
@@ -537,12 +540,14 @@
             }
           }
         },
-        "firewall": {
-          "type": "object",
-          "required": [
-            "status"
-          ],
-          "properties": {
+        "firewalls": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "status"
+            ],
+            "properties": {
               "description": {
                 "type": "string",
                 "title": "Active connection's interface (Windows only)"
@@ -564,11 +569,12 @@
                   "PublicProfile"
                 ]
               },
-            "status": {
-              "type": "string",
-              "examples": [
-                "on"
-              ]
+              "status": {
+                "type": "string",
+                "examples": [
+                  "on"
+                ]
+              }
             }
           }
         },
@@ -1460,75 +1466,77 @@
           }
         },
         "printers": {
-          "type": "object",
-          "required": [
-            "name",
-            "network"
-          ],
-          "properties": {
-            "description": {
-              "type": "string",
-              "examples": [
-                "Deskjet-2540"
-              ]
-            },
-            "driver": {
-              "type": "string",
-              "examples": [
-                "HP Deskjet 2540 Series, hpcups 3.17.4"
-              ]
-            },
-            "name": {
-              "type": "string",
-              "examples": [
-                "Deskjet-2540"
-              ]
-            },
-            "network": {
-              "type": "boolean"
-            },
-            "port": {
-              "$comment": "Should be an integer?",
-              "type": "string",
-              "examples": [
-                "Deskjet-2540"
-              ]
-            },
-            "printprocessor": {
-              "type": "string",
-              "examples": [
-                "winprint"
-              ]
-            },
-            "resolution": {
-              "type": "string",
-              "examples": [
-                "200x200"
-              ]
-            },
-            "shared": {
-              "type": "boolean"
-            },
-            "status": {
-              "type": "string",
-              "examples": [
-                "Idle"
-              ]
-            },
-            "comment": {
-              "type": "string"
-            },
-            "errstatus": {
-              "type": "string"
-            },
-            "servername": {
-              "type": "string"
-            },
-            "sharename": {
-              "type": "string"
-            },
-            "serial": {
-              "type": "string"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "description": {
+                "type": "string",
+                "examples": [
+                  "Deskjet-2540"
+                ]
+              },
+              "driver": {
+                "type": "string",
+                "examples": [
+                  "HP Deskjet 2540 Series, hpcups 3.17.4"
+                ]
+              },
+              "name": {
+                "type": "string",
+                "examples": [
+                  "Deskjet-2540"
+                ]
+              },
+              "network": {
+                "type": "boolean"
+              },
+              "port": {
+                "$comment": "Should be an integer?",
+                "type": "string",
+                "examples": [
+                  "Deskjet-2540"
+                ]
+              },
+              "printprocessor": {
+                "type": "string",
+                "examples": [
+                  "winprint"
+                ]
+              },
+              "resolution": {
+                "type": "string",
+                "examples": [
+                  "200x200"
+                ]
+              },
+              "shared": {
+                "type": "boolean"
+              },
+              "status": {
+                "type": "string",
+                "examples": [
+                  "Idle"
+                ]
+              },
+              "comment": {
+                "type": "string"
+              },
+              "errstatus": {
+                "type": "string"
+              },
+              "servername": {
+                "type": "string"
+              },
+              "sharename": {
+                "type": "string"
+              },
+              "serial": {
+                "type": "string"
+              }
             }
           }
         },
@@ -1615,37 +1623,40 @@
           }
         },
         "slots": {
-          "type": "object",
-          "title": "A physical connection points including ports, motherboard slots and peripherals, and proprietary connection points",
-          "required": [
-            "description",
-            "designation",
-            "name",
-            "status"
-          ],
-          "properties": {
-            "description": {
-              "type": "string",
-              "examples": [
-                  "x16 PCI Express",
-                  "Other"
-              ]
-            },
-            "designation": {
-              "type": "string"
-            },
-            "name": {
-              "type": "string",
-              "examples": [
-                "SD CARD"
-              ]
-            },
-            "status": {
-              "type": "string",
-              "examples": [
-                "used"
-              ],
-              "pattern": "^(free|used)$"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "title": "A physical connection points including ports, motherboard slots and peripherals, and proprietary connection points",
+            "required": [
+              "description",
+              "designation",
+              "name",
+              "status"
+            ],
+            "properties": {
+              "description": {
+                "type": "string",
+                "examples": [
+                    "x16 PCI Express",
+                    "Other"
+                ]
+              },
+              "designation": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string",
+                "examples": [
+                  "SD CARD"
+                ]
+              },
+              "status": {
+                "type": "string",
+                "examples": [
+                  "used"
+                ],
+                "pattern": "^(free|used)$"
+              }
             }
           }
         },
@@ -1792,86 +1803,89 @@
           }
         },
         "storages": {
-          "type": "object",
-          "required": [
-            "manufacturer",
-            "model",
-            "name",
-            "type"
-          ],
-          "properties": {
-            "description": {
-              "type": "string",
-              "examples": [
-                "SATA"
-              ]
-            },
-            "disksize": {
-              "type": "integer",
-              "title": "Disk size in MB",
-              "examples": [
-                "250059"
-              ]
-            },
-            "firmware": {
-              "type": "string",
-              "examples": [
-                "0101"
-              ]
-            },
-            "interface": {
-              "type": "string",
-              "examples": [
-                "IDE"
-              ],
-              "pattern": "^(SCSI|HDC|IDE|USB|1394|serial-ATA|SAS)$"
-            },
-            "manufacturer": {
-              "type": "string",
-              "examples": [
-                "Toshiba"
-              ]
-            },
-            "model": {
-              "type": "string",
-              "examples": [
-                "TOSHIBATHNSNJ25"
-              ]
-            },
-            "name": {
-              "type": "string",
-              "examples": [
-                "sda",
-                "\\\\.\\PHYSICALDRIVE0"
-              ]
-            },
-            "scsi_coid": {
-              "type": "string",
-              "examples": [
-                "2"
-              ]
-            },
-            "scsi_lun": {
-              "type": "string"
-            },
-            "scsi_unid": {
-              "type": "string"
-            },
-            "scsi_chid": {
-              "type": "string"
-            },
-            "serial": {
-              "type": "string"
-            },
-            "type": {
-              "type": "string",
-              "examples": [
-                "disk"
-              ]
-            },
-            "wwn": {
-              "type": "string",
-              "title": "World Wide Name http://fr.wikipedia.org/wiki/World_Wide_Name"
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "manufacturer",
+              "model",
+              "name",
+              "type"
+            ],
+            "properties": {
+              "description": {
+                "type": "string",
+                "examples": [
+                  "SATA"
+                ]
+              },
+              "disksize": {
+                "type": "integer",
+                "title": "Disk size in MB",
+                "examples": [
+                  "250059"
+                ]
+              },
+              "firmware": {
+                "type": "string",
+                "examples": [
+                  "0101"
+                ]
+              },
+              "interface": {
+                "type": "string",
+                "examples": [
+                  "IDE"
+                ],
+                "pattern": "^(SCSI|HDC|IDE|USB|1394|serial-ATA|SAS)$"
+              },
+              "manufacturer": {
+                "type": "string",
+                "examples": [
+                  "Toshiba"
+                ]
+              },
+              "model": {
+                "type": "string",
+                "examples": [
+                  "TOSHIBATHNSNJ25"
+                ]
+              },
+              "name": {
+                "type": "string",
+                "examples": [
+                  "sda",
+                  "\\\\.\\PHYSICALDRIVE0"
+                ]
+              },
+              "scsi_coid": {
+                "type": "string",
+                "examples": [
+                  "2"
+                ]
+              },
+              "scsi_lun": {
+                "type": "string"
+              },
+              "scsi_unid": {
+                "type": "string"
+              },
+              "scsi_chid": {
+                "type": "string"
+              },
+              "serial": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "examples": [
+                  "disk"
+                ]
+              },
+              "wwn": {
+                "type": "string",
+                "title": "World Wide Name http://fr.wikipedia.org/wiki/World_Wide_Name"
+              }
             }
           }
         },
@@ -1930,22 +1944,25 @@
           }
         },
         "users": {
-          "type": "object",
-          "required": [
-            "login"
-          ],
-          "properties": {
-            "domain": {
-              "type": "string",
-              "examples": [
-                "AD"
-              ]
-            },
-            "login": {
-              "type": "string",
-              "examples": [
-                "johan"
-              ]
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "login"
+            ],
+            "properties": {
+              "domain": {
+                "type": "string",
+                "examples": [
+                  "AD"
+                ]
+              },
+              "login": {
+                "type": "string",
+                "examples": [
+                  "johan"
+                ]
+              }
             }
           }
         },
