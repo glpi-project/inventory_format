@@ -128,11 +128,8 @@
           "items": {
             "type": "object",
             "required": [
-                "capacity",
                 "chemistry",
-                "manufacturer",
-                "name",
-                "voltage"
+                "manufacturer"
             ],
             "properties": {
               "capacity": {
@@ -178,7 +175,6 @@
         "bios": {
           "type": "object",
           "required": [
-            "bmanufacturer",
             "bversion"
           ],
           "properties": {
@@ -339,7 +335,6 @@
           "items": {
             "type": "object",
             "required": [
-                "arch",
                 "name"
             ],
             "properties": {
@@ -750,7 +745,6 @@
             "type": "object",
             "required": [
               "id",
-              "member",
               "name"
             ],
             "properties": {
@@ -786,11 +780,7 @@
           "items": {
             "type": "object",
             "required": [
-              "home",
-              "id",
-              "login",
-              "name",
-              "shell"
+              "id"
             ],
             "properties": {
               "home": {
@@ -1018,11 +1008,7 @@
           "items": {
             "type": "object",
             "required": [
-              "capacity",
-              "caption",
-              "manufacturer",
-              "speed",
-              "type"
+              "caption"
             ],
             "properties": {
               "capacity": {
@@ -1099,7 +1085,6 @@
           "items": {
             "type": "object",
             "required": [
-                "base64",
                 "caption"
             ],
             "properties": {
@@ -1158,10 +1143,7 @@
             "type": "object",
             "required": [
               "description",
-              "macaddr",
-              "speed",
-              "status",
-              "type"
+              "status"
             ],
             "properties": {
               "description": {
@@ -1316,8 +1298,7 @@
           "required": [
             "arch",
             "full_name",
-            "name",
-            "version"
+            "name"
           ],
           "properties": {
             "arch": {
@@ -1447,7 +1428,6 @@
           "items": {
             "type": "object",
             "required": [
-              "name",
               "type"
             ],
             "properties": {
@@ -1674,9 +1654,7 @@
           "items": {
             "type": "object",
             "required": [
-              "name",
-              "system_category",
-              "version"
+              "name"
             ],
             "properties": {
               "arch": {
@@ -1816,8 +1794,6 @@
         "storages": {
           "type": "object",
           "required": [
-            "disksize",
-            "interface",
             "manufacturer",
             "model",
             "name",
