@@ -10,29 +10,20 @@
       "examples": [
         "2018-10-11 04:55:07"
       ],
-      "pattern": "^[0-9]{4}-(01|02|03|04|05|06|07|08|09|10|11|12)-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}$"
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}$"
     },
     "date": {
       "type": "string",
       "examples": [
-        "31/12/2018",
-        "01/01/2018"
+        "2018-12-31",
+        "2012-01-01"
       ],
-      "pattern": "^[0-9]{2}/(01|02|03|04|05|06|07|08|09|10|11|12)/[0-9]{4}$"
-    },
-    "biosdate": {
-      "type": "string",
-      "examples": [
-        "12/31/2018",
-        "01/01/2018"
-      ],
-      "pattern": "^(01|02|03|04|05|06|07|08|09|10|11|12)/[0-9]{2}/[0-9]{4}$"
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
     }
   },
   "required": [
     "content",
-    "deviceid",
-    "query"
+    "deviceid"
   ],
   "properties": {
     "content": {
@@ -130,10 +121,6 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": [
-                "chemistry",
-                "manufacturer"
-            ],
             "properties": {
               "capacity": {
                 "type": "string",
@@ -185,7 +172,7 @@
               "type": "string"
             },
             "bdate": {
-              "$ref": "#/definitions/biosdate"
+              "$ref": "#/definitions/date"
             },
             "bmanufacturer": {
               "type": "string",
@@ -1413,7 +1400,7 @@
                   "examples": [
                     "+0200"
                   ],
-                  "pattern": "^(+|-)[0-9]{4}$"
+                  "pattern": "^[+-][0-9]{4}$"
                 }
               }
             },
@@ -1997,8 +1984,6 @@
             "required": [
               "name",
               "status",
-              "subsystem",
-              "uuid",
               "vcpu",
               "vmtype"
             ],
