@@ -164,9 +164,6 @@
         },
         "bios": {
           "type": "object",
-          "required": [
-            "bversion"
-          ],
           "properties": {
             "assettag": {
               "type": "string"
@@ -247,9 +244,6 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": [
-              "name"
-            ],
             "properties": {
               "caption": {
                 "type": "string",
@@ -324,9 +318,6 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": [
-                "name"
-            ],
             "properties": {
               "arch": {
                 "type": "string",
@@ -807,138 +798,142 @@
           }
         },
         "physical_volumes": {
-          "type": "object",
-          "required": [
-            "device",
-            "format",
-            "free",
-            "pe_size",
-            "pv_pe_count",
-            "pv_uuid",
-            "size",
-            "vg_uuid"
-          ],
-          "properties": {
-            "attr": {
-              "type": "string",
-              "examples": [
-                "a--"
-              ]
-            },
-            "device": {
-              "type": "string",
-              "examples": [
-                "/dev/mapper/luks-cb6a71cc-593e-4490-9c75-3e4d652ed366"
-              ]
-            },
-            "format": {
-              "type": "string",
-              "examples": [
-                "lvm2"
-              ]
-            },
-            "free": {
-              "type": "integer",
-              "title": "Free size, in MB",
-              "examples": [
-                "4"
-              ]
-            },
-            "pe_size": {
-              "type": "integer",
-              "title": "Physical Extent size, in MB",
-              "examples": [
-                "4"
-              ]
-            },
-            "pv_pe_count": {
-              "type": "integer",
-              "examples": [
-                "60923"
-              ]
-            },
-            "pv_uuid": {
-              "type": "string",
-              "examples": [
-                "1CmGuH-0Vwr-H3O6-dhgy-wEHS-P2jC-NuhuPS"
-              ]
-            },
-            "size": {
-              "type": "integer",
-              "title": "Volume size, in MB",
-              "examples": [
-                "255529"
-              ]
-            },
-            "vg_uuid": {
-              "type": "string",
-              "examples": [
-                "tZSsF8-wsLg-ZoAt-jjFY-GwGn-y2q3-QOP60c"
-              ]
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "device",
+              "format",
+              "free",
+              "pv_pe_count",
+              "pv_uuid",
+              "size"
+            ],
+            "properties": {
+              "attr": {
+                "type": "string",
+                "examples": [
+                  "a--"
+                ]
+              },
+              "device": {
+                "type": "string",
+                "examples": [
+                  "/dev/mapper/luks-cb6a71cc-593e-4490-9c75-3e4d652ed366"
+                ]
+              },
+              "format": {
+                "type": "string",
+                "examples": [
+                  "lvm2"
+                ]
+              },
+              "free": {
+                "type": "integer",
+                "title": "Free size, in MB",
+                "examples": [
+                  "4"
+                ]
+              },
+              "pe_size": {
+                "type": "integer",
+                "title": "Physical Extent size, in MB",
+                "examples": [
+                  "4"
+                ]
+              },
+              "pv_pe_count": {
+                "type": "integer",
+                "examples": [
+                  "60923"
+                ]
+              },
+              "pv_uuid": {
+                "type": "string",
+                "examples": [
+                  "1CmGuH-0Vwr-H3O6-dhgy-wEHS-P2jC-NuhuPS"
+                ]
+              },
+              "size": {
+                "type": "integer",
+                "title": "Volume size, in MB",
+                "examples": [
+                  "255529"
+                ]
+              },
+              "vg_uuid": {
+                "type": "string",
+                "examples": [
+                  "tZSsF8-wsLg-ZoAt-jjFY-GwGn-y2q3-QOP60c"
+                ]
+              }
             }
           }
         },
         "volume_groups": {
-          "type": "object",
-          "required": [
-            "free",
-            "lv_count",
-            "pv_count",
-            "size",
-            "vg_extent_size",
-            "vg_name",
-            "vg_uuid"
-          ],
-          "properties": {
-            "attr": {
-              "type": "string",
-              "examples": [
-                "wz--n-"
-              ]
-            },
-            "free": {
-              "type": "integer",
-              "title": "Free size, in MB",
-              "examples": [
-                "4"
-              ]
-            },
-            "lv_count": {
-              "type": "integer",
-              "examples": [
-                "3"
-              ]
-            },
-            "pv_count": {
-              "type": "integer",
-              "examples": [
-                "1"
-              ]
-            },
-            "size": {
-              "type": "integer",
-              "title": "Size, in MB",
-              "examples": [
-                "255529"
-              ]
-            },
-            "vg_extent_size": {
-              "type": "string",
-              "examples": [
-                "4.19"
-              ]
-            },
-            "vg_name": {
-              "type": "string",
-              "examples": [
-                "fedora"
-              ]
-            },
-            "vg_uuid": {
-              "type": "string",
-              "examples": [
-                "tZSsF8-wsLg-ZoAt-jjFY-GwGn-y2q3-QOP60c"
-              ]
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "free",
+              "lv_count",
+              "pv_count",
+              "size",
+              "vg_extent_size",
+              "vg_name",
+              "vg_uuid"
+            ],
+            "properties": {
+              "attr": {
+                "type": "string",
+                "examples": [
+                  "wz--n-"
+                ]
+              },
+              "free": {
+                "type": "integer",
+                "title": "Free size, in MB",
+                "examples": [
+                  "4"
+                ]
+              },
+              "lv_count": {
+                "type": "integer",
+                "examples": [
+                  "3"
+                ]
+              },
+              "pv_count": {
+                "type": "integer",
+                "examples": [
+                  "1"
+                ]
+              },
+              "size": {
+                "type": "integer",
+                "title": "Size, in MB",
+                "examples": [
+                  "255529"
+                ]
+              },
+              "vg_extent_size": {
+                "type": "string",
+                "examples": [
+                  "4.19"
+                ]
+              },
+              "vg_name": {
+                "type": "string",
+                "examples": [
+                  "fedora"
+                ]
+              },
+              "vg_uuid": {
+                "type": "string",
+                "examples": [
+                  "tZSsF8-wsLg-ZoAt-jjFY-GwGn-y2q3-QOP60c"
+                ]
+              }
             }
           }
         },
@@ -949,8 +944,7 @@
             "required": [
               "lv_name",
               "lv_uuid",
-              "size",
-              "vg_uuid"
+              "size"
             ],
             "properties": {
               "attr": {
@@ -1000,9 +994,6 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": [
-              "caption"
-            ],
             "properties": {
               "capacity": {
                 "type": "integer",
@@ -1077,9 +1068,6 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": [
-                "caption"
-            ],
             "properties": {
               "base64": {
                 "$comment": "Guess this is a base64 encoded",
@@ -1160,8 +1148,7 @@
                 "format": "ipv4"
               },
               "ipaddress6": {
-                "type": "string",
-                "format": "ipv6"
+                "type": "string"
               },
               "ipdhcp": {
                 "type": "string",
@@ -1232,7 +1219,7 @@
                   "ethernet",
                   "loopback"
                 ],
-                "pattern": "^(ethernet|wifi|infiniband|aggregate|alias|dialup|loopback|bridge|fibrechannel)$"
+                "pattern": "^(ethernet|wifi|infiniband|aggregate|alias|dialup|loopback|bridge|fibrechannel|bluetooth)$"
               },
               "virtualdev": {
                 "type": "boolean",
@@ -1288,11 +1275,6 @@
         },
         "operatingsystem": {
           "type": "object",
-          "required": [
-            "arch",
-            "full_name",
-            "name"
-          ],
           "properties": {
             "arch": {
               "type": "string",
@@ -1589,23 +1571,26 @@
           }
         },
         "remote_mgmt": {
-          "type": "object",
-          "required": [
-            "id",
-            "type"
-          ],
-          "properties": {
-            "id": {
-              "type": "string",
-              "examples": [
-                "700873443"
-              ]
-            },
-            "type": {
-              "type": "string",
-              "examples": [
-                "teamviewer"
-              ]
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "type"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "examples": [
+                  "700873443"
+                ]
+              },
+              "type": {
+                "type": "string",
+                "examples": [
+                  "teamviewer"
+                ]
+              }
             }
           }
         },
@@ -1616,8 +1601,7 @@
             "title": "A physical connection points including ports, motherboard slots and peripherals, and proprietary connection points",
             "required": [
               "description",
-              "name",
-              "status"
+              "name"
             ],
             "properties": {
               "description": {
@@ -1792,12 +1776,6 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": [
-              "manufacturer",
-              "model",
-              "name",
-              "type"
-            ],
             "properties": {
               "description": {
                 "type": "string",
@@ -1823,7 +1801,7 @@
                 "examples": [
                   "IDE"
                 ],
-                "pattern": "^(SCSI|HDC|IDE|USB|1394|SATA|SAS)$"
+                "pattern": "^(SCSI|HDC|IDE|USB|1394|SATA|SAS|ATAPI)$"
               },
               "manufacturer": {
                 "type": "string",
@@ -1929,9 +1907,6 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": [
-              "login"
-            ],
             "properties": {
               "domain": {
                 "type": "string",
@@ -1949,31 +1924,31 @@
           }
         },
         "videos": {
-          "type": "object",
-          "required": [
-            "name"
-          ],
-          "properties": {
-            "name": {
-              "type": "string",
-              "examples": [
-                "VirtualBox Graphics Adapter"
-              ]
-            },
-            "chipset": {
-                "type": "string"
-            },
-            "memory": {
-                "type": "integer"
-            },
-            "resolution": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
                 "type": "string",
                 "examples": [
-                    "1024x768"
+                  "VirtualBox Graphics Adapter"
                 ]
-            },
-            "pcislot": {
-                "type": "string"
+              },
+              "chipset": {
+                  "type": "string"
+              },
+              "memory": {
+                  "type": "integer"
+              },
+              "resolution": {
+                  "type": "string",
+                  "examples": [
+                      "1024x768"
+                  ]
+              },
+              "pcislot": {
+                  "type": "string"
+              }
             }
           }
         },
@@ -1983,8 +1958,6 @@
             "type": "object",
             "required": [
               "name",
-              "status",
-              "vcpu",
               "vmtype"
             ],
             "properties": {
@@ -2039,7 +2012,7 @@
                 "examples": [
                   "libvirt"
                 ],
-                "pattern": "^(Physical|Xen|VirtualBox|Virtual Machine|VMware|QEMU|SolarisZone|VServer|OpenVZ|BSDJail|Parallels|Hyper-V|AIX_LPAR|Docker|libvirt|LXD)$"
+                "pattern": "^(physical|xen|virtualbox|virtual machine|vmware|qemu|solariszone|vserver|openvz|bsdjail|parallels|hyperv|aix_lpar|docker|libvirt|lxd|lxc|virtuozzo)$"
               },
               "vmid": {
                 "type": "string"
