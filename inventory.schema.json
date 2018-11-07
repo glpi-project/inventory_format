@@ -598,7 +598,7 @@
             "lastloggeduser": {
               "type": "string",
               "examples": [
-                "johan"
+                "john"
               ]
             },
             "memory": {
@@ -647,7 +647,7 @@
             "workgroup": {
               "type": "string",
               "examples": [
-                "ad.teclib.infra"
+                "ad.example.com"
               ]
             },
             "type": {
@@ -743,10 +743,9 @@
                 "items": {
                   "type": "string",
                   "examples": [
-                    "teclib",
                     "builder",
-                    "jcwiklinski@ad.teclib.infra",
-                    "johan"
+                    "jdoe@ad.example.com",
+                    "john"
                   ]
                 }
               },
@@ -1291,13 +1290,13 @@
             "dns_domain": {
               "type": "string",
               "examples": [
-                "ad.teclib.infra"
+                "ad.example.com"
               ]
             },
             "fqdn": {
               "type": "string",
               "examples": [
-                "LF014.ad.teclib.infra"
+                "skynet.ad.example.com"
               ]
             },
             "full_name": {
@@ -1917,7 +1916,7 @@
               "login": {
                 "type": "string",
                 "examples": [
-                  "johan"
+                  "john"
                 ]
               }
             }
