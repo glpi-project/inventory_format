@@ -372,7 +372,7 @@ Original XML specification
        <!ELEMENT MEMORYCORRECTION (#PCDATA)>
        <!ELEMENT MANUFACTURER (#PCDATA)>
 
-     <!ELEMENT MODEMS (NAME, DESCRIPTION, TYPE, MODEL, MANUFACTURER, SERIAL)>
+     <!ELEMENT MODEMS (NAME, DESCRIPTION, TYPE, MODEL, MANUFACTURER, SERIAL, IMEI)>
        <!-- modem name -->
        <!ELEMENT NAME (#PCDATA)>
        <!-- modem description if available -->
@@ -385,6 +385,8 @@ Original XML specification
        <!ELEMENT MANUFACTURER (#PCDATA)>
        <!-- modem serial -->
        <!ELEMENT SERIAL (#PCDATA)>
+       <!-- IMEI information -->
+       <!ELEMENT IMEI (#PCDATA)>
 
      <!-- component firmwares -->
      <!ELEMENT FIRMWARES (NAME, DESCRIPTION, TYPE, VERSION, DATE, MANUFACTURER)>
