@@ -2086,9 +2086,6 @@
               },
               "serial": {
                 "type": "string"
-              },
-              "imei": {
-                "type": "string"
               }
             }
           }
