@@ -274,6 +274,7 @@ class Converter
                 'cpus/stepping',
                 'cpus/thread',
                 'cpus/external_clock',
+                'cpus/corecount',
                 'drives/free',
                 'drives/total',
                 'hardware/etime',
@@ -528,6 +529,9 @@ class Converter
                         case 'stopped':
                             $vm['status'] = 'off';
                             break;
+                        case 'unknown':
+                            unset($vm['status']);
+                            break;
                     }
                 }
             }
@@ -535,6 +539,14 @@ class Converter
 
         if (!isset($data['content']['versionclient']) && isset($data['content']['hardware']['versionclient'])) {
             $data['content']['versionclient'] = $data['content']['hardware']['versionclient'];
+        }
+
+        if (isset($data['content']['accountinfo'])) {
+            if (isset($data['content']['accountinfo']['keyname'])
+                && !isset($data['content']['accountinfo']['keyvalue'])
+            ) {
+                $data['content']['accountinfo']['keyvalue'] = '';
+            }
         }
 
         return $data;
