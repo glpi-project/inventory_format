@@ -25,6 +25,11 @@ if (!file_exists($json_path)) {
     die(1);
 }
 
-$converter = new Glpi\Inventory\Converter;
-$json = $converter->convert(file_get_contents($json_path));
-$converter->validate($json);
+try {
+    $converter = new Glpi\Inventory\Converter;
+    $json = $converter->convert(file_get_contents($json_path));
+    $converter->validate($json);
+} catch (\Exception $e) {
+    echo "File: $json_path\n";
+    throw $e;
+}
