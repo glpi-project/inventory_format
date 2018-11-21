@@ -1739,10 +1739,6 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": [
-              "manufacturer",
-              "name"
-            ],
             "properties": {
               "caption": {
                 "type": "string",
