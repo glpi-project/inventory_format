@@ -2114,6 +2114,17 @@
               },
               "serial": {
                 "type": "string"
+              },
+              "imei": {
+                "oneOf": [{
+                    "type": "string"
+                  }, {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                ]
               }
             }
           }
