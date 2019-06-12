@@ -242,6 +242,10 @@
             },
             "enclosureserial": {
                 "type": "string"
+            },
+            "partial": {
+              "type": "boolean",
+              "title": "To set when bios only contains partial data for partial inventory"
             }
           }
         },
@@ -716,6 +720,10 @@
             },
             "vmhostserial": {
               "type": "string"
+            },
+            "partial": {
+              "type": "boolean",
+              "title": "To set when hardware only contains partial data for partial inventory"
             }
           }
         },
