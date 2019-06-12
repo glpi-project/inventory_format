@@ -29,6 +29,8 @@
     "content": {
       "type": "object",
       "required": [
+        "bios",
+        "hardware",
         "versionclient"
       ],
       "properties": {
@@ -164,6 +166,9 @@
         },
         "bios": {
           "type": "object",
+          "required": [
+            "ssn"
+          ],
           "properties": {
             "assettag": {
               "type": "string"
@@ -586,6 +591,9 @@
         },
         "hardware": {
           "type": "object",
+          "required": [
+            "name"
+          ],
           "properties": {
             "chassis_type": {
               "type": "string",
@@ -660,6 +668,7 @@
             "uuid": {
               "type": "string",
               "title": "Computer unique identifier",
+              "description": "Computer UUID (should be set also for partial inventory)",
               "examples": [
                 "0055ADC9-1D3A-E411-8043-B05D95113232"
               ]
@@ -2360,7 +2369,7 @@
     "query": {
       "type": "string",
       "default": "INVENTORY",
-      "pattern": "^(INVENTORY|SNMP)$"
+      "pattern": "^(PARTIALINVENTORY|INVENTORY|SNMP)$"
     }
   }
 }
