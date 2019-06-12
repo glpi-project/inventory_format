@@ -1876,6 +1876,22 @@
               "wwn": {
                 "type": "string",
                 "title": "World Wide Name http://fr.wikipedia.org/wiki/World_Wide_Name"
+              },
+              "encrypt_name": {
+                "type": "string",
+                "title": "Supported encryption"
+              },
+              "encrypt_algo": {
+                "type": "string",
+                "title": "Used encryption algorithm"
+              },
+              "encrypt_status": {
+                "type": "string",
+                "title": "Encryption status"
+              },
+              "encrypt_type": {
+                "type": "string",
+                "title": "Encryption type"
               }
             }
           }
