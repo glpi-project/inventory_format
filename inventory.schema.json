@@ -490,6 +490,34 @@
               },
               "label": {
                 "type": "string"
+              },
+              "encrypt_name": {
+                "type": "string",
+                "title": "Supported encryption",
+                "examples": [
+                  "BitLocker", "cryptsetup", "FileVault"
+                ]
+              },
+              "encrypt_algo": {
+                "type": "string",
+                "title": "Used encryption algorithm",
+                "examples": [
+                  "AES_128", "AES_256", "HARDWARE_ENCRYPTION"
+                ]
+              },
+              "encrypt_status": {
+                "type": "string",
+                "title": "Encryption status",
+                "examples": [
+                  "Yes", "No", "Partially"
+                ]
+              },
+              "encrypt_type": {
+                "type": "string",
+                "title": "Encryption type",
+                "examples": [
+                  "hardware", "software"
+                ]
               }
             }
           }

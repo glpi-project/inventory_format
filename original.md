@@ -251,7 +251,8 @@ Original XML specification
 
      <!-- a filesystem -->
      <!ELEMENT DRIVES (CREATEDATE, DESCRIPTION, FREE, FILESYSTEM, LABEL,
-     LETTER, SERIAL, SYSTEMDRIVE, TOTAL, TYPE, VOLUMN)>
+     LETTER, SERIAL, SYSTEMDRIVE, TOTAL, TYPE, VOLUMN, ENCRYPT_NAME,
+     ENCRYPT_ALGO, ENCRYPT_STATUS, ENCRYPT_TYPE)>
        <!-- creation date, in DD/MM/YYYY format -->
        <!ELEMENT CREATEDATE (#PCDATA)>
        <!ELEMENT DESCRIPTION (#PCDATA)>
@@ -274,6 +275,14 @@ Original XML specification
        <!ELEMENT SYSTEMDRIVE (#PCDATA)>
        <!-- filesystem mount point (Unix only) -->
        <!ELEMENT TYPE (#PCDATA)>
+       <!-- supported encryption: BitLocker, cryptsetup, FileVault, ... -->
+       <!ELEMENT ENCRYPT_NAME (#PCDATA)>
+       <!-- encryption algorithm: AES_128, AES_256, HARDWARE_ENCRYPTION, ... -->
+       <!ELEMENT ENCRYPT_ALGO (#PCDATA)>
+       <!-- encryption status: Yes, No, Partially, ... -->
+       <!ELEMENT ENCRYPT_STATUS (#PCDATA)>
+       <!-- encryption type: hardware, software, ... -->
+       <!ELEMENT ENCRYPT_TYPE (#PCDATA)>
 
      <!ELEMENT ENVS (KEY, VAL)>
        <!ELEMENT KEY (#PCDATA)>
