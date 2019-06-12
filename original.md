@@ -626,7 +626,8 @@ Original XML specification
 
      <!ELEMENT STORAGES (DESCRIPTION, DISKSIZE, INTERFACE, MANUFACTURER,
      MODEL, NAME, TYPE, SERIAL, SERIALNUMBER, FIRMWARE, SCSI_COID,
-     SCSI_CHID, SCSI_UNID, SCSI_LUN, WWN)>
+     SCSI_CHID, SCSI_UNID, SCSI_LUN, WWN, ENCRYPT_NAME, ENCRYPT_ALGO,
+     ENCRYPT_STATUS, ENCRYPT_TYPE)>
        <!-- device name, ie 'hda' on Linux, '\\.\PHYSICALDRIVE0' on Windows
           -->
        <!ELEMENT NAME (#PCDATA)>
@@ -650,6 +651,14 @@ Original XML specification
        <!ELEMENT SCSI_LUN (#PCDATA)>
        <!-- World Wide Name http://fr.wikipedia.org/wiki/World_Wide_Name -->
        <!ELEMENT WWN (#PCDATA)>
+       <!-- supported encryption name -->
+       <!ELEMENT ENCRYPT_NAME (#PCDATA)>
+       <!-- encryption algorithme -->
+       <!ELEMENT ENCRYPT_ALGO (#PCDATA)>
+       <!-- encryption status -->
+       <!ELEMENT ENCRYPT_STATUS (#PCDATA)>
+       <!-- encryption type -->
+       <!ELEMENT ENCRYPT_TYPE (#PCDATA)>
 
      <!ELEMENT VIDEOS (CHIPSET, MEMORY, NAME, RESOLUTION, PCISLOT)>
        <!ELEMENT CHIPSET (#PCDATA)>
