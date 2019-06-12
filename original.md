@@ -5,11 +5,12 @@ Original XML specification
 <!ELEMENT REQUEST (CONTENT, DEVICEID, QUERY)>
 
   <!ELEMENT CONTENT (ACCESSLOG, BIOS, HARDWARE, OPERATINGSYSTEM, ANTIVIRUS+,
-  BATTERIES+, CONTROLLERS+, CPUS+, DRIVES+, ENVS+, INPUTS+, LICENSEINFOS+,
+  BATTERIES+, CONTROLLERS+, CPUS+, DRIVES+, ENVS+, FIREWALL, INPUTS+, LICENSEINFOS+,
   LOCAL_GROUPS+, LOCAL_USERS+, LOGICAL_VOLUMES+, MEMORIES+, MODEMS+, FIRMWARES+,
   MONITORS+, NETWORKS+, PHYSICAL_VOLUMES+, PORTS+, PRINTERS+, PROCESSES+, SLOTS+,
-  SOFTWARES+, USERS+, STORAGES+, SOUNDS+, VIRTUALMACHINES+,
-  VOLUME_GROUPS+, REMOTE_MGMT+, SIMCARDS+, SENSORS+)>
+  SOFTWARES+, USERS+, STORAGES+, VIDEOS+, SOUNDS+, VIRTUALMACHINES+, USBDEVICES+,
+  VOLUME_GROUPS+, REMOTE_MGMT+, SIMCARDS+, SENSORS+, POWERSUPPLIES+, REGISTRY,
+  RUDDER, CAMERAS+)>
 
      <!ELEMENT BIOS (SMODEL, SMANUFACTURER, SSN, BDATE, BVERSION,
      BMANUFACTURER, MMANUFACTURER, MSN, MMODEL, ASSETTAG, ENCLOSURESERIAL,
@@ -150,8 +151,7 @@ Original XML specification
        <!ELEMENT LOGDATE (#PCDATA)>
 
      <!ELEMENT ANTIVIRUS (COMPANY, NAME, GUID, ENABLED, UPTODATE, VERSION,
-     EXPIRATION, BASE_CREATION, BASE_VERSION, 32ENGINE_VERSION,
-     64ENGINE_VERSION)>
+     EXPIRATION, BASE_CREATION, BASE_VERSION)>
        <!-- company name -->
        <!ELEMENT COMPANY (#PCDATA)>
        <!ELEMENT NAME (#PCDATA)>
@@ -168,10 +168,6 @@ Original XML specification
        <!ELEMENT BASE_CREATION (#PCDATA)>
        <!-- signatures base version -->
        <!ELEMENT BASE_VERSION (#PCDATA)>
-       <!-- 32-bit engine version -->
-       <!ELEMENT 32ENGINE_VERSION (#PCDATA)>
-       <!-- 64-bit engine version -->
-       <!ELEMENT 64ENGINE_VERSION (#PCDATA)>
 
      <!ELEMENT BATTERIES (CAPACITY, CHEMISTRY, DATE, NAME, SERIAL,
      MANUFACTURER, VOLTAGE)>
@@ -800,6 +796,32 @@ Original XML specification
        <!ELEMENT STATUS (#PCDATA)>
        <!-- powersupply location in computer -->
        <!ELEMENT LOCATION (#PCDATA)>
+
+     <!ELEMENT CAMERAS (RESOLUTION, LENSFACING, FLASHUNIT,
+     IMAGEFORMATS+, ORIENTATION, FOCALLENGHT, SENSORSIZE, MANUFACTURER,
+     RESOLUTIONVIDEO, MODEL, SUPPORTS+)>
+       <!-- Camera resolution, ie '1200x800' -->
+       <!ELEMENT RESOLUTION (#PCDATA)>
+       <!-- Direction the camera faces, relative to device screen -->
+       <!ELEMENT LENSFACING (#PCDATA)>
+       <!-- Whether this camera device has a flash unit -->
+       <!ELEMENT FLASHUNIT (#PCDATA)>
+       <!-- Image output formats -->
+       <!ELEMENT IMAGEFORMATS (#PCDATA)>
+       <!-- Orientation camera - Degrees of clockwise rotation -->
+       <!ELEMENT ORIENTATION (#PCDATA)>
+       <!-- List of focal lengths - Units in Millimeters -->
+       <!ELEMENT FOCALLENGHT (#PCDATA)>
+       <!-- This is the physical size of the sensor - Units in Millimeters -->
+       <!ELEMENT SENSORSIZE (#PCDATA)>
+       <!-- Name of the Manufacturer -->
+       <!ELEMENT MANUFACTURER (#PCDATA)>
+       <!--  Video Camera resolution, ie '1200x800'  -->
+       <!ELEMENT RESOLUTIONVIDEO (#PCDATA)>
+       <!-- Name of the Model -->
+       <!ELEMENT MODEL (#PCDATA)>
+       <!-- List of intefaces and protocols about Camera -->
+       <!ELEMENT SUPPORTS (#PCDATA)>
 
   <!-- agent ID (string) -->
   <!ELEMENT DEVICEID (#PCDATA)>
