@@ -18,5 +18,8 @@
         "seld/jsonlint": "^1.7",
         "justinrainbow/json-schema": "^5.2"
     },
+    "autoload": {
+        "files": ["lib/php/Converter.php"]
+    },
     "bin": ["bin/convert"]
 }
