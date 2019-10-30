@@ -449,11 +449,10 @@ class Converter
 
         if (isset($data['content']['bios'])) {
             if (isset($data['content']['bios']['bdate'])) {
-                $data['content']['bios']['date'] = $this->convertDate(
+                $data['content']['bios']['bdate'] = $this->convertDate(
                     $data['content']['bios']['bdate'],
                     'Y-m-d'
                 );
-                unset($data['content']['bios']['bdate']);
             }
         }
 
