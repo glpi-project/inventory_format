@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ad7a7f0114ac0eb1b4e5597e9d11b83e",
+    "content-hash": "e67820c5c24910d06fde7d5f2c2999d0",
     "packages": [
         {
             "name": "justinrainbow/json-schema",
@@ -125,16 +125,16 @@
     "packages-dev": [
         {
             "name": "atoum/atoum",
-            "version": "3.3.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/atoum/atoum.git",
-                "reference": "c5279d0ecd4e2d53af6b38815db2cafee8fc46b6"
+                "reference": "b6c93433a7b0b92b54c2bb9b0731d71ddc03b365"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atoum/atoum/zipball/c5279d0ecd4e2d53af6b38815db2cafee8fc46b6",
-                "reference": "c5279d0ecd4e2d53af6b38815db2cafee8fc46b6",
+                "url": "https://api.github.com/repos/atoum/atoum/zipball/b6c93433a7b0b92b54c2bb9b0731d71ddc03b365",
+                "reference": "b6c93433a7b0b92b54c2bb9b0731d71ddc03b365",
                 "shasum": ""
             },
             "require": {
@@ -142,7 +142,7 @@
                 "ext-json": "*",
                 "ext-tokenizer": "*",
                 "ext-xml": "*",
-                "php": "^5.6.0 || ^7.0.0 <7.4.0"
+                "php": "^5.6.0 || ^7.0.0 <7.5.0"
             },
             "replace": {
                 "mageekguy/atoum": "*"
@@ -204,73 +204,14 @@
                 "test",
                 "unit testing"
             ],
-            "time": "2018-03-15T22:46:39+00:00"
-        },
-        {
-            "name": "atoum/telemetry-extension",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/atoum/telemetry-extension.git",
-                "reference": "d804a1becc2f91f4b8b731fa559949733ce7eb76"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/atoum/telemetry-extension/zipball/d804a1becc2f91f4b8b731fa559949733ce7eb76",
-                "reference": "d804a1becc2f91f4b8b731fa559949733ce7eb76",
-                "shasum": ""
-            },
-            "require": {
-                "atoum/atoum": "^2.9 || ^3.0",
-                "php": ">=5.4.0"
-            },
-            "conflict": {
-                "atoum/reports-extension": "<3.0.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "mageekguy\\atoum\\telemetry\\": "classes"
-                },
-                "files": [
-                    "configuration.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD"
-            ],
-            "authors": [
-                {
-                    "name": "jubianchi",
-                    "email": "contact@jubianchi.fr"
-                }
-            ],
-            "description": "atoum telemetry reports extension",
-            "homepage": "http://www.atoum.org",
-            "keywords": [
-                "TDD",
-                "atoum",
-                "atoum-extension",
-                "reports",
-                "telemetry",
-                "test",
-                "unit testing"
-            ],
-            "time": "2017-10-02T22:09:26+00:00"
+            "time": "2019-10-04T19:45:12+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "atoum/atoum": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
