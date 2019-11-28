@@ -9,7 +9,7 @@ script:
   - ./vendor/bin/jsonlint -q inventory.schema.json
   - xmlwf tests/data/*.xml
   - for i in `ls tests/data/*.xml`; do ./bin/convert $i; done
-  - php vendor/bin/atoum -mcn 1 -bf tests/bootstrap.php -d tests/Glpi/
+  - php vendor/bin/atoum --no-cc -mcn 1 -bf tests/bootstrap.php -d tests/Glpi/
 
 php:
   - 7.0
