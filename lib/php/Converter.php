@@ -385,6 +385,14 @@ class Converter
             }
         }
 
+        if (isset($data['content']['cpus'])) {
+            foreach ($data['content']['cpus'] as &$cpu) {
+                if (isset($cpu['arch'])) {
+                    $cpu['arch'] = strtolower($cpu['arch']);
+                }
+            }
+        }
+
         //plurals
         if (isset($data['content']['firewall'])) {
             $data['content']['firewalls'] = $data['content']['firewall'];
@@ -545,6 +553,15 @@ class Converter
                 && !isset($data['content']['accountinfo']['keyvalue'])
             ) {
                 $data['content']['accountinfo']['keyvalue'] = '';
+            }
+        }
+
+        //missing hour in ntimezone offset
+        if (isset($data['operatingsystem'])) {
+            foreach ($data['content']['operatingsystem'] as &$os) {
+                if (isset($os['offset']) && preg_match('/^[+-][0-9]{2}$/')) {
+                    $os['offset'] .= '00';
+                }
             }
         }
 
