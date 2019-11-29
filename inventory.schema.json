@@ -324,7 +324,7 @@
                 "examples": [
                     "i386"
                 ],
-                "pattern": "^(MIPS|MIPS64|Alpha|SPARC|SPARC64|m68k|i386|x86_64|PowerPC|PowerPC64|ARM(.+)?|AArch64)$"
+                "pattern": "^(mips|mips64|alpha|sparc|sparc64|m68k|i386|x86_64|powerpc|powerpc64|arm(.+)?|aarch64)$"
               },
               "core": {
                 "type": "integer",
