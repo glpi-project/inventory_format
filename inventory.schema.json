@@ -2255,6 +2255,60 @@
             }
           }
         },
+        "cameras": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "resolution": {
+                "type": "string",
+                "examples": [
+                  "1200x800"
+                ]
+              },
+              "lensfacing": {
+                "type": "string"
+              },
+              "flashunit": {
+                "type": "boolean"
+              },
+              "imageformats": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+              },
+              "orientation": {
+                "type": "string"
+              },
+              "focallenght": {
+                "type": "string"
+              },
+              "sensorsize": {
+                "type": "string"
+              },
+              "manufacturer": {
+                "type": "string"
+              },
+              "resolutionvideo": {
+                "type": "string",
+                "examples": [
+                  "1200x800"
+                ]
+              },
+              "model": {
+                "type": "string"
+              },
+              "supports": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+              }
+            }
+          }
+        },
+
         "versionclient": {
           "type": "string",
           "examples": [
