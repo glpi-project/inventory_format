@@ -124,7 +124,7 @@ class FilesToJSON
         }
 
         $interval = strtotime('-1 week');
-        if (!file_exists($path) && filemtime($path) <= $interval) {
+        if (!file_exists($path) || filemtime($path) <= $interval) {
             file_put_contents(
                 $path,
                 file_get_contents($uri)
