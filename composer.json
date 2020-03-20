@@ -24,5 +24,10 @@
     "bin": ["bin/convert", "bin/build_hw_jsons"],
     "require-dev": {
         "atoum/atoum": "dev-master"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
     }
 }
