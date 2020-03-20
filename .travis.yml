@@ -12,11 +12,9 @@ script:
   - php vendor/bin/atoum --no-cc -mcn 1 -bf tests/bootstrap.php -d tests/Glpi/
 
 php:
-  - 7.0
-  - 7.1
   - 7.2
   - 7.3
-  - 7.4snapshot
+  - 7.4
   - nightly
 matrix:
   allow_failures:

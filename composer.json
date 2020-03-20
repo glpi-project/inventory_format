@@ -19,9 +19,9 @@
         "justinrainbow/json-schema": "^5.2"
     },
     "autoload": {
-        "files": ["lib/php/Converter.php"]
+        "files": ["lib/php/Converter.php", "lib/php/FilesToJSON.php"]
     },
-    "bin": ["bin/convert"],
+    "bin": ["bin/convert", "bin/build_hw_jsons"],
     "require-dev": {
         "atoum/atoum": "dev-master"
     }

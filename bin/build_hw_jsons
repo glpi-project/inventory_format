@@ -1,0 +1,7 @@
+#!/usr/bin/env php
+<?php
+
+require_once 'vendor/autoload.php';
+
+$tojson = new Glpi\Inventory\FilesToJSON;
+$tojson->run();
