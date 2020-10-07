@@ -124,7 +124,7 @@
             "properties": {
               "capacity": {
                 "type": "string",
-                "title": "Battery capacity, in mWh",
+                "title": "Battery capacity, in Wh",
                 "examples": [
                     "43.7456 Wh"
                 ]
