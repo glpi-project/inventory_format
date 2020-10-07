@@ -2408,6 +2408,12 @@
       "type": "string",
       "title": "Agent ID"
     },
+    "itemtype": {
+      "type": "string",
+      "title": "Item type",
+      "default": "Computer",
+      "pattern": "^(Computer|Phone|NetworkEquipment|Printer)$"
+    },
     "query": {
       "type": "string",
       "default": "INVENTORY",
