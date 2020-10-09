@@ -123,11 +123,8 @@
             "type": "object",
             "properties": {
               "capacity": {
-                "type": "string",
-                "title": "Battery capacity, in Wh",
-                "examples": [
-                    "43.7456 Wh"
-                ]
+                "type": "integer",
+                "title": "Battery capacity, in mWh"
               },
               "date": {
                 "$ref": "#/definitions/date"
@@ -154,10 +151,8 @@
                 "type": "string"
               },
               "voltage": {
-                "type": "string",
-                "examples": [
-                    "8.614 V"
-                ]
+                "type": "integer",
+                "title": "Battery voltage, in mV"
               }
             }
           }
