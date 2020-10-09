@@ -1065,6 +1065,12 @@
                   "23853943"
                 ]
               },
+              "model": {
+                "type": "string",
+                "examples": [
+                  "EDFA232A2MA-JD-F-R"
+                ]
+              },
               "speed": {
                 "type": "string",
                 "examples": [
