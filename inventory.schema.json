@@ -124,7 +124,11 @@
             "properties": {
               "capacity": {
                 "type": "integer",
-                "title": "Battery capacity, in mWh"
+                "title": "Battery max capacity by design, in mWh"
+              },
+              "real_capacity": {
+                "type": "integer",
+                "title": "Real battery capacity which decreases with battery lifetime, in mWh"
               },
               "date": {
                 "$ref": "#/definitions/date"
