@@ -180,8 +180,10 @@ Original XML specification
        <!ELEMENT SERIAL (#PCDATA)>
        <!-- battery manufacturer -->
        <!ELEMENT MANUFACTURER (#PCDATA)>
-       <!-- battery capacity, in mWh -->
+       <!-- battery max capacity (the maximum capacity by design), in mWh -->
        <!ELEMENT CAPACITY (#PCDATA)>
+       <!-- battery real max capacity (decreases as the battery gets old), in mWh -->
+       <!ELEMENT REAL_CAPACITY (#PCDATA)>
        <!-- battery voltage, in mV -->
        <!ELEMENT VOLTAGE (#PCDATA)>
 
