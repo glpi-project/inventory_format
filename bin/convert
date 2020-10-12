@@ -5,12 +5,23 @@ require_once 'vendor/autoload.php';
 require_once 'lib/php/Converter.php';
 
 
-if (count($argv) !== 2) {
-   die("usage: ".$argv[0]." /path/to/file\n");
+if (count($argv) !== 2 && count($argv) !== 3) {
+   die("usage: ".$argv[0]." /path/to/file.xml [/path/to/file.json]\n");
 }
 
-$json_path = $argv[1];
-if (parse_url($json_path, PHP_URL_SCHEME) == null) {
+$xml_path = $argv[1];
+if (parse_url($xml_path, PHP_URL_SCHEME) == null) {
+    if ($xml_path{0} == '/') {
+        //absolute path
+        $xml_path = 'file://' . $xml_path;
+    } else {
+        //relative path: make absolute
+        $xml_path = 'file://' . getcwd() . '/' . $xml_path;
+    }
+}
+
+$json_path = $argv[2] ?? null;
+if ($json_path !== null && parse_url($json_path, PHP_URL_SCHEME) == null) {
     if ($json_path{0} == '/') {
         //absolute path
         $json_path = 'file://' . $json_path;
@@ -20,16 +31,20 @@ if (parse_url($json_path, PHP_URL_SCHEME) == null) {
     }
 }
 
-if (!file_exists($json_path)) {
-    echo "File does not exists!\n";
+if (!file_exists($xml_path)) {
+    echo "Source file does not exists!\n";
     die(1);
 }
 
 try {
     $converter = new Glpi\Inventory\Converter;
-    $json = $converter->convert(file_get_contents($json_path));
+    $json = $converter->convert(file_get_contents($xml_path));
     $converter->validate($json);
+
+    if ($json_path !== null) {
+        file_put_contents($json_path, json_encode($json, JSON_PRETTY_PRINT));
+    }
 } catch (\Exception $e) {
-    echo "File: $json_path\n";
+    echo "File: $xml_path\n";
     throw $e;
 }
