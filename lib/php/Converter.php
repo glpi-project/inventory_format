@@ -563,6 +563,28 @@ class Converter
             }
         }
 
+        //Fix batteries capacities & voltages
+        if (isset($data['content']['batteries'])) {
+            foreach ($data['content']['batteries'] as &$battery) {
+                if (isset($battery['capacity'])) {
+                    $capacity = $this->convertBatteryCapacity($battery['capacity']);
+                    if ($capacity == false) {
+                        unset($battery['capacity']);
+                    } else {
+                        $battery['capacity'] = $capacity;
+                    }
+                }
+                if (isset($battery['voltage'])) {
+                    $voltage = $this->convertBatteryVoltage($battery['voltage']);
+                    if ($voltage == false) {
+                        unset($battery['voltage']);
+                    } else {
+                        $battery['voltage'] = $voltage;
+                    }
+                }
+            }
+        }
+
         return $data;
     }
 
@@ -726,4 +748,61 @@ class Converter
             )
         );
     }
+
+    /**
+     * Convert battery capacity
+     *
+     * @param string $capacity Inventoried capacity
+     *
+     * @return integer|false
+     */
+    public function convertBatteryCapacity($capacity)
+    {
+        $capa_pattern = "/^([0-9]+(\.[0-9]+)?) Wh$/i";
+        $matches = [];
+        if (preg_match($capa_pattern, $capacity, $matches)) {
+            return (int)round((float)$matches[1] * 1000);
+        }
+
+        $capa_pattern = '/^([0-9]+) mWh$/i';
+        $matches = [];
+        if (preg_match($capa_pattern, $capacity, $matches)) {
+            return (int)$matches[1];
+        }
+
+        if (ctype_digit($capacity)) {
+            return (int)$capacity;
+        }
+
+        return false;
+    }
+
+    /**
+     * Convert battery voltage
+     *
+     * @param string $voltage Inventoried voltage
+     *
+     * @return integer|false
+     */
+    public function convertBatteryVoltage($voltage)
+    {
+        $volt_pattern = "/^([0-9]+(\.[0-9]+)?) V$/i";
+        $matches = [];
+        if (preg_match($volt_pattern, $voltage, $matches)) {
+            return (int)round((float)$matches[1] * 1000);
+        }
+
+        $volt_pattern = '/^([0-9]+) mV$/i';
+        $matches = [];
+        if (preg_match($volt_pattern, $voltage, $matches)) {
+            return (int)$matches[1];
+        }
+
+        if (ctype_digit($voltage)) {
+            return (int)$voltage;
+        }
+
+        return false;
+    }
+
 }

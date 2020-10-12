@@ -309,4 +309,123 @@ class Converter extends \atoum {
             ]
         ]);
     }
+
+    /**
+     * Batteries capacities convert provider
+     *
+     * @return array
+     */
+    protected function batteryCapasToConvertProvider()
+    {
+        return [
+            ['43.7456 Wh', 43746],
+            ['512584', 512584],
+            ['43746 mWh', 43746],
+            ['43.746 mWh', false],
+            ['43 7456 Wh', false],
+            ['43,7456 Wh', false],
+            ['43 Wh', 43000]
+        ];
+    }
+
+    /**
+     * Test battery capacity conversion
+     *
+     * @dataProvider batteryCapasToConvertProvider
+     *
+     * @param string $orig     Original data
+     * @param string $expected Expected result
+     *
+     * @return void
+     */
+    public function testConvertBatteryCapacity($orig, $expected)
+    {
+        if ($expected == false) {
+            $this
+                ->given($this->newTestedInstance())
+                ->then
+                    ->boolean($this->testedInstance->convertBatteryCapacity($orig))
+                        ->isIdenticalTo($expected);
+        } else {
+            $this
+                ->given($this->newTestedInstance())
+                ->then
+                    ->integer($this->testedInstance->convertBatteryCapacity($orig))
+                    ->isIdenticalTo($expected);
+        }
+    }
+
+    /**
+     * Batteries voltages convert provider
+     *
+     * @return array
+     */
+    protected function batteryVoltsToConvertProvider()
+    {
+        return [
+            ['8 V', 8000],
+            ['8.2 V', 8200],
+            ['4365 mV', 4365],
+            ['8.2 mV', false],
+            ['8 2 V', false],
+            ['8,2 V', false]
+        ];
+    }
+
+    /**
+     * Test battery voltage conversion
+     *
+     * @dataProvider batteryVoltsToConvertProvider
+     *
+     * @param string $orig     Original data
+     * @param string $expected Expected result
+     *
+     * @return void
+     */
+    public function testConvertBatteryVoltage($orig, $expected)
+    {
+        if ($expected == false) {
+            $this
+                ->given($this->newTestedInstance())
+                ->then
+                    ->boolean($this->testedInstance->convertBatteryVoltage($orig))
+                        ->isIdenticalTo($expected);
+        } else {
+            $this
+                ->given($this->newTestedInstance())
+                ->then
+                    ->integer($this->testedInstance->convertBatteryVoltage($orig))
+                    ->isIdenticalTo($expected);
+        }
+    }
+
+    /**
+     * Test a full conversion
+     *
+     * @return void
+     */
+    public function testConvert()
+    {
+        $this->string($xml_path = realpath(TU_DIR . '/data/4.xml'));
+        $this
+            ->given($this->newTestedInstance())
+            ->then
+                ->string($json_str = $this->testedInstance->convert(file_get_contents($xml_path)))
+                ->isNotEmpty();
+
+        $this->object($json = json_decode($json_str));
+        $this->string($json->deviceid)->isIdenticalTo('iMac-de-Marie.local-2017-06-12-09-24-14');
+
+        $expected = [
+            'capacity'     => 43746,
+            'chemistry'    => 'lithium-polymer',
+            'date'         => '2015-11-10',
+            'manufacturer' => 'SMP',
+            'name'         => 'DELL JHXPY53',
+            'serial'       => '3701',
+            'voltage'      => 8614
+
+        ];
+        $this->array((array)$json->content->batteries[0])->isIdenticalTo($expected);
+    }
 }
