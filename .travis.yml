@@ -8,7 +8,7 @@ before_script:
 script:
   - ./vendor/bin/jsonlint -q inventory.schema.json
   - xmlwf tests/data/*.xml
-  - for i in `ls tests/data/*.xml`; do ./bin/convert $i; done
+  - for i in `ls tests/data/*.xml`; do ./bin/convert $i || exit 1; done
   - php vendor/bin/atoum --no-cc -mcn 1 -bf tests/bootstrap.php -d tests/Glpi/
 
 php:

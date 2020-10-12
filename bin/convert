@@ -46,5 +46,6 @@ try {
     }
 } catch (\Exception $e) {
     echo "File: $xml_path\n";
-    throw $e;
+    echo $e->getMessage();
+    die(1);
 }
