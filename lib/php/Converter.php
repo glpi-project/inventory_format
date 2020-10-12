@@ -557,7 +557,7 @@ class Converter
         }
 
         //missing hour in ntimezone offset
-        if (isset($data['content']['operatingsystem'])) {
+        if (isset($data['content']['operatingsystem']) && isset($data['content']['operatingsystem']['timezone'])) {
             if (preg_match('/^[+-][0-9]{2}$/', $data['content']['operatingsystem']['timezone']['offset'])) {
                 $data['content']['operatingsystem']['timezone']['offset'] .= '00';
             }
