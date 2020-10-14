@@ -300,7 +300,8 @@ class Converter
                 'softwares/filesize',
                 'virtualmachines/memory',
                 'virtualmachines/vcpu',
-                'videos/memory'
+                'videos/memory',
+                'batteries/real_capacity'
             ]
         ]);
         $this->convertTypes($data);
