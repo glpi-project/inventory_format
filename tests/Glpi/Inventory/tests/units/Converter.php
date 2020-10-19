@@ -415,6 +415,7 @@ class Converter extends \atoum {
 
         $this->object($json = json_decode($json_str));
         $this->string($json->deviceid)->isIdenticalTo('iMac-de-Marie.local-2017-06-12-09-24-14');
+        $this->string($json->itemtype)->isIdenticalTo('Computer');
 
         $expected = [
             'capacity'     => 43746,
@@ -427,5 +428,28 @@ class Converter extends \atoum {
 
         ];
         $this->array((array)$json->content->batteries[0])->isIdenticalTo($expected);
+    }
+
+    /**
+     * Test a full network equipment conversion
+     *
+     * @return void
+     */
+    public function testNetEConvert()
+    {
+        $this->string($xml_path = realpath(TU_DIR . '/data/6.xml'));
+        $this
+            ->given($this->newTestedInstance())
+            ->then
+                ->string($json_str = $this->testedInstance->convert(file_get_contents($xml_path)))
+                ->isNotEmpty();
+
+        $this->object($json = json_decode($json_str));
+        $this->string($json->deviceid)->isIdenticalTo('foo');
+        $this->string($json->query)->isIdenticalTo('SNMP');
+        $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
+
+        $device = $json->content->device;
+        $this->array($device->ports)->hasSize(183);
     }
 }

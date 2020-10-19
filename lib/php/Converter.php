@@ -253,6 +253,7 @@ class Converter
     {
         //all keys are now lowercase
         $data = $this->arrayChangeKeyCaseRecursive($data);
+        $data = $this->convertNetworkInventory($data);
 
         //replace bad typed values...
         $this->setConvertTypes([
@@ -266,7 +267,8 @@ class Converter
                 'printers/shared',
                 'networks/management',
                 'softwares/no_remove',
-                'licenseinfos/trial'
+                'licenseinfos/trial',
+                'network_ports/trunk'
             ],
             'integer'   => [
                 'cpus/core',
@@ -301,7 +303,20 @@ class Converter
                 'virtualmachines/memory',
                 'virtualmachines/vcpu',
                 'videos/memory',
-                'batteries/real_capacity'
+                'batteries/real_capacity',
+                'network_ports/ifinerrors',
+                'network_ports/ifinoctets',
+                'network_ports/ifinternalstatus',
+                'network_ports/ifmtu',
+                'network_ports/ifnumber',
+                'network_ports/ifouterrors',
+                'network_ports/ifoutoctets',
+                'network_ports/ifspeed',
+                'network_ports/ifportduplex',
+                'network_ports/ifstatus',
+                'network_ports/iftype',
+                'network_components/fru',
+                'network_components/index'
             ]
         ]);
         $this->convertTypes($data);
@@ -586,6 +601,11 @@ class Converter
             }
         }
 
+        if (!isset($data['itemtype'])) {
+            //set a default
+            $data['itemtype'] = 'Computer';
+        }
+
         return $data;
     }
 
@@ -619,7 +639,7 @@ class Converter
             foreach ($names as $name) {
                 $keys = explode('/', $name);
                 if (count($keys) != 2) {
-                    throw new \RuntimeException('Not suported!');
+                    throw new \RuntimeException($name . ' not suported!');
                 }
                 if (isset($data['content'][$keys[0]])) {
                     if (is_array($data['content'][$keys[0]])) {
@@ -806,4 +826,128 @@ class Converter
         return false;
     }
 
+    /**
+     * Handle network inventory XML format
+     *
+     * @param array $data Contents
+     *
+     * @return array
+     */
+    public function convertNetworkInventory(array $data): array
+    {
+        if (!isset($data['content']['device'])) {
+            //not a network inventory XML
+            return $data;
+        }
+
+        if (!isset($data['content']['versionclient']) && isset($data['content']['moduleversion'])) {
+            $data['content']['versionclient'] = $data['content']['moduleversion'];
+            unset($data['content']['moduleversion']);
+        }
+
+        if (isset($data['content']['processnumber'])) {
+            $data['content']['versionprovider'] = array_merge(
+                ($data['content']['versionprovider'] ?? []),
+                ['processnumber' => $data['content']['processnumber']]
+            );
+        }
+
+        $device = $data['content']['device'];
+
+        if (!isset($data['query']) || $data['query'] == 'SNMPQUERY') {
+            $data['query'] = 'SNMP';
+        }
+
+        foreach ($device as $key => $device_data) {
+            switch ($key) {
+                case 'info':
+                    $device_info = $device['info'];
+
+                    if (isset($device_info['cpu'])) {
+                        $device_info['cpu'] = (int)$device_info['cpu'];
+                    }
+                    if (isset($device_info['id'])) {
+                        $device_info['id'] = (int)$device_info['id'];
+                    }
+
+                    //Fix network inventory type
+                    if (isset($device_info['type'])) {
+                        $device_info['type'] = ucfirst(strtolower($device_info['type']));
+                        if ($device_info['type'] == 'Kvm') {
+                            $device_info['type'] = 'KVM';
+                        }
+                    }
+                    $data['content']['network_device'] = $device_info;
+
+                    //Guess itemtype from device type info
+                    if (!isset($data['itemtype'])) {
+                        $itemtype = 'Computer';
+                        if (isset($device_info['type'])) {
+                            switch ($device_info['type']) {
+                                case 'Computer':
+                                case 'Phone':
+                                case 'Printer':
+                                    $itemtype = $device_info['type'];
+                                    break;
+                                case 'Networking':
+                                case 'Storage':
+                                case 'Power':
+                                case 'Video':
+                                case 'KVM':
+                                    $itemtype = 'NetworkEquipment';
+                                    break;
+                                default:
+                                    throw new \RuntimeException('Unhandled device type: ' . $device_info['type']);
+                            }
+                        }
+                        $data['itemtype'] = $itemtype;
+                    }
+
+                    break;
+                case 'ports':
+                    $data['content']['network_ports'] = $device['ports']['port'];
+
+                    //check for arrays
+                    foreach ($data['content']['network_ports'] as &$netport) {
+                        if (isset($netport['vlans'])) {
+                            $netport['vlans'] = isset($netport['vlans']['vlan'][0]) ?
+                                $netport['vlans']['vlan'] :
+                                [$netport['vlans']['vlan']];
+                        }
+                        if (isset($netport['connections'])) {
+                            $netport['connections'] = isset($netport['connections']['connection'][0]) ?
+                                $netport['connections']['connection'] :
+                                [$netport['connections']['connection']];
+                        }
+                    }
+                    break;
+                case 'firmwares':
+                    //first, retrieve firmwares from device
+                    $firmwares = $device['firmwares'];
+                    if (!isset($firmwares[0])) {
+                        $firmwares = [$firmwares];
+                    }
+
+                    //second, append them to data
+                    if (isset($data['content']['firmwares'])) {
+                        if (!isset($data['content']['firmwares'][0])) {
+                            $data['content']['firmwares'] = [$data['content']['firmwares']];
+                        }
+                        $data['content']['firmwares'] = array_merge(
+                            $data['content']['firmwares'],
+                            $firmwares
+                        );
+                    }
+
+                    break;
+                case 'components':
+                    $data['content']['network_components'] = $device['components']['component'];
+                    break;
+                default:
+                    throw new \RuntimeException('Key ' . $key . ' is not handled in network devices conversion');
+            }
+        }
+
+        return $data;
+    }
 }
