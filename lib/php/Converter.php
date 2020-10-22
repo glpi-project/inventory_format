@@ -850,6 +850,7 @@ class Converter
                 ($data['content']['versionprovider'] ?? []),
                 ['processnumber' => $data['content']['processnumber']]
             );
+            unset($data['content']['processnumber']);
         }
 
         $device = $data['content']['device'];
