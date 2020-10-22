@@ -43,7 +43,7 @@
                 "2018-10-11 04:55:07"
               ],
               "$ref": "#/definitions/datetime"
-             },
+            },
             "userid": {
               "type": "string"
             }
@@ -103,12 +103,12 @@
                 ]
               },
               "expiration": {
-                  "title": "License expiration date",
-                  "$ref": "#/definitions/date"
+                "title": "License expiration date",
+                "$ref": "#/definitions/date"
               },
               "base_creation": {
-                  "$comment": "What type is it? A date?",
-                  "type": "string"
+                "$comment": "What type is it? A date?",
+                "type": "string"
               },
               "base_version": {
                 "type": "string",
@@ -136,19 +136,19 @@
               "chemistry": {
                 "type": "string",
                 "examples": [
-                    "Li-ION"
+                  "Li-ION"
                 ]
               },
               "manufacturer": {
                 "type": "string",
                 "examples": [
-                    "TOSHIBA"
+                  "TOSHIBA"
                 ]
               },
               "name": {
                 "type": "string",
                 "examples": [
-                    "DELL JHXPY53"
+                  "DELL JHXPY53"
                 ]
               },
               "serial": {
@@ -232,10 +232,10 @@
               ]
             },
             "biosserial": {
-                "type": "string"
+              "type": "string"
             },
             "enclosureserial": {
-                "type": "string"
+              "type": "string"
             }
           }
         },
@@ -321,7 +321,7 @@
               "arch": {
                 "type": "string",
                 "examples": [
-                    "i386"
+                  "i386"
                 ],
                 "pattern": "^(mips|mips64|alpha|sparc|sparc64|m68k|i386|x86_64|powerpc|powerpc64|arm.*|aarch64)$"
               },
@@ -329,88 +329,88 @@
                 "type": "integer",
                 "title": "Enabled number of cores",
                 "examples": [
-                    "2"
+                  "2"
                 ]
               },
               "corecount": {
                 "type": "integer",
                 "title": "Total number of cores",
                 "examples": [
-                    "4"
+                  "4"
                 ]
               },
               "description": {
                 "type": "string",
                 "examples": [
-                    "Intel64 Family 6 Model 47 Stepping 2"
+                  "Intel64 Family 6 Model 47 Stepping 2"
                 ]
               },
               "external_clock": {
                 "type": "integer",
                 "examples": [
-                    "100"
+                  "100"
                 ]
               },
               "familyname": {
                 "type": "string",
                 "examples": [
-                    "Core i5"
+                  "Core i5"
                 ]
               },
               "familynumber": {
                 "type": "string",
                 "examples": [
-                    "6"
+                  "6"
                 ]
               },
               "id": {
                 "type": "string",
                 "examples": [
-                    "51 06 04 00 FF FB EB BF"
+                  "51 06 04 00 FF FB EB BF"
                 ]
               },
               "manufacturer": {
                 "type": "string",
                 "examples": [
-                    "Intel"
+                  "Intel"
                 ]
               },
               "model": {
                 "type": "string",
                 "examples": [
-                    "69"
+                  "69"
                 ]
               },
               "name": {
                 "type": "string",
                 "examples": [
-                    "Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz"
+                  "Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz"
                 ]
               },
               "serial": {
                 "type": "string",
                 "examples": [
-                    "To Be Filled By O.E.M."
+                  "To Be Filled By O.E.M."
                 ]
               },
               "speed": {
                 "type": "integer",
                 "title": "CPU frequency in MHz",
                 "examples": [
-                    "1700"
+                  "1700"
                 ]
               },
               "stepping": {
                 "type": "integer",
                 "examples": [
-                    "1"
+                  "1"
                 ]
               },
               "thread": {
                 "type": "integer",
                 "title": "Number of threads per core",
                 "examples": [
-                    "4"
+                  "4"
                 ]
               },
               "cache": {
@@ -494,28 +494,35 @@
                 "type": "string",
                 "title": "Supported encryption",
                 "examples": [
-                  "BitLocker", "cryptsetup", "FileVault"
+                  "BitLocker",
+                  "cryptsetup",
+                  "FileVault"
                 ]
               },
               "encrypt_algo": {
                 "type": "string",
                 "title": "Used encryption algorithm",
                 "examples": [
-                  "AES_128", "AES_256", "HARDWARE_ENCRYPTION"
+                  "AES_128",
+                  "AES_256",
+                  "HARDWARE_ENCRYPTION"
                 ]
               },
               "encrypt_status": {
                 "type": "string",
                 "title": "Encryption status",
                 "examples": [
-                  "Yes", "No", "Partially"
+                  "Yes",
+                  "No",
+                  "Partially"
                 ]
               },
               "encrypt_type": {
                 "type": "string",
                 "title": "Encryption type",
                 "examples": [
-                  "hardware", "software"
+                  "hardware",
+                  "software"
                 ]
               }
             }
@@ -1106,25 +1113,25 @@
                 "type": "string",
                 "title": "uuencoded EDID trame",
                 "examples": [
-                    "AP///////wANrlUTAAAAAAsXAQSVHRF4AlPVmFhSkCchUFQAAAABAQEBAQEBAQEBAQEBAQEB2h1W4lAAIDBELUcAJaUQAAAYAAAA/gBOMTMzQkdFLUVBQQogAAAA/gBDTU4KICAgICAgICAgAAAA/gBOMTMzQkdFLUVBQQogAGw="
+                  "AP///////wANrlUTAAAAAAsXAQSVHRF4AlPVmFhSkCchUFQAAAABAQEBAQEBAQEBAQEBAQEB2h1W4lAAIDBELUcAJaUQAAAYAAAA/gBOMTMzQkdFLUVBQQogAAAA/gBDTU4KICAgICAgICAgAAAA/gBOMTMzQkdFLUVBQQogAGw="
                 ]
               },
               "caption": {
                 "type": "string",
                 "examples": [
-                    "N133BGE-EAA CMN N133BGE-EAA"
+                  "N133BGE-EAA CMN N133BGE-EAA"
                 ]
               },
               "description": {
                 "type": "string",
                 "examples": [
-                    "11/2013"
+                  "11/2013"
                 ]
               },
               "manufacturer": {
                 "type": "string",
                 "examples": [
-                    "CMN"
+                  "CMN"
                 ]
               },
               "serial": {
@@ -1133,8 +1140,8 @@
               "altserial": {
                 "type": "string",
                 "title": "Alternative monitor serial number computed from known manufacter formula and if different from SERIAL"
-                },
-                "port": {
+              },
+              "port": {
                 "type": "integer"
               },
               "uuencode": {
@@ -1373,7 +1380,7 @@
               "title": "Operating system name ('Distributor ID' in LSB terms)",
               "examples": [
                 "Fedora",
-                "Debian", 
+                "Debian",
                 "Ubuntu",
                 "CentOS",
                 "SUSE LINUX",
@@ -1639,8 +1646,8 @@
               "description": {
                 "type": "string",
                 "examples": [
-                    "x16 PCI Express",
-                    "Other"
+                  "x16 PCI Express",
+                  "Other"
                 ]
               },
               "designation": {
@@ -1776,13 +1783,13 @@
               "caption": {
                 "type": "string",
                 "examples": [
-                    "Périphérique High Definition Audio"
+                  "Périphérique High Definition Audio"
                 ]
               },
               "description": {
                 "type": "string",
                 "examples": [
-                    "rev 21"
+                  "rev 21"
                 ]
               },
               "manufacturer": {
@@ -1979,19 +1986,19 @@
                 ]
               },
               "chipset": {
-                  "type": "string"
+                "type": "string"
               },
               "memory": {
-                  "type": "integer"
+                "type": "integer"
               },
               "resolution": {
-                  "type": "string",
-                  "examples": [
-                      "1024x768"
-                  ]
+                "type": "string",
+                "examples": [
+                  "1024x768"
+                ]
               },
               "pcislot": {
-                  "type": "string"
+                "type": "string"
               }
             }
           }
@@ -2133,9 +2140,11 @@
                 "type": "string"
               },
               "imei": {
-                "oneOf": [{
+                "oneOf": [
+                  {
                     "type": "string"
-                  }, {
+                  },
+                  {
                     "type": "array",
                     "items": {
                       "type": "string"
@@ -2280,7 +2289,7 @@
               "imageformats": {
                 "type": "array",
                 "items": {
-                    "type": "string"
+                  "type": "string"
                 }
               },
               "orientation": {
@@ -2307,13 +2316,12 @@
               "supports": {
                 "type": "array",
                 "items": {
-                    "type": "string"
+                  "type": "string"
                 }
               }
             }
           }
         },
-
         "versionclient": {
           "type": "string",
           "examples": [
