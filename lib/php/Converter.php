@@ -948,6 +948,7 @@ class Converter
             }
         }
 
+        unset($data['content']['device']);
         return $data;
     }
 }
