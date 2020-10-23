@@ -934,11 +934,11 @@ class Converter
                         if (!isset($data['content']['firmwares'][0])) {
                             $data['content']['firmwares'] = [$data['content']['firmwares']];
                         }
-                        $data['content']['firmwares'] = array_merge(
-                            $data['content']['firmwares'],
-                            $firmwares
-                        );
                     }
+                    $data['content']['firmwares'] = array_merge(
+                        $data['content']['firmwares'] ?? [],
+                        $firmwares
+                    );
 
                     break;
                 case 'components':
