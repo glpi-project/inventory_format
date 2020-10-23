@@ -2330,51 +2330,47 @@
               "connections": {
                 "type": "array",
                 "items": {
-                  "connection": {
-                    "mac": {
-                      "type": "string",
-                      "title": "Remote device mac address ",
-                      "examples": [
-                        "00:00:00:00:00:00"
-                      ]
-                    },
-                    "ifnumber": {
-                      "type": "integer",
-                      "title": "Remote device ifindex, from CDP/LLDP"
-                    },
-                    "sysmac": {
-                      "type": "string",
-                      "title": "Remote device mac address, from CDP/LLDP",
-                      "examples": [
-                        "00:00:00:00:00:00"
-                      ]
-                    },
-                    "ifdescr": {
-                      "type": "string",
-                      "title": "Remote device port description, from CDP/LLDP"
-                    },
-                    "ip": {
-                      "type": "string",
-                      "title": "Remote device IP address, from CDP/LLDP"
-                    },
-                    "sysdescr": {
-                      "type": "string",
-                      "title": "Remote device system description, from CDP/LLDP"
-                    },
-                    "sysname": {
-                      "type": "string",
-                      "title": "Remote device name, from CDP/LLDP"
-                    }
+                  "mac": {
+                    "type": "string",
+                    "title": "Remote device mac address ",
+                    "examples": [
+                      "00:00:00:00:00:00"
+                    ]
+                  },
+                  "ifnumber": {
+                    "type": "integer",
+                    "title": "Remote device ifindex, from CDP/LLDP"
+                  },
+                  "sysmac": {
+                    "type": "string",
+                    "title": "Remote device mac address, from CDP/LLDP",
+                    "examples": [
+                      "00:00:00:00:00:00"
+                    ]
+                  },
+                  "ifdescr": {
+                    "type": "string",
+                    "title": "Remote device port description, from CDP/LLDP"
+                  },
+                  "ip": {
+                    "type": "string",
+                    "title": "Remote device IP address, from CDP/LLDP"
+                  },
+                  "sysdescr": {
+                    "type": "string",
+                    "title": "Remote device system description, from CDP/LLDP"
+                  },
+                  "sysname": {
+                    "type": "string",
+                    "title": "Remote device name, from CDP/LLDP"
                   }
                 }
               },
               "aggregate": {
                 "type": "array",
                 "items": {
-                  "port": {
-                    "type": "integer",
-                    "title": "Aggregated port ifindex"
-                  }
+                  "type": "integer",
+                  "title": "Aggregated port ifindex"
                 }
               },
               "ifdescr": {

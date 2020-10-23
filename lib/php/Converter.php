@@ -316,7 +316,8 @@ class Converter
                 'network_ports/ifstatus',
                 'network_ports/iftype',
                 'network_components/fru',
-                'network_components/index'
+                'network_components/index',
+                'network_device/ram',
             ]
         ]);
         $this->convertTypes($data);
@@ -930,6 +931,12 @@ class Converter
                             $netport['connections'] = isset($netport['connections']['connection'][0]) ?
                                 $netport['connections']['connection'] :
                                 [$netport['connections']['connection']];
+                        }
+                        if (isset($netport['aggregate'])) {
+                            $netport['aggregate'] = isset($netport['aggregate']['port'][0]) ?
+                                $netport['aggregate']['port'] :
+                                [$netport['aggregate']['port']];
+                            $netport['aggregate'] = array_map('intval', $netport['aggregate']);
                         }
                     }
                     break;
