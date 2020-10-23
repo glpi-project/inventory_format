@@ -2614,7 +2614,8 @@
               "type": "array",
               "title": "IP addresses",
               "items": {
-                "type": [
+                "type": "string",
+                "format": [
                   "ipv4",
                   "ipv6"
                 ],

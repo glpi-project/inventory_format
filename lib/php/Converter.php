@@ -878,6 +878,13 @@ class Converter
                             $device_info['type'] = 'KVM';
                         }
                     }
+
+                    if (isset($device_info['ips'])) {
+                        $device_info['ips'] = isset($device_info['ips']['ip'][0]) ?
+                            $device_info['ips']['ip'] :
+                            [$device_info['ips']['ip']];
+                    }
+
                     $data['content']['network_device'] = $device_info;
 
                     //Guess itemtype from device type info
