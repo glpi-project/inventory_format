@@ -879,6 +879,10 @@ class Converter
                         }
                     }
 
+                    if (isset($device_info['macaddr'])) {
+                        $device_info['mac'] = $device_info['macaddr'];
+                    }
+
                     if (isset($device_info['ips'])) {
                         $device_info['ips'] = isset($device_info['ips']['ip'][0]) ?
                             $device_info['ips']['ip'] :

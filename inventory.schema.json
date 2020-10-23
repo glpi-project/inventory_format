@@ -1219,7 +1219,7 @@
               "ipsubnet6": {
                 "type": "string"
               },
-              "macaddr": {
+              "mac": {
                 "type": "string",
                 "examples": [
                   "00:00:00:00:00:00"
@@ -2629,7 +2629,7 @@
             "location": {
               "type": "string"
             },
-            "macaddr": {
+            "mac": {
               "type": "string",
               "examples": [
                 "00:00:00:00:00:00"
