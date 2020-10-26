@@ -2366,6 +2366,10 @@
                   }
                 }
               },
+              "cdp": {
+                "type": "boolean",
+                "title": "Is a Cisco Discorvery Protocol connection"
+              },
               "aggregate": {
                 "type": "array",
                 "items": {

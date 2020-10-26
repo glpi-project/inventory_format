@@ -927,6 +927,10 @@ class Converter
                                 $netport['vlans']['vlan'] :
                                 [$netport['vlans']['vlan']];
                         }
+                        if (isset($netport['connections']['cdp'])) {
+                            $netport['cdp'] = true;
+                            unset($netport['connections']['cdp']);
+                        }
                         if (isset($netport['connections'])) {
                             $netport['connections'] = isset($netport['connections']['connection'][0]) ?
                                 $netport['connections']['connection'] :
