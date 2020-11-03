@@ -885,7 +885,7 @@ class Converter
                     }
 
                     if (isset($device_info['ips'])) {
-                        $device_info['ips'] = isset($device_info['ips']['ip'][0]) ?
+                        $device_info['ips'] = is_array($device_info['ips']['ip']) ?
                             $device_info['ips']['ip'] :
                             [$device_info['ips']['ip']];
                     }
