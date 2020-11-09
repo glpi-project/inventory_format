@@ -2368,7 +2368,7 @@
               },
               "lldp": {
                 "type": "boolean",
-                "title": "Is ia LLDP (Link Layer Discovery Protocol) or CDP (Cisco Discovery Protocol) connection"
+                "title": "Is a LLDP (Link Layer Discovery Protocol) or CDP (Cisco Discovery Protocol) connection"
               },
               "aggregate": {
                 "type": "array",
