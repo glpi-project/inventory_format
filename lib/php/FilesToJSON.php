@@ -207,7 +207,7 @@ class FilesToJSON
             $stack = [];
             if (preg_match("/^(\S+)\s*\(hex\)\t{2}(.+)/i", $buffer, $stack)) {
                 $mac = strtr($stack[1], '-', ':');
-                $ouis[$mac] = $stack[2];
+                $ouis[$mac] = trim($stack[2]);
             }
         }
 
