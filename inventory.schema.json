@@ -2384,7 +2384,7 @@
                 "type": "integer",
                 "title": "Number of input errors"
               },
-              "ifinoctets": {
+              "ifinbytes": {
                 "type": "integer",
                 "title": "Number of input bytes"
               },
@@ -2413,7 +2413,7 @@
                 "type": "integer",
                 "title": "Number of output errors"
               },
-              "ifoutoctets": {
+              "ifoutbytes": {
                 "type": "integer",
                 "title": "Number of output bytes"
               },

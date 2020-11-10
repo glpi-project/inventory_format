@@ -935,6 +935,17 @@ class Converter
                             $netport['connections'] = isset($netport['connections']['connection'][0]) ?
                                 $netport['connections']['connection'] :
                                 [$netport['connections']['connection']];
+                            //rename ifinoctets and ifoutoctets
+                            foreach ($netport['connections'] as &$connection) {
+                                if (isset($connection['ifinoctets'])) {
+                                    $connection['ifinbytes'] = $connection['ifinoctets'];
+                                    unset($connection['ifinoctets']);
+                                }
+                                if (isset($connection['ifoutoctets'])) {
+                                    $connection['ifoutbytes'] = $connection['ifoutoctets'];
+                                    unset($connection['ifoutoctets']);
+                                }
+                            }
                         }
                         if (isset($netport['aggregate'])) {
                             $netport['aggregate'] = isset($netport['aggregate']['port'][0]) ?
