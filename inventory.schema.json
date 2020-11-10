@@ -2581,10 +2581,6 @@
               "examples": [
                 "2.3.20"
               ]
-            },
-            "processnumber": {
-              "type": "string",
-              "title": "Server process id"
             }
           }
         },
