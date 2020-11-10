@@ -846,6 +846,10 @@ class Converter
             unset($data['content']['moduleversion']);
         }
 
+        if (isset($data['content']['processnumber'])) {
+            unset($data['content']['processnumber']);
+        }
+
         $device = $data['content']['device'];
 
         if (!isset($data['query']) || $data['query'] == 'SNMPQUERY') {
