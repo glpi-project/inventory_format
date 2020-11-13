@@ -949,6 +949,12 @@ class Converter
                                 [$netport['aggregate']['port']];
                             $netport['aggregate'] = array_map('intval', $netport['aggregate']);
                         }
+
+                        if (isset($netport['ips'])) {
+                            $netport['ips'] = is_array($netport['ips']['ip']) ?
+                                $netport['ips']['ip'] :
+                                [$netport['ips']['ip']];
+                        }
                     }
                     break;
                 case 'firmwares':
