@@ -431,6 +431,91 @@ class Converter extends \atoum {
     }
 
     /**
+     * Test simcards and firmwares conversions
+     *
+     * @return void
+     */
+    public function testFwAndSimcards()
+    {
+        $this->string($xml_path = realpath(TU_DIR . '/data/5.xml'));
+        $this
+            ->given($this->newTestedInstance())
+            ->then
+                ->string($json_str = $this->testedInstance->convert(file_get_contents($xml_path)))
+                ->isNotEmpty();
+
+        $this->object($json = json_decode($json_str));
+        $this->string($json->deviceid)->isIdenticalTo('foo');
+        $this->string($json->query)->isIdenticalTo('SNMP');
+        $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
+
+        $device = $json->content->network_device;
+        $this->array((array)$device)->isIdenticalTo([
+            'comments' => '
+Digi TransPort WR11-L700-DE1-XW Ser#:486280
+Software Build Ver5.2.17.12.  Mar  8 2017 13:55:20  1W
+ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88',
+            'contact' => 'test@glpi-project.org',
+            'firmware' => '5.2.17.12',
+            'id' => 0,
+            'ips' => [
+                '172.21.255.102'
+            ],
+            'location' => 'FR-WR21',
+            'mac' => '00:04:2d:07:6b:ae',
+            'manufacturer' => 'Digi',
+            'model' => 'WR11 XT',
+            'name' => 'WR21',
+            'serial' => '486280',
+            'type' => 'Networking',
+            'uptime' => '(12078) 0:02:00.78'
+        ]);
+        $this->array($json->content->network_ports)->hasSize(18);
+        //$this->array($json->content->network_components)->hasSize(66);
+        $this->array($json->content->firmwares)->hasSize(1);
+        $this->boolean(property_exists($json->content, 'simcards'))->isFalse();
+
+        //reload with simcards real infos
+        $this->string($xml_path = realpath(TU_DIR . '/data/5-good.xml'));
+        $this
+            ->given($this->newTestedInstance())
+            ->then
+                ->string($json_str = $this->testedInstance->convert(file_get_contents($xml_path)))
+                ->isNotEmpty();
+
+        $this->object($json = json_decode($json_str));
+        $this->string($json->deviceid)->isIdenticalTo('foo');
+        $this->string($json->query)->isIdenticalTo('SNMP');
+        $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
+
+        $device = $json->content->network_device;
+        $this->array((array)$device)->isIdenticalTo([
+            'comments' => '
+Digi TransPort WR11-L700-DE1-XW Ser#:486280
+Software Build Ver5.2.17.12.  Mar  8 2017 13:55:20  1W
+ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88',
+            'contact' => 'test@glpi-project.org',
+            'firmware' => '5.2.17.12',
+            'id' => 0,
+            'ips' => [
+                '172.21.255.102'
+            ],
+            'location' => 'FR-WR21',
+            'mac' => '00:04:2d:07:6b:ae',
+            'manufacturer' => 'Digi',
+            'model' => 'WR11 XT',
+            'name' => 'WR21',
+            'serial' => '486280',
+            'type' => 'Networking',
+            'uptime' => '(12078) 0:02:00.78'
+        ]);
+        $this->array($json->content->network_ports)->hasSize(18);
+        //$this->array($json->content->network_components)->hasSize(66);
+        $this->array($json->content->firmwares)->hasSize(1);
+        $this->boolean(property_exists($json->content, 'simcards'))->isTrue();
+    }
+
+    /**
      * Test a full network equipment conversion
      *
      * @return void
