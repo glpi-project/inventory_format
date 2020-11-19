@@ -958,21 +958,23 @@ class Converter
                     }
                     break;
                 case 'firmwares':
-                    //first, retrieve firmwares from device
-                    $firmwares = $device['firmwares'];
-                    if (!isset($firmwares[0])) {
-                        $firmwares = [$firmwares];
+                case 'modems':
+                case 'simcards':
+                    //first, retrieve data from device
+                    $elements = $device[$key];
+                    if (!isset($elements[0])) {
+                        $elements = [$elements];
                     }
 
                     //second, append them to data
-                    if (isset($data['content']['firmwares'])) {
-                        if (!isset($data['content']['firmwares'][0])) {
-                            $data['content']['firmwares'] = [$data['content']['firmwares']];
+                    if (isset($data['content'][$key])) {
+                        if (!isset($data['content'][$key][0])) {
+                            $data['content'][$key] = [$data['content'][$key]];
                         }
                     }
-                    $data['content']['firmwares'] = array_merge(
-                        $data['content']['firmwares'] ?? [],
-                        $firmwares
+                    $data['content'][$key] = array_merge(
+                        $data['content'][$key] ?? [],
+                        $elements
                     );
 
                     break;
