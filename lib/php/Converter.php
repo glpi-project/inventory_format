@@ -888,6 +888,20 @@ class Converter
 
                     $data['content']['network_device'] = $device_info;
 
+                    //Prior to agent 2.3.22, we get only a firmware version in device information
+                    if ((!isset($device['firmwares'])
+                        || !count($device['firmwares']))
+                        && isset($device_data['firmware'])
+                    ) {
+                        $data['content']['firmwares'] = array_merge(
+                            $data['content']['firmwares'] ?? [],
+                            [
+                                'version' => $device_data['firmware'],
+                                'name'    => $device_data['firmware']
+                            ]
+                        );
+                    }
+
                     //Guess itemtype from device type info
                     if (!isset($data['itemtype'])) {
                         $itemtype = 'Computer';
