@@ -2429,9 +2429,9 @@
               },
               "ifstatus": {
                 "type": "integer",
-                "title": "Port status",
+                "title": "Port status (up(1), down(2), testing(3), unknown(4), dormant(5), notPresent(6), lowerLayerDown(7))",
                 "minimum": 1,
-                "maximum": 2
+                "maximum": 7
               },
               "iftype": {
                 "type": "integer",
