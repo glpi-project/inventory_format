@@ -115,7 +115,7 @@ class FilesToJSON
         switch ($type) {
             case 'pci':
                 $path .= 'pci.ids';
-                $uri = 'http://pciids.sourceforge.net/pci.ids';
+                $uri = 'https://pci-ids.ucw.cz/v2.2/pci.ids';
                 break;
             case 'usb':
                 $path .= 'usb.ids';
