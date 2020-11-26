@@ -7,7 +7,7 @@ if (!file_exists($coverage_dir)) {
     mkdir($coverage_dir);
 }
 
-$coverageField = new atoum\report\fields\runner\coverage\html(
+$coverageField = new atoum\atoum\report\fields\runner\coverage\html(
     'GLPI Inventory format',
     $coverage_dir
 );
