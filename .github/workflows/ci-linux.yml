@@ -1,0 +1,49 @@
+name: Linux
+
+on:
+  push:
+    branches:
+      - master
+      - 'feature/*'
+      - 'fix/*'
+  pull_request:
+
+jobs:
+  ubuntu-latest:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        php-versions: [ '7.2', '7.3', '7.4', '8.0', '8.1' ]
+        coverage: [none]
+      fail-fast: false
+
+    name: PHP ${{ matrix.php-versions }} on ubuntu-latest
+
+    steps:
+      - name: PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          tools: composer
+          coverage: ${{ matrix.coverage }}
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install 3rd party deps
+        run: composer install --no-progress --no-interaction --ignore-platform-reqs
+
+      - name: Schema lint
+        run: vendor/bin/jsonlint inventory.schema.json
+
+      - name: XML well formed
+        run: |
+          sudo apt-get install expat
+          xmlwf tests/data/*.xml
+
+      - name: Conversions tests
+        run: for i in `ls tests/data/*.xml`; do ./bin/convert $i || exit 1; done
+
+      - name: Unit tests
+        run: vendor/bin/atoum --no-cc -mcn 1 -bf tests/bootstrap.php -d tests/Glpi/
