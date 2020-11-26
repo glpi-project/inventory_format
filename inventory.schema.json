@@ -2602,10 +2602,6 @@
             "firmware": {
               "type": "string"
             },
-            "id": {
-              "type": "integer",
-              "title": "Device ID in GLPI ????"
-            },
             "ips": {
               "type": "array",
               "title": "IP addresses",
