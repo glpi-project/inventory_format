@@ -23,7 +23,7 @@
     },
     "bin": ["bin/convert", "bin/build_hw_jsons"],
     "require-dev": {
-        "atoum/atoum": "dev-master"
+        "atoum/atoum": "^4.0"
     },
     "extra": {
         "branch-alias": {
