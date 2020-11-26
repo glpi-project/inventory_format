@@ -1219,7 +1219,7 @@
               "ipsubnet6": {
                 "type": "string"
               },
-              "macaddr": {
+              "mac": {
                 "type": "string",
                 "examples": [
                   "00:00:00:00:00:00"
@@ -2322,6 +2322,176 @@
             }
           }
         },
+        "network_ports": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "connections": {
+                "type": "array",
+                "items": {
+                  "mac": {
+                    "type": "string",
+                    "title": "Remote device mac address ",
+                    "examples": [
+                      "00:00:00:00:00:00"
+                    ]
+                  },
+                  "ifnumber": {
+                    "type": "integer",
+                    "title": "Remote device ifindex, from CDP/LLDP"
+                  },
+                  "sysmac": {
+                    "type": "string",
+                    "title": "Remote device mac address, from CDP/LLDP",
+                    "examples": [
+                      "00:00:00:00:00:00"
+                    ]
+                  },
+                  "ifdescr": {
+                    "type": "string",
+                    "title": "Remote device port description, from CDP/LLDP"
+                  },
+                  "ip": {
+                    "type": "string",
+                    "title": "Remote device IP address, from CDP/LLDP"
+                  },
+                  "sysdescr": {
+                    "type": "string",
+                    "title": "Remote device system description, from CDP/LLDP"
+                  },
+                  "sysname": {
+                    "type": "string",
+                    "title": "Remote device name, from CDP/LLDP"
+                  }
+                }
+              },
+              "lldp": {
+                "type": "boolean",
+                "title": "Is a LLDP (Link Layer Discovery Protocol) or CDP (Cisco Discovery Protocol) connection"
+              },
+              "aggregate": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "title": "Aggregated port ifindex"
+                }
+              },
+              "ifdescr": {
+                "type": "string"
+              },
+              "ifinerrors": {
+                "type": "integer",
+                "title": "Number of input errors"
+              },
+              "ifinbytes": {
+                "type": "integer",
+                "title": "Number of input bytes"
+              },
+              "ifinternalstatus": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 3
+              },
+              "iflastchange": {
+                "type": "string",
+                "title": "Time since last status change ('X days, HH:MM::SS' format)"
+              },
+              "ifmtu": {
+                "type": "integer",
+                "title": "MTU"
+              },
+              "ifname": {
+                "type": "string",
+                "title": "Port name"
+              },
+              "ifnumber": {
+                "type": "integer",
+                "title": "Index of the interface"
+              },
+              "ifouterrors": {
+                "type": "integer",
+                "title": "Number of output errors"
+              },
+              "ifoutbytes": {
+                "type": "integer",
+                "title": "Number of output bytes"
+              },
+              "ifspeed": {
+                "type": "integer",
+                "title": "Speed in bytes"
+              },
+              "ifportduplex": {
+                "type": "integer",
+                "title": "Duplex status",
+                "minimum": 1,
+                "maximum": 3
+              },
+              "ifstatus": {
+                "type": "integer",
+                "title": "Port status (up(1), down(2), testing(3), unknown(4), dormant(5), notPresent(6), lowerLayerDown(7))",
+                "minimum": 1,
+                "maximum": 7
+              },
+              "iftype": {
+                "type": "integer",
+                "title": "Port type"
+              },
+              "mac": {
+                "type": "string",
+                "examples": [
+                  "00:00:00:00:00:00"
+                ]
+              },
+              "trunk": {
+                "type": "boolean",
+                "title": "Trunk port flag"
+              },
+              "vlans": {
+                "type": "array",
+                "items": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "id": {
+                    "type": "integer",
+                    "title": "VLAN identifier"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "network_components": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "contained_index": {
+                "type": "integer",
+                "title": "Index of the parent component"
+              },
+              "description": {
+                "type": "string"
+              },
+              "fru": {
+                "type": "integer"
+              },
+              "index": {
+                "type": "integer"
+              },
+              "manufacturer": {
+                "type": "string"
+              },
+              "model": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          }
+        },
         "versionclient": {
           "type": "string",
           "examples": [
@@ -2411,6 +2581,94 @@
               "examples": [
                 "2.3.20"
               ]
+            }
+          }
+        },
+        "network_device": {
+          "type": "object",
+          "title": "Network inventory device",
+          "required": [
+            "type"
+          ],
+          "properties": {
+            "description": {
+              "type": "string",
+              "title": "System description"
+            },
+            "cpu": {
+              "type": "integer",
+              "title": "CPU load in %"
+            },
+            "firmware": {
+              "type": "string"
+            },
+            "ips": {
+              "type": "array",
+              "title": "IP addresses",
+              "items": {
+                "type": "string",
+                "format": [
+                  "ipv4",
+                  "ipv6"
+                ],
+                "examples": [
+                  "127.0.0.1",
+                  "172.28.211.1",
+                  "::1"
+                ]
+              }
+            },
+            "location": {
+              "type": "string"
+            },
+            "mac": {
+              "type": "string",
+              "examples": [
+                "00:00:00:00:00:00"
+              ]
+            },
+            "memory": {
+              "type": "integer",
+              "title": "Total system memory in Mio",
+              "examples": [
+                "7908"
+              ]
+            },
+            "model": {
+              "type": "string",
+              "examples": [
+                "UCS 6248UP 48-Port"
+              ]
+            },
+            "name": {
+              "type": "string"
+            },
+            "ram": {
+              "type": "integer",
+              "title": "Volatile memory memory in Mio",
+              "examples": [
+                "7908"
+              ]
+            },
+            "serial": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string",
+              "pattern": "^(Computer|Networking|Printer|Storage|Power|Phone|Video|KVM)$"
+            },
+            "uptime": {
+              "type": "string",
+              "title": "Uptime ('X days, HH:MM::SS' format)"
+            },
+            "manufacturer": {
+              "type": "string",
+              "examples": [
+                "Cisco"
+              ]
+            },
+            "contact": {
+              "type": "string"
             }
           }
         }

@@ -56,6 +56,7 @@ class FilesToJSON
     private $type_pci = 'pciid';
     private $type_usb = 'usbid';
     private $type_oui = 'ouis';
+    private $type_iftype = 'iftype';
     private $path = __DIR__ . '/../../data';
 
     /**
@@ -92,6 +93,11 @@ class FilesToJSON
         if ($oui === false) {
             throw new \RuntimeException('OUI JSON file has not been written!');
         }
+
+        $iftype = $this->convertIftypeFile();
+        if ($iftype === false) {
+            throw new \RuntimeException('IFtype JSON file has not been written!');
+        }
     }
 
     /**
@@ -109,7 +115,7 @@ class FilesToJSON
         switch ($type) {
             case 'pci':
                 $path .= 'pci.ids';
-                $uri = 'http://pciids.sourceforge.net/pci.ids';
+                $uri = 'https://pci-ids.ucw.cz/v2.2/pci.ids';
                 break;
             case 'usb':
                 $path .= 'usb.ids';
@@ -118,6 +124,11 @@ class FilesToJSON
             case 'oui':
                 $path .= 'oui.txt';
                 $uri = 'http://standards-oui.ieee.org/oui/oui.txt';
+                break;
+            case 'iftype':
+                ini_set('user_agent', 'Mozilla/4.0 (compatible; MSIE 6.0)');
+                $path .= 'iftype.csv';
+                $uri = 'https://www.iana.org/assignments/smi-numbers/smi-numbers-5.csv';
                 break;
             default:
                 throw new \RuntimeException('Unknown type ' . $type);
@@ -207,10 +218,32 @@ class FilesToJSON
             $stack = [];
             if (preg_match("/^(\S+)\s*\(hex\)\t{2}(.+)/i", $buffer, $stack)) {
                 $mac = strtr($stack[1], '-', ':');
-                $ouis[$mac] = $stack[2];
+                $ouis[$mac] = trim($stack[2]);
             }
         }
 
         return file_put_contents($this->getPathFor('oui'), json_encode($ouis, JSON_PRETTY_PRINT));
+    }
+
+    /**
+     * Convert iftype file from CSV to JSON
+     *
+     * @return int|false
+     */
+    public function convertIftypeFile()
+    {
+        $iftypeFile = $this->getSourceFile('iftype');
+        $iftypes = [];
+
+        while (($line = fgetcsv($iftypeFile)) !== false) {
+            $iftypes[] = [
+                'decimal'     => $line[0],
+                'name'        => $line[1],
+                'description' => $line[2] ?? '',
+                'references'  => $line[3] ?? ''
+            ];
+        }
+
+        return file_put_contents($this->getPathFor('iftype'), json_encode($iftypes, JSON_PRETTY_PRINT));
     }
 }

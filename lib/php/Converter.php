@@ -253,6 +253,7 @@ class Converter
     {
         //all keys are now lowercase
         $data = $this->arrayChangeKeyCaseRecursive($data);
+        $data = $this->convertNetworkInventory($data);
 
         //replace bad typed values...
         $this->setConvertTypes([
@@ -266,7 +267,8 @@ class Converter
                 'printers/shared',
                 'networks/management',
                 'softwares/no_remove',
-                'licenseinfos/trial'
+                'licenseinfos/trial',
+                'network_ports/trunk'
             ],
             'integer'   => [
                 'cpus/core',
@@ -301,7 +303,21 @@ class Converter
                 'virtualmachines/memory',
                 'virtualmachines/vcpu',
                 'videos/memory',
-                'batteries/real_capacity'
+                'batteries/real_capacity',
+                'network_ports/ifinerrors',
+                'network_ports/ifinoctets',
+                'network_ports/ifinternalstatus',
+                'network_ports/ifmtu',
+                'network_ports/ifnumber',
+                'network_ports/ifouterrors',
+                'network_ports/ifoutoctets',
+                'network_ports/ifspeed',
+                'network_ports/ifportduplex',
+                'network_ports/ifstatus',
+                'network_ports/iftype',
+                'network_components/fru',
+                'network_components/index',
+                'network_device/ram',
             ]
         ]);
         $this->convertTypes($data);
@@ -586,6 +602,11 @@ class Converter
             }
         }
 
+        if (!isset($data['itemtype'])) {
+            //set a default
+            $data['itemtype'] = 'Computer';
+        }
+
         return $data;
     }
 
@@ -619,7 +640,7 @@ class Converter
             foreach ($names as $name) {
                 $keys = explode('/', $name);
                 if (count($keys) != 2) {
-                    throw new \RuntimeException('Not suported!');
+                    throw new \RuntimeException($name . ' not suported!');
                 }
                 if (isset($data['content'][$keys[0]])) {
                     if (is_array($data['content'][$keys[0]])) {
@@ -806,4 +827,180 @@ class Converter
         return false;
     }
 
+    /**
+     * Handle network inventory XML format
+     *
+     * @param array $data Contents
+     *
+     * @return array
+     */
+    public function convertNetworkInventory(array $data): array
+    {
+        if (!isset($data['content']['device'])) {
+            //not a network inventory XML
+            return $data;
+        }
+
+        if (!isset($data['content']['versionclient']) && isset($data['content']['moduleversion'])) {
+            $data['content']['versionclient'] = $data['content']['moduleversion'];
+            unset($data['content']['moduleversion']);
+        }
+
+        if (isset($data['content']['processnumber'])) {
+            unset($data['content']['processnumber']);
+        }
+
+        $device = $data['content']['device'];
+
+        if (!isset($data['query']) || $data['query'] == 'SNMPQUERY') {
+            $data['query'] = 'SNMP';
+        }
+
+        foreach ($device as $key => $device_data) {
+            switch ($key) {
+                case 'info':
+                    $device_info = $device['info'];
+
+                    if (isset($device_info['cpu'])) {
+                        $device_info['cpu'] = (int)$device_info['cpu'];
+                    }
+                    if (isset($device_info['id'])) {
+                        $device_info['id'] = (int)$device_info['id'];
+                    }
+
+                    //Fix network inventory type
+                    if (isset($device_info['type'])) {
+                        $device_info['type'] = ucfirst(strtolower($device_info['type']));
+                        if ($device_info['type'] == 'Kvm') {
+                            $device_info['type'] = 'KVM';
+                        }
+                    }
+
+                    if (isset($device_info['macaddr'])) {
+                        $device_info['mac'] = $device_info['macaddr'];
+                    }
+
+                    if (isset($device_info['ips'])) {
+                        $device_info['ips'] = is_array($device_info['ips']['ip']) ?
+                            $device_info['ips']['ip'] :
+                            [$device_info['ips']['ip']];
+                    }
+
+                    $data['content']['network_device'] = $device_info;
+
+                    //Prior to agent 2.3.22, we get only a firmware version in device information
+                    if ((!isset($device['firmwares'])
+                        || !count($device['firmwares']))
+                        && isset($device_data['firmware'])
+                    ) {
+                        $data['content']['firmwares'] = array_merge(
+                            $data['content']['firmwares'] ?? [],
+                            [
+                                'version' => $device_data['firmware'],
+                                'name'    => $device_data['firmware']
+                            ]
+                        );
+                    }
+
+                    //Guess itemtype from device type info
+                    if (!isset($data['itemtype'])) {
+                        $itemtype = 'Computer';
+                        if (isset($device_info['type'])) {
+                            switch ($device_info['type']) {
+                                case 'Computer':
+                                case 'Phone':
+                                case 'Printer':
+                                    $itemtype = $device_info['type'];
+                                    break;
+                                case 'Networking':
+                                case 'Storage':
+                                case 'Power':
+                                case 'Video':
+                                case 'KVM':
+                                    $itemtype = 'NetworkEquipment';
+                                    break;
+                                default:
+                                    throw new \RuntimeException('Unhandled device type: ' . $device_info['type']);
+                            }
+                        }
+                        $data['itemtype'] = $itemtype;
+                    }
+
+                    break;
+                case 'ports':
+                    $data['content']['network_ports'] = $device['ports']['port'];
+
+                    //check for arrays
+                    foreach ($data['content']['network_ports'] as &$netport) {
+                        if (isset($netport['vlans'])) {
+                            $netport['vlans'] = isset($netport['vlans']['vlan'][0]) ?
+                                $netport['vlans']['vlan'] :
+                                [$netport['vlans']['vlan']];
+                        }
+                        if (isset($netport['connections']['cdp'])) {
+                            $netport['lldp'] = (bool)$netport['connections']['cdp'];
+                            unset($netport['connections']['cdp']);
+                        }
+                        if (isset($netport['connections'])) {
+                            $netport['connections'] = isset($netport['connections']['connection'][0]) ?
+                                $netport['connections']['connection'] :
+                                [$netport['connections']['connection']];
+                            //rename ifinoctets and ifoutoctets
+                            foreach ($netport['connections'] as &$connection) {
+                                if (isset($connection['ifinoctets'])) {
+                                    $connection['ifinbytes'] = $connection['ifinoctets'];
+                                    unset($connection['ifinoctets']);
+                                }
+                                if (isset($connection['ifoutoctets'])) {
+                                    $connection['ifoutbytes'] = $connection['ifoutoctets'];
+                                    unset($connection['ifoutoctets']);
+                                }
+                            }
+                        }
+                        if (isset($netport['aggregate'])) {
+                            $netport['aggregate'] = isset($netport['aggregate']['port'][0]) ?
+                                $netport['aggregate']['port'] :
+                                [$netport['aggregate']['port']];
+                            $netport['aggregate'] = array_map('intval', $netport['aggregate']);
+                        }
+
+                        if (isset($netport['ips'])) {
+                            $netport['ips'] = is_array($netport['ips']['ip']) ?
+                                $netport['ips']['ip'] :
+                                [$netport['ips']['ip']];
+                        }
+                    }
+                    break;
+                case 'firmwares':
+                case 'modems':
+                case 'simcards':
+                    //first, retrieve data from device
+                    $elements = $device[$key];
+                    if (!isset($elements[0])) {
+                        $elements = [$elements];
+                    }
+
+                    //second, append them to data
+                    if (isset($data['content'][$key])) {
+                        if (!isset($data['content'][$key][0])) {
+                            $data['content'][$key] = [$data['content'][$key]];
+                        }
+                    }
+                    $data['content'][$key] = array_merge(
+                        $data['content'][$key] ?? [],
+                        $elements
+                    );
+
+                    break;
+                case 'components':
+                    $data['content']['network_components'] = $device['components']['component'];
+                    break;
+                default:
+                    throw new \RuntimeException('Key ' . $key . ' is not handled in network devices conversion');
+            }
+        }
+
+        unset($data['content']['device']);
+        return $data;
+    }
 }

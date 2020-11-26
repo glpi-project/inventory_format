@@ -11,7 +11,7 @@ if (count($argv) !== 2 && count($argv) !== 3) {
 
 $xml_path = $argv[1];
 if (parse_url($xml_path, PHP_URL_SCHEME) == null) {
-    if ($xml_path{0} == '/') {
+    if ($xml_path[0] == '/') {
         //absolute path
         $xml_path = 'file://' . $xml_path;
     } else {
@@ -22,7 +22,7 @@ if (parse_url($xml_path, PHP_URL_SCHEME) == null) {
 
 $json_path = $argv[2] ?? null;
 if ($json_path !== null && parse_url($json_path, PHP_URL_SCHEME) == null) {
-    if ($json_path{0} == '/') {
+    if ($json_path[0] == '/') {
         //absolute path
         $json_path = 'file://' . $json_path;
     } else {
@@ -42,7 +42,7 @@ try {
     $converter->validate($json);
 
     if ($json_path !== null) {
-        file_put_contents($json_path, json_encode($json, JSON_PRETTY_PRINT));
+        file_put_contents($json_path, $json);
     }
 } catch (\Exception $e) {
     echo "File: $xml_path\n";
