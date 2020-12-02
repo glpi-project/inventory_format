@@ -928,7 +928,9 @@ class Converter
 
                     break;
                 case 'ports':
-                    $data['content']['network_ports'] = $device['ports']['port'];
+                    $data['content']['network_ports'] = isset($device['ports']['port'][0]) ?
+                        $device['ports']['port'] :
+                        [$device['ports']['port']];
 
                     //check for arrays
                     foreach ($data['content']['network_ports'] as &$netport) {

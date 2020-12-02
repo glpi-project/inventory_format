@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<REQUEST>
+  <CONTENT>
+    <DEVICE>
+      <FIRMWARES>
+        <DESCRIPTION>device firmware</DESCRIPTION>
+        <MANUFACTURER>Cisco</MANUFACTURER>
+        <NAME>UCS 6248UP 48-Port</NAME>
+        <TYPE>device</TYPE>
+        <VERSION>5.0(3)N2(4.02b)</VERSION>
+      </FIRMWARES>
+      <INFO>
+        <COMMENTS>Cisco NX-OS(tm) ucs, Software (ucs-6100-k9-system), Version 5.0(3)N2(4.02b), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc.   Compiled 1/16/2019 18:00:00</COMMENTS>
+        <CONTACT>noc@glpi-project.org</CONTACT>
+        <CPU>4</CPU>
+        <FIRMWARE>5.0(3)N2(4.02b)</FIRMWARE>
+        <ID>0</ID>
+        <LOCATION>paris.pa3</LOCATION>
+        <MAC>8c:60:4f:8d:ae:fc</MAC>
+        <MANUFACTURER>Cisco</MANUFACTURER>
+        <MODEL>UCS 6248UP 48-Port</MODEL>
+        <NAME>ucs6248up-cluster-pa3-B</NAME>
+        <SERIAL>SSI1912014B</SERIAL>
+        <TYPE>NETWORKING</TYPE>
+        <UPTIME>482 days, 05:42:18.50</UPTIME>
+      </INFO>
+      <PORTS>
+        <PORT>
+          <CONNECTIONS>
+            <CDP>1</CDP>
+            <CONNECTION>
+              <IFDESCR>FastEthernet0/2</IFDESCR>
+              <IP>172.25.1.2</IP>
+              <MODEL>cisco WS-C2960-48TC-S</MODEL>
+              <SYSDESCR>Cisco IOS Software, C2960 Software (C2960-LANLITEK9-M), Version 12.2(50)SE5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2010 by Cisco Systems, Inc.
+Compiled Tue 28-Sep-10 13:44 by prod_rel_team</SYSDESCR>
+              <SYSNAME>sw2-mgmt-eqnx</SYSNAME>
+            </CONNECTION>
+          </CONNECTIONS>
+          <IFDESCR>mgmt0</IFDESCR>
+          <IFINERRORS>0</IFINERRORS>
+          <IFINOCTETS>1883240436</IFINOCTETS>
+          <IFINTERNALSTATUS>2</IFINTERNALSTATUS>
+          <IFLASTCHANGE>0.00 seconds</IFLASTCHANGE>
+          <IFMTU>1500</IFMTU>
+          <IFNAME>mgmt0</IFNAME>
+          <IFNUMBER>83886080</IFNUMBER>
+          <IFOUTERRORS>0</IFOUTERRORS>
+          <IFOUTOCTETS>0</IFOUTOCTETS>
+          <IFPORTDUPLEX>1</IFPORTDUPLEX>
+          <IFSPEED>1000000000</IFSPEED>
+          <IFSTATUS>2</IFSTATUS>
+          <IFTYPE>6</IFTYPE>
+          <MAC>8c:60:4f:8d:ae:a1</MAC>
+        </PORT>
+      </PORTS>
+    </DEVICE>
+    <MODULEVERSION>4.1</MODULEVERSION>
+    <PROCESSNUMBER>1</PROCESSNUMBER>
+  </CONTENT>
+  <DEVICEID>foo</DEVICEID>
+  <QUERY>SNMPQUERY</QUERY>
+</REQUEST>

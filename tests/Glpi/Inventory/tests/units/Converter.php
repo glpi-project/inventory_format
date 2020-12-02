@@ -553,4 +553,43 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88',
         $this->array($json->content->network_ports)->hasSize(183);
         $this->array($json->content->network_components)->hasSize(66);
     }
+
+    /**
+     * Test one port equipment
+     *
+     * @return void
+     */
+    public function testOnePort()
+    {
+        $this->string($xml_path = realpath(TU_DIR . '/data/7.xml'));
+        $xml = file_get_contents($xml_path);
+        $this
+            ->given($this->newTestedInstance())
+            ->then
+                ->string($json_str = $this->testedInstance->convert($xml))
+                ->isNotEmpty();
+
+        $this->object($json = json_decode($json_str));
+        $this->string($json->deviceid)->isIdenticalTo('foo');
+        $this->string($json->query)->isIdenticalTo('SNMP');
+        $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
+
+        $device = $json->content->network_device;
+        $this->array((array)$device)->isIdenticalTo([
+            'comments' => "Cisco NX-OS(tm) ucs, Software (ucs-6100-k9-system), Version 5.0(3)N2(4.02b), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc.   Compiled 1/16/2019 18:00:00",
+            'contact' => "noc@glpi-project.org",
+            'cpu' => 4,
+            'firmware' => "5.0(3)N2(4.02b)",
+            'id' => 0,
+            'location' => "paris.pa3",
+            'mac' => "8c:60:4f:8d:ae:fc",
+            'manufacturer' => "Cisco",
+            'model' => "UCS 6248UP 48-Port",
+            'name' => "ucs6248up-cluster-pa3-B",
+            'serial' => "SSI1912014B",
+            'type' => "Networking",
+            'uptime' => "482 days, 05:42:18.50"
+        ]);
+        $this->array($json->content->network_ports)->hasSize(1);
+    }
 }
