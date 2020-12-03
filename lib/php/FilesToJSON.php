@@ -126,7 +126,6 @@ class FilesToJSON
                 $uri = 'http://standards-oui.ieee.org/oui/oui.txt';
                 break;
             case 'iftype':
-                ini_set('user_agent', 'Mozilla/4.0 (compatible; MSIE 6.0)');
                 $path .= 'iftype.csv';
                 $uri = 'https://www.iana.org/assignments/smi-numbers/smi-numbers-5.csv';
                 break;
@@ -274,7 +273,7 @@ class FilesToJSON
         $ch = curl_init($url);
         $opts = [
             CURLOPT_URL             => $url,
-            CURLOPT_USERAGENT       => "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322)",
+            CURLOPT_USERAGENT       => "GLPI/Inventory format 1.0",
             CURLOPT_RETURNTRANSFER  => 1,
         ] + $eopts;
 
