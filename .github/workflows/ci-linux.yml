@@ -47,6 +47,10 @@ jobs:
           sudo apt-get install expat
           xmlwf tests/data/*.xml
 
+      - name: PSR12
+        run: |
+          vendor/bin/phpcbf --standard=PSR12 lib/php/*
+
       - name: Conversions tests
         run: for i in `ls tests/data/*.xml`; do ./bin/convert $i || exit 1; done
 

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ---------------------------------------------------------------------
  * GLPI - Gestionnaire Libre de Parc Informatique
@@ -165,7 +166,7 @@ class FilesToJSON
             $stack = [];
             if (preg_match("/^\t(\w+)\s*(.+)/i", $buffer, $stack)) {
                 $deviceId = $stack[1];
-                $pci_ids[$vendorId.'::'.$deviceId] = $stack[2];
+                $pci_ids[$vendorId . '::' . $deviceId] = $stack[2];
             }
         }
 
@@ -194,7 +195,7 @@ class FilesToJSON
             $stack = [];
             if (preg_match("/^\t(\w+)\s*(.+)/i", $buffer, $stack)) {
                 $deviceId = $stack[1];
-                $usb_ids[$vendorId.'::'.$deviceId] = $stack[2];
+                $usb_ids[$vendorId . '::' . $deviceId] = $stack[2];
             }
         }
 
@@ -265,8 +266,10 @@ class FilesToJSON
         $defaultport = 80;
 
         // Manage standard HTTPS port : scheme detection or port 443
-        if ((isset($taburl["scheme"]) && $taburl["scheme"]=='https')
-            || (isset($taburl["port"]) && $taburl["port"]=='443')) {
+        if (
+            (isset($taburl["scheme"]) && $taburl["scheme"] == 'https')
+            || (isset($taburl["port"]) && $taburl["port"] == '443')
+        ) {
             $defaultport = 443;
         }
 

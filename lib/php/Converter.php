@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ---------------------------------------------------------------------
  * GLPI - Gestionnaire Libre de Parc Informatique
@@ -53,7 +54,7 @@ namespace Glpi\Inventory;
  */
 class Converter
 {
-    const LAST_VERSION = 0.1;
+    public const LAST_VERSION = 0.1;
 
     private $target_version;
     private $debug = false;
@@ -198,7 +199,7 @@ class Converter
 
         //remove empty nodes
         $removes = $sxml->xpath('//*[(not(text()) or normalize-space(.) = "") and not(*)]');
-        for ($i = count($removes) -1; $i >= 0; --$i) {
+        for ($i = count($removes) - 1; $i >= 0; --$i) {
             unset($removes[$i][0]);
         }
 
@@ -566,7 +567,8 @@ class Converter
         }
 
         if (isset($data['content']['accountinfo'])) {
-            if (isset($data['content']['accountinfo']['keyname'])
+            if (
+                isset($data['content']['accountinfo']['keyname'])
                 && !isset($data['content']['accountinfo']['keyvalue'])
             ) {
                 $data['content']['accountinfo']['keyvalue'] = '';
@@ -889,7 +891,8 @@ class Converter
                     $data['content']['network_device'] = $device_info;
 
                     //Prior to agent 2.3.22, we get only a firmware version in device information
-                    if ((!isset($device['firmwares'])
+                    if (
+                        (!isset($device['firmwares'])
                         || !count($device['firmwares']))
                         && isset($device_data['firmware'])
                     ) {
