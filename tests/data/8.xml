@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<REQUEST><CONTENT><DEVICE>
+      <CARTRIDGES>
+        <DRUMBLACK>0</DRUMBLACK>
+        <TONERBLACK>0g</TONERBLACK>
+      </CARTRIDGES>
+      <INFO>
+        <COMMENTS>Brother NC-6800h, Firmware Ver.1.01  (08.12.12),MID 84UB03</COMMENTS>
+        <ID>1907</ID>
+        <IPS>
+          <IP>10.75.230.125</IP>
+        </IPS>
+        <LOCATION>Greffe Charron</LOCATION>
+        <MAC>00:1b:a9:12:11:f2</MAC>
+        <MANUFACTURER>Brother</MANUFACTURER>
+        <MEMORY>32</MEMORY>
+        <MODEL>Brother HL-5350DN series</MODEL>
+        <NAME>CE75I09008</NAME>
+        <RAM>32</RAM>
+        <SERIAL>D9J230159</SERIAL>
+        <TYPE>PRINTER</TYPE>
+        <UPTIME>14 days, 22:48:33.30</UPTIME>
+      </INFO>
+      <PAGECOUNTERS>
+        <TOTAL>94344</TOTAL>
+      </PAGECOUNTERS>
+      <PORTS>
+        <PORT>
+          <IFDESCR>NC-6800h</IFDESCR>
+          <IFINERRORS>0</IFINERRORS>
+          <IFINOCTETS>1446413508</IFINOCTETS>
+          <IFINTERNALSTATUS>1</IFINTERNALSTATUS>
+          <IFLASTCHANGE>23.85 seconds</IFLASTCHANGE>
+          <IFMTU>1500</IFMTU>
+          <IFNAME>NC-6800h</IFNAME>
+          <IFNUMBER>1</IFNUMBER>
+          <IFOUTERRORS>0</IFOUTERRORS>
+          <IFOUTOCTETS>53073183</IFOUTOCTETS>
+          <IFSPEED>100000000</IFSPEED>
+          <IFSTATUS>1</IFSTATUS>
+          <IFTYPE>7</IFTYPE>
+          <IP>10.75.230.125</IP>
+          <IPS>
+            <IP>10.75.230.125</IP>
+          </IPS>
+          <MAC>00:1b:a9:12:11:f2</MAC>
+        </PORT>
+        <PORT>
+          <IFDESCR>SoftwareLoopBack</IFDESCR>
+          <IFINERRORS>0</IFINERRORS>
+          <IFINOCTETS>0</IFINOCTETS>
+          <IFINTERNALSTATUS>1</IFINTERNALSTATUS>
+          <IFLASTCHANGE>0.00 seconds</IFLASTCHANGE>
+          <IFMTU>1500</IFMTU>
+          <IFNAME>SoftwareLoopBack</IFNAME>
+          <IFNUMBER>2</IFNUMBER>
+          <IFOUTERRORS>0</IFOUTERRORS>
+          <IFOUTOCTETS>0</IFOUTOCTETS>
+          <IFSPEED>0</IFSPEED>
+          <IFSTATUS>1</IFSTATUS>
+          <IFTYPE>24</IFTYPE>
+        </PORT>
+      </PORTS>
+    </DEVICE>
+  </CONTENT><QUERY>SNMP</QUERY><DEVICEID>foo</DEVICEID></REQUEST>

@@ -2492,6 +2492,78 @@
             }
           }
         },
+        "pagecounters": {
+          "type": "object",
+          "properties": {
+            "total": {
+              "type": "integer"
+            },
+            "black": {
+              "type": "integer"
+            },
+            "color": {
+              "type": "integer"
+            },
+            "rectoverso": {
+              "type": "integer"
+            },
+            "scanned": {
+              "type": "integer"
+            },
+            "printtotal": {
+              "type": "integer"
+            },
+            "printblack": {
+              "type": "integer"
+            },
+            "printcolor": {
+              "type": "integer"
+            },
+            "copytotal": {
+              "type": "integer"
+            },
+            "copyblack": {
+              "type": "integer"
+            }
+          }
+        },
+        "cartridges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "consumables": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "color": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              },
+              "unit": {
+                "type": "string"
+              },
+              "max": {
+                "type": "integer"
+              }
+            }
+          }
+        },
         "versionclient": {
           "type": "string",
           "examples": [
