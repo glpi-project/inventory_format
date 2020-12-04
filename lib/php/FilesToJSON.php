@@ -283,13 +283,6 @@ class FilesToJSON
         curl_close($ch);
 
         if ($curl_error !== null) {
-            if (empty($CFG_GLPI["proxy_name"])) {
-                //TRANS: %s is the error string
-                $msgerr = sprintf(
-                    'Connection failed. (%s)',
-                    $curl_error
-                );
-            }
             $content = '';
         } elseif (empty($content)) {
             $msgerr = sprintf(
