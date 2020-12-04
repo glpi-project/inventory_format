@@ -319,6 +319,8 @@ class Converter
                 'network_components/fru',
                 'network_components/index',
                 'network_device/ram',
+                'network_device/memory',
+                'pagecounters/total'
             ]
         ]);
         $this->convertTypes($data);
@@ -358,7 +360,8 @@ class Converter
             'sensors',
             'powersupplies',
             'videos',
-            'remote_mgmt'
+            'remote_mgmt',
+            'cartridges'
         ];
 
         foreach ($arrays as $array) {
@@ -1000,9 +1003,17 @@ class Converter
                 case 'components':
                     $data['content']['network_components'] = $device['components']['component'];
                     break;
+                case "cartridges":
+                case "pagecounters":
+                    $data['content'][$key] = $device[$key];
+                    break;
                 default:
                     throw new \RuntimeException('Key ' . $key . ' is not handled in network devices conversion');
             }
+        }
+
+        if (!isset($data['content']['versionclient']) && $data['itemtype'] == 'Printer') {
+            $data['content']['versionclient'] = 'missing';
         }
 
         unset($data['content']['device']);
