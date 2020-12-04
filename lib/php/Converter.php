@@ -198,11 +198,11 @@ class Converter
         }
 
         //remove empty nodes
-        $removes = $sxml->xpath('//*[(not(text()) or normalize-space(.) = "") and not(*)]');
-        for ($i = count($removes) - 1; $i >= 0; --$i) {
-            unset($removes[$i][0]);
+        while ($removes = $sxml->xpath('/child::*//*[not(*) and not(text()[normalize-space()])]')) {
+            for ($i = count($removes) - 1; $i >= 0; --$i) {
+                unset($removes[$i][0]);
+            }
         }
-
         //convert SimpleXML object to array, recursively.
         $data = json_decode(
             json_encode((array)$sxml),
