@@ -35,7 +35,9 @@ jobs:
         run: composer install --no-progress --no-interaction --ignore-platform-reqs
 
       - name: Build hardware JSONs
-        run: bin/build_hw_jsons
+        run: |
+          bin/build_hw_jsons
+          rm data/*.json
 
       - name: Schema lint
         run: vendor/bin/jsonlint inventory.schema.json
