@@ -197,7 +197,7 @@ class Converter
         }
 
         //remove empty nodes
-        $removes = $sxml->xpath('//*[not(text()) or normalize-space(.) = ""]');
+        $removes = $sxml->xpath('//*[(not(text()) or normalize-space(.) = "") and not(*)]');
         for ($i = count($removes) -1; $i >= 0; --$i) {
             unset($removes[$i][0]);
         }
