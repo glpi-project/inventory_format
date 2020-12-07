@@ -136,7 +136,17 @@ class FilesToJSON
 
         $interval = strtotime('-1 week');
         if (!file_exists($path) || filemtime($path) <= $interval) {
-            $contents = $this->callCurl($uri);
+            try {
+                $contents = $this->callCurl($uri);
+            } catch (\RuntimeException $e) {
+                if ($type === 'iftype') {
+                    var_dump('BOUM (:');
+                    //use provided file; upstream webste is unstable.
+                    $contents = file_get_contents(__DIR__ . '/../../smi-numbers-5.csv');
+                } else {
+                    throw $e;
+                }
+            }
             file_put_contents(
                 $path,
                 $contents
