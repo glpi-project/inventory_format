@@ -737,7 +737,8 @@ class Converter
             'Y-m-d H:i',
             'd/m/Y',
             'm/d/Y',
-            'Y-m-d'
+            'Y-m-d',
+            'Ymd'
         ];
         try {
             while ($current = array_shift($formats)) {
