@@ -496,6 +496,18 @@ class Converter
             }
         }
 
+        if (isset($data['content']['firmwares'])) {
+            foreach ($data['content']['firmwares'] as &$fw) {
+                if (isset($fw['date'])) {
+                    $fw['date'] = $this->convertDate(
+                        $fw['date'],
+                        'Y-m-d'
+                    );
+                }
+            }
+        }
+
+
         //storages serial-ata with several cases
         if (isset($data['content']['storages'])) {
             foreach ($data['content']['storages'] as &$storage) {
