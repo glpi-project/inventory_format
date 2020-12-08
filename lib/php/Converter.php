@@ -320,7 +320,17 @@ class Converter
                 'network_components/index',
                 'network_device/ram',
                 'network_device/memory',
-                'pagecounters/total'
+                'pagecounters/total',
+                'pagecounters/black',
+                'pagecounters/color',
+                'pagecounters/total',
+                'pagecounters/rectoverso',
+                'pagecounters/scanned',
+                'pagecounters/printtotal',
+                'pagecounters/printblack',
+                'pagecounters/printcolor',
+                'pagecounters/copytotal',
+                'pagecounters/copyblack',
             ]
         ]);
         $this->convertTypes($data);
