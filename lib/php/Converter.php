@@ -41,6 +41,8 @@
 
 namespace Glpi\Inventory;
 
+use Swaggest\JsonSchema\Schema;
+
 /**
  * Converts old FusionInventory XML format to new JSON schema
  * for automatic inventory.
@@ -158,22 +160,11 @@ class Converter
      */
     public function validate($json)
     {
-        $validator = new \JsonSchema\Validator();
-        $json = json_decode($json);
-        $validator->validate(
-            $json,
-            (object)['$ref' => 'file://' . $this->getSchemaPath()]
-        );
-
-        if (!$validator->isValid()) {
+        try {
+            $schema = Schema::import('file://' . $this->getSchemaPath());
+        } catch (\Exception $e) {
             $errmsg = "JSON does not validate. Violations:\n";
-            foreach ($validator->getErrors() as $error) {
-                $errmsg .= sprintf(
-                    "[%s] %s\n",
-                    $error['property'],
-                    $error['message']
-                );
-            }
+            $errmsg .= $e->getMessages();
             throw new \RuntimeException($errmsg);
         }
     }

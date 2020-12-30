@@ -16,7 +16,7 @@
     },
     "require": {
         "seld/jsonlint": "^1.7",
-        "justinrainbow/json-schema": "^5.2"
+        "swaggest/json-schema": "^0.12.31"
     },
     "autoload": {
         "files": ["lib/php/Converter.php", "lib/php/FilesToJSON.php"]
