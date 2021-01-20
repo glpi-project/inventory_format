@@ -33,7 +33,7 @@
  *
  * @category  Inventory
  * @package   Glpi
- * @author    Johan Cwiklinski <jcwiklinski@telcib.com>
+ * @author    Johan Cwiklinski <jcwiklinski@teclib.com>
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL License 3.0 or (at your option) any later version
  * @link      https://glpi-project.org
  */
@@ -45,7 +45,7 @@ namespace Glpi\Inventory\tests\units;
  *
  * @category  Inventory
  * @package   GlpiTests
- * @author    Johan Cwiklinski <jcwiklinski@telcib.com>
+ * @author    Johan Cwiklinski <jcwiklinski@teclib.com>
  * @copyright 2019 GLPI Team and Contributors
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL License 3.0 or (at your option) any later version
  * @link      https://glpi-project.org
