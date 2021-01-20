@@ -2,7 +2,7 @@
     "name": "glpi-project/inventory_format",
     "description": "GLPI Inventory format lib",
     "keywords": ["automatic inventory", "GLPI"],
-    "license": "GPL-2.0-or-later",
+    "license": "MIT",
     "authors": [
         {
             "name": "Teclib'",
