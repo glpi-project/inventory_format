@@ -138,6 +138,9 @@ class FilesToJSON
         if (!file_exists($path) || filemtime($path) <= $interval) {
             try {
                 $contents = $this->callCurl($uri);
+                if ($contents == '') {
+                    throw new \RuntimeException('Empty content');
+                }
             } catch (\RuntimeException $e) {
                 if ($type === 'iftype') {
                     var_dump('BOUM (:');
