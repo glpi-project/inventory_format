@@ -143,7 +143,6 @@ class FilesToJSON
                 }
             } catch (\RuntimeException $e) {
                 if ($type === 'iftype') {
-                    var_dump('BOUM (:');
                     //use provided file; upstream webste is unstable.
                     $contents = file_get_contents(__DIR__ . '/../../smi-numbers-5.csv');
                 } else {
