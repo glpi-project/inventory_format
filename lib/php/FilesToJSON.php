@@ -69,8 +69,39 @@ class FilesToJSON
      */
     public function getPathFor($type)
     {
-        $type = 'type_' . $type;
-        return $this->path . '/' . $this->$type . '.json';
+        return $this->path . '/' . $type . '.json';
+    }
+
+    /**
+     * Clean all files
+     *
+     * @return void
+     */
+    public function cleanFiles()
+    {
+        $types = [
+            $this->type_pci,
+            $this->type_usb,
+            $this->type_oui,
+            $this->type_iftype
+        ];
+        foreach ($types as $type) {
+            @unlink($this->getPathFor($type));
+            @unlink($this->getSourceFilePath($type));
+        }
+    }
+
+    /**
+     * Download new sources
+     *
+     * @return void
+     */
+    public function downloadSources()
+    {
+        $this->getSourceFile($this->type_pci, true);
+        $this->getSourceFile($this->type_usb, true);
+        $this->getSourceFile($this->type_oui, true);
+        $this->getSourceFile($this->type_iftype, true);
     }
 
     /**
@@ -102,32 +133,60 @@ class FilesToJSON
     }
 
     /**
+     * Get source file path
+     *
+     * @param string $type File type
+     *
+     * @return string
+     */
+    public function getSourceFilePath($type)
+    {
+        $path = $this->path . '/';
+
+        switch ($type) {
+            case $this->type_pci:
+                $path .= 'pci.ids';
+                break;
+            case $this->type_usb:
+                $path .= 'usb.ids';
+                break;
+            case $this->type_oui:
+                $path .= 'oui.txt';
+                break;
+            case $this->type_iftype:
+                $path .= 'iftype.csv';
+                break;
+            default:
+                throw new \RuntimeException('Unknown type ' . $type);
+        }
+
+        return $path;
+    }
+
+    /**
      * Get file for type
      *
-     * @param string $type Type
+     * @param string  $type     Type
+     * @param boolean $download Whether to download source files from upstream oor use provided ones
      *
      * @return resource
      */
-    protected function getSourceFile($type)
+    protected function getSourceFile($type, $download = false)
     {
-        $path = $this->path . '/';
+        $path = $this->getSourceFilePath($type);
         $uri = null;
 
         switch ($type) {
-            case 'pci':
-                $path .= 'pci.ids';
+            case $this->type_pci:
                 $uri = 'https://pci-ids.ucw.cz/v2.2/pci.ids';
                 break;
-            case 'usb':
-                $path .= 'usb.ids';
+            case $this->type_usb:
                 $uri = 'http://www.linux-usb.org/usb.ids';
                 break;
-            case 'oui':
-                $path .= 'oui.txt';
+            case $this->type_oui:
                 $uri = 'http://standards-oui.ieee.org/oui/oui.txt';
                 break;
-            case 'iftype':
-                $path .= 'iftype.csv';
+            case $this->type_iftype:
                 $uri = 'https://www.iana.org/assignments/smi-numbers/smi-numbers-5.csv';
                 break;
             default:
@@ -136,19 +195,16 @@ class FilesToJSON
 
         $interval = strtotime('-1 week');
         if (!file_exists($path) || filemtime($path) <= $interval) {
-            try {
+            if ($download === true) {
                 $contents = $this->callCurl($uri);
-                if ($contents == '') {
-                    throw new \RuntimeException('Empty content');
-                }
-            } catch (\RuntimeException $e) {
-                if ($type === 'iftype') {
-                    //use provided file; upstream webste is unstable.
-                    $contents = file_get_contents(__DIR__ . '/../../smi-numbers-5.csv');
-                } else {
-                    throw $e;
-                }
+            } else {
+                $contents = file_get_contents(__DIR__ . '/../../source_files/' . basename($uri));
             }
+
+            if ($contents == '') {
+                throw new \RuntimeException('Empty content');
+            }
+
             file_put_contents(
                 $path,
                 $contents
@@ -156,6 +212,7 @@ class FilesToJSON
         }
         return fopen($path, 'r');
     }
+
     /**
      * Convert PCI file from IDS to JSON
      *
@@ -163,7 +220,7 @@ class FilesToJSON
      */
     public function convertPciFile()
     {
-        $pciFile = $this->getSourceFile('pci');
+        $pciFile = $this->getSourceFile($this->type_pci);
         $pci_ids = [];
 
         while (!feof($pciFile)) {
@@ -182,7 +239,7 @@ class FilesToJSON
             }
         }
 
-        return file_put_contents($this->getPathFor('pci'), json_encode($pci_ids, JSON_PRETTY_PRINT));
+        return file_put_contents($this->getPathFor($this->type_pci), json_encode($pci_ids, JSON_PRETTY_PRINT));
     }
 
     /**
@@ -192,7 +249,7 @@ class FilesToJSON
      */
     public function convertUsbFile()
     {
-        $usbFile = $this->getSourceFile('usb');
+        $usbFile = $this->getSourceFile($this->type_usb);
         $usb_ids = [];
 
         while (!feof($usbFile)) {
@@ -211,7 +268,7 @@ class FilesToJSON
             }
         }
 
-        return file_put_contents($this->getPathFor('usb'), json_encode($usb_ids, JSON_PRETTY_PRINT));
+        return file_put_contents($this->getPathFor($this->type_usb), json_encode($usb_ids, JSON_PRETTY_PRINT));
     }
 
 
@@ -222,7 +279,7 @@ class FilesToJSON
      */
     public function convertOUIFile()
     {
-        $ouiFile = $this->getSourceFile('oui');
+        $ouiFile = $this->getSourceFile($this->type_oui);
         $ouis = [];
 
         while (!feof($ouiFile)) {
@@ -235,7 +292,7 @@ class FilesToJSON
             }
         }
 
-        return file_put_contents($this->getPathFor('oui'), json_encode($ouis, JSON_PRETTY_PRINT));
+        return file_put_contents($this->getPathFor($this->type_oui), json_encode($ouis, JSON_PRETTY_PRINT));
     }
 
     /**
@@ -245,7 +302,7 @@ class FilesToJSON
      */
     public function convertIftypeFile()
     {
-        $iftypeFile = $this->getSourceFile('iftype');
+        $iftypeFile = $this->getSourceFile($this->type_iftype);
         $iftypes = [];
 
         while (($line = fgetcsv($iftypeFile)) !== false) {
@@ -257,7 +314,7 @@ class FilesToJSON
             ];
         }
 
-        return file_put_contents($this->getPathFor('iftype'), json_encode($iftypes, JSON_PRETTY_PRINT));
+        return file_put_contents($this->getPathFor($this->type_iftype), json_encode($iftypes, JSON_PRETTY_PRINT));
     }
 
     /**
@@ -265,7 +322,7 @@ class FilesToJSON
      *
      * @param string $url        URL to retrieve
      * @param array  $eopts      Extra curl opts
-     * @param string $msgerr     will contains a human readable error string if an error occurs of url returns empty contents
+     * @param string $msgerr     human readable error string on error or empty content
      * @param string $curl_error will contains original curl error string if an error occurs
      *
      * @return string
@@ -299,15 +356,19 @@ class FilesToJSON
 
         if ($curl_error !== null) {
             $content = '';
-        } elseif (empty($content)) {
+        }
+
+        if (empty($content)) {
             $msgerr = sprintf(
                 'No data available on %s',
                 $url
             );
         }
+
         if (!empty($msgerr)) {
             throw new \RuntimeException($msgerr);
         }
+
         return $content;
     }
 }
