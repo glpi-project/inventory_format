@@ -34,7 +34,7 @@
  *
  * @category  Inventory
  * @package   Glpi
- * @author    Johan Cwiklinski <jcwiklinski@telcib.com>
+ * @author    Johan Cwiklinski <jcwiklinski@teclib.com>
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL License 3.0 or (at your option) any later version
  * @link      https://glpi-project.org
  */
@@ -49,7 +49,7 @@ use Swaggest\JsonSchema\Schema;
  *
  * @category  Inventory
  * @package   Glpi
- * @author    Johan Cwiklinski <jcwiklinski@telcib.com>
+ * @author    Johan Cwiklinski <jcwiklinski@teclib.com>
  * @copyright 2018 GLPI Team and Contributors
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL License 3.0 or (at your option) any later version
  * @link      https://glpi-project.org
