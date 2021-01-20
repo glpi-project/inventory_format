@@ -67,7 +67,7 @@ class FilesToJSON
      *
      * @return string
      */
-    public function getPathFor($type)
+    public function getJsonFilePath($type)
     {
         return $this->path . '/' . $type . '.json';
     }
@@ -86,7 +86,7 @@ class FilesToJSON
             $this->type_iftype
         ];
         foreach ($types as $type) {
-            @unlink($this->getPathFor($type));
+            @unlink($this->getJsonFilePath($type));
             @unlink($this->getSourceFilePath($type));
         }
     }
@@ -239,7 +239,7 @@ class FilesToJSON
             }
         }
 
-        return file_put_contents($this->getPathFor($this->type_pci), json_encode($pci_ids, JSON_PRETTY_PRINT));
+        return file_put_contents($this->getJsonFilePath($this->type_pci), json_encode($pci_ids, JSON_PRETTY_PRINT));
     }
 
     /**
@@ -268,7 +268,7 @@ class FilesToJSON
             }
         }
 
-        return file_put_contents($this->getPathFor($this->type_usb), json_encode($usb_ids, JSON_PRETTY_PRINT));
+        return file_put_contents($this->getJsonFilePath($this->type_usb), json_encode($usb_ids, JSON_PRETTY_PRINT));
     }
 
 
@@ -292,7 +292,7 @@ class FilesToJSON
             }
         }
 
-        return file_put_contents($this->getPathFor($this->type_oui), json_encode($ouis, JSON_PRETTY_PRINT));
+        return file_put_contents($this->getJsonFilePath($this->type_oui), json_encode($ouis, JSON_PRETTY_PRINT));
     }
 
     /**
@@ -314,7 +314,7 @@ class FilesToJSON
             ];
         }
 
-        return file_put_contents($this->getPathFor($this->type_iftype), json_encode($iftypes, JSON_PRETTY_PRINT));
+        return file_put_contents($this->getJsonFilePath($this->type_iftype), json_encode($iftypes, JSON_PRETTY_PRINT));
     }
 
     /**
