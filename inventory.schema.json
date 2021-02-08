@@ -1629,6 +1629,10 @@
                 "examples": [
                   "teamviewer"
                 ]
+              },
+              "version": {
+                "type": "string",
+                "title": "Remote management software or firmware version"
               }
             }
           }
