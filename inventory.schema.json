@@ -1632,7 +1632,7 @@
               },
               "version": {
                 "type": "string",
-                "title": "Remote management software or firmware version",
+                "title": "Remote management software or firmware version"
               }
             }
           }
