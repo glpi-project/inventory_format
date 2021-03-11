@@ -362,7 +362,8 @@ class Converter
             'powersupplies',
             'videos',
             'remote_mgmt',
-            'cartridges'
+            'cartridges',
+            'cameras'
         ];
 
         foreach ($arrays as $array) {
