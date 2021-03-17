@@ -2763,6 +2763,11 @@
       "default": "Computer",
       "pattern": "^(Computer|Phone|NetworkEquipment|Printer)$"
     },
+    "partial": {
+      "type": "boolean",
+      "title": "Is inventory partial?",
+      "default": false
+    },
     "query": {
       "type": "string",
       "default": "INVENTORY",
