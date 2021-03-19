@@ -2279,12 +2279,15 @@
             "type": "object",
             "properties": {
               "resolution": {
-                "type": "string",
-                "examples": [
-                  "1200x800"
-                ]
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "lensfacing": {
+                "type": "string"
+              },
+              "designation": {
                 "type": "string"
               },
               "flashunit": {
@@ -2309,10 +2312,10 @@
                 "type": "string"
               },
               "resolutionvideo": {
-                "type": "string",
-                "examples": [
-                  "1200x800"
-                ]
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "model": {
                 "type": "string"
