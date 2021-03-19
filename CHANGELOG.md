@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.0.4] - 2021-03-19
+
+Fix camera formats specs
+
 ## [1.0.3] - 2021-03-11
 
 Fix conversion in some cases
