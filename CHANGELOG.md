@@ -3,9 +3,14 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.0.5] - 2021-03-24
+
+Add partial inventory support
+
 ## [1.0.4] - 2021-03-19
 
 Fix camera formats specs
+Add designation on cameras
 
 ## [1.0.3] - 2021-03-11
 
