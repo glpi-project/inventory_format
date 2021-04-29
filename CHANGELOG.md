@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.0.6] - 2021-0-29
+
+Schema validation was not effective
+
 ## [1.0.5] - 2021-03-24
 
 Add partial inventory support
