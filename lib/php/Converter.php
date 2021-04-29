@@ -162,9 +162,10 @@ class Converter
     {
         try {
             $schema = Schema::import('file://' . $this->getSchemaPath());
+            $schema->in($json);
         } catch (\Exception $e) {
             $errmsg = "JSON does not validate. Violations:\n";
-            $errmsg .= $e->getMessages();
+            $errmsg .= $e->getMessage();
             throw new \RuntimeException($errmsg);
         }
     }
