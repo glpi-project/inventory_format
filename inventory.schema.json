@@ -615,14 +615,6 @@
                 "172.28.200.20/172.21.201.241/192.168.1.1"
               ]
             },
-            "etime": {
-              "type": "integer",
-              "title": "Time (seconds) needed to run the inventory",
-              "default": "",
-              "examples": [
-                "3"
-              ]
-            },
             "lastloggeduser": {
               "type": "string",
               "examples": [
@@ -2647,6 +2639,14 @@
               "type": "string",
               "examples": [
                 "/usr/bin/fusioninventory-agent"
+              ]
+            },
+            "etime": {
+              "type": "integer",
+              "title": "Time (seconds) needed to run the inventory",
+              "default": "",
+              "examples": [
+                "3"
               ]
             },
             "version": {
