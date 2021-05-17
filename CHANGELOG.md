@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.0.8] - 2021-05-17
+
+Missed conversions
+
 ## [1.0.7] - 2021-05-17
 
 Fix invalid schema properties
