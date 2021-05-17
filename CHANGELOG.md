@@ -3,7 +3,11 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
-## [1.0.6] - 2021-0-29
+## [1.0.7] - 2021-05-17
+
+Fix invalid schema properties
+
+## [1.0.6] - 2021-04-29
 
 Schema validation was not effective
 
