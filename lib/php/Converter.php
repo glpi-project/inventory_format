@@ -261,7 +261,8 @@ class Converter
                 'networks/management',
                 'softwares/no_remove',
                 'licenseinfos/trial',
-                'network_ports/trunk'
+                'network_ports/trunk',
+                'cameras/flashunit'
             ],
             'integer'   => [
                 'cpus/core',
@@ -375,7 +376,10 @@ class Converter
 
         $sub_arrays = [
             'local_groups/member',
-            'versionprovider/comments'
+            'versionprovider/comments',
+            'cameras/resolution',
+            'cameras/imageformats',
+            'cameras/resolutionvideo'
         ];
 
         foreach ($sub_arrays as $array) {
