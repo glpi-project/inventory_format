@@ -2681,15 +2681,19 @@
               "type": "array",
               "title": "IP addresses",
               "items": {
-                "type": "string",
-                "format": [
-                  "ipv4",
-                  "ipv6"
-                ],
-                "examples": [
-                  "127.0.0.1",
-                  "172.28.211.1",
-                  "::1"
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "ipv4",
+                    "examples": [
+                      "127.0.0.1",
+                      "172.28.211.1"
+                    ]
+                  }, {
+                    "type": "string",
+                    "format": "ipv6",
+                    "examples": ["::1"]
+                  }
                 ]
               }
             },
