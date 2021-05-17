@@ -2443,12 +2443,14 @@
               "vlans": {
                 "type": "array",
                 "items": {
-                  "name": {
-                    "type": "string"
-                  },
-                  "id": {
-                    "type": "integer",
-                    "title": "VLAN identifier"
+                  "vlan": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "integer",
+                      "title": "VLAN identifier"
+                    }
                   }
                 }
               }
