@@ -2749,6 +2749,64 @@
               "type": "string"
             }
           }
+        },
+        "databases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "version",
+              "port"
+            ],
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              },
+              "instance_name": {
+                "type": "string"
+              },
+              "port": {
+                "type": "integer"
+              },
+              "size": {
+                "type": "integer"
+              },
+              "is_active": {
+                "type": "boolean"
+              },
+              "is_onbackup": {
+                "type": "boolean"
+              },
+              "creation_date": {
+                "examples": [
+                  "2021-06-03 10:16:47"
+                ],
+                "$ref": "#/definitions/datetime"
+              },
+              "update_date": {
+                "examples": [
+                  "2021-06-03 10:16:47"
+                ],
+                "$ref": "#/definitions/datetime"
+              },
+              "last_boot_date": {
+                "examples": [
+                  "2021-06-03 10:16:47"
+                ],
+                "$ref": "#/definitions/datetime"
+              },
+              "manufacturer": {
+                "type": "string"
+              }
+            }
+          }
         }
       }
     },
