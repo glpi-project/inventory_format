@@ -54,5 +54,8 @@ jobs:
       - name: Conversions tests
         run: for i in `ls tests/data/*.xml`; do ./bin/convert $i || exit 1; done
 
+      - name: Examples validation tests
+        run: for i in `ls examples/*.json`; do ./bin/validate $i || exit 1; done
+
       - name: Unit tests
         run: vendor/bin/atoum --no-cc -mcn 1 -bf tests/bootstrap.php -d tests/Glpi/
