@@ -466,13 +466,15 @@ class Converter
                     unset($soft['installdate']);
                 }
 
-                if ($soft['install_date'] == 'N/A') {
-                    unset($soft['install_date']);
-                } else {
-                    $soft['install_date'] = $this->convertDate(
-                        $soft['install_date'],
-                        'Y-m-d'
-                    );
+                if (isset($soft['install_date'])) {
+                    if ($soft['install_date'] == 'N/A') {
+                        unset($soft['install_date']);
+                    } else {
+                        $soft['install_date'] = $this->convertDate(
+                            $soft['install_date'],
+                            'Y-m-d'
+                        );
+                    }
                 }
             }
         }
