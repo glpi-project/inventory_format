@@ -514,7 +514,6 @@ class Converter
             }
         }
 
-
         //storages serial-ata with several cases
         if (isset($data['content']['storages'])) {
             foreach ($data['content']['storages'] as &$storage) {
@@ -597,7 +596,7 @@ class Converter
             }
         }
 
-        //missing hour in ntimezone offset
+        //missing hour in timezone offset
         if (isset($data['content']['operatingsystem']) && isset($data['content']['operatingsystem']['timezone'])) {
             if (preg_match('/^[+-][0-9]{2}$/', $data['content']['operatingsystem']['timezone']['offset'])) {
                 $data['content']['operatingsystem']['timezone']['offset'] .= '00';
@@ -622,6 +621,15 @@ class Converter
                     } else {
                         $battery['voltage'] = $voltage;
                     }
+                }
+            }
+        }
+
+        //type on ports is required
+        if (isset($data['content']['ports'])) {
+            foreach ($data['content']['ports'] as &$port) {
+                if (!isset($port['type'])) {
+                    $port['type'] = 'None';
                 }
             }
         }
