@@ -166,6 +166,7 @@ class Converter
         } catch (\Exception $e) {
             $errmsg = "JSON does not validate. Violations:\n";
             $errmsg .= $e->getMessage();
+            $errmsg .= "\n";
             throw new \RuntimeException($errmsg);
         }
     }
@@ -463,6 +464,11 @@ class Converter
                 if (isset($soft['installdate'])) {
                     $soft['install_date'] = $soft['installdate'];
                     unset($soft['installdate']);
+                }
+
+                if ($soft['install_date'] == 'N/A') {
+                    unset($soft['install_date']);
+                } else {
                     $soft['install_date'] = $this->convertDate(
                         $soft['install_date'],
                         'Y-m-d'
@@ -475,30 +481,42 @@ class Converter
         if (isset($data['content']['batteries'])) {
             foreach ($data['content']['batteries'] as &$battery) {
                 if (isset($battery['date'])) {
-                    $battery['date'] = $this->convertDate(
-                        $battery['date'],
-                        'Y-m-d'
-                    );
+                    if ($battery['date'] == 'N/A') {
+                        unset($battery['date']);
+                    } else {
+                        $battery['date'] = $this->convertDate(
+                            $battery['date'],
+                            'Y-m-d'
+                        );
+                    }
                 }
             }
         }
 
         if (isset($data['content']['bios'])) {
             if (isset($data['content']['bios']['bdate'])) {
-                $data['content']['bios']['bdate'] = $this->convertDate(
-                    $data['content']['bios']['bdate'],
-                    'Y-m-d'
-                );
+                if ($data['content']['bios']['bdate'] == 'N/A') {
+                    unset($data['content']['bios']['bdate']);
+                } else {
+                    $data['content']['bios']['bdate'] = $this->convertDate(
+                        $data['content']['bios']['bdate'],
+                        'Y-m-d'
+                    );
+                }
             }
         }
 
         if (isset($data['content']['antivirus'])) {
             foreach ($data['content']['antivirus'] as &$av) {
                 if (isset($av['expiration'])) {
-                    $av['expiration'] = $this->convertDate(
-                        $av['expiration'],
-                        'Y-m-d'
-                    );
+                    if ($av['expiration'] == 'N/A') {
+                        unset($av['expiration']);
+                    } else {
+                        $av['expiration'] = $this->convertDate(
+                            $av['expiration'],
+                            'Y-m-d'
+                        );
+                    }
                 }
             }
         }
@@ -506,10 +524,14 @@ class Converter
         if (isset($data['content']['firmwares'])) {
             foreach ($data['content']['firmwares'] as &$fw) {
                 if (isset($fw['date'])) {
-                    $fw['date'] = $this->convertDate(
-                        $fw['date'],
-                        'Y-m-d'
-                    );
+                    if ($fw['date'] == 'N/A') {
+                        unset($fw['date']);
+                    } else {
+                        $fw['date'] = $this->convertDate(
+                            $fw['date'],
+                            'Y-m-d'
+                        );
+                    }
                 }
             }
         }
