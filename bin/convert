@@ -32,7 +32,10 @@ if ($json_path !== null && parse_url($json_path, PHP_URL_SCHEME) == null) {
 }
 
 if (!file_exists($xml_path)) {
-    echo "Source file does not exists!\n";
+    echo sprintf(
+        "Source file '%s' does not exists!\n",
+        $xml_path
+    );
     die(1);
 }
 

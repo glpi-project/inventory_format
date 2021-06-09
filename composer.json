@@ -21,7 +21,7 @@
     "autoload": {
         "files": ["lib/php/Converter.php", "lib/php/FilesToJSON.php"]
     },
-    "bin": ["bin/convert", "bin/build_hw_jsons", "bin/refresh_hw_sources"],
+    "bin": ["bin/convert", "bin/build_hw_jsons", "bin/refresh_hw_sources","bin/validate"],
     "require-dev": {
         "atoum/atoum": "^4.0",
         "squizlabs/php_codesniffer": "^3.5"
