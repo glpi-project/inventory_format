@@ -602,7 +602,8 @@ class Converter
 
         //missing hour in timezone offset
         if (isset($data['content']['operatingsystem']) && isset($data['content']['operatingsystem']['timezone'])) {
-            $timezone = $data['content']['operatingsystem']['timezone'];
+            $timezone = &$data['content']['operatingsystem']['timezone'];
+
             if (preg_match('/^[+-][0-9]{2}$/', $timezone['offset'])) {
                 $timezone['offset'] .= '00';
             }
