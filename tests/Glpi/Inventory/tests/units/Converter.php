@@ -225,7 +225,7 @@ class Converter extends \atoum {
             ['2018-01-12', 'Y-m-d', null],
             ['01/12/2018', 'Y-m-d', '2018-12-01'],
             ['01/15/2018', 'Y-m-d', '2019-03-01'],
-            ['', 'Y-m-d', ''],
+            ['', 'Y-m-d', null],
             ['20201207', 'Y-m-d', '2020-12-07'],
         ];
     }
@@ -249,7 +249,7 @@ class Converter extends \atoum {
         $this
             ->given($this->newTestedInstance())
             ->then
-                ->string($this->testedInstance->convertDate($orig, $format))
+                ->variable($this->testedInstance->convertDate($orig, $format))
                     ->isIdenticalTo($expected);
     }
 
