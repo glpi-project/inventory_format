@@ -461,12 +461,15 @@ class Converter
         //rename installdate to install_date; change date format
         if (isset($data['content']['softwares'])) {
             foreach ($data['content']['softwares'] as &$soft) {
-                if (isset($soft['installdate']) && !isset($soft['install_date'])) {
-                    $soft['install_date'] = $soft['installdate'];
+                $convertedDate = $this->convertDate($soft['install_date'] ?? '');
+                if (isset($soft['installdate'])) {
+                    if ($convertedDate === null) {
+                        $convertedDate = $this->convertDate($soft['installdate']);
+                    }
                     unset($soft['installdate']);
                 }
 
-                if (($convertedDate = $this->convertDate($soft['install_date'] ?? '')) !== null) {
+                if ($convertedDate !== null) {
                     $soft['install_date'] = $convertedDate;
                 } else {
                     unset($soft['install_date']);
