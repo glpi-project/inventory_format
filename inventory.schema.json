@@ -1705,7 +1705,7 @@
                 ]
               },
               "install_date": {
-                "$ref": "#/definitions/date"
+                "$ref": "#/definitions/dateordatetime"
               },
               "name": {
                 "type": "string",

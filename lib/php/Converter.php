@@ -263,7 +263,9 @@ class Converter
                 'softwares/no_remove',
                 'licenseinfos/trial',
                 'network_ports/trunk',
-                'cameras/flashunit'
+                'cameras/flashunit',
+                'powersupplies/hotreplaceable',
+                'powersupplies/plugged'
             ],
             'integer'   => [
                 'cpus/core',
@@ -600,8 +602,22 @@ class Converter
 
         //missing hour in timezone offset
         if (isset($data['content']['operatingsystem']) && isset($data['content']['operatingsystem']['timezone'])) {
-            if (preg_match('/^[+-][0-9]{2}$/', $data['content']['operatingsystem']['timezone']['offset'])) {
-                $data['content']['operatingsystem']['timezone']['offset'] .= '00';
+            $timezone = &$data['content']['operatingsystem']['timezone'];
+
+            if (preg_match('/^[+-][0-9]{2}$/', $timezone['offset'])) {
+                $timezone['offset'] .= '00';
+            }
+            if (!isset($timezone['name'])) {
+                $timezone['name'] = $timezone['offset'];
+            }
+        }
+
+        if (isset($data['content']['operatingsystem'])) {
+            $os = &$data['content']['operatingsystem'];
+            if (($convertedDate = $this->convertDate($os['install_date'] ?? '')) !== null) {
+                $os['install_date'] = $convertedDate;
+            } else {
+                unset($os['install_date']);
             }
         }
 
@@ -758,7 +774,7 @@ class Converter
      */
     public function convertDate($value, $format = 'Y-m-d'): ?string
     {
-        $nullables = ['n/a'];
+        $nullables = ['n/a', 'boot_time'];
         if (empty($value) || isset(array_flip($nullables)[strtolower($value)])) {
             return null;
         }
@@ -772,6 +788,7 @@ class Converter
             'd/m/Y',
             'm/d/Y',
             'Y-m-d',
+            'd.m.Y',
             'Ymd'
         ];
         try {
