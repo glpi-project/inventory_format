@@ -461,20 +461,15 @@ class Converter
         //rename installdate to install_date; change date format
         if (isset($data['content']['softwares'])) {
             foreach ($data['content']['softwares'] as &$soft) {
-                if (isset($soft['installdate'])) {
+                if (isset($soft['installdate']) && !isset($soft['install_date'])) {
                     $soft['install_date'] = $soft['installdate'];
                     unset($soft['installdate']);
                 }
 
-                if (isset($soft['install_date'])) {
-                    if ($soft['install_date'] == 'N/A') {
-                        unset($soft['install_date']);
-                    } else {
-                        $soft['install_date'] = $this->convertDate(
-                            $soft['install_date'],
-                            'Y-m-d'
-                        );
-                    }
+                if (($convertedDate = $this->convertDate($soft['install_date'] ?? '')) !== null) {
+                    $soft['install_date'] = $convertedDate;
+                } else {
+                    unset($soft['install_date']);
                 }
             }
         }
@@ -776,10 +771,15 @@ class Converter
      * @param string $value  Current value
      * @param string $format Format for output
      *
-     * @return string
+     * @return string|null
      */
-    public function convertDate($value, $format)
+    public function convertDate($value, $format = 'Y-m-d'): ?string
     {
+        $nullables = ['N/A'];
+        if (empty($value) || preg_grep('/^' . str_replace('/', '\\/', $value) . '$/i', $nullables)) {
+            return null;
+        }
+
         $formats = [
             'D M d H:i:s Y', //Thu Mar 14 15:05:41 2013
             'd/m/Y H:i:s',
