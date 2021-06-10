@@ -621,7 +621,6 @@ class Converter
             }
         }
 
-
         //Fix batteries capacities & voltages
         if (isset($data['content']['batteries'])) {
             foreach ($data['content']['batteries'] as &$battery) {
