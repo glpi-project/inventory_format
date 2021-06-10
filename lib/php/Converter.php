@@ -166,6 +166,7 @@ class Converter
         } catch (\Exception $e) {
             $errmsg = "JSON does not validate. Violations:\n";
             $errmsg .= $e->getMessage();
+            $errmsg .= "\n";
             throw new \RuntimeException($errmsg);
         }
     }
@@ -460,13 +461,18 @@ class Converter
         //rename installdate to install_date; change date format
         if (isset($data['content']['softwares'])) {
             foreach ($data['content']['softwares'] as &$soft) {
+                $convertedDate = $this->convertDate($soft['install_date'] ?? '');
                 if (isset($soft['installdate'])) {
-                    $soft['install_date'] = $soft['installdate'];
+                    if ($convertedDate === null) {
+                        $convertedDate = $this->convertDate($soft['installdate']);
+                    }
                     unset($soft['installdate']);
-                    $soft['install_date'] = $this->convertDate(
-                        $soft['install_date'],
-                        'Y-m-d'
-                    );
+                }
+
+                if ($convertedDate !== null) {
+                    $soft['install_date'] = $convertedDate;
+                } else {
+                    unset($soft['install_date']);
                 }
             }
         }
@@ -474,42 +480,38 @@ class Converter
         //change dates formats
         if (isset($data['content']['batteries'])) {
             foreach ($data['content']['batteries'] as &$battery) {
-                if (isset($battery['date'])) {
-                    $battery['date'] = $this->convertDate(
-                        $battery['date'],
-                        'Y-m-d'
-                    );
+                if (($convertedDate = $this->convertDate($battery['date'] ?? '')) !== null) {
+                    $battery['date'] = $convertedDate;
+                } else {
+                    unset($battery['date']);
                 }
             }
         }
 
         if (isset($data['content']['bios'])) {
-            if (isset($data['content']['bios']['bdate'])) {
-                $data['content']['bios']['bdate'] = $this->convertDate(
-                    $data['content']['bios']['bdate'],
-                    'Y-m-d'
-                );
+            if (($convertedDate = $this->convertDate($data['content']['bios']['bdate'] ?? '')) !== null) {
+                $data['content']['bios']['bdate'] = $convertedDate;
+            } else {
+                unset($data['content']['bios']['bdate']);
             }
         }
 
         if (isset($data['content']['antivirus'])) {
             foreach ($data['content']['antivirus'] as &$av) {
-                if (isset($av['expiration'])) {
-                    $av['expiration'] = $this->convertDate(
-                        $av['expiration'],
-                        'Y-m-d'
-                    );
+                if (($convertedDate = $this->convertDate($av['expiration'] ?? '')) !== null) {
+                    $av['expiration'] = $convertedDate;
+                } else {
+                    unset($av['expiration']);
                 }
             }
         }
 
         if (isset($data['content']['firmwares'])) {
             foreach ($data['content']['firmwares'] as &$fw) {
-                if (isset($fw['date'])) {
-                    $fw['date'] = $this->convertDate(
-                        $fw['date'],
-                        'Y-m-d'
-                    );
+                if (($convertedDate = $this->convertDate($fw['date'] ?? '')) !== null) {
+                    $fw['date'] = $convertedDate;
+                } else {
+                    unset($fw['date']);
                 }
             }
         }
@@ -752,10 +754,15 @@ class Converter
      * @param string $value  Current value
      * @param string $format Format for output
      *
-     * @return string
+     * @return string|null
      */
-    public function convertDate($value, $format)
+    public function convertDate($value, $format = 'Y-m-d'): ?string
     {
+        $nullables = ['n/a'];
+        if (empty($value) || isset(array_flip($nullables)[strtolower($value)])) {
+            return null;
+        }
+
         $formats = [
             'D M d H:i:s Y', //Thu Mar 14 15:05:41 2013
             'd/m/Y H:i:s',
