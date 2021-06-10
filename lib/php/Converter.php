@@ -480,15 +480,10 @@ class Converter
         //change dates formats
         if (isset($data['content']['batteries'])) {
             foreach ($data['content']['batteries'] as &$battery) {
-                if (isset($battery['date'])) {
-                    if ($battery['date'] == 'N/A') {
-                        unset($battery['date']);
-                    } else {
-                        $battery['date'] = $this->convertDate(
-                            $battery['date'],
-                            'Y-m-d'
-                        );
-                    }
+                if (($convertedDate = $this->convertDate($battery['date'] ?? '')) !== null) {
+                    $battery['date'] = $convertedDate;
+                } else {
+                    unset($battery['date']);
                 }
             }
         }
