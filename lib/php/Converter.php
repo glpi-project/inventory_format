@@ -491,44 +491,29 @@ class Converter
         }
 
         if (isset($data['content']['bios'])) {
-            if (isset($data['content']['bios']['bdate'])) {
-                if ($data['content']['bios']['bdate'] == 'N/A') {
-                    unset($data['content']['bios']['bdate']);
-                } else {
-                    $data['content']['bios']['bdate'] = $this->convertDate(
-                        $data['content']['bios']['bdate'],
-                        'Y-m-d'
-                    );
-                }
+            if (($convertedDate = $this->convertDate($data['content']['bios']['bdate'] ?? '')) !== null) {
+                $data['content']['bios']['bdate'] = $convertedDate;
+            } else {
+                unset($data['content']['bios']['bdate']);
             }
         }
 
         if (isset($data['content']['antivirus'])) {
             foreach ($data['content']['antivirus'] as &$av) {
-                if (isset($av['expiration'])) {
-                    if ($av['expiration'] == 'N/A') {
-                        unset($av['expiration']);
-                    } else {
-                        $av['expiration'] = $this->convertDate(
-                            $av['expiration'],
-                            'Y-m-d'
-                        );
-                    }
+                if (($convertedDate = $this->convertDate($av['expiration'] ?? '')) !== null) {
+                    $av['expiration'] = $convertedDate;
+                } else {
+                    unset($av['expiration']);
                 }
             }
         }
 
         if (isset($data['content']['firmwares'])) {
             foreach ($data['content']['firmwares'] as &$fw) {
-                if (isset($fw['date'])) {
-                    if ($fw['date'] == 'N/A') {
-                        unset($fw['date']);
-                    } else {
-                        $fw['date'] = $this->convertDate(
-                            $fw['date'],
-                            'Y-m-d'
-                        );
-                    }
+                if (($convertedDate = $this->convertDate($fw['date'] ?? '')) !== null) {
+                    $fw['date'] = $convertedDate;
+                } else {
+                    unset($fw['date']);
                 }
             }
         }
