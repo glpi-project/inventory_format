@@ -775,8 +775,8 @@ class Converter
      */
     public function convertDate($value, $format = 'Y-m-d'): ?string
     {
-        $nullables = ['N/A'];
-        if (empty($value) || preg_grep('/^' . str_replace('/', '\\/', $value) . '$/i', $nullables)) {
+        $nullables = ['n/a'];
+        if (empty($value) || isset(array_flip($nullables)[strtolower($value)])) {
             return null;
         }
 

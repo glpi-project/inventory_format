@@ -222,9 +222,11 @@ class Converter extends \atoum {
     protected function datesToConvertProvider()
     {
         return [
-            ['2018-01-12', 'Y-m-d', null],
+            ['2018-01-12', 'Y-m-d', '2018-01-12'],
             ['01/12/2018', 'Y-m-d', '2018-12-01'],
             ['01/15/2018', 'Y-m-d', '2019-03-01'],
+            ['N/A', 'Y-m-d', null],
+            ['n/a', 'Y-m-d', null],
             ['', 'Y-m-d', null],
             ['20201207', 'Y-m-d', '2020-12-07'],
         ];
@@ -243,9 +245,6 @@ class Converter extends \atoum {
      */
     public function testConvertDate($orig, $format, $expected)
     {
-        if ($expected === null) {
-            $expected = $orig;
-        }
         $this
             ->given($this->newTestedInstance())
             ->then
