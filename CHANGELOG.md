@@ -3,6 +3,12 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.0.9] - 2021-06-11
+
+Add databases support
+Few fixes on lod data
+Add timezone support on datetime
+
 ## [1.0.8] - 2021-05-17
 
 Missed conversions
