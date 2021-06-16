@@ -12,15 +12,14 @@
         },
         "hardware": {
             "name": "Mi9TPro-T\u00e9l\u00e9phoneM",
-            "osname": "Android",
-            "osversion": "10",
-            "archname": "aarch64",
             "uuid": "af8d3fcfa6fe4784",
             "memory": 5523
         },
-        "user": {
-            "login": "builder"
-        },
+        "users": [
+            {
+                "login": "builder"
+            }
+        ],
         "operatingsystem": {
             "arch": "arm64-v8a,armeabi-v7a,armeabi",
             "boot_time": "2019-54-17 10:54:37",
@@ -62,336 +61,288 @@
                 "name": "vl53l3_tof  Non-wakeup",
                 "manufacturer": "ST micro",
                 "type": "Unknow",
-                "power": "20.0",
                 "version": "256"
             },
             {
                 "name": "ccd_tilt  Wakeup",
                 "manufacturer": "qualcomm",
                 "type": "Unknow",
-                "power": "0.024",
                 "version": "256"
             },
             {
                 "name": "pedometer  Wakeup",
                 "manufacturer": "qualcomm",
                 "type": "Unknow",
-                "power": "0.15",
                 "version": "1"
             },
             {
                 "name": "pedometer  Non-wakeup",
                 "manufacturer": "qualcomm",
                 "type": "Unknow",
-                "power": "0.15",
                 "version": "1"
             },
             {
                 "name": "pedometer  Wakeup",
                 "manufacturer": "qualcomm",
                 "type": "Unknow",
-                "power": "0.15",
                 "version": "1"
             },
             {
                 "name": "pedometer  Non-wakeup",
                 "manufacturer": "qualcomm",
                 "type": "Unknow",
-                "power": "0.15",
                 "version": "1"
             },
             {
                 "name": "stationary_detect_wakeup",
                 "manufacturer": "qualcomm",
                 "type": "Unknow",
-                "power": "0.025",
                 "version": "1"
             },
             {
                 "name": "stationary_detect",
                 "manufacturer": "qualcomm",
                 "type": "Unknow",
-                "power": "0.025",
                 "version": "1"
             },
             {
                 "name": "sns_smd  Wakeup",
                 "manufacturer": "qualcomm",
                 "type": "Unknow",
-                "power": "0.025",
                 "version": "1"
             },
             {
                 "name": "sar_detector  Wakeup",
                 "manufacturer": "xiaomi",
                 "type": "Unknow",
-                "power": "0.001",
                 "version": "1"
             },
             {
                 "name": "sar_detector  Non-wakeup",
                 "manufacturer": "xiaomi",
                 "type": "Unknow",
-                "power": "0.001",
                 "version": "1"
             },
             {
                 "name": "rotation vector  Non-wakeup",
                 "manufacturer": "xiaomi",
                 "type": "ROTATION VECTOR",
-                "power": "0.001",
                 "version": "1"
             },
             {
                 "name": "tcs3701 Proximity Sensor Wakeup",
                 "manufacturer": "ams AG",
                 "type": "PROXIMITY",
-                "power": "1.0",
                 "version": "256"
             },
             {
                 "name": "tcs3701 Proximity Sensor Non-wakeup",
                 "manufacturer": "ams AG",
                 "type": "PROXIMITY",
-                "power": "1.0",
                 "version": "256"
             },
             {
                 "name": "oem9_raiseCAM  Wakeup",
                 "manufacturer": "XiaoMi",
                 "type": "Unknow",
-                "power": "0.001",
                 "version": "1"
             },
             {
                 "name": "oem9_raiseCAM  Non-wakeup",
                 "manufacturer": "XiaoMi",
                 "type": "Unknow",
-                "power": "0.001",
                 "version": "1"
             },
             {
                 "name": "tcs3701  Non-wakeup",
                 "manufacturer": "ams AG",
                 "type": "Unknow",
-                "power": "1.0",
                 "version": "256"
             },
             {
                 "name": "orientation  Non-wakeup",
                 "manufacturer": "xiaomi",
                 "type": "Unknow",
-                "power": "0.001",
                 "version": "1"
             },
             {
                 "name": "pickup  Wakeup",
                 "manufacturer": "XiaoMi",
                 "type": "Unknow",
-                "power": "0.001",
                 "version": "1"
             },
             {
                 "name": "pickup  Non-wakeup",
                 "manufacturer": "XiaoMi",
                 "type": "Unknow",
-                "power": "0.001",
                 "version": "1"
             },
             {
                 "name": "3d_signature  Wakeup",
                 "manufacturer": "XiaoMi",
                 "type": "Unknow",
-                "power": "0.001",
                 "version": "1"
             },
             {
                 "name": "3d_signature  Non-wakeup",
                 "manufacturer": "XiaoMi",
                 "type": "Unknow",
-                "power": "0.001",
                 "version": "1"
             },
             {
                 "name": "motion_detect_wakeup",
                 "manufacturer": "qualcomm",
                 "type": "Unknow",
-                "power": "0.025",
                 "version": "1"
             },
             {
                 "name": "motion_detect",
                 "manufacturer": "qualcomm",
                 "type": "Unknow",
-                "power": "0.025",
                 "version": "1"
             },
             {
                 "name": "ak0991x Magnetometer-Uncalibrated Non-wakeup",
                 "manufacturer": "akm",
                 "type": "Unknow",
-                "power": "1.1",
                 "version": "20037"
             },
             {
                 "name": "ak0991x Magnetometer Non-wakeup",
                 "manufacturer": "akm",
                 "type": "MAGNETIC FIELD",
-                "power": "1.1",
                 "version": "20037"
             },
             {
                 "name": "linear_acceleration",
                 "manufacturer": "qualcomm",
                 "type": "LINEAR ACCELERATION",
-                "power": "0.515",
                 "version": "1"
             },
             {
                 "name": "gravity  Non-wakeup",
                 "manufacturer": "qualcomm",
                 "type": "GRAVITY",
-                "power": "0.515",
                 "version": "1"
             },
             {
                 "name": "sns_geomag_rv  Non-wakeup",
                 "manufacturer": "qualcomm",
                 "type": "Unknow",
-                "power": "1.05",
                 "version": "1"
             },
             {
                 "name": "Game Rotation Vector  Non-wakeup",
                 "manufacturer": "qualcomm",
                 "type": "Unknow",
-                "power": "0.515",
                 "version": "1"
             },
             {
                 "name": "tcs3701  Non-wakeup",
                 "manufacturer": "ams AG",
                 "type": "Unknow",
-                "power": "0.09",
                 "version": "256"
             },
             {
                 "name": "tcs3701 Ambient Light Sensor Wakeup",
                 "manufacturer": "ams AG",
                 "type": "Unknow",
-                "power": "0.09",
                 "version": "256"
             },
             {
                 "name": "tcs3701 Ambient Light Sensor Non-wakeup",
                 "manufacturer": "ams AG",
                 "type": "Unknow",
-                "power": "0.09",
                 "version": "256"
             },
             {
                 "name": "icm4x6xx  Wakeup",
                 "manufacturer": "TDK-Invensense",
                 "type": "Unknow",
-                "power": "0.05",
                 "version": "291"
             },
             {
                 "name": "icm4x6xx  Non-wakeup",
                 "manufacturer": "TDK-Invensense",
                 "type": "Unknow",
-                "power": "0.05",
                 "version": "291"
             },
             {
                 "name": "icm4x6xx Gyroscope-Uncalibrated Non-wakeup",
                 "manufacturer": "TDK-Invensense",
                 "type": "Unknow",
-                "power": "0.57",
                 "version": "291"
             },
             {
                 "name": "fod  Wakeup",
                 "manufacturer": "XiaoMi",
                 "type": "Unknow",
-                "power": "0.001",
                 "version": "1"
             },
             {
                 "name": "fod  Non-wakeup",
                 "manufacturer": "XiaoMi",
                 "type": "Unknow",
-                "power": "0.001",
                 "version": "1"
             },
             {
                 "name": "icm4x6xx Accelerometer-Uncalibrated Non-wakeup",
                 "manufacturer": "TDK-Invensense",
                 "type": "Unknow",
-                "power": "0.24",
                 "version": "291"
             },
             {
                 "name": "NonUi  Wakeup",
                 "manufacturer": "XiaoMi",
                 "type": "Unknow",
-                "power": "0.001",
                 "version": "1"
             },
             {
                 "name": "NonUi  Non-wakeup",
                 "manufacturer": "XiaoMi",
                 "type": "Unknow",
-                "power": "0.001",
                 "version": "1"
             },
             {
                 "name": "SAR ADUX1050  Non-wakeup",
                 "manufacturer": "analog_devices_inc",
                 "type": "Unknow",
-                "power": "2.2",
                 "version": "256"
             },
             {
                 "name": "icm4x6xx Accelerometer Non-wakeup",
                 "manufacturer": "TDK-Invensense",
                 "type": "ACCELEROMETER",
-                "power": "0.24",
                 "version": "291"
             },
             {
                 "name": "icm4x6xx Gyroscope Non-wakeup",
                 "manufacturer": "TDK-Invensense",
                 "type": "GYROSCOPE",
-                "power": "0.57",
                 "version": "291"
             },
             {
                 "name": "Aod  Wakeup",
                 "manufacturer": "XiaoMi",
                 "type": "Unknow",
-                "power": "0.001",
                 "version": "1"
             },
             {
                 "name": "Aod  Non-wakeup",
                 "manufacturer": "XiaoMi",
                 "type": "Unknow",
-                "power": "0.001",
                 "version": "1"
             },
             {
                 "name": "device_orient  Wakeup",
                 "manufacturer": "xiaomi",
                 "type": "Unknow",
-                "power": "0.001",
                 "version": "1"
             },
             {
                 "name": "device_orient  Non-wakeup",
                 "manufacturer": "xiaomi",
                 "type": "Unknow",
-                "power": "0.001",
                 "version": "1"
             }
         ],
@@ -429,10 +380,9 @@
                 "country": "fr",
                 "operator_code": "20815",
                 "operator_name": "Free",
-                "serial": "8933150319050352521",
+                "imsi": "8933150319050352521",
                 "state": "SIM_STATE_READY",
-                "line_number": "+33632331095",
-                "subscriber_id": "1"
+                "phone_number": "+33632331095"
             }
         ],
         "videos": [
@@ -484,7 +434,7 @@
                 "ipmask6": "ffff:ffff:ffff:ffff::",
                 "ipsubnet": "172.28.214.132",
                 "ipsubnet6": "fe80::",
-                "macaddr": "E0:DC:FF:ED:09:59",
+                "mac": "E0:DC:FF:ED:09:59",
                 "speed": "240",
                 "type": "wifi",
                 "wifi_bssid": "<unknown ssid>",
@@ -492,15 +442,6 @@
                 "status": "up"
             }
         ],
-        "jvms": {
-            "name": "Dalvik",
-            "language": "fr_FR",
-            "vendor": "The Android Project",
-            "runtime": "0.9",
-            "home": "\/system",
-            "version": "2.1.0",
-            "classpath": "."
-        },
         "softwares": [
             {
                 "name": "Enregistreur d'\u00e9cran",
@@ -538,10 +479,6 @@
         ],
         "batteries": [
             {
-                "temperature": "28.2c",
-                "level": "93%",
-                "health": "Good",
-                "status": "Charging",
                 "capacity": 93
             }
         ]

@@ -453,13 +453,8 @@ class Converter extends \atoum {
 
         $device = $json->content->network_device;
         $this->array((array)$device)->isIdenticalTo([
-            'comments' => '
-Digi TransPort WR11-L700-DE1-XW Ser#:486280
-Software Build Ver5.2.17.12.  Mar  8 2017 13:55:20  1W
-ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88',
             'contact' => 'test@glpi-project.org',
             'firmware' => '5.2.17.12',
-            'id' => 0,
             'ips' => [
                 '172.21.255.102'
             ],
@@ -492,13 +487,8 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88',
 
         $device = $json->content->network_device;
         $this->array((array)$device)->isIdenticalTo([
-            'comments' => '
-Digi TransPort WR11-L700-DE1-XW Ser#:486280
-Software Build Ver5.2.17.12.  Mar  8 2017 13:55:20  1W
-ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88',
             'contact' => 'test@glpi-project.org',
             'firmware' => '5.2.17.12',
-            'id' => 0,
             'ips' => [
                 '172.21.255.102'
             ],
@@ -538,11 +528,9 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88',
 
         $device = $json->content->network_device;
         $this->array((array)$device)->isIdenticalTo([
-            'comments' => "Cisco NX-OS(tm) ucs, Software (ucs-6100-k9-system), Version 5.0(3)N2(4.02b), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc.   Compiled 1/16/2019 18:00:00",
             'contact' => "noc@glpi-project.org",
             'cpu' => 4,
             'firmware' => "5.0(3)N2(4.02b)",
-            'id' => 0,
             'location' => "paris.pa3",
             'mac' => "8c:60:4f:8d:ae:fc",
             'manufacturer' => "Cisco",
@@ -578,11 +566,9 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88',
 
         $device = $json->content->network_device;
         $this->array((array)$device)->isIdenticalTo([
-            'comments' => "Cisco NX-OS(tm) ucs, Software (ucs-6100-k9-system), Version 5.0(3)N2(4.02b), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc.   Compiled 1/16/2019 18:00:00",
             'contact' => "noc@glpi-project.org",
             'cpu' => 4,
             'firmware' => "5.0(3)N2(4.02b)",
-            'id' => 0,
             'location' => "paris.pa3",
             'mac' => "8c:60:4f:8d:ae:fc",
             'manufacturer' => "Cisco",

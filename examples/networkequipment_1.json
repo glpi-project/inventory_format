@@ -1,50 +1,43 @@
 {
     "content": {
         "versionclient": "4.1",
-        "versionprovider": {
-            "processnumber": "1"
-        },
         "network_components": [
             {
-                "containedinindex": "0",
+                "contained_index": 0,
                 "description": "Fabric [MAC address-8c:60:4f:8d:ae:fc]",
                 "fru": 2,
                 "index": 10,
                 "manufacturer": "Cisco Systems, Inc.",
                 "model": "UCS-FI-6248UP",
                 "name": "Fabric [MAC address-8c:60:4f:8d:ae:fc]",
-                "revision": "1.0",
                 "serial": "SSI1912014B",
                 "type": "stack"
             },
             {
-                "containedinindex": "214",
+                "contained_index": 214,
                 "description": "32 port Modular Universal Port Supervisor in Fixed Module-1",
-                "firmware": "5.0(3)N2(4.02b)",
                 "fru": 2,
                 "index": 22,
                 "manufacturer": "Cisco Systems, Inc.",
                 "model": "UCS-FI-6248UP",
                 "name": "32 port Modular Universal Port Supervisor in Fixed Module-1",
-                "revision": "1.0",
                 "serial": "FOC19260BJM",
                 "type": "module",
-                "version": "5.0(3)N2(4.02b)"
+                "firmware": "5.0(3)N2(4.02b)"
             },
             {
-                "containedinindex": "10",
+                "contained_index": 10,
                 "description": "UCS 6248 Series Fabric Interconnect",
                 "fru": 2,
                 "index": 149,
                 "manufacturer": "Cisco Systems, Inc.",
                 "model": "UCS-FI-6248UP",
                 "name": "UCS 6248 Series Fabric Interconnect",
-                "revision": "1.0",
                 "serial": "SSI1912014B",
                 "type": "chassis"
             },
             {
-                "containedinindex": "149",
+                "contained_index": 149,
                 "description": "Fixed Slot-1",
                 "fru": 2,
                 "index": 214,
@@ -53,7 +46,7 @@
                 "type": "container"
             },
             {
-                "containedinindex": "149",
+                "contained_index": 149,
                 "description": "Module Slot-2",
                 "fru": 2,
                 "index": 215,
@@ -63,7 +56,7 @@
                 "type": "container"
             },
             {
-                "containedinindex": "149",
+                "contained_index": 149,
                 "description": "Module Slot-3",
                 "fru": 2,
                 "index": 216,
@@ -73,7 +66,7 @@
                 "type": "container"
             },
             {
-                "containedinindex": "149",
+                "contained_index": 149,
                 "description": "PowerSupplyBay-1",
                 "fru": 2,
                 "index": 278,
@@ -83,7 +76,7 @@
                 "type": "container"
             },
             {
-                "containedinindex": "149",
+                "contained_index": 149,
                 "description": "PowerSupplyBay-2",
                 "fru": 2,
                 "index": 279,
@@ -93,7 +86,7 @@
                 "type": "container"
             },
             {
-                "containedinindex": "149",
+                "contained_index": 149,
                 "description": "FanBay-1",
                 "fru": 2,
                 "index": 342,
@@ -103,7 +96,7 @@
                 "type": "container"
             },
             {
-                "containedinindex": "149",
+                "contained_index": 149,
                 "description": "FanBay-2",
                 "fru": 2,
                 "index": 343,
@@ -113,31 +106,29 @@
                 "type": "container"
             },
             {
-                "containedinindex": "278",
+                "contained_index": 278,
                 "description": "UCS 6248 PSU module, AC 750W",
                 "fru": 1,
                 "index": 470,
                 "manufacturer": "Cisco Systems, Inc.",
                 "model": "UCS-PSU-6248UP-AC",
                 "name": "PowerSupply-1",
-                "revision": "1.0",
                 "serial": "ART191210RX",
                 "type": "powerSupply"
             },
             {
-                "containedinindex": "279",
+                "contained_index": 279,
                 "description": "UCS 6248 PSU module, AC 750W",
                 "fru": 1,
                 "index": 471,
                 "manufacturer": "Cisco Systems, Inc.",
                 "model": "UCS-PSU-6248UP-AC",
                 "name": "PowerSupply-2",
-                "revision": "1.0",
                 "serial": "ART191110TA",
                 "type": "powerSupply"
             },
             {
-                "containedinindex": "342",
+                "contained_index": 342,
                 "description": "FanModule-1",
                 "fru": 1,
                 "index": 534,
@@ -147,7 +138,7 @@
                 "type": "fan"
             },
             {
-                "containedinindex": "343",
+                "contained_index": 343,
                 "description": "FanModule-2",
                 "fru": 1,
                 "index": 535,
@@ -157,55 +148,51 @@
                 "type": "fan"
             },
             {
-                "containedinindex": "470",
+                "contained_index": 470,
                 "description": "PowerSupply-1 Fan-1",
                 "fru": 2,
                 "index": 536,
                 "manufacturer": "Cisco Systems, Inc.",
                 "model": "UCS-PSU-6248UP-AC",
                 "name": "PowerSupply-1 Fan-1",
-                "revision": "1.0",
                 "serial": "ART191210RX",
                 "type": "fan"
             },
             {
-                "containedinindex": "470",
+                "contained_index": 470,
                 "description": "PowerSupply-1 Fan-2",
                 "fru": 2,
                 "index": 537,
                 "manufacturer": "Cisco Systems, Inc.",
                 "model": "UCS-PSU-6248UP-AC",
                 "name": "PowerSupply-1 Fan-2",
-                "revision": "1.0",
                 "serial": "ART191210RX",
                 "type": "fan"
             },
             {
-                "containedinindex": "471",
+                "contained_index": 471,
                 "description": "PowerSupply-2 Fan-1",
                 "fru": 2,
                 "index": 538,
                 "manufacturer": "Cisco Systems, Inc.",
                 "model": "UCS-PSU-6248UP-AC",
                 "name": "PowerSupply-2 Fan-1",
-                "revision": "1.0",
                 "serial": "ART191110TA",
                 "type": "fan"
             },
             {
-                "containedinindex": "471",
+                "contained_index": 471,
                 "description": "PowerSupply-2 Fan-2",
                 "fru": 2,
                 "index": 539,
                 "manufacturer": "Cisco Systems, Inc.",
                 "model": "UCS-PSU-6248UP-AC",
                 "name": "PowerSupply-2 Fan-2",
-                "revision": "1.0",
                 "serial": "ART191110TA",
                 "type": "fan"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-1",
                 "fru": 2,
                 "index": 4950,
@@ -214,7 +201,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-2",
                 "fru": 2,
                 "index": 4951,
@@ -223,7 +210,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-3",
                 "fru": 2,
                 "index": 4952,
@@ -232,7 +219,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-4",
                 "fru": 2,
                 "index": 4953,
@@ -241,7 +228,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-5",
                 "fru": 2,
                 "index": 4954,
@@ -250,7 +237,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-6",
                 "fru": 2,
                 "index": 4955,
@@ -259,7 +246,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-7",
                 "fru": 2,
                 "index": 4956,
@@ -268,7 +255,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-8",
                 "fru": 2,
                 "index": 4957,
@@ -277,7 +264,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-9",
                 "fru": 2,
                 "index": 4958,
@@ -286,7 +273,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-10",
                 "fru": 2,
                 "index": 4959,
@@ -295,7 +282,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-11",
                 "fru": 2,
                 "index": 4960,
@@ -304,7 +291,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-12",
                 "fru": 2,
                 "index": 4961,
@@ -313,7 +300,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-13",
                 "fru": 2,
                 "index": 4962,
@@ -322,7 +309,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-14",
                 "fru": 2,
                 "index": 4963,
@@ -331,7 +318,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-15",
                 "fru": 2,
                 "index": 4964,
@@ -340,7 +327,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-16",
                 "fru": 2,
                 "index": 4965,
@@ -349,7 +336,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-17",
                 "fru": 2,
                 "index": 4966,
@@ -358,7 +345,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-18",
                 "fru": 2,
                 "index": 4967,
@@ -367,7 +354,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-19",
                 "fru": 2,
                 "index": 4968,
@@ -376,7 +363,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-20",
                 "fru": 2,
                 "index": 4969,
@@ -385,7 +372,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-21",
                 "fru": 2,
                 "index": 4970,
@@ -394,7 +381,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-22",
                 "fru": 2,
                 "index": 4971,
@@ -403,7 +390,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-23",
                 "fru": 2,
                 "index": 4972,
@@ -412,7 +399,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-24",
                 "fru": 2,
                 "index": 4973,
@@ -421,7 +408,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-25",
                 "fru": 2,
                 "index": 4974,
@@ -430,7 +417,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-26",
                 "fru": 2,
                 "index": 4975,
@@ -439,7 +426,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-27",
                 "fru": 2,
                 "index": 4976,
@@ -448,7 +435,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-28",
                 "fru": 2,
                 "index": 4977,
@@ -457,7 +444,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-29",
                 "fru": 2,
                 "index": 4978,
@@ -466,7 +453,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-30",
                 "fru": 2,
                 "index": 4979,
@@ -475,7 +462,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-31",
                 "fru": 2,
                 "index": 4980,
@@ -484,7 +471,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "FixedModule-1 Port-32",
                 "fru": 2,
                 "index": 4981,
@@ -493,7 +480,7 @@
                 "type": "port"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "Module-1, Fan side",
                 "fru": 2,
                 "index": 21590,
@@ -502,7 +489,7 @@
                 "type": "sensor"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "Module-1, Outlet-1",
                 "fru": 2,
                 "index": 21591,
@@ -511,7 +498,7 @@
                 "type": "sensor"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "Module-1, Intake-0",
                 "fru": 2,
                 "index": 21592,
@@ -520,7 +507,7 @@
                 "type": "sensor"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "Module-1, Intake-1",
                 "fru": 2,
                 "index": 21593,
@@ -529,7 +516,7 @@
                 "type": "sensor"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "PowerSupply-1 Sensor-1",
                 "fru": 2,
                 "index": 21594,
@@ -538,7 +525,7 @@
                 "type": "sensor"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "PowerSupply-2 Sensor-1",
                 "fru": 2,
                 "index": 21595,
@@ -547,7 +534,7 @@
                 "type": "sensor"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "Module-1, Carmel-1",
                 "fru": 2,
                 "index": 21596,
@@ -556,7 +543,7 @@
                 "type": "sensor"
             },
             {
-                "containedinindex": "22",
+                "contained_index": 22,
                 "description": "Module-1, Carmel-2",
                 "fru": 2,
                 "index": 21597,
@@ -565,7 +552,7 @@
                 "type": "sensor"
             },
             {
-                "containedinindex": "470",
+                "contained_index": 470,
                 "description": "Module-1, Port side",
                 "fru": 2,
                 "index": 21598,
@@ -574,7 +561,7 @@
                 "type": "sensor"
             },
             {
-                "containedinindex": "471",
+                "contained_index": 471,
                 "description": "Module-1, Control",
                 "fru": 2,
                 "index": 21599,
@@ -583,7 +570,7 @@
                 "type": "sensor"
             },
             {
-                "containedinindex": "4950",
+                "contained_index": 4950,
                 "description": "Fex-2 Port 1 to Core Port eth1\/1 Cable",
                 "fru": 1,
                 "index": 300001,
@@ -592,7 +579,7 @@
                 "type": "other"
             },
             {
-                "containedinindex": "4951",
+                "contained_index": 4951,
                 "description": "Fex-2 Port 5 to Core Port eth1\/2 Cable",
                 "fru": 1,
                 "index": 300002,
@@ -601,7 +588,7 @@
                 "type": "other"
             },
             {
-                "containedinindex": "4952",
+                "contained_index": 4952,
                 "description": "Fex-2 Port 2 to Core Port eth1\/3 Cable",
                 "fru": 1,
                 "index": 300003,
@@ -610,7 +597,7 @@
                 "type": "other"
             },
             {
-                "containedinindex": "4953",
+                "contained_index": 4953,
                 "description": "Fex-2 Port 6 to Core Port eth1\/4 Cable",
                 "fru": 1,
                 "index": 300004,
@@ -619,7 +606,7 @@
                 "type": "other"
             },
             {
-                "containedinindex": "4966",
+                "contained_index": 4966,
                 "description": "Fex-1 Port 1 to Core Port eth1\/17 Cable",
                 "fru": 1,
                 "index": 300017,
@@ -628,7 +615,7 @@
                 "type": "other"
             },
             {
-                "containedinindex": "4967",
+                "contained_index": 4967,
                 "description": "Fex-1 Port 5 to Core Port eth1\/18 Cable",
                 "fru": 1,
                 "index": 300018,
@@ -647,11 +634,9 @@
             }
         ],
         "network_device": {
-            "comments": "Cisco NX-OS(tm) ucs, Software (ucs-6100-k9-system), Version 5.0(3)N2(4.02b), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc.   Compiled 1\/16\/2019 18:00:00",
             "contact": "noc@glpi-project.org",
             "cpu": 4,
             "firmware": "5.0(3)N2(4.02b)",
-            "id": 0,
             "location": "paris.pa3",
             "mac": "8c:60:4f:8d:ae:fc",
             "manufacturer": "Cisco",

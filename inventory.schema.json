@@ -54,7 +54,8 @@
             "userid": {
               "type": "string"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "accountinfo": {
           "type": "object",
@@ -72,7 +73,8 @@
             "keyvalue": {
               "type": "string"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "antivirus": {
           "type": "array",
@@ -121,7 +123,8 @@
                 "type": "string",
                 "title": "Signatures base version"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "batteries": {
@@ -165,7 +168,8 @@
                 "type": "integer",
                 "title": "Battery voltage, in mV"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "bios": {
@@ -244,7 +248,8 @@
             "enclosureserial": {
               "type": "string"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "controllers": {
           "type": "array",
@@ -317,7 +322,8 @@
                   "8086"
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "cpus": {
@@ -424,7 +430,8 @@
                 "$comment": "Never seen",
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "drives": {
@@ -532,7 +539,8 @@
                   "software"
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "envs": {
@@ -556,7 +564,8 @@
                   "xterm"
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "firewalls": {
@@ -594,7 +603,8 @@
                   "on"
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "hardware": {
@@ -707,7 +717,8 @@
             "vmhostserial": {
               "type": "string"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "inputs": {
           "type": "array",
@@ -747,7 +758,8 @@
               "pointingtype": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "local_groups": {
@@ -782,7 +794,8 @@
                   "wheel"
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "local_users": {
@@ -820,7 +833,8 @@
                   "/bin/zsh"
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "physical_volumes": {
@@ -893,7 +907,8 @@
                   "tZSsF8-wsLg-ZoAt-jjFY-GwGn-y2q3-QOP60c"
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "volume_groups": {
@@ -960,7 +975,8 @@
                   "tZSsF8-wsLg-ZoAt-jjFY-GwGn-y2q3-QOP60c"
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "logical_volumes": {
@@ -1013,7 +1029,8 @@
               "vg_name": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "memories": {
@@ -1093,7 +1110,8 @@
               "removable": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "monitors": {
@@ -1147,7 +1165,8 @@
               "type": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "networks": {
@@ -1301,7 +1320,8 @@
               "wifi_version": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "operatingsystem": {
@@ -1349,7 +1369,7 @@
               "examples": [
                 "2013-08-09 12:00:21"
               ],
-              "$ref": "#/definitions/datetime"
+              "$ref": "#/definitions/dateordatetime"
             },
             "kernel_name": {
               "type": "string",
@@ -1427,7 +1447,8 @@
                 "11.04"
               ]
             }
-          }
+          },
+          "additionalProperties": false
         },
         "ports": {
           "type": "array",
@@ -1462,7 +1483,8 @@
                   "USB"
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "printers": {
@@ -1537,7 +1559,8 @@
               "serial": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "processes": {
@@ -1598,7 +1621,8 @@
                   "215324"
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "remote_mgmt": {
@@ -1626,7 +1650,8 @@
                 "type": "string",
                 "title": "Remote management software or firmware version"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "slots": {
@@ -1662,7 +1687,8 @@
                 ],
                 "pattern": "^(free|used)$"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "softwares": {
@@ -1768,7 +1794,8 @@
               "userid": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "sounds": {
@@ -1800,7 +1827,8 @@
                   "Audio device"
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "storages": {
@@ -1897,7 +1925,8 @@
                 "type": "string",
                 "title": "Encryption type"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "usbdevices": {
@@ -1947,7 +1976,8 @@
               "serial": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "users": {
@@ -1967,7 +1997,8 @@
                   "john"
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "videos": {
@@ -1996,7 +2027,8 @@
               "pcislot": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "virtualmachines": {
@@ -2076,7 +2108,8 @@
               "serial": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "licenseinfos": {
@@ -2109,7 +2142,8 @@
               "productid": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "modems": {
@@ -2148,7 +2182,8 @@
                   }
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "firmwares": {
@@ -2174,7 +2209,8 @@
               "manufacturer": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "simcards": {
@@ -2203,7 +2239,8 @@
               "operator_name": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "sensors": {
@@ -2223,7 +2260,8 @@
               "version": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "powersupplies": {
@@ -2262,7 +2300,8 @@
               "location": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "cameras": {
@@ -2294,7 +2333,7 @@
               "orientation": {
                 "type": "string"
               },
-              "focallenght": {
+              "focallength": {
                 "type": "string"
               },
               "sensorsize": {
@@ -2318,7 +2357,8 @@
                   "type": "string"
                 }
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "network_ports": {
@@ -2377,6 +2417,9 @@
                 }
               },
               "ifdescr": {
+                "type": "string"
+              },
+              "ifalias": {
                 "type": "string"
               },
               "ifinerrors": {
@@ -2442,6 +2485,26 @@
                   "00:00:00:00:00:00"
                 ]
               },
+              "ips": {
+                "type": "array",
+                "title": "IP addresses",
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "ipv4",
+                      "examples": [
+                        "127.0.0.1",
+                        "172.28.211.1"
+                      ]
+                    }, {
+                      "type": "string",
+                      "format": "ipv6",
+                      "examples": ["::1"]
+                    }
+                  ]
+                }
+              },
               "trunk": {
                 "type": "boolean",
                 "title": "Trunk port flag"
@@ -2460,7 +2523,8 @@
                   }
                 }
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "network_components": {
@@ -2489,8 +2553,43 @@
               },
               "name": {
                 "type": "string"
+              },
+              "serial": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "firmware": {
+                "type": "string",
+                "title": "Component firmware version"
+              },
+              "mac": {
+                "type": "string",
+                "examples": [
+                  "00:00:00:00:00:00"
+                ]
+              },
+              "ip": {
+                "type": "string",
+                "title": "IP address",
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "ipv4",
+                    "examples": [
+                      "127.0.0.1",
+                      "172.28.211.1"
+                    ]
+                  }, {
+                    "type": "string",
+                    "format": "ipv6",
+                    "examples": ["::1"]
+                  }
+                ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "pagecounters": {
@@ -2526,7 +2625,8 @@
             "copyblack": {
               "type": "integer"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "cartridges": {
           "type": "array",
@@ -2562,7 +2662,8 @@
               "max": {
                 "type": "integer"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "versionclient": {
@@ -2663,7 +2764,8 @@
                 "2.3.20"
               ]
             }
-          }
+          },
+          "additionalProperties": false
         },
         "network_device": {
           "type": "object",
@@ -2755,16 +2857,16 @@
             "contact": {
               "type": "string"
             }
-          }
+          },
+          "additionalProperties": false
         },
-        "databases": {
+        "databases_servers": {
           "type": "array",
           "items": {
             "type": "object",
             "required": [
               "name",
-              "version",
-              "port"
+              "version"
             ],
             "properties": {
               "type": {
@@ -2776,46 +2878,66 @@
               "version": {
                 "type": "string"
               },
-              "instance_name": {
-                "type": "string"
-              },
-              "port": {
-                "type": "integer"
-              },
-              "size": {
-                "type": "integer"
-              },
-              "is_active": {
-                "type": "boolean"
-              },
-              "is_onbackup": {
-                "type": "boolean"
-              },
-              "creation_date": {
-                "examples": [
-                  "2021-06-03 10:16:47"
-                ],
-                "$ref": "#/definitions/datetime"
-              },
-              "update_date": {
-                "examples": [
-                  "2021-06-03 10:16:47"
-                ],
-                "$ref": "#/definitions/datetime"
-              },
-              "last_boot_date": {
-                "examples": [
-                  "2021-06-03 10:16:47"
-                ],
-                "$ref": "#/definitions/datetime"
-              },
               "manufacturer": {
                 "type": "string"
+              },
+              "instances": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "name",
+                    "port"
+                  ],
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "port": {
+                      "type": "integer"
+                    },
+                    "size": {
+                      "type": "integer"
+                    },
+                    "is_active": {
+                      "type": "boolean"
+                    },
+                    "is_onbackup": {
+                      "type": "boolean"
+                    },
+                    "last_boot_date": {
+                      "examples": [
+                        "2021-06-03 10:16:47"
+                      ],
+                      "$ref": "#/definitions/datetime"
+                    },
+                    "last_backup_date": {
+                      "examples": [
+                        "2021-06-21 11:37:46"
+                      ],
+                      "$ref": "#/definitions/datetime"
+                    },
+                    "creation_date": {
+                      "examples": [
+                        "2021-06-03 10:16:47"
+                      ],
+                      "$ref": "#/definitions/datetime"
+                    },
+                    "update_date": {
+                      "examples": [
+                        "2021-06-03 10:16:47"
+                      ],
+                      "$ref": "#/definitions/datetime"
+                    }
+                  }
+                }
               }
-            }
+            },
+            "additionalProperties": false
           }
         }
-      }
+      },
+      "additionalProperties": false
     },
     "deviceid": {
       "type": "string",
@@ -2837,5 +2959,6 @@
       "default": "INVENTORY",
       "pattern": "^(INVENTORY|SNMP)$"
     }
-  }
+  },
+  "additionalProperties": false
 }

@@ -1,9 +1,6 @@
 {
     "content": {
         "versionclient": "2.5",
-        "versionprovider": {
-            "processnumber": "1"
-        },
         "firmwares": [
             {
                 "description": "device firmware",
@@ -14,9 +11,7 @@
             }
         ],
         "network_device": {
-            "comments": "HP J9775A 2530-48G Switch, revision YA.15.12.0015, ROM YA.15.12 (\/ws\/swbuildm\/YA_rel_knoxville_qaoff\/code\/build\/lakes(swbuildm_YA_rel_knoxville_qaoff_rel_knoxville)) (Formerly ProCurve)",
             "firmware": "YA.15.12.0015",
-            "id": 0,
             "ips": [
                 "192.168.63.30"
             ],
@@ -1614,10 +1609,9 @@
                 "ifspeed": 0,
                 "ifstatus": 1,
                 "iftype": 53,
-                "ip": "192.168.63.30",
-                "ips": {
-                    "ip": "192.168.63.30"
-                },
+                "ips": [
+                    "192.168.63.30"
+                ],
                 "mac": "b0:5a:da:10:10:80"
             },
             {
