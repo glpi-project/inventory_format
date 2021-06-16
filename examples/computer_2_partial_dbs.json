@@ -14,39 +14,55 @@
             "ssn": "2FAGP34"
         },
         "hardware": {
-            "archname": "x86_64-linux-gnu-thread-multi",
             "chassis_type": "Laptop",
-            "checksum": "131071",
             "datelastloggeduser": "Mon Feb 20 14:21",
             "defaultgateway": "172.28.220.1",
             "dns": "127.0.1.1",
-            "etime": 5,
-            "ipaddr": "172.28.220.83\/172.17.0.1\/172.19.0.1\/172.18.0.1",
             "lastloggeduser": "local",
             "memory": 7830,
             "name": "COMP1",
             "oscomments": "#201701090438 SMP Mon Jan 9 09:40:28 UTC 2017",
-            "osname": "Ubuntu 16.10",
-            "osversion": "4.8.17-040817-generic",
-            "processorn": "1",
-            "processors": "2300",
-            "processort": "Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz",
             "swap": 8038,
-            "userid": "local",
             "uuid": "4BDRGGFE-0046-4710-8047-B2C04F503732",
             "vmsystem": "Physical"
         },
         "versionclient": "FusionInventory-Agent_v2.3.19",
-        "databases": [
+        "databases_servers": [
             {
                 "name": "MariaDB",
                 "type": "mysql",
                 "version": "Ver 15.1 Distrib 10.5.10-MariaDB",
-                "port": 3306,
-                "size": 52000,
-                "is_active": true,
-                "is_onbackup": false,
-                "last_backup_date": null
+                "instances": [
+                    {
+                        "name": "default",
+                        "port": 3306,
+                        "size": 52000,
+                        "last_backup_date": "2021-06-21 11:38:23",
+                        "is_active": true,
+                        "is_onbackup": true
+                    }, {
+                        "name": "another one",
+                        "port": 3307,
+                        "size": 32000,
+                        "last_backup_date": "2021-06-23 07:20:11",
+                        "is_active": true,
+                        "is_onbackup": true
+                    }
+                ]
+            }, {
+                "type": "postgres",
+                "name": "PostgreSQL 13",
+                "version": "13.2.3",
+                "manufacturer": "PostgreSQL",
+                "instances": [
+                    {
+                        "name": "default",
+                        "port": 5432,
+                        "size": 2048000,
+                        "is_active": true,
+                        "is_onbackup": false
+                    }
+                ]
             }
         ]
     },
