@@ -3,6 +3,21 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.0] - 2021-06-28
+
+Various schema update/fixes/improvements, including:
+
+List instances under related database, makes updates easier
+Do not allow additional properties
+Handle no longer existing nodes; rename old networks/macaddr
+Fix OS installation date
+Various fixes
+Disable replacements that should not exists (no if(in|out)(octets|bytes) in connections
+Fix examples, missing backup date in dbs specs
+Network compoonents can have ip and mac (wifi access points), and firmwares versions
+Rework DB schema, rename main node
+No ifalias on connections
+
 ## [1.0.9] - 2021-06-11
 
 Add databases support
