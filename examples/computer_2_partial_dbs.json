@@ -27,40 +27,36 @@
             "vmsystem": "Physical"
         },
         "versionclient": "FusionInventory-Agent_v2.3.19",
-        "databases_servers": [
+        "databases": [
             {
                 "name": "MariaDB",
                 "type": "mysql",
                 "version": "Ver 15.1 Distrib 10.5.10-MariaDB",
-                "instances": [
+                "port": 3306,
+                "is_active": true,
+                "is_onbackup": true,
+                "last_backup_date": "2021-06-21 11:38:23",
+                "schemas": [
                     {
-                        "name": "default",
-                        "port": 3306,
-                        "size": 52000,
-                        "last_backup_date": "2021-06-21 11:38:23",
-                        "is_active": true,
-                        "is_onbackup": true
+                        "name": "glpi",
+                        "size": 52000
                     }, {
-                        "name": "another one",
-                        "port": 3307,
-                        "size": 32000,
-                        "last_backup_date": "2021-06-23 07:20:11",
-                        "is_active": true,
-                        "is_onbackup": true
+                        "name": "dotclear",
+                        "size": 32000
                     }
                 ]
             }, {
                 "type": "postgres",
                 "name": "PostgreSQL 13",
                 "version": "13.2.3",
+                "port": 5432,
                 "manufacturer": "PostgreSQL",
-                "instances": [
+                "is_active": true,
+                "is_onbackup": false,
+                "schemas": [
                     {
-                        "name": "default",
-                        "port": 5432,
-                        "size": 2048000,
-                        "is_active": true,
-                        "is_onbackup": false
+                        "name": "galette",
+                        "size": 2048000
                     }
                 ]
             }

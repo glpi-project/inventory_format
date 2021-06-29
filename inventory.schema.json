@@ -2860,13 +2860,14 @@
           },
           "additionalProperties": false
         },
-        "databases_servers": {
+        "databases": {
           "type": "array",
           "items": {
             "type": "object",
             "required": [
               "name",
-              "version"
+              "version",
+              "port"
             ],
             "properties": {
               "type": {
@@ -2881,41 +2882,40 @@
               "manufacturer": {
                 "type": "string"
               },
-              "instances": {
+              "port": {
+                "type": "integer"
+              },
+              "is_active": {
+                "type": "boolean"
+              },
+              "is_onbackup": {
+                "type": "boolean"
+              },
+              "last_boot_date": {
+                "examples": [
+                  "2021-06-03 10:16:47"
+                ],
+                "$ref": "#/definitions/datetime"
+              },
+              "last_backup_date": {
+                "examples": [
+                  "2021-06-21 11:37:46"
+                ],
+                "$ref": "#/definitions/datetime"
+              },
+              "schemas": {
                 "type": "array",
                 "items": {
                   "type": "object",
                   "required": [
-                    "name",
-                    "port"
+                    "name"
                   ],
                   "properties": {
                     "name": {
                       "type": "string"
                     },
-                    "port": {
-                      "type": "integer"
-                    },
                     "size": {
                       "type": "integer"
-                    },
-                    "is_active": {
-                      "type": "boolean"
-                    },
-                    "is_onbackup": {
-                      "type": "boolean"
-                    },
-                    "last_boot_date": {
-                      "examples": [
-                        "2021-06-03 10:16:47"
-                      ],
-                      "$ref": "#/definitions/datetime"
-                    },
-                    "last_backup_date": {
-                      "examples": [
-                        "2021-06-21 11:37:46"
-                      ],
-                      "$ref": "#/definitions/datetime"
                     },
                     "creation_date": {
                       "examples": [
