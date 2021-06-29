@@ -2866,8 +2866,7 @@
             "type": "object",
             "required": [
               "name",
-              "version",
-              "port"
+              "version"
             ],
             "properties": {
               "type": {
@@ -2883,6 +2882,12 @@
                 "type": "string"
               },
               "port": {
+                "type": "integer"
+              },
+              "path": {
+                "type": "integer"
+              },
+              "size": {
                 "type": "integer"
               },
               "is_active": {
@@ -2917,6 +2922,12 @@
                     "size": {
                       "type": "integer"
                     },
+                    "is_active": {
+                      "type": "boolean"
+                    },
+                    "is_onbackup": {
+                      "type": "boolean"
+                    },
                     "creation_date": {
                       "examples": [
                         "2021-06-03 10:16:47"
@@ -2926,6 +2937,12 @@
                     "update_date": {
                       "examples": [
                         "2021-06-03 10:16:47"
+                      ],
+                      "$ref": "#/definitions/datetime"
+                    },
+                    "last_backup_date": {
+                      "examples": [
+                        "2021-06-21 11:37:46"
                       ],
                       "$ref": "#/definitions/datetime"
                     }
