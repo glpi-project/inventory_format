@@ -2885,10 +2885,11 @@
                 "type": "integer"
               },
               "path": {
-                "type": "integer"
+                "type": "string"
               },
               "size": {
-                "type": "integer"
+                "type": "integer",
+                "title": "Size in MB"
               },
               "is_active": {
                 "type": "boolean"
@@ -2920,7 +2921,8 @@
                       "type": "string"
                     },
                     "size": {
-                      "type": "integer"
+                      "type": "integer",
+                      "title": "Size in MB"
                     },
                     "is_active": {
                       "type": "boolean"
