@@ -2860,7 +2860,7 @@
           },
           "additionalProperties": false
         },
-        "databases": {
+        "databases_instances": {
           "type": "array",
           "items": {
             "type": "object",
