@@ -27,7 +27,7 @@
             "vmsystem": "Physical"
         },
         "versionclient": "FusionInventory-Agent_v2.3.19",
-        "databases_instances": [
+        "databases_services": [
             {
                 "name": "MariaDB",
                 "type": "mysql",
