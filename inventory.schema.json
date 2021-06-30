@@ -2860,7 +2860,7 @@
           },
           "additionalProperties": false
         },
-        "databases_servers": {
+        "databases_services": {
           "type": "array",
           "items": {
             "type": "object",
@@ -2881,41 +2881,55 @@
               "manufacturer": {
                 "type": "string"
               },
-              "instances": {
+              "port": {
+                "type": "integer"
+              },
+              "path": {
+                "type": "string"
+              },
+              "size": {
+                "type": "integer",
+                "title": "Size in MB"
+              },
+              "is_active": {
+                "type": "boolean"
+              },
+              "is_onbackup": {
+                "type": "boolean"
+              },
+              "last_boot_date": {
+                "examples": [
+                  "2021-06-03 10:16:47"
+                ],
+                "$ref": "#/definitions/datetime"
+              },
+              "last_backup_date": {
+                "examples": [
+                  "2021-06-21 11:37:46"
+                ],
+                "$ref": "#/definitions/datetime"
+              },
+              "databases": {
+                "title": "List of databases in the instance",
                 "type": "array",
                 "items": {
                   "type": "object",
                   "required": [
-                    "name",
-                    "port"
+                    "name"
                   ],
                   "properties": {
                     "name": {
                       "type": "string"
                     },
-                    "port": {
-                      "type": "integer"
-                    },
                     "size": {
-                      "type": "integer"
+                      "type": "integer",
+                      "title": "Size in MB"
                     },
                     "is_active": {
                       "type": "boolean"
                     },
                     "is_onbackup": {
                       "type": "boolean"
-                    },
-                    "last_boot_date": {
-                      "examples": [
-                        "2021-06-03 10:16:47"
-                      ],
-                      "$ref": "#/definitions/datetime"
-                    },
-                    "last_backup_date": {
-                      "examples": [
-                        "2021-06-21 11:37:46"
-                      ],
-                      "$ref": "#/definitions/datetime"
                     },
                     "creation_date": {
                       "examples": [
@@ -2926,6 +2940,12 @@
                     "update_date": {
                       "examples": [
                         "2021-06-03 10:16:47"
+                      ],
+                      "$ref": "#/definitions/datetime"
+                    },
+                    "last_backup_date": {
+                      "examples": [
+                        "2021-06-21 11:37:46"
                       ],
                       "$ref": "#/definitions/datetime"
                     }
