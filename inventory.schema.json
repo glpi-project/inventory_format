@@ -2909,7 +2909,8 @@
                 ],
                 "$ref": "#/definitions/datetime"
               },
-              "schemas": {
+              "databases": {
+                "title": "List of databases in the instance",
                 "type": "array",
                 "items": {
                   "type": "object",

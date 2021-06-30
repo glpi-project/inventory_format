@@ -36,7 +36,7 @@
                 "is_active": true,
                 "is_onbackup": true,
                 "last_backup_date": "2021-06-21 11:38:23",
-                "schemas": [
+                "databases": [
                     {
                         "name": "glpi",
                         "size": 52000
@@ -53,7 +53,7 @@
                 "manufacturer": "PostgreSQL",
                 "is_active": true,
                 "is_onbackup": false,
-                "schemas": [
+                "databases": [
                     {
                         "name": "galette",
                         "size": 2048000
