@@ -247,6 +247,24 @@ class Converter
     {
         //all keys are now lowercase
         $data = $this->arrayChangeKeyCaseRecursive($data);
+
+        if (!isset($data['action'])) {
+            $query = $data['query'] ?? ($this->isNetworkInventory($datz) ? null : 'inventory');
+
+            switch ($query) {
+                case 'SNMP':
+                case 'SNMPQUERY':
+                case null:
+                    $data['action'] = 'netinventory';
+                    break;
+                case 'INVENTORY':
+                default:
+                    $data['action'] = 'inventory';
+                    break;
+            }
+        }
+        unset($data['query']);
+
         $data = $this->convertNetworkInventory($data);
 
         //replace bad typed values...
@@ -1115,7 +1133,7 @@ class Converter
      */
     public function convertNetworkInventory(array $data): array
     {
-        if (!isset($data['content']['device'])) {
+        if (!$this->isNetworkInventory($data)) {
             //not a network inventory XML
             return $data;
         }
@@ -1130,10 +1148,6 @@ class Converter
         }
 
         $device = $data['content']['device'];
-
-        if (!isset($data['query']) || $data['query'] == 'SNMPQUERY') {
-            $data['query'] = 'SNMP';
-        }
 
         foreach ($device as $key => $device_data) {
             switch ($key) {
@@ -1350,5 +1364,10 @@ class Converter
 
             unset($data['pciid']);
         }
+    }
+
+    private function isNetworkInventory($data): bool
+    {
+        return isset($data['content']['device']);
     }
 }
