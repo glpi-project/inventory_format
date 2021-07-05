@@ -2102,6 +2102,6 @@
         ]
     },
     "deviceid": "DGS-3420-52T-2020-12-31-11-28-51",
-    "query": "SNMP",
+    "action": "netinventory",
     "itemtype": "NetworkEquipment"
 }

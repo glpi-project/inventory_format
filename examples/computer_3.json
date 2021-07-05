@@ -30977,6 +30977,6 @@
         ]
     },
     "deviceid": "LF014-2017-02-20-12-19-56",
-    "query": "INVENTORY",
+    "action": "inventory",
     "itemtype": "Computer"
 }

@@ -13690,6 +13690,6 @@
         ]
     },
     "deviceid": "3k-1-pa3.glpi-project.infra-2020-12-31-11-28-51",
-    "query": "SNMP",
+    "action": "netinventory",
     "itemtype": "NetworkEquipment"
 }
