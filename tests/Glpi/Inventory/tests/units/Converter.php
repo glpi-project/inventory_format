@@ -448,7 +448,7 @@ class Converter extends \atoum {
 
         $this->object($json = json_decode($json_str));
         $this->string($json->deviceid)->isIdenticalTo('foo');
-        $this->string($json->query)->isIdenticalTo('SNMP');
+        $this->string($json->action)->isIdenticalTo('netinventory');
         $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
 
         $device = $json->content->network_device;
@@ -482,7 +482,7 @@ class Converter extends \atoum {
 
         $this->object($json = json_decode($json_str));
         $this->string($json->deviceid)->isIdenticalTo('foo');
-        $this->string($json->query)->isIdenticalTo('SNMP');
+        $this->string($json->action)->isIdenticalTo('netinventory');
         $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
 
         $device = $json->content->network_device;
@@ -523,7 +523,7 @@ class Converter extends \atoum {
 
         $this->object($json = json_decode($json_str));
         $this->string($json->deviceid)->isIdenticalTo('foo');
-        $this->string($json->query)->isIdenticalTo('SNMP');
+        $this->string($json->action)->isIdenticalTo('netinventory');
         $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
 
         $device = $json->content->network_device;
@@ -561,7 +561,7 @@ class Converter extends \atoum {
 
         $this->object($json = json_decode($json_str));
         $this->string($json->deviceid)->isIdenticalTo('foo');
-        $this->string($json->query)->isIdenticalTo('SNMP');
+        $this->string($json->action)->isIdenticalTo('netinventory');
         $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
 
         $device = $json->content->network_device;
