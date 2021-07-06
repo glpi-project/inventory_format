@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.1] - 2021-07-06
+
+Rework databases schemas a bit
+
 ## [1.1.0] - 2021-06-28
 
 Various schema update/fixes/improvements, including:
