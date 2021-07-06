@@ -249,15 +249,14 @@ class Converter
         $data = $this->arrayChangeKeyCaseRecursive($data);
 
         if (!isset($data['action'])) {
-            $query = $data['query'] ?? ($this->isNetworkInventory($datz) ? null : 'inventory');
+            $query = $data['query'] ?? ($this->isNetworkInventory($data) ? 'snmp' : 'inventory');
 
-            switch ($query) {
-                case 'SNMP':
-                case 'SNMPQUERY':
-                case null:
+            switch (strtolower($query)) {
+                case 'snmp':
+                case 'snmpquery':
                     $data['action'] = 'netinventory';
                     break;
-                case 'INVENTORY':
+                case 'inventory':
                 default:
                     $data['action'] = 'inventory';
                     break;
