@@ -710,12 +710,6 @@
             },
             "winlang": {
               "type": "string"
-            },
-            "vmname": {
-              "type": "string"
-            },
-            "vmhostserial": {
-              "type": "string"
             }
           },
           "additionalProperties": false
