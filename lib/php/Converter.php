@@ -835,6 +835,9 @@ class Converter
             'network_components' => [
                 'ip',
                 'mac'
+            ],
+            'virtualmachines' => [
+                'vmid'
             ]
         ];
 
