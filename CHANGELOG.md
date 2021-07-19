@@ -3,6 +3,11 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.3] - 2021-07-19
+
+Add secure_boot support
+Add tag node
+
 ## [1.1.2] - 2021-07-19
 
 Change query to action
