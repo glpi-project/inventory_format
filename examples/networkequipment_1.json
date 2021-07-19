@@ -5011,6 +5011,6 @@
         ]
     },
     "deviceid": "foo",
-    "query": "SNMP",
+    "action": "netinventory",
     "itemtype": "NetworkEquipment"
 }

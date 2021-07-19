@@ -71,7 +71,7 @@
         ],
         "versionclient": "missing"
     },
-    "query": "SNMP",
+    "action": "netinventory",
     "deviceid": "NPIF2BE10-2020-12-31-11-28-51",
     "itemtype": "Printer"
 }
