@@ -661,7 +661,7 @@ class Converter
                 && $ainfos['keyvalue'] != ''
             ) {
                 if (!isset($data['tag'])) {
-                    $data['tag'] = $ainfos->keyvalue;
+                    $data['tag'] = $ainfos['keyvalue'];
                 }
             }
             unset($data['content']['accountinfo']);
