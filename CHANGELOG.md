@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.4] - 2021-07-19
+
+Drop accountinfo
+
 ## [1.1.3] - 2021-07-19
 
 Add secure_boot support
