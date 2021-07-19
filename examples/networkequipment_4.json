@@ -3457,6 +3457,6 @@
         ]
     },
     "deviceid": "CH-GV1-DSI-WLC-INSID-1-2020-12-31-11-28-51",
-    "query": "SNMP",
+    "action": "netinventory",
     "itemtype": "NetworkEquipment"
 }

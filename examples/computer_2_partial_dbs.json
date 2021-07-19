@@ -63,7 +63,7 @@
         ]
     },
     "deviceid": "acomputer-2021-01-26-14-32-36",
-    "query": "INVENTORY",
+    "action": "inventory",
     "itemtype": "Computer",
     "partial": true
 }

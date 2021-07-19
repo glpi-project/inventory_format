@@ -2972,10 +2972,10 @@
       "title": "Is inventory partial?",
       "default": false
     },
-    "query": {
+    "action": {
       "type": "string",
-      "default": "INVENTORY",
-      "pattern": "^(INVENTORY|SNMP)$"
+      "default": "inventory",
+      "pattern": "^(injector|inventory|netdiscovery|netinventory|.*)$"
     }
   },
   "additionalProperties": false
