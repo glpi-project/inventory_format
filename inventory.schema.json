@@ -57,25 +57,6 @@
           },
           "additionalProperties": false
         },
-        "accountinfo": {
-          "type": "object",
-          "required": [
-            "keyname",
-            "keyvalue"
-          ],
-          "properties": {
-            "keyname": {
-              "type": "string",
-              "examples": [
-                "TAG"
-              ]
-            },
-            "keyvalue": {
-              "type": "string"
-            }
-          },
-          "additionalProperties": false
-        },
         "antivirus": {
           "type": "array",
           "items": {

@@ -652,12 +652,19 @@ class Converter
         }
 
         if (isset($data['content']['accountinfo'])) {
+            $ainfos = $data['content']['accountinfo']['keyname'];
+
             if (
-                isset($data['content']['accountinfo']['keyname'])
-                && !isset($data['content']['accountinfo']['keyvalue'])
+                isset($ainfos['keyname'])
+                && $ainfos['keyname'] == 'TAG'
+                && isset($ainfos['keyvalue'])
+                && $ainfos['keyvalue'] != ''
             ) {
-                $data['content']['accountinfo']['keyvalue'] = '';
+                if (!isset($data['tag'])) {
+                    $data['tag'] = $ainfos['keyvalue'];
+                }
             }
+            unset($data['content']['accountinfo']);
         }
 
         //missing hour in timezone offset
@@ -1365,7 +1372,14 @@ class Converter
         }
     }
 
-    private function isNetworkInventory($data): bool
+    /**
+     * Is a network inventory?
+     *
+     * @param array $data Data
+     *
+     * @return boolean
+     */
+    private function isNetworkInventory(array $data): bool
     {
         return isset($data['content']['device']);
     }
