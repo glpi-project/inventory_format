@@ -2072,9 +2072,6 @@
                 ],
                 "pattern": "^(physical|xen|virtualbox|virtual machine|vmware|qemu|solariszone|vserver|openvz|bsdjail|parallels|hyperv|aix_lpar|docker|libvirt|lxd|lxc|virtuozzo)$"
               },
-              "vmid": {
-                "type": "string"
-              },
               "mac": {
                 "type": "string"
               },
