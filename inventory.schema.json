@@ -2972,6 +2972,9 @@
       "type": "string",
       "default": "inventory",
       "pattern": "^(injector|inventory|netdiscovery|netinventory|.*)$"
+    },
+    "tag": {
+      "type": "string"
     }
   },
   "additionalProperties": false

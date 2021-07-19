@@ -3,10 +3,6 @@
         "accesslog": {
             "logdate": "2020-06-12 14:19:54"
         },
-        "accountinfo": {
-            "keyname": "TAG",
-            "keyvalue": "000005"
-        },
         "batteries": [
             {
                 "capacity": 57570,
@@ -821,5 +817,6 @@
         ]
     },
     "deviceid": "glpixps-2018-07-09-09-07-13",
-    "action": "inventory"
+    "action": "inventory",
+    "tag": "000005"
 }

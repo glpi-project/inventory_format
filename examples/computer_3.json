@@ -3,10 +3,6 @@
         "accesslog": {
             "logdate": "2017-02-20 13:23:05"
         },
-        "accountinfo": {
-            "keyname": "TAG",
-            "keyvalue": "000005"
-        },
         "batteries": [
             {
                 "chemistry": "Li-ION",
@@ -30978,5 +30974,6 @@
     },
     "deviceid": "LF014-2017-02-20-12-19-56",
     "action": "inventory",
-    "itemtype": "Computer"
+    "itemtype": "Computer",
+    "tag": "000005"
 }
