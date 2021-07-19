@@ -247,6 +247,10 @@
             },
             "enclosureserial": {
               "type": "string"
+            },
+            "secure_boot": {
+              "type": "string",
+              "pattern": "^(enabled|disabled|unsupported)$"
             }
           },
           "additionalProperties": false
