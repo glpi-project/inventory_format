@@ -763,6 +763,7 @@ class Converter
                 'etime',
                 'ipaddr',
                 'osversion',
+                'oscomments',
                 'processorn',
                 'processors',
                 'processort',
