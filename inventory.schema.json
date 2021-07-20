@@ -636,13 +636,6 @@
                 "LF014"
               ]
             },
-            "oscomments": {
-              "type": "string",
-              "title": "Operating system revision number (Service Pack on Windows, kernel build date on Linux",
-              "examples": [
-                "#1 SMP Thu May 25 19:03:07 UTC 2017"
-              ]
-            },
             "swap": {
               "type": "integer",
               "title": "Swap memory in MB",
