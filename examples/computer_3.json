@@ -309,7 +309,7 @@
         ],
         "memories": [
             {
-                "capacity": 8192,
+                "capacity": 4096,
                 "caption": "DIMM0",
                 "description": "DIMM",
                 "manufacturer": "Samsung",
