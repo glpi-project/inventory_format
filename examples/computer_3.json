@@ -309,21 +309,25 @@
         ],
         "memories": [
             {
-                "capacity": 8192,
+                "capacity": 2048,
                 "caption": "DIMM0",
                 "description": "DIMM",
                 "manufacturer": "Samsung",
                 "memorycorrection": "None",
                 "numslots": 1,
                 "serialnumber": "23853943",
-                "speed": "1600 MHz",
+                "speed": "1333 MHz",
                 "type": "DDR3"
             },
             {
-                "caption": "DIMM2",
+                "capacity": 2048,
+                "caption": "DIMM1",
                 "description": "DIMM",
                 "memorycorrection": "None",
-                "numslots": 2
+                "numslots": 2,
+                "serialnumber": "23853943",
+                "speed": "1333 MHz",
+                "type": "DDR3"
             }
         ],
         "monitors": [
