@@ -3,6 +3,12 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.5] - 2021-07-29
+
+Remove obsolete hardware/oscomments
+Remove obsolete virtualmachines/vmid
+Improve update example with several memory components updated
+
 ## [1.1.4] - 2021-07-19
 
 Drop accountinfo
