@@ -3,6 +3,11 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.6] - 2021-09-16
+
+Missed possible date format in conversions
+Use constants instead of private properties for external JSON files
+
 ## [1.1.5] - 2021-07-29
 
 Remove obsolete hardware/oscomments
