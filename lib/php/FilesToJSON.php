@@ -54,10 +54,10 @@ namespace Glpi\Inventory;
  */
 class FilesToJSON
 {
-    private $type_pci = 'pciid';
-    private $type_usb = 'usbid';
-    private $type_oui = 'ouis';
-    private $type_iftype = 'iftype';
+    public const TYPE_PCI = 'pciid';
+    public const TYPE_USB = 'usbid';
+    public const TYPE_OUI = 'ouis';
+    public const TYPE_IFTYPE = 'iftype';
     private $path = __DIR__ . '/../../data';
 
     /**
@@ -80,10 +80,10 @@ class FilesToJSON
     public function cleanFiles()
     {
         $types = [
-            $this->type_pci,
-            $this->type_usb,
-            $this->type_oui,
-            $this->type_iftype
+            self::TYPE_PCI,
+            self::TYPE_USB,
+            self::TYPE_OUI,
+            self::TYPE_IFTYPE
         ];
         foreach ($types as $type) {
             @unlink($this->getJsonFilePath($type));
@@ -98,10 +98,10 @@ class FilesToJSON
      */
     public function downloadSources()
     {
-        $this->getSourceFile($this->type_pci, true);
-        $this->getSourceFile($this->type_usb, true);
-        $this->getSourceFile($this->type_oui, true);
-        $this->getSourceFile($this->type_iftype, true);
+        $this->getSourceFile(self::TYPE_PCI, true);
+        $this->getSourceFile(self::TYPE_USB, true);
+        $this->getSourceFile(self::TYPE_OUI, true);
+        $this->getSourceFile(self::TYPE_IFTYPE, true);
     }
 
     /**
@@ -144,16 +144,16 @@ class FilesToJSON
         $path = $this->path . '/';
 
         switch ($type) {
-            case $this->type_pci:
+            case self::TYPE_PCI:
                 $path .= 'pci.ids';
                 break;
-            case $this->type_usb:
+            case self::TYPE_USB:
                 $path .= 'usb.ids';
                 break;
-            case $this->type_oui:
+            case self::TYPE_OUI:
                 $path .= 'oui.txt';
                 break;
-            case $this->type_iftype:
+            case self::TYPE_IFTYPE:
                 $path .= 'iftype.csv';
                 break;
             default:
@@ -177,16 +177,16 @@ class FilesToJSON
         $uri = null;
 
         switch ($type) {
-            case $this->type_pci:
+            case self::TYPE_PCI:
                 $uri = 'https://pci-ids.ucw.cz/v2.2/pci.ids';
                 break;
-            case $this->type_usb:
+            case self::TYPE_USB:
                 $uri = 'http://www.linux-usb.org/usb.ids';
                 break;
-            case $this->type_oui:
+            case self::TYPE_OUI:
                 $uri = 'http://standards-oui.ieee.org/oui/oui.txt';
                 break;
-            case $this->type_iftype:
+            case self::TYPE_IFTYPE:
                 $uri = 'https://www.iana.org/assignments/smi-numbers/smi-numbers-5.csv';
                 break;
             default:
@@ -220,7 +220,7 @@ class FilesToJSON
      */
     public function convertPciFile()
     {
-        $pciFile = $this->getSourceFile($this->type_pci);
+        $pciFile = $this->getSourceFile(self::TYPE_PCI);
         $pci_ids = [];
 
         while (!feof($pciFile)) {
@@ -239,7 +239,7 @@ class FilesToJSON
             }
         }
 
-        return file_put_contents($this->getJsonFilePath($this->type_pci), json_encode($pci_ids, JSON_PRETTY_PRINT));
+        return file_put_contents($this->getJsonFilePath(self::TYPE_PCI), json_encode($pci_ids, JSON_PRETTY_PRINT));
     }
 
     /**
@@ -249,7 +249,7 @@ class FilesToJSON
      */
     public function convertUsbFile()
     {
-        $usbFile = $this->getSourceFile($this->type_usb);
+        $usbFile = $this->getSourceFile(self::TYPE_USB);
         $usb_ids = [];
 
         while (!feof($usbFile)) {
@@ -268,7 +268,7 @@ class FilesToJSON
             }
         }
 
-        return file_put_contents($this->getJsonFilePath($this->type_usb), json_encode($usb_ids, JSON_PRETTY_PRINT));
+        return file_put_contents($this->getJsonFilePath(self::TYPE_USB), json_encode($usb_ids, JSON_PRETTY_PRINT));
     }
 
 
@@ -279,7 +279,7 @@ class FilesToJSON
      */
     public function convertOUIFile()
     {
-        $ouiFile = $this->getSourceFile($this->type_oui);
+        $ouiFile = $this->getSourceFile(self::TYPE_OUI);
         $ouis = [];
 
         while (!feof($ouiFile)) {
@@ -292,7 +292,7 @@ class FilesToJSON
             }
         }
 
-        return file_put_contents($this->getJsonFilePath($this->type_oui), json_encode($ouis, JSON_PRETTY_PRINT));
+        return file_put_contents($this->getJsonFilePath(self::TYPE_OUI), json_encode($ouis, JSON_PRETTY_PRINT));
     }
 
     /**
@@ -302,7 +302,7 @@ class FilesToJSON
      */
     public function convertIftypeFile()
     {
-        $iftypeFile = $this->getSourceFile($this->type_iftype);
+        $iftypeFile = $this->getSourceFile(self::TYPE_IFTYPE);
         $iftypes = [];
 
         while (($line = fgetcsv($iftypeFile)) !== false) {
@@ -314,7 +314,7 @@ class FilesToJSON
             ];
         }
 
-        return file_put_contents($this->getJsonFilePath($this->type_iftype), json_encode($iftypes, JSON_PRETTY_PRINT));
+        return file_put_contents($this->getJsonFilePath(self::TYPE_IFTYPE), json_encode($iftypes, JSON_PRETTY_PRINT));
     }
 
     /**
