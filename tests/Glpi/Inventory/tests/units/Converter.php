@@ -230,7 +230,8 @@ class Converter extends \atoum {
             ['', 'Y-m-d', null],
             ['20201207', 'Y-m-d', '2020-12-07'],
             ['03.04.2020', 'Y-m-d', '2020-04-03'],
-            ['BOOT_TIME', 'Y-m-d', null]
+            ['BOOT_TIME', 'Y-m-d', null],
+            ['2014-05-13T00:00:00Z', 'Y-m-d', '2014-05-13']
         ];
     }
 

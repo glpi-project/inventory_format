@@ -1031,6 +1031,7 @@ class Converter
 
         $formats = [
             'D M d H:i:s Y', //Thu Mar 14 15:05:41 2013
+            'Y-m-d\TH:i:sZ',
             'd/m/Y H:i:s',
             'Y-m-d H:i:s',
             'd/m/Y H:i',
