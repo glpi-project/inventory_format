@@ -327,7 +327,8 @@ class Converter extends \atoum {
             ['43.746 mWh', false],
             ['43 7456 Wh', false],
             ['43,7456 Wh', false],
-            ['43 Wh', 43000]
+            ['43 Wh', 43000],
+            ['2100.0', 2100]
         ];
     }
 
@@ -371,7 +372,8 @@ class Converter extends \atoum {
             ['4365 mV', 4365],
             ['8.2 mV', false],
             ['8 2 V', false],
-            ['8,2 V', false]
+            ['8,2 V', false],
+            ['4.255 V', 4255]
         ];
     }
 
