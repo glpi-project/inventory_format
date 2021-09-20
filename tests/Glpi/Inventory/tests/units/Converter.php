@@ -373,7 +373,7 @@ class Converter extends \atoum {
             ['8.2 mV', false],
             ['8 2 V', false],
             ['8,2 V', false],
-            ['4.255 V', 4255]
+            ['4.255V', 4255]
         ];
     }
 
