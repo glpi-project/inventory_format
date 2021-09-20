@@ -1104,6 +1104,12 @@ class Converter
             return (int)$capacity;
         }
 
+        $capa_pattern = '/^([0-9]+)\.0+$/';
+        $matches = [];
+        if (preg_match($capa_pattern, $capacity, $matches)) {
+            return (int)$matches[1];
+        }
+
         return false;
     }
 
@@ -1116,7 +1122,7 @@ class Converter
      */
     public function convertBatteryVoltage($voltage)
     {
-        $volt_pattern = "/^([0-9]+(\.[0-9]+)?) V$/i";
+        $volt_pattern = "/^([0-9]+(\.[0-9]+)?) ?V$/i";
         $matches = [];
         if (preg_match($volt_pattern, $voltage, $matches)) {
             return (int)round((float)$matches[1] * 1000);
