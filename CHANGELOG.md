@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.7] - 2021-09-20
+
+Impriove batteries capacity and voltage conversion
+
 ## [1.1.6] - 2021-09-16
 
 Missed possible date format in conversions
