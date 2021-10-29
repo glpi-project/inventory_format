@@ -451,6 +451,7 @@ class Converter extends \atoum {
 
         $this->object($json = json_decode($json_str));
         $this->string($json->deviceid)->isIdenticalTo('foo');
+        $this->integer($json->jobid)->isIdenticalTo(1);
         $this->string($json->action)->isIdenticalTo('netinventory');
         $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
 
@@ -485,6 +486,7 @@ class Converter extends \atoum {
 
         $this->object($json = json_decode($json_str));
         $this->string($json->deviceid)->isIdenticalTo('foo');
+        $this->integer($json->jobid)->isIdenticalTo(1);
         $this->string($json->action)->isIdenticalTo('netinventory');
         $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
 
@@ -526,6 +528,7 @@ class Converter extends \atoum {
 
         $this->object($json = json_decode($json_str));
         $this->string($json->deviceid)->isIdenticalTo('foo');
+        $this->integer($json->jobid)->isIdenticalTo(1);
         $this->string($json->action)->isIdenticalTo('netinventory');
         $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
 
@@ -564,6 +567,7 @@ class Converter extends \atoum {
 
         $this->object($json = json_decode($json_str));
         $this->string($json->deviceid)->isIdenticalTo('foo');
+        $this->integer($json->jobid)->isIdenticalTo(1);
         $this->string($json->action)->isIdenticalTo('netinventory');
         $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
 
@@ -594,6 +598,7 @@ class Converter extends \atoum {
 
         $this->object($json = json_decode($json_str));
         $this->string($json->deviceid)->isIdenticalTo('johanxps-2020-08-19-14-29-10');
+        $this->integer($json->jobid)->isIdenticalTo(29);
         $this->string($json->action)->isIdenticalTo('netdiscovery');
         $device = $json->content->network_device;
         $this->string($device->name)->isIdenticalTo('homeassistant');
@@ -610,6 +615,7 @@ class Converter extends \atoum {
 
         $this->object($json = json_decode($json_str));
         $this->string($json->deviceid)->isIdenticalTo('qlf-sesi-inventory.glpi-project.org-2013-11-14-17-47-17');
+        $this->integer($json->jobid)->isIdenticalTo(1);
         $this->string($json->action)->isIdenticalTo('netdiscovery');
         $device = $json->content->network_device;
         $this->string($device->name)->isIdenticalTo('swdc-07-01-dc1');
