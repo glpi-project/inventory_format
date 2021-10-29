@@ -597,6 +597,7 @@ class Converter extends \atoum {
         $this->string($json->action)->isIdenticalTo('netdiscovery');
         $device = $json->content->network_device;
         $this->string($device->name)->isIdenticalTo('homeassistant');
+        $this->string($device->type)->isIdenticalTo('Computer');
         $this->string($json->itemtype)->isIdenticalTo('Computer');
 
         //example from old specs documentation
@@ -616,6 +617,7 @@ class Converter extends \atoum {
 
         $device = $json->content->network_device;
         $this->array((array)$device)->isIdenticalTo([
+            'type' => 'Networking',
             'contact' => 'dsi.sesi.reseau@inria.fr',
             'description' => 'Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(5), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 6/27/2013 16:00:00',
             'firmware' => 'CW_VERSION$5.2(1)N1(5)$',
@@ -627,9 +629,7 @@ class Converter extends \atoum {
             'manufacturer' => 'Cisco',
             'model' => 'Cisco Nexus 5596',
             'name' => 'swdc-07-01-dc1',
-            'type' => 'Networking',
             'uptime' => '175 days, 11:33:37.48'
         ]);
-
     }
 }

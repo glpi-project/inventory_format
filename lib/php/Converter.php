@@ -1382,7 +1382,7 @@ class Converter
 
         $device = &$data['content']['device'];
         if (!isset($device['info'])) {
-            $device['info'] = [];
+            $device['info'] = ['type' => 'Computer'];
         }
         $device_info = &$data['content']['device']['info'];
 
