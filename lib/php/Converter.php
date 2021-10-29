@@ -256,6 +256,9 @@ class Converter
                 case 'snmpquery':
                     $data['action'] = 'netinventory';
                     break;
+                case 'netdiscovery':
+                    $data['action'] = 'netdiscovery';
+                    break;
                 case 'inventory':
                 default:
                     $data['action'] = 'inventory';
@@ -1155,6 +1158,9 @@ class Converter
             return $data;
         }
 
+        //pre handle for network discoveries
+        $data = $this->convertNetworkDiscovery($data);
+
         if (!isset($data['content']['versionclient']) && isset($data['content']['moduleversion'])) {
             $data['content']['versionclient'] = $data['content']['moduleversion'];
             unset($data['content']['moduleversion']);
@@ -1361,6 +1367,94 @@ class Converter
     }
 
     /**
+     * Pre-handle network inventory XML format
+     *
+     * @param array $data Contents
+     *
+     * @return array
+     */
+    public function convertNetworkDiscovery(array $data): array
+    {
+        if (!$this->isNetworkDiscovery($data)) {
+            //not a network discovery XML
+            return $data;
+        }
+
+        $device = &$data['content']['device'];
+        if (!isset($device['info'])) {
+            $device['info'] = ['type' => 'Computer'];
+        }
+        $device_info = &$data['content']['device']['info'];
+
+        if (isset($device['snmphostname']) && !empty($device['snmphostname'])) {
+            //SNMP hostname has precedence
+            if (isset($device['dnshostname'])) {
+                unset($device['dnshostname']);
+            }
+            if (isset($device['netbiosname'])) {
+                unset($device['netbiosname']);
+            }
+        }
+
+        if (isset($device['netbiosname']) && !empty($device['netbiosname']) && isset($device['dnshostname'])) {
+            //NETBIOS name has precedence
+            unset($device['dnshostname']);
+        }
+
+        foreach ($device as $key => $device_data) {
+            switch ($key) {
+                case 'info':
+                    //empty for discovery
+                    break;
+                case 'dnshostname':
+                case 'snmphostname':
+                case 'netbiosname':
+                    $device_info['name'] = $device[$key];
+                    unset($device[$key]);
+                    break;
+                case 'entity':
+                case 'usersession':
+                case 'authsnmp':
+                    unset($device[$key]);
+                    //not used
+                    break;
+                case 'ip':
+                    $device_info['ips'] = ['ip' => $device[$key]];
+                    unset($device[$key]);
+                    break;
+                case 'mac':
+                case 'contact':
+                case 'firmware':
+                case 'location':
+                case 'manufacturer':
+                case 'model':
+                case 'uptime':
+                case 'type':
+                case 'description':
+                case 'serial':
+                    $device_info[$key] = $device[$key];
+                    unset($device[$key]);
+                    break;
+                case 'netportvendor':
+                    //translate as manufacturer - if not present
+                    if (!isset($device['manufacturer'])) {
+                        $device_info['manufacturer'] = $device[$key];
+                    }
+                    unset($device[$key]);
+                    break;
+                case 'workgroup':
+                    $data['hardware']['workgroup'] = $device[$key];
+                    unset($device[$key]);
+                    break;
+                default:
+                    throw new \RuntimeException('Key ' . $key . ' is not handled in network discovery conversion');
+            }
+        }
+
+        return $data;
+    }
+
+    /**
      * Explode old pciid to vendorid:productid
      *
      * @param array $data Node data
@@ -1393,5 +1487,17 @@ class Converter
     private function isNetworkInventory(array $data): bool
     {
         return isset($data['content']['device']);
+    }
+
+    /**
+     * Is a network discovery?
+     *
+     * @param array $data Data
+     *
+     * @return boolean
+     */
+    private function isNetworkDiscovery(array $data): bool
+    {
+        return isset($data['content']['device']) && $data['action'] == 'netdiscovery';
     }
 }
