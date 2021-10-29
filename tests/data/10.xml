@@ -3,11 +3,11 @@
   <CONTENT>
     <DEVICE>
       <AUTHSNMP>1</AUTHSNMP>
-      <CONTACT>dsi.sesi.reseau@inria.fr</CONTACT>
+      <CONTACT>anyone@glpi-project.org</CONTACT>
       <DESCRIPTION>Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(5), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 6/27/2013 16:00:00</DESCRIPTION>
       <FIRMWARE>CW_VERSION$5.2(1)N1(5)$</FIRMWARE>
       <IP>192.168.0.8</IP>
-      <LOCATION>Inria dc1 salle 07</LOCATION>
+      <LOCATION>dc1 salle 07</LOCATION>
       <MAC>00:23:04:ee:be:02</MAC>
       <MANUFACTURER>Cisco</MANUFACTURER>
       <MODEL>Cisco Nexus 5596</MODEL>
@@ -18,6 +18,6 @@
     <MODULEVERSION>2.3.9901</MODULEVERSION>
     <PROCESSNUMBER>1</PROCESSNUMBER>
   </CONTENT>
-  <DEVICEID>qlf-sesi-inventory.inria.fr-2013-11-14-17-47-17</DEVICEID>
+  <DEVICEID>qlf-sesi-inventory.glpi-project.org-2013-11-14-17-47-17</DEVICEID>
   <QUERY>NETDISCOVERY</QUERY>
 </REQUEST>

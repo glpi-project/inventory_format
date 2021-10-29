@@ -609,7 +609,7 @@ class Converter extends \atoum {
             ->isNotEmpty();
 
         $this->object($json = json_decode($json_str));
-        $this->string($json->deviceid)->isIdenticalTo('qlf-sesi-inventory.inria.fr-2013-11-14-17-47-17');
+        $this->string($json->deviceid)->isIdenticalTo('qlf-sesi-inventory.glpi-project.org-2013-11-14-17-47-17');
         $this->string($json->action)->isIdenticalTo('netdiscovery');
         $device = $json->content->network_device;
         $this->string($device->name)->isIdenticalTo('swdc-07-01-dc1');
@@ -618,13 +618,13 @@ class Converter extends \atoum {
         $device = $json->content->network_device;
         $this->array((array)$device)->isIdenticalTo([
             'type' => 'Networking',
-            'contact' => 'dsi.sesi.reseau@inria.fr',
+            'contact' => 'anyone@glpi-project.org',
             'description' => 'Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(5), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 6/27/2013 16:00:00',
             'firmware' => 'CW_VERSION$5.2(1)N1(5)$',
             'ips' => [
                 '192.168.0.8',
             ],
-            'location' => 'Inria dc1 salle 07',
+            'location' => 'dc1 salle 07',
             'mac' => '00:23:04:ee:be:02',
             'manufacturer' => 'Cisco',
             'model' => 'Cisco Nexus 5596',
