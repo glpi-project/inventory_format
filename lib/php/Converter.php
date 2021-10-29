@@ -1167,6 +1167,7 @@ class Converter
         }
 
         if (isset($data['content']['processnumber'])) {
+            $data['jobid'] = (int)$data['content']['processnumber'];
             unset($data['content']['processnumber']);
         }
 

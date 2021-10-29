@@ -2932,6 +2932,10 @@
       "type": "string",
       "title": "Agent ID"
     },
+    "jobid": {
+      "type": "integer",
+      "title": "Job ID"
+    },
     "itemtype": {
       "type": "string",
       "title": "Item type",
