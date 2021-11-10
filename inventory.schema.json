@@ -2825,6 +2825,9 @@
             },
             "contact": {
               "type": "string"
+            },
+            "credentials": {
+              "type": "integer"
             }
           },
           "additionalProperties": false
