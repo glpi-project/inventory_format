@@ -635,7 +635,8 @@ class Converter extends \atoum {
             'manufacturer' => 'Cisco',
             'model' => 'Cisco Nexus 5596',
             'name' => 'swdc-07-01-dc1',
-            'uptime' => '175 days, 11:33:37.48'
+            'uptime' => '175 days, 11:33:37.48',
+            'credentials' => 1
         ]);
     }
 }
