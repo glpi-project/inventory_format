@@ -338,6 +338,7 @@ class Converter
                 'network_components/index',
                 'network_device/ram',
                 'network_device/memory',
+                'network_device/credentials',
                 'pagecounters/total',
                 'pagecounters/black',
                 'pagecounters/color',
@@ -1415,7 +1416,6 @@ class Converter
                     break;
                 case 'entity':
                 case 'usersession':
-                case 'authsnmp':
                     unset($device[$key]);
                     //not used
                     break;
@@ -1445,6 +1445,10 @@ class Converter
                     break;
                 case 'workgroup':
                     $data['hardware']['workgroup'] = $device[$key];
+                    unset($device[$key]);
+                    break;
+                case 'authsnmp':
+                    $device_info['credentials'] = $device[$key];
                     unset($device[$key]);
                     break;
                 default:
