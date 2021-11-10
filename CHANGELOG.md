@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.9] - 2021-11-10
+
+Add credentials id
+
 ## [1.1.8] - 2021-11-03
 
 Network discoveries conversion
