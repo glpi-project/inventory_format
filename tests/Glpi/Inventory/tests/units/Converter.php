@@ -622,7 +622,7 @@ class Converter extends \atoum {
         $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
 
         $device = $json->content->network_device;
-        $this->array((array)$device)->isIdenticalTo([
+        $this->array((array)$device)->isEqualTo([
             'type' => 'Networking',
             'contact' => 'anyone@glpi-project.org',
             'description' => 'Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(5), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 6/27/2013 16:00:00',
