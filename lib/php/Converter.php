@@ -1291,9 +1291,7 @@ class Converter
 
                         if (isset($netport['ip'])) {
                             if (!isset($netport['ips'])) {
-                                $netport['ips'] = is_array($netport['ip']) ?
-                                    $netport['ip'] :
-                                    [$netport['ip']];
+                                $netport['ips']['ip'] = [$netport['ip']];
                             }
                             unset($netport['ip']);
                         }
@@ -1405,9 +1403,7 @@ class Converter
 
         if (isset($device['ip'])) {
             if (!isset($device['ips'])) {
-                $device['ips'] = is_array($device['ip']) ?
-                    $device['ip'] :
-                    [$device['ip']];
+                $device['ips']['ip'] = [$device['ip']];
             }
             unset($device['ip']);
         }
