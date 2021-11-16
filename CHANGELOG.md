@@ -3,6 +3,11 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.10] - 2021-11-16
+
+Update virtual machines regexp
+Fix IPs conversion from network discoveries
+
 ## [1.1.9] - 2021-11-10
 
 Add credentials id
