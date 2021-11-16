@@ -1291,9 +1291,7 @@ class Converter
 
                         if (isset($netport['ip'])) {
                             if (!isset($netport['ips'])) {
-                                $netport['ips'] = is_array($netport['ip']) ?
-                                    $netport['ip'] :
-                                    [$netport['ip']];
+                                $netport['ips']['ip'] = [$netport['ip']];
                             }
                             unset($netport['ip']);
                         }
@@ -1403,6 +1401,13 @@ class Converter
             unset($device['dnshostname']);
         }
 
+        if (isset($device['ip'])) {
+            if (!isset($device['ips'])) {
+                $device['ips']['ip'] = [$device['ip']];
+            }
+            unset($device['ip']);
+        }
+
         foreach ($device as $key => $device_data) {
             switch ($key) {
                 case 'info':
@@ -1419,8 +1424,8 @@ class Converter
                     unset($device[$key]);
                     //not used
                     break;
-                case 'ip':
-                    $device_info['ips'] = ['ip' => $device[$key]];
+                case 'ips':
+                    $device_info['ips'] = $device[$key];
                     unset($device[$key]);
                     break;
                 case 'mac':
