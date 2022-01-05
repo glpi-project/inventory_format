@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.11] - 2022-01-05
+
+Missing battery power conversions
+
 ## [1.1.10] - 2021-11-16
 
 Update virtual machines regexp
