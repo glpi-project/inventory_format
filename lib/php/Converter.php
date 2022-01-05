@@ -705,14 +705,22 @@ class Converter
         //Fix batteries capacities & voltages
         if (isset($data['content']['batteries'])) {
             foreach ($data['content']['batteries'] as &$battery) {
-                if (isset($battery['capacity'])) {
-                    $capacity = $this->convertBatteryCapacity($battery['capacity']);
-                    if ($capacity == false) {
-                        unset($battery['capacity']);
-                    } else {
-                        $battery['capacity'] = $capacity;
+                $powers = [
+                    'capacity',
+                    'real_capacity',
+                    'power_max'
+                ];
+                foreach ($powers as $power) {
+                    if (isset($battery[$power])) {
+                        $value = $this->convertBatteryPower($battery[$power]);
+                        if ($value == false) {
+                            unset($battery[$power]);
+                        } else {
+                            $battery[$power] = $value;
+                        }
                     }
                 }
+
                 if (isset($battery['voltage'])) {
                     $voltage = $this->convertBatteryVoltage($battery['voltage']);
                     if ($voltage == false) {
@@ -1090,7 +1098,7 @@ class Converter
      *
      * @return integer|false
      */
-    public function convertBatteryCapacity($capacity)
+    public function convertBatteryPower($capacity)
     {
         $capa_pattern = "/^([0-9]+(\.[0-9]+)?) Wh$/i";
         $matches = [];
