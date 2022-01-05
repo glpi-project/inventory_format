@@ -348,13 +348,13 @@ class Converter extends \atoum {
             $this
                 ->given($this->newTestedInstance())
                 ->then
-                    ->boolean($this->testedInstance->convertBatteryCapacity($orig))
+                    ->boolean($this->testedInstance->convertBatteryPower($orig))
                         ->isIdenticalTo($expected);
         } else {
             $this
                 ->given($this->newTestedInstance())
                 ->then
-                    ->integer($this->testedInstance->convertBatteryCapacity($orig))
+                    ->integer($this->testedInstance->convertBatteryPower($orig))
                     ->isIdenticalTo($expected);
         }
     }
