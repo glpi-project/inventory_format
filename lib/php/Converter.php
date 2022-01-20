@@ -69,6 +69,29 @@ class Converter
     private $schema_patterns;
 
     /**
+     * @var array
+     *
+     * A two dimensions array with types as key,
+     * and nodes names as values.
+     *
+     * Node name is expected to be defined with its parent
+     * separated with a "/":
+     * $convert_types = [
+     *     'integer' => [
+     *         'drives/free'
+     *     ]
+     * ];
+     *
+     * With above example, 'drives/free' will replace all
+     * entries found as $drives['free'] and $drives[$i]['free']
+     * with their value cast to integer.
+     *
+     * @see Converter::getCastedValue() for supported types
+     * @see Converter::convertTypes() for usage
+     */
+    private $convert_types;
+
+    /**
      * Instantiate converter
      *
      * @param double|null $target_version JSON schema based version to target. Use last version if null.
@@ -248,6 +271,92 @@ class Converter
         unset($data['query']);
 
         $data = $this->convertNetworkInventory($data);
+
+        //replace bad typed values...
+        $this->setConvertTypes([
+            'boolean'   => [
+                'antivirus/enabled',
+                'antivirus/enabled',
+                'antivirus/uptodate',
+                'drives/systemdrive',
+                'networks/virtualdev',
+                'printers/network',
+                'printers/shared',
+                'networks/management',
+                'softwares/no_remove',
+                'licenseinfos/trial',
+                'network_ports/trunk',
+                'cameras/flashunit',
+                'powersupplies/hotreplaceable',
+                'powersupplies/plugged',
+                'memories/removable'
+            ],
+            'integer'   => [
+                'cpus/core',
+                'cpus/speed',
+                'cpus/stepping',
+                'cpus/thread',
+                'cpus/external_clock',
+                'cpus/corecount',
+                'drives/free',
+                'drives/total',
+                'hardware/etime',
+                'hardware/memory',
+                'hardware/swap',
+                'storages/disksize',
+                'physical_volumes/free',
+                'physical_volumes/pe_size',
+                'physical_volumes/pv_pe_count',
+                'physical_volumes/size',
+                'volume_groups/lv_count',
+                'volume_groups/pv_count',
+                'volume_groups/free',
+                'volume_groups/size',
+                'logical_volumes/seg_count',
+                'logical_volumes/size',
+                'memories/capacity',
+                'memories/numslots',
+                'processes/pid',
+                'processes/virtualmemory',
+                'monitors/port',
+                'networks/mtu',
+                'softwares/filesize',
+                'virtualmachines/memory',
+                'virtualmachines/vcpu',
+                'videos/memory',
+                'batteries/real_capacity',
+                'network_ports/ifinerrors',
+                'network_ports/ifinoctets',
+                'network_ports/ifinbytes',
+                'network_ports/ifinternalstatus',
+                'network_ports/ifmtu',
+                'network_ports/ifnumber',
+                'network_ports/ifouterrors',
+                'network_ports/ifoutoctets',
+                'network_ports/ifoutbytes',
+                'network_ports/ifspeed',
+                'network_ports/ifportduplex',
+                'network_ports/ifstatus',
+                'network_ports/iftype',
+                'network_components/fru',
+                'network_components/index',
+                'network_device/ram',
+                'network_device/memory',
+                'network_device/credentials',
+                'pagecounters/total',
+                'pagecounters/black',
+                'pagecounters/color',
+                'pagecounters/total',
+                'pagecounters/rectoverso',
+                'pagecounters/scanned',
+                'pagecounters/printtotal',
+                'pagecounters/printblack',
+                'pagecounters/printcolor',
+                'pagecounters/copytotal',
+                'pagecounters/copyblack',
+            ]
+        ]);
+        $this->convertTypes($data);
 
         //replace arrays...
         $arrays = [
@@ -815,6 +924,90 @@ class Converter
             }
         }
         return $data;
+    }
+
+    /**
+     * Set convert types
+     *
+     * @param array $convert_types COnvert types cnfiguration
+     *
+     * @return Converter
+     */
+    public function setConvertTypes(array $convert_types)
+    {
+        $this->convert_types = $convert_types;
+        return $this;
+    }
+
+    /**
+     * Converts values for all entries of name to requested type
+     *
+     * Method must populate $convert_types array.
+     * @see Converter::convert_types parameter
+     *
+     * @param array $data Input data, will be modified
+     *
+     * @return void
+     */
+    public function convertTypes(&$data)
+    {
+        $types = $this->convert_types;
+        foreach ($types as $type => $names) {
+            foreach ($names as $name) {
+                $keys = explode('/', $name);
+                if (count($keys) != 2) {
+                    throw new \RuntimeException($name . ' not supported!');
+                }
+                if (isset($data['content'][$keys[0]])) {
+                    if (is_array($data['content'][$keys[0]])) {
+                        foreach ($data['content'][$keys[0]] as $key => $value) {
+                            if (isset($data['content'][$keys[0]][$key][$keys[1]])) {
+                                $data['content'][$keys[0]][$key][$keys[1]] =
+                                    $this->getCastedValue(
+                                        $data['content'][$keys[0]][$key][$keys[1]],
+                                        $type
+                                    );
+                            }
+                        }
+                    } else {
+                        if (isset($data['content'][$keys[0]][$keys[1]])) {
+                            $data['content'][$keys[0]][$keys[1]] =
+                                $this->getCastedValue(
+                                    $data['content'][$keys[0]][$keys[1]],
+                                    $type
+                                );
+                        }
+                    }
+                }
+                if (isset($data['content'][$keys[0]]) && isset($data['content'][$keys[0]][$keys[1]])) {
+                    $data['content'][$keys[0]][$keys[1]] = $this->getCastedValue(
+                        $data['content'][$keys[0]][$keys[1]],
+                        $type
+                    );
+                }
+            }
+        }
+    }
+
+
+    /**
+     * Get value casted
+     *
+     * @param string $value Original value
+     * @param string $type  Requested type
+     *
+     * @return mixed
+     */
+    public function getCastedValue($value, $type)
+    {
+        switch ($type) {
+            case 'boolean':
+                return (bool)$value;
+            case 'integer':
+                return (int)$value;
+            default:
+                throw new \UnexpectedValueException('Type ' . $type . ' not known.');
+        }
     }
 
     /**

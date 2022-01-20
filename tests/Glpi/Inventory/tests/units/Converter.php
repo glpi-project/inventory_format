@@ -108,6 +108,72 @@ class Converter extends \atoum {
     }
 
     /**
+     * Values to cast provider
+     *
+     * @return array
+     */
+    protected function valuesToCastProvider()
+    {
+        return [
+            //true real values
+            [true, 'boolean', true],
+            ['true', 'boolean', true],
+            [1, 'boolean', true],
+            ['1', 'boolean', true],
+            //false real values
+            [false, 'boolean', false],
+            [0, 'boolean', false],
+            ['0', 'boolean', false],
+            //true from cast values
+            ['false', 'boolean', true],
+            ['abcde', 'boolean', true],
+            //integers
+            [10, 'integer', 10],
+            ['10', 'integer', 10],
+            ['abcde', 'integer', 0]
+        ];
+    }
+
+    /**
+     * Test cast value
+     *
+     * @dataProvider valuesToCastProvider
+     *
+     * @param mixed  $value    Value to cast
+     * @param string $cast     Type to cast to
+     * @param mixed  $expected Expected casted value
+     *
+     * @return void
+     */
+    public function testGetCastedValue($value, $cast, $expected)
+    {
+        $this
+            ->given($this->newTestedInstance())
+            ->then
+                ->variable($this->testedInstance->getCastedValue($value, $cast))
+                    ->isIdenticalTo($expected);
+    }
+
+    /**
+     * Test cast value exception
+     *
+     * @return void
+     */
+    public function testGetCastedValueWE()
+    {
+        $this->exception(
+            function () {
+                $this
+                    ->given($this->newTestedInstance())
+                    ->then
+                        ->variable($this->testedInstance->getCastedValue(0, 'blah'));
+            }
+        )
+            ->isInstanceOf('\UnexpectedValueException')
+            ->hasMessage('Type blah not known.');
+    }
+
+    /**
      * Array case change provider
      *
      * @return array
@@ -188,7 +254,65 @@ class Converter extends \atoum {
                 ->variable($this->testedInstance->convertDate($orig, $format))
                     ->isIdenticalTo($expected);
     }
-    
+
+    public function testConvertTypes()
+    {
+        $this->newTestedInstance();
+        $this->testedInstance->setConvertTypes([
+            'boolean'  => [
+                'cpus/enabled'
+            ],
+            'integer'   => [
+                'one/two'
+            ]
+        ]);
+
+        $data = [
+            'content'   => [
+                'cpus'  => [
+                    0   => [
+                        'enabled'   => 1
+                    ],
+                    1   => [
+                        'enabled'   => 'y'
+                    ],
+                    2   => [
+                        'enabled'   => 0
+                    ],
+                    3   => [
+                        'enabled'   => '0'
+                    ]
+                ],
+                'one'   => [
+                    'two'  => '42'
+                ]
+            ]
+        ];
+
+        $this->testedInstance->convertTypes($data);
+        $this->array($data)->isIdenticalTo([
+            'content'   => [
+                'cpus'  => [
+                    0   => [
+                        'enabled'   => true
+                    ],
+                    1   => [
+                        'enabled'   => true
+                    ],
+                    2   => [
+                        'enabled'   => false
+                    ],
+                    3   => [
+                        'enabled'   => false
+                    ]
+                ],
+                'one'   => [
+                    'two'  => 42
+                ]
+            ]
+        ]);
+    }
+
     /**
      * Batteries capacities convert provider
      *
