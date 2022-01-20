@@ -142,7 +142,7 @@ class Converter
             $context = new Context();
             $context->tolerateStrings = true;
             $schema = Schema::import('file://' . $this->getSchemaPath(), $context);
-            $schema->in($json);
+            $schema->in($json, $context);
         } catch (\Exception $e) {
             $errmsg = "JSON does not validate. Violations:\n";
             $errmsg .= $e->getMessage();
