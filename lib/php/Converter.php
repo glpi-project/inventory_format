@@ -50,7 +50,7 @@ use Swaggest\JsonSchema\Schema;
  * @category  Inventory
  * @package   Glpi
  * @author    Johan Cwiklinski <jcwiklinski@teclib.com>
- * @copyright 2018 GLPI Team and Contributors
+ * @copyright 2018-2022 GLPI Team and Contributors
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL License 3.0 or (at your option) any later version
  * @link      https://glpi-project.org
  */
@@ -83,7 +83,7 @@ class Converter
      *
      * With above example, 'drives/free' will replace all
      * entries found as $drives['free'] and $drives[$i]['free']
-     * with their value casted to integer.
+     * with their value cast to integer.
      *
      * @see Converter::getCastedValue() for supported types
      * @see Converter::convertTypes() for usage
@@ -91,7 +91,7 @@ class Converter
     private $convert_types;
 
     /**
-     * Instanciate converte
+     * Instantiate converter
      *
      * @param double|null $target_version JSON schema based version to target. Use last version if null.
      */
@@ -953,7 +953,7 @@ class Converter
             foreach ($names as $name) {
                 $keys = explode('/', $name);
                 if (count($keys) != 2) {
-                    throw new \RuntimeException($name . ' not suported!');
+                    throw new \RuntimeException($name . ' not supported!');
                 }
                 if (isset($data['content'][$keys[0]])) {
                     if (is_array($data['content'][$keys[0]])) {
