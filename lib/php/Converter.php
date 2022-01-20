@@ -285,7 +285,8 @@ class Converter
                 'network_ports/trunk',
                 'cameras/flashunit',
                 'powersupplies/hotreplaceable',
-                'powersupplies/plugged'
+                'powersupplies/plugged',
+                'memories/removable'
             ],
             'integer'   => [
                 'cpus/core',
