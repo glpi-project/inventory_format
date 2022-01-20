@@ -319,7 +319,6 @@ class Converter
                 'memories/numslots',
                 'processes/pid',
                 'processes/virtualmemory',
-                'monitors/port',
                 'networks/mtu',
                 'softwares/filesize',
                 'virtualmachines/memory',
