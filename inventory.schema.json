@@ -1125,7 +1125,7 @@
                 "title": "Alternative monitor serial number computed from known manufacter formula and if different from SERIAL"
               },
               "port": {
-                "type": "integer"
+                "type": "string"
               },
               "uuencode": {
                 "type": "string",
