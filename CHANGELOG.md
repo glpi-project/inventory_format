@@ -3,6 +3,11 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.12] - 2022-01-21
+
+Soft cast for integers and booleans
+Minor schema fixes
+
 ## [1.1.11] - 2022-01-05
 
 Missing battery power conversions
