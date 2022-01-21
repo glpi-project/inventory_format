@@ -165,7 +165,7 @@ class Converter
             $schema = Schema::import('file://' . $this->getSchemaPath());
 
             $context = new Context();
-            $context->tolerateStrings = true;
+            $context->tolerateStrings = (!defined('TU_USER'));
             $schema->in($json, $context);
         } catch (\Exception $e) {
             $errmsg = "JSON does not validate. Violations:\n";
