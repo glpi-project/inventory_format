@@ -2593,6 +2593,21 @@
             },
             "copyblack": {
               "type": "integer"
+            },
+            "copyblack_a3": {
+              "type": "integer"
+            },
+            "copycolor": {
+              "type": "integer"
+            },
+            "copycolor_a3": {
+              "type": "integer"
+            },
+            "faxtotal": {
+              "type": "integer"
+            },
+            "duplex": {
+              "type": "integer"
             }
           },
           "additionalProperties": false
