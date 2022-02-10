@@ -1461,7 +1461,7 @@ class Converter
                     unset($device[$key]);
                     break;
                 case 'workgroup':
-                    $data['hardware']['workgroup'] = $device[$key];
+                    $data['content']['hardware']['workgroup'] = $device[$key];
                     unset($device[$key]);
                     break;
                 case 'authsnmp':
