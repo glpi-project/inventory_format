@@ -639,4 +639,104 @@ class Converter extends \atoum {
             'credentials' => 1
         ]);
     }
+
+    public function testValidate() {
+        $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['name' => 'my inventory']]]));
+        $this
+            ->given($this->newTestedInstance())
+            ->then
+            ->boolean($this->testedInstance->validate($json))->isTrue();
+
+        //required "versionclient" is missing
+        $this->exception(
+            function () {
+                $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['hardware' => ['name' => 'my inventory']]]));
+                $this
+                    ->given($this->newTestedInstance())
+                    ->then
+                    ->boolean($this->testedInstance->validate($json))->isFalse();
+            }
+        )
+            ->isInstanceOf('\RuntimeException')
+            ->message->contains('Required property missing: versionclient');
+
+        //extra "plugin_node" is unknown
+        $this->exception(
+            function () {
+                $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'plugin_node' => 'plugin node']]));
+                $this
+                    ->given($this->newTestedInstance())
+                    ->then
+                    ->boolean($this->testedInstance->validate($json))->isFalse();
+            }
+        )
+            ->isInstanceOf('\RuntimeException')
+            ->message->contains('Additional properties not allowed: plugin_node');
+
+        //add extra "plugin_node" as string
+        $extra_prop = ['plugin_node' => ['type' => 'string']];
+        $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'plugin_node' => 'plugin node']]));
+        $this
+            ->given($this->newTestedInstance())
+            ->if($this->testedInstance->setExtraProperties($extra_prop))
+            ->then
+            ->boolean($this->testedInstance->validate($json))->isTrue();
+
+        //extra "hardware/hw_plugin_node" is unknown
+        $this->exception(
+            function () {
+                $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['hw_plugin_node' => 'plugin node']]]));
+                $this
+                    ->given($this->newTestedInstance())
+                    ->then
+                    ->boolean($this->testedInstance->validate($json))->isFalse();
+            }
+        )
+            ->isInstanceOf('\RuntimeException')
+            ->message->contains('Additional properties not allowed: hw_plugin_node');
+
+        //add extra "hardware/hw_plugin_node" as string
+        $extra_sub_prop = ['hardware' => ['hw_plugin_node' => ['type' => 'string']]];
+        $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['hw_plugin_node' => 'plugin node']]]));
+        $this
+            ->given($this->newTestedInstance())
+            ->if($this->testedInstance->setExtraSubProperties($extra_sub_prop))
+            ->then
+            ->boolean($this->testedInstance->validate($json))->isTrue();
+
+        //extra "virtualmachines/vm_plugin_node" is unknown
+        $this->exception(
+            function () {
+                $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'virtualmachines' => [['name' => 'My VM', 'vmtype' => 'libvirt', 'vm_plugin_node' => 'plugin node']]]]));
+                $this
+                    ->given($this->newTestedInstance())
+                    ->then
+                    ->boolean($this->testedInstance->validate($json))->isFalse();
+            }
+        )
+            ->isInstanceOf('\RuntimeException')
+            ->message->contains('Additional properties not allowed: vm_plugin_node');
+
+        //add extra "virtualmachines/vm_plugin_node" as string
+        $extra_sub_prop = ['virtualmachines' => ['vm_plugin_node' => ['type' => 'string']]];
+        $json = json_decode(json_encode([
+            'deviceid' => 'myid',
+            'content' => [
+                'versionclient' => 'GLPI-Agent_v1.0',
+                'virtualmachines' => [
+                    [
+                        'name' => 'My VM',
+                        'vmtype' => 'libvirt',
+                        'vm_plugin_node' => 'plugin node'
+                    ]
+                ]
+            ]
+        ]));
+        $this
+            ->given($this->newTestedInstance())
+            ->if($this->testedInstance->setExtraSubProperties($extra_sub_prop))
+            ->then
+            ->boolean($this->testedInstance->validate($json))->isTrue();
+
+    }
 }
