@@ -166,7 +166,11 @@ class Converter
         return $this;
     }
 
-    private function buildSchema()
+    /**
+     * Build (extended) JSON schema
+     * @return mixed
+     */
+    public function buildSchema()
     {
         $schema = json_decode(file_get_contents($this->getSchemaPath()));
 
