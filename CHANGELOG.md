@@ -3,6 +3,12 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.13] - 2022-02-14
+
+Add extra schema properties
+Fix network data conversion
+Add missing printers properties
+
 ## [1.1.12] - 2022-01-21
 
 Soft cast for integers and booleans
