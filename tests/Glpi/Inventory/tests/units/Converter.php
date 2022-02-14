@@ -751,7 +751,7 @@ class Converter extends \atoum {
             }
         )
             ->error()
-            ->withType(E_USER_ERROR)
+            ->withType(E_USER_WARNING)
             ->withMessage('Property accesslog already exists in schema.')
             ->exists();
 
@@ -768,7 +768,7 @@ class Converter extends \atoum {
             }
         )
             ->error()
-            ->withType(E_USER_ERROR)
+            ->withType(E_USER_WARNING)
             ->withMessage('Property hardware/chassis_type already exists in schema.')
             ->exists();
 
@@ -785,7 +785,7 @@ class Converter extends \atoum {
             }
         )
             ->error()
-            ->withType(E_USER_ERROR)
+            ->withType(E_USER_WARNING)
             ->withMessage('Property unknown does not exists in schema.')
             ->exists();
     }
