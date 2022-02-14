@@ -738,5 +738,55 @@ class Converter extends \atoum {
             ->then
             ->boolean($this->testedInstance->validate($json))->isTrue();
 
+        //try add extra node already existing
+        $this->when(
+            function () {
+                $extra_prop = ['accesslog' => ['type' => 'string']];
+                $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0']]));
+                $this
+                    ->given($this->newTestedInstance())
+                    ->if($this->testedInstance->setExtraProperties($extra_prop))
+                    ->then
+                    ->boolean($this->testedInstance->validate($json))->isTrue();
+            }
+        )
+            ->error()
+            ->withType(E_USER_ERROR)
+            ->withMessage('Property accesslog already exists in schema.')
+            ->exists();
+
+        //try add extra sub node already existing
+        $this->when(
+            function () {
+                $extra_sub_prop = ['hardware' => ['chassis_type' => ['type' => 'string']]];
+                $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0']]));
+                $this
+                    ->given($this->newTestedInstance())
+                    ->if($this->testedInstance->setExtraSubProperties($extra_sub_prop))
+                    ->then
+                    ->boolean($this->testedInstance->validate($json))->isTrue();
+            }
+        )
+            ->error()
+            ->withType(E_USER_ERROR)
+            ->withMessage('Property hardware/chassis_type already exists in schema.')
+            ->exists();
+
+        //try add extra sub node with missing parent
+        $this->when(
+            function () {
+                $extra_sub_prop = ['unknown' => ['chassis_type' => ['type' => 'string']]];
+                $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0']]));
+                $this
+                    ->given($this->newTestedInstance())
+                    ->if($this->testedInstance->setExtraSubProperties($extra_sub_prop))
+                    ->then
+                    ->boolean($this->testedInstance->validate($json))->isTrue();
+            }
+        )
+            ->error()
+            ->withType(E_USER_ERROR)
+            ->withMessage('Property unknown does not exists in schema.')
+            ->exists();
     }
 }

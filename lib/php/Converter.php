@@ -208,7 +208,11 @@ class Converter
                                         json_decode(json_encode($subconfig));
                                 } else {
                                     trigger_error(
-                                        sprintf('Property %1$s already exists in schema.', $subprop),
+                                        sprintf(
+                                            'Property %1$s/%2$s already exists in schema.',
+                                            $extra_sub_property,
+                                            $subprop
+                                        ),
                                         E_USER_ERROR
                                     );
                                 }
