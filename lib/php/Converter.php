@@ -183,7 +183,7 @@ class Converter
                 } else {
                     trigger_error(
                         sprintf('Property %1$s already exists in schema.', $extra_property),
-                        E_USER_ERROR
+                        E_USER_WARNING
                     );
                 }
             }
@@ -202,7 +202,7 @@ class Converter
                                 } else {
                                     trigger_error(
                                         sprintf('Property %1$s already exists in schema.', $subprop),
-                                        E_USER_ERROR
+                                        E_USER_WARNING
                                     );
                                 }
                                 break;
@@ -217,18 +217,18 @@ class Converter
                                             $extra_sub_property,
                                             $subprop
                                         ),
-                                        E_USER_ERROR
+                                        E_USER_WARNING
                                     );
                                 }
                                 break;
                             default:
-                                trigger_error('Unknown type ' . $type, E_USER_ERROR);
+                                trigger_error('Unknown type ' . $type, E_USER_WARNING);
                         }
                     }
                 } else {
                     trigger_error(
                         sprintf('Property %1$s does not exists in schema.', $extra_sub_property),
-                        E_USER_ERROR
+                        E_USER_WARNING
                     );
                 }
             }
