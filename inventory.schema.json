@@ -1233,7 +1233,7 @@
                 "examples": [
                   "Down"
                 ],
-                "pattern": "^(up|down)$"
+                "pattern": "^(up|down|dormant|notpresent|lowerlayerdown|unknown|testing)$"
               },
               "type": {
                 "type": "string",
