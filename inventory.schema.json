@@ -1231,7 +1231,8 @@
               "status": {
                 "type": "string",
                 "examples": [
-                  "Down"
+                  "down",
+                  "dormant"
                 ],
                 "pattern": "^(up|down|dormant|notpresent|lowerlayerdown|unknown|testing)$"
               },
