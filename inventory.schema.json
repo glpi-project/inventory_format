@@ -319,9 +319,12 @@
               "arch": {
                 "type": "string",
                 "examples": [
-                  "i386"
+                  "i386",
+                  "i586",
+                  "i686",
+                  "sparc"
                 ],
-                "pattern": "^(mips|mips64|alpha|sparc|sparc64|m68k|i386|x86_64|powerpc|powerpc64|arm.*|aarch64)$"
+                "pattern": "^(mips|mips64|alpha|sparc|sparc64|m68k|i\\d86|x86_64|powerpc|powerpc64|arm.*|aarch64)$"
               },
               "core": {
                 "type": "integer",
