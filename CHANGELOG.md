@@ -3,6 +3,11 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.14] - 2022-04-07
+
+Add more possible values for ports status
+Add more CPUs archs
+
 ## [1.1.13] - 2022-02-14
 
 Add extra schema properties
