@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REQUEST>
+  <CONTENT>
+    <ACCESSLOG>
+      <LOGDATE>2017-05-15 18:38:07</LOGDATE>
+    </ACCESSLOG>
+    <ACCOUNTINFO>
+      <KEYNAME>TAG</KEYNAME>
+      <KEYVALUE>3923</KEYVALUE>
+    </ACCOUNTINFO>
+    <ANTIVIRUS>
+      <ENABLED>1</ENABLED>
+      <GUID>{D68DDC3A-831F-4fae-9E44-DA132C1ACF46}</GUID>
+      <NAME>Windows Defender</NAME>
+      <UPTODATE>1</UPTODATE>
+    </ANTIVIRUS>
+    <ANTIVIRUS>
+      <ENABLED>1</ENABLED>
+      <GUID>{B41C7598-35F6-4D89-7D0E-7ADE69B4047B}</GUID>
+      <NAME>Kaspersky Endpoint Security 10 for Windows</NAME>
+      <UPTODATE>1</UPTODATE>
+    </ANTIVIRUS>
+    <BATTERIES>
+      <CAPACITY>5100</CAPACITY>
+      <CHEMISTRY>LION</CHEMISTRY>
+      <DATE>11/01/2007</DATE>
+      <MANUFACTURER>33-24</MANUFACTURER>
+      <NAME>MS06055</NAME>
+      <SERIAL>0D47</SERIAL>
+      <VOLTAGE>10800</VOLTAGE>
+    </BATTERIES>
+    <BIOS>
+      <ASSETTAG>CZC0479792</ASSETTAG>
+      <BDATE>08/24/2010</BDATE>
+      <BMANUFACTURER>Hewlett-Packard</BMANUFACTURER>
+      <BVERSION>68CSU Ver. F.06</BVERSION>
+      <MMANUFACTURER>Hewlett-Packard</MMANUFACTURER>
+      <MMODEL>7008</MMODEL>
+      <MSN>CZC0479792</MSN>
+      <SKUNUMBER>J2696431</SKUNUMBER>
+      <SMANUFACTURER>Hewlett-Packard</SMANUFACTURER>
+      <SMODEL>HP EliteBook 2540p</SMODEL>
+      <SSN>CZC0479792</SSN>
+    </BIOS>
+    <CONTROLLERS>
+      <CAPTION>5 Series/3400 Series Chipset 6 port SATA AHCI Controller</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>5 Series/3400 Series Chipset 6 port SATA AHCI Controller</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>3b2f</PRODUCTID>
+      <TYPE>Standard SATA AHCI Controller</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>R5C843 MMC Host Controller</CAPTION>
+      <MANUFACTURER>Ricoh Co Ltd</MANUFACTURER>
+      <NAME>R5C843 MMC Host Controller</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>0843</PRODUCTID>
+      <TYPE>Ricoh SD/MMC Host Controller</TYPE>
+      <VENDORID>1180</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>5 Series/3400 Series Chipset USB2 Enhanced Host Controller</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>5 Series/3400 Series Chipset USB2 Enhanced Host Controller</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>3b34</PRODUCTID>
+      <TYPE>Intel(R) 5 Series/3400 Series Chipset Family USB Enhanced Host Controller - 3B34</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>5 Series/3400 Series Chipset USB2 Enhanced Host Controller</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>5 Series/3400 Series Chipset USB2 Enhanced Host Controller</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>3b3c</PRODUCTID>
+      <TYPE>Intel(R) 5 Series/3400 Series Chipset Family USB Enhanced Host Controller - 3B3C</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>R5C832 IEEE 1394 Controller</CAPTION>
+      <MANUFACTURER>Ricoh Co Ltd</MANUFACTURER>
+      <NAME>R5C832 IEEE 1394 Controller</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>0832</PRODUCTID>
+      <TYPE>Ricoh 1394 OHCI Compliant Host Controller</TYPE>
+      <VENDORID>1180</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>RL5c476 II</CAPTION>
+      <MANUFACTURER>Ricoh Co Ltd</MANUFACTURER>
+      <NAME>RL5c476 II</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>0476</PRODUCTID>
+      <TYPE>Ricoh R/RL/5C476(II) or Compatible CardBus Controller</TYPE>
+      <VENDORID>1180</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>5 Series/3400 Series Chipset Thermal Subsystem</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>5 Series/3400 Series Chipset Thermal Subsystem</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>3b32</PRODUCTID>
+      <TYPE>Intel(R) 5 Series/3400 Series Chipset Family Thermal Subsystem - 3B32</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>Core Processor Integrated Graphics Controller</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>Core Processor Integrated Graphics Controller</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>0046</PRODUCTID>
+      <TYPE>Intel(R) HD Graphics</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>82801 Mobile PCI Bridge</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>82801 Mobile PCI Bridge</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>2448</PRODUCTID>
+      <TYPE>Intel(R) 82801 PCI Bridge - 2448</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>Core Processor QuickPath Architecture System Address Decoder</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>Core Processor QuickPath Architecture System Address Decoder</NAME>
+      <PCISUBSYSTEMID>8086:8086</PCISUBSYSTEMID>
+      <PRODUCTID>2d01</PRODUCTID>
+      <TYPE>PCI standard host CPU bridge</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>5 Series/3400 Series Chipset PCI Express Root Port 4</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>5 Series/3400 Series Chipset PCI Express Root Port 4</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>3b48</PRODUCTID>
+      <TYPE>Intel(R) 5 Series/3400 Series Chipset Family PCI Express Root Port 4 - 3B48</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>R5C822 SD/SDIO/MMC/MS/MSPro Host Adapter</CAPTION>
+      <MANUFACTURER>Ricoh Co Ltd</MANUFACTURER>
+      <NAME>R5C822 SD/SDIO/MMC/MS/MSPro Host Adapter</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>0822</PRODUCTID>
+      <TYPE>SDA Standard Compliant SD Host Controller</TYPE>
+      <VENDORID>1180</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>Centrino Advanced-N 6200</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>Centrino Advanced-N 6200 2x2 AGN</NAME>
+      <PCISUBSYSTEMID>8086:1311</PCISUBSYSTEMID>
+      <PRODUCTID>4239</PRODUCTID>
+      <TYPE>Intel(R) Centrino(R) Advanced-N 6200 AGN</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>5 Series/3400 Series Chipset High Definition Audio</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>5 Series/3400 Series Chipset High Definition Audio</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>3b56</PRODUCTID>
+      <TYPE>High Definition Audio Controller</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>5 Series/3400 Series Chipset PCI Express Root Port 1</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>5 Series/3400 Series Chipset PCI Express Root Port 1</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>3b42</PRODUCTID>
+      <TYPE>Intel(R) 5 Series/3400 Series Chipset Family PCI Express Root Port 1 - 3B42</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>Core Processor QuickPath Architecture Generic Non-core Registers</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>Core Processor QuickPath Architecture Generic Non-core Registers</NAME>
+      <PCISUBSYSTEMID>8086:8086</PCISUBSYSTEMID>
+      <PRODUCTID>2c62</PRODUCTID>
+      <TYPE>PCI standard host CPU bridge</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>82577LM Gigabit Network Connection</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>82577LM Gigabit Network Connection</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>10ea</PRODUCTID>
+      <TYPE>Connexion réseau Intel(R) 82577LM Gigabit</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>5 Series/3400 Series Chipset PCI Express Root Port 2</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>5 Series/3400 Series Chipset PCI Express Root Port 2</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>3b44</PRODUCTID>
+      <TYPE>Intel(R) 5 Series/3400 Series Chipset Family PCI Express Root Port 2 - 3B44</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>5 Series/3400 Series Chipset KT Controller</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>5 Series/3400 Series Chipset KT Controller</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>3b67</PRODUCTID>
+      <TYPE>Intel(R) Management Engine Interface</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>1st Generation Core i3/5/7 Processor Reserved</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>1st Generation Core i3/5/7 Processor Reserved</NAME>
+      <PCISUBSYSTEMID>8086:8086</PCISUBSYSTEMID>
+      <PRODUCTID>2d13</PRODUCTID>
+      <TYPE>PCI standard host CPU bridge</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>1st Generation Core i3/5/7 Processor Reserved</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>1st Generation Core i3/5/7 Processor Reserved</NAME>
+      <PCISUBSYSTEMID>8086:8086</PCISUBSYSTEMID>
+      <PRODUCTID>2d12</PRODUCTID>
+      <TYPE>PCI standard host CPU bridge</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>Core Processor DRAM Controller</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>Core Processor DRAM Controller</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>0044</PRODUCTID>
+      <TYPE>PCI standard host CPU bridge</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>1st Generation Core i3/5/7 Processor QPI Physical 0</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>1st Generation Core i3/5/7 Processor QPI Physical 0</NAME>
+      <PCISUBSYSTEMID>8086:8086</PCISUBSYSTEMID>
+      <PRODUCTID>2d11</PRODUCTID>
+      <TYPE>PCI standard host CPU bridge</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>5 Series/3400 Series Chipset HECI Controller</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>5 Series/3400 Series Chipset HECI Controller</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>3b64</PRODUCTID>
+      <TYPE>Intel(R) Management Engine Interface</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>Core Processor QPI Link 0</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>Core Processor QPI Link 0</NAME>
+      <PCISUBSYSTEMID>8086:8086</PCISUBSYSTEMID>
+      <PRODUCTID>2d10</PRODUCTID>
+      <TYPE>PCI standard host CPU bridge</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CONTROLLERS>
+      <CAPTION>QM57 Chipset LPC Interface Controller</CAPTION>
+      <MANUFACTURER>Intel Corporation</MANUFACTURER>
+      <NAME>QM57 Chipset LPC Interface Controller</NAME>
+      <PCISUBSYSTEMID>103c:7008</PCISUBSYSTEMID>
+      <PRODUCTID>3b07</PRODUCTID>
+      <TYPE>Intel(R) QM57 Express Chipset LPC Interface Controller - 3B07</TYPE>
+      <VENDORID>8086</VENDORID>
+    </CONTROLLERS>
+    <CPUS>
+      <CORE>2</CORE>
+      <DESCRIPTION>Intel64 Family 6 Model 37 Stepping 5</DESCRIPTION>
+      <FAMILYNUMBER>6</FAMILYNUMBER>
+      <ID>55 06 02 00 FF FB EB BF</ID>
+      <MANUFACTURER>Intel</MANUFACTURER>
+      <MODEL>37</MODEL>
+      <NAME>Intel(R) Core(TM) i5 CPU M 540 @ 2.53GHz</NAME>
+      <SPEED>2530</SPEED>
+      <STEPPING>5</STEPPING>
+      <THREAD>4</THREAD>
+    </CPUS>
+    <DRIVES>
+      <DESCRIPTION>Disque fixe local</DESCRIPTION>
+      <FILESYSTEM>NTFS</FILESYSTEM>
+      <FREE>71954</FREE>
+      <LABEL>Systeme</LABEL>
+      <LETTER>C:</LETTER>
+      <SERIAL>68D96170</SERIAL>
+      <SYSTEMDRIVE>1</SYSTEMDRIVE>
+      <TOTAL>115123</TOTAL>
+      <TYPE>Local Disk</TYPE>
+      <VOLUMN>Systeme</VOLUMN>
+    </DRIVES>
+    <DRIVES>
+      <DESCRIPTION>Disque fixe local</DESCRIPTION>
+      <FILESYSTEM>NTFS</FILESYSTEM>
+      <FREE>122885</FREE>
+      <LABEL>Donnees</LABEL>
+      <LETTER>D:</LETTER>
+      <SERIAL>FCC57918</SERIAL>
+      <SYSTEMDRIVE/>
+      <TOTAL>122997</TOTAL>
+      <TYPE>Local Disk</TYPE>
+      <VOLUMN>Donnees</VOLUMN>
+    </DRIVES>
+    <DRIVES>
+      <FILESYSTEM>NTFS</FILESYSTEM>
+      <FREE>86</FREE>
+      <LABEL>Réservé au système</LABEL>
+      <LETTER>Réservé au système</LETTER>
+      <SERIAL>3AD09452</SERIAL>
+      <SYSTEMDRIVE/>
+      <TOTAL>349</TOTAL>
+      <TYPE>Local Disk</TYPE>
+      <VOLUMN>Réservé au système</VOLUMN>
+    </DRIVES>
+    <ENVS>
+      <KEY>FP_NO_HOST_CHECK</KEY>
+      <VAL>NO</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>USERNAME</KEY>
+      <VAL>SYSTEM</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>Path</KEY>
+      <VAL>C:\ProgramData\Oracle\Java\javapath;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files\KONICA MINOLTA\PageScope Box Operator3\;C:\Program Files\OpenVPN\bin</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>ComSpec</KEY>
+      <VAL>%SystemRoot%\system32\cmd.exe</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>TMP</KEY>
+      <VAL>%SystemRoot%\TEMP</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>OS</KEY>
+      <VAL>Windows_NT</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>windir</KEY>
+      <VAL>%SystemRoot%</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>PROCESSOR_ARCHITECTURE</KEY>
+      <VAL>AMD64</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>TEMP</KEY>
+      <VAL>%SystemRoot%\TEMP</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>PATHEXT</KEY>
+      <VAL>.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>PSModulePath</KEY>
+      <VAL>%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules\</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>NUMBER_OF_PROCESSORS</KEY>
+      <VAL>4</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>PROCESSOR_LEVEL</KEY>
+      <VAL>6</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>PROCESSOR_IDENTIFIER</KEY>
+      <VAL>Intel64 Family 6 Model 37 Stepping 5, GenuineIntel</VAL>
+    </ENVS>
+    <ENVS>
+      <KEY>PROCESSOR_REVISION</KEY>
+      <VAL>2505</VAL>
+    </ENVS>
+    <HARDWARE>
+      <ARCHNAME>MSWin32-x64-multi-thread</ARCHNAME>
+      <CHASSIS_TYPE>Notebook</CHASSIS_TYPE>
+      <CHECKSUM>127855</CHECKSUM>
+      <DEFAULTGATEWAY>10.253.6.1</DEFAULTGATEWAY>
+      <DNS>10.42.50.19</DNS>
+      <ETIME>13</ETIME>
+      <IPADDR>10.253.6.55</IPADDR>
+      <LASTLOGGEDUSER>cvigneron</LASTLOGGEDUSER>
+      <MEMORY>3887</MEMORY>
+      <NAME>pc-arg-23</NAME>
+      <OSNAME>Microsoft Windows 8.1 Professionnel</OSNAME>
+      <OSVERSION>6.3.9600</OSVERSION>
+      <PROCESSORN>1</PROCESSORN>
+      <PROCESSORS>2530</PROCESSORS>
+      <PROCESSORT>Intel(R) Core(TM) i5 CPU M 540 @ 2.53GHz</PROCESSORT>
+      <USERID>cvigneron</USERID>
+      <UUID>33E737A8-F827-11DF-9297-47C0A301005A</UUID>
+      <VMSYSTEM>Physical</VMSYSTEM>
+      <WINLANG>1036</WINLANG>
+      <WINOWNER> </WINOWNER>
+      <WINPRODID>00259-40825-10721-AAOEM</WINPRODID>
+      <WINPRODKEY>BCDEFG-BCDEFG-BCDEFG-BCDEFG-BBCDEFG</WINPRODKEY>
+      <WORKGROUP>cedre.local</WORKGROUP>
+    </HARDWARE>
+    <INPUTS>
+      <CAPTION>Étendu (101 ou 102 touches)</CAPTION>
+      <DESCRIPTION>USB Input Device</DESCRIPTION>
+      <LAYOUT>0000040C</LAYOUT>
+      <NAME>Étendu (101 ou 102 touches)</NAME>
+    </INPUTS>
+    <INPUTS>
+      <CAPTION>USB Input Device</CAPTION>
+      <DESCRIPTION>USB Input Device</DESCRIPTION>
+      <INTERFACE>USB</INTERFACE>
+      <MANUFACTURER>(Standard system devices)</MANUFACTURER>
+      <NAME>USB Input Device</NAME>
+      <POINTINGTYPE>2</POINTINGTYPE>
+    </INPUTS>
+    <INPUTS>
+      <CAPTION>Synaptics PS/2 Port TouchPad</CAPTION>
+      <DESCRIPTION>Synaptics PS/2 Port TouchPad</DESCRIPTION>
+      <INTERFACE>PS/2</INTERFACE>
+      <MANUFACTURER>Synaptics</MANUFACTURER>
+      <NAME>Synaptics PS/2 Port TouchPad</NAME>
+      <POINTINGTYPE>2</POINTINGTYPE>
+    </INPUTS>
+    <LICENSEINFOS>
+      <COMPONENTS>Access/AccessRuntime/Excel/ExcelConsumer/Groove/InfoPath/OneNote/Outlook/OutlookStandard/PowerPoint/Project/Publisher/SharePointDesigner/Visio/VisioSDK/Word/WordConsumer</COMPONENTS>
+      <FULLNAME>Microsoft Office Professionnel 2010</FULLNAME>
+      <KEY>V33KV-CMD8V-6JXQ9-YJP62-7FTGD</KEY>
+      <NAME>Microsoft Office</NAME>
+      <OEM>1</OEM>
+      <PRODUCTID>82503-OEM-1190037-27208</PRODUCTID>
+      <TRIAL>0</TRIAL>
+      <UPDATE>SP2</UPDATE>
+    </LICENSEINFOS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-32-544</ID>
+      <NAME>Administrateurs</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-32-578</ID>
+      <NAME>Administrateurs Hyper-V</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-32-552</ID>
+      <NAME>Duplicateurs</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-32-568</ID>
+      <NAME>IIS_IUSRS</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-32-546</ID>
+      <NAME>Invités</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-32-573</ID>
+      <NAME>Lecteurs des journaux d’événements</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-32-579</ID>
+      <NAME>Opérateurs d'assistance de contrôle d'accès</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-32-569</ID>
+      <NAME>Opérateurs de chiffrement</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-32-556</ID>
+      <NAME>Opérateurs de configuration réseau</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-32-551</ID>
+      <NAME>Opérateurs de sauvegarde</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-32-545</ID>
+      <NAME>Utilisateurs</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-32-547</ID>
+      <NAME>Utilisateurs avec pouvoir</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-32-580</ID>
+      <NAME>Utilisateurs de gestion à distance</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-32-558</ID>
+      <NAME>Utilisateurs de l’Analyseur de performances</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-32-555</ID>
+      <NAME>Utilisateurs du Bureau à distance</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-32-559</ID>
+      <NAME>Utilisateurs du journal de performances</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-32-562</ID>
+      <NAME>Utilisateurs du modèle COM distribué</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_GROUPS>
+      <ID>S-1-5-21-1991532173-3840140016-515664010-1000</ID>
+      <NAME>WinRMRemoteWMIUsers__</NAME>
+    </LOCAL_GROUPS>
+    <LOCAL_USERS>
+      <ID>S-1-5-21-1991532173-3840140016-515664010-1006</ID>
+      <NAME>Admin</NAME>
+    </LOCAL_USERS>
+    <LOCAL_USERS>
+      <ID>S-1-5-21-1991532173-3840140016-515664010-1005</ID>
+      <NAME>Utilisateur</NAME>
+    </LOCAL_USERS>
+    <MEMORIES>
+      <CAPACITY>2048</CAPACITY>
+      <CAPTION>Bottom-Slot 1(left)</CAPTION>
+      <DESCRIPTION>SODIMM</DESCRIPTION>
+      <MANUFACTURER>Samsung</MANUFACTURER>
+      <MEMORYCORRECTION>None</MEMORYCORRECTION>
+      <NUMSLOTS>1</NUMSLOTS>
+      <SERIALNUMBER>8036448B</SERIALNUMBER>
+      <SPEED>1333 MHz</SPEED>
+      <TYPE>DDR3</TYPE>
+    </MEMORIES>
+    <MEMORIES>
+      <CAPACITY>2048</CAPACITY>
+      <CAPTION>Bottom-Slot 2(right)</CAPTION>
+      <DESCRIPTION>SODIMM</DESCRIPTION>
+      <MANUFACTURER>Samsung</MANUFACTURER>
+      <MEMORYCORRECTION>None</MEMORYCORRECTION>
+      <NUMSLOTS>2</NUMSLOTS>
+      <SERIALNUMBER>9428388F</SERIALNUMBER>
+      <SPEED>1333 MHz</SPEED>
+      <TYPE>DDR3</TYPE>
+    </MEMORIES>
+    <MODEMS>
+      <DESCRIPTION>Agere Systems HDA Modem</DESCRIPTION>
+      <MODEL>Agere Systems HDA Modem</MODEL>
+      <NAME>Agere Systems HDA Modem</NAME>
+      <TYPE>Internal Modem</TYPE>
+    </MODEMS>
+    <MONITORS>
+      <BASE64>AP///////wAQrBJAUjJCQQMQAQMOIht47q6lplRMmSYUUFSlSwBxT4GAAQEBAQEBAQEBAQEBMCoAmFEAKkAwcBMAUg4RAAAeAAAA/wBDOTc1NjYxSEFCMlIKAAAA/ABERUxMIDE3MDdGUAogAAAA/QA4TB5RDgAKICAgICAgAPw=</BASE64>
+      <CAPTION>DELL 1707FP</CAPTION>
+      <DESCRIPTION>3/2006</DESCRIPTION>
+      <MANUFACTURER>Dell Inc.</MANUFACTURER>
+      <PORT>VGA</PORT>
+      <SERIAL>C975661HAB2R</SERIAL>
+    </MONITORS>
+    <NETWORKS>
+      <DESCRIPTION>Connexion réseau Intel(R) 82577LM Gigabit</DESCRIPTION>
+      <IPADDRESS>10.253.6.55</IPADDRESS>
+      <IPDHCP>10.253.6.1</IPDHCP>
+      <IPGATEWAY>10.253.6.1</IPGATEWAY>
+      <IPMASK>255.255.255.0</IPMASK>
+      <IPSUBNET>10.253.6.0</IPSUBNET>
+      <MACADDR>68:B5:99:E6:84:EB</MACADDR>
+      <PCIID>8086:10EA:7008:103C</PCIID>
+      <PNPDEVICEID>PCI\VEN_8086&amp;DEV_10EA&amp;SUBSYS_7008103C&amp;REV_05\3&amp;21436425&amp;0&amp;C8</PNPDEVICEID>
+      <SPEED>100</SPEED>
+      <STATUS>Up</STATUS>
+      <TYPE>ethernet</TYPE>
+      <VIRTUALDEV>0</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>Connexion réseau Intel(R) 82577LM Gigabit</DESCRIPTION>
+      <IPADDRESS6>fe80::855e:72a5:247e:b3d8</IPADDRESS6>
+      <IPMASK6>ffff:ffff:ffff:ffff::</IPMASK6>
+      <IPSUBNET6>fe80::</IPSUBNET6>
+      <MACADDR>61:B5:99:E6:84:EA</MACADDR>
+      <PCIID>8086:10EA:7008:103C</PCIID>
+      <PNPDEVICEID>PCI\VEN_8086&amp;DEV_10EA&amp;SUBSYS_7008103C&amp;REV_05\3&amp;21436425&amp;0&amp;C8</PNPDEVICEID>
+      <SPEED>100</SPEED>
+      <STATUS>Up</STATUS>
+      <TYPE>ethernet</TYPE>
+      <VIRTUALDEV>0</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>Périphérique Bluetooth (réseau personnel)</DESCRIPTION>
+      <MACADDR>74:F3:95:C7:E8:C2</MACADDR>
+      <PNPDEVICEID>BTH\MS_BTHPAN\7&amp;1CE08EA5&amp;0&amp;2</PNPDEVICEID>
+      <SPEED>3</SPEED>
+      <STATUS>Down</STATUS>
+      <VIRTUALDEV>0</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>TAP-Windows Adapter V9</DESCRIPTION>
+      <MACADDR>00:FF:3A:68:62:80</MACADDR>
+      <PNPDEVICEID>ROOT\NET\0000</PNPDEVICEID>
+      <SPEED>1073.741824</SPEED>
+      <STATUS>Down</STATUS>
+      <TYPE>ethernet</TYPE>
+      <VIRTUALDEV>0</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>Intel(R) Centrino(R) Advanced-N 6200 AGN</DESCRIPTION>
+      <MACADDR>00:22:10:D4:3E:74</MACADDR>
+      <PCIID>8086:4239:1311:8086</PCIID>
+      <PNPDEVICEID>PCI\VEN_8086&amp;DEV_4239&amp;SUBSYS_13118086&amp;REV_35\002710FFFFD43E7400</PNPDEVICEID>
+      <SPEED>9223372036854.78</SPEED>
+      <STATUS>Down</STATUS>
+      <TYPE>wifi</TYPE>
+      <VIRTUALDEV>0</VIRTUALDEV>
+    </NETWORKS>
+    <NETWORKS>
+      <DESCRIPTION>Carte virtuelle de réseau hébergé Microsoft</DESCRIPTION>
+      <MACADDR>00:27:15:D4:3E:75</MACADDR>
+      <PNPDEVICEID>{5D624F94-8850-40C3-A3FA-A4FD2080BAF3}\VWIFIMP_SAP\5&amp;98E2437&amp;0&amp;03</PNPDEVICEID>
+      <SPEED>9223372036854.78</SPEED>
+      <STATUS>Down</STATUS>
+      <TYPE>ethernet</TYPE>
+      <VIRTUALDEV>1</VIRTUALDEV>
+    </NETWORKS>
+    <OPERATINGSYSTEM>
+      <ARCH>64-bit</ARCH>
+      <BOOT_TIME>2017-05-15 09:23:09</BOOT_TIME>
+      <DNS_DOMAIN>cedre.local</DNS_DOMAIN>
+      <FQDN>pc-arg-23.cedre.local</FQDN>
+      <FULL_NAME>Microsoft Windows 8.1 Professionnel</FULL_NAME>
+      <INSTALL_DATE>2015-04-17T03:02:45Z</INSTALL_DATE>
+      <BOOT_DATE>2021-05-31 14:00:00:00+02:00</BOOT_DATE>
+      <KERNEL_NAME>MSWin32</KERNEL_NAME>
+      <KERNEL_VERSION>6.3.9600</KERNEL_VERSION>
+      <NAME>Windows</NAME>
+      <SERVICE_PACK/>  <TIMEZONE>
+        <NAME>Romance Standard Time</NAME>
+        <OFFSET>+0200</OFFSET>
+      </TIMEZONE>
+    </OPERATINGSYSTEM>
+    <PRINTERS>
+      <DRIVER>Microsoft XPS Document Writer v4</DRIVER>
+      <NAME>Microsoft XPS Document Writer</NAME>
+      <NETWORK>0</NETWORK>
+      <PORT>PORTPROMPT:</PORT>
+      <PRINTPROCESSOR>winprint</PRINTPROCESSOR>
+      <RESOLUTION>600x600</RESOLUTION>
+      <SHARED>0</SHARED>
+      <STATUS>Idle</STATUS>
+    </PRINTERS>
+    <PRINTERS>
+      <DRIVER>Amyuni Document Converter 450</DRIVER>
+      <NAME>Imprimante PDF Sage v4</NAME>
+      <NETWORK>0</NETWORK>
+      <PORT>nul:</PORT>
+      <PRINTPROCESSOR>winprint</PRINTPROCESSOR>
+      <RESOLUTION>600x600</RESOLUTION>
+      <SHARED>0</SHARED>
+      <STATUS>Idle</STATUS>
+    </PRINTERS>
+    <PRINTERS>
+      <DRIVER>HP Color LaserJet Pro MFP M476 PCL 6</DRIVER>
+      <NAME>HP Color LaserJet Pro MFP M476 PCL 6</NAME>
+      <NETWORK>0</NETWORK>
+      <PORT>10.253.6.117</PORT>
+      <PRINTPROCESSOR>hpcpp155</PRINTPROCESSOR>
+      <RESOLUTION>600x600</RESOLUTION>
+      <SHARED>0</SHARED>
+      <SHARENAME>HP Color LaserJet Pro MFP M476 PCL 6  (1)</SHARENAME>
+      <STATUS>Unknown</STATUS>
+    </PRINTERS>
+    <PRINTERS>
+      <DRIVER>Microsoft Shared Fax Driver</DRIVER>
+      <NAME>Fax</NAME>
+      <NETWORK>0</NETWORK>
+      <PORT>SHRFAX:</PORT>
+      <PRINTPROCESSOR>winprint</PRINTPROCESSOR>
+      <RESOLUTION>200x200</RESOLUTION>
+      <SHARED>0</SHARED>
+      <STATUS>Idle</STATUS>
+    </PRINTERS>
+    <PRINTERS>
+      <DRIVER>Send To Microsoft OneNote 2010 Driver</DRIVER>
+      <NAME>Envoyer à OneNote 2010</NAME>
+      <NETWORK>0</NETWORK>
+      <PORT>nul:</PORT>
+      <PRINTPROCESSOR>winprint</PRINTPROCESSOR>
+      <RESOLUTION>600x600</RESOLUTION>
+      <SHARED>0</SHARED>
+      <STATUS>Idle</STATUS>
+    </PRINTERS>
+    <REMOTE_MGMT>
+      <ID>407026896</ID>
+      <TYPE>teamviewer</TYPE>
+    </REMOTE_MGMT>
+    <SLOTS>
+      <DESCRIPTION>32-bit PCI</DESCRIPTION>
+      <DESIGNATION>1</DESIGNATION>
+      <NAME>PCI SLOT1</NAME>
+      <STATUS>free</STATUS>
+    </SLOTS>
+    <SLOTS>
+      <DESCRIPTION>Connecteur système</DESCRIPTION>
+      <DESIGNATION>PCI SLOT1</DESIGNATION>
+      <NAME>Connecteur système</NAME>
+      <STATUS>free</STATUS>
+    </SLOTS>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <FROM>registry</FROM>
+      <GUID>CCleaner</GUID>
+      <INSTALLDATE>11/09/2015</INSTALLDATE>
+      <NAME>CCleaner</NAME>
+      <PUBLISHER>Piriform</PUBLISHER>
+      <UNINSTALL_STRING>"C:\Program Files\CCleaner\uninst.exe"</UNINSTALL_STRING>
+      <VERSION>5.09</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <FROM>registry</FROM>
+      <GUID>FusionInventory-Agent</GUID>
+      <HELPLINK>https://github.com/fusioninventory/fusioninventory-agent</HELPLINK>
+      <INSTALLDATE>18/04/2017</INSTALLDATE>
+      <NAME>FusionInventory Agent 2.3.19 (x64 edition)</NAME>
+      <PUBLISHER>FusionInventory Team</PUBLISHER>
+      <UNINSTALL_STRING>C:\Program Files\FusionInventory-Agent\Uninstall.exe</UNINSTALL_STRING>
+      <VERSION>2.3.19</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <FROM>registry</FROM>
+      <GUID>Microsoft Visual Studio 2010 Tools for Office Runtime (x64)</GUID>
+      <HELPLINK>http://go.microsoft.com/fwlink/?LinkId=133405</HELPLINK>
+      <INSTALLDATE>16/09/2015</INSTALLDATE>
+      <NAME>Microsoft Visual Studio 2010 Tools for Office Runtime (x64)</NAME>
+      <PUBLISHER>Microsoft Corporation</PUBLISHER>
+      <UNINSTALL_STRING>C:\Program Files\Common Files\Microsoft Shared\VSTO\10.0\Microsoft Visual Studio 2010 Tools for Office Runtime (x64)\install.exe</UNINSTALL_STRING>
+      <VERSION>10.0.50903</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <FROM>registry</FROM>
+      <GUID>Microsoft Visual Studio 2010 Tools for Office Runtime (x64) Language Pack - FRA</GUID>
+      <HELPLINK>http://go.microsoft.com/fwlink/?LinkId=133405</HELPLINK>
+      <INSTALLDATE>16/09/2015</INSTALLDATE>
+      <NAME>Module linguistique Microsoft Visual Studio 2010 Tools pour Office Runtime (x64) - FRA</NAME>
+      <PUBLISHER>Microsoft Corporation</PUBLISHER>
+      <UNINSTALL_STRING>C:\Program Files\Common Files\Microsoft Shared\VSTO\10.0\Microsoft Visual Studio 2010 Tools for Office Runtime (x64) Language Pack - FRA\install.exe</UNINSTALL_STRING>
+      <VERSION>10.0.50903</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <FROM>registry</FROM>
+      <GUID>Office14.SingleImage</GUID>
+      <INSTALLDATE>18/09/2015</INSTALLDATE>
+      <NAME>Microsoft Office Famille et Petite Entreprise 2010</NAME>
+      <NO_REMOVE>0</NO_REMOVE>
+      <PUBLISHER>Microsoft Corporation</PUBLISHER>
+      <UNINSTALL_STRING>"C:\Program Files\Common Files\Microsoft Shared\OFFICE14\Office Setup Controller\setup.exe" /uninstall SINGLEIMAGE /dll OSETUP.DLL</UNINSTALL_STRING>
+      <VERSION>14.0.7015.1000</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <FROM>registry</FROM>
+      <GUID>OpenVPN</GUID>
+      <INSTALLDATE>17/11/2016</INSTALLDATE>
+      <NAME>OpenVPN 2.3.8-I001 </NAME>
+      <UNINSTALL_STRING>C:\Program Files\OpenVPN\Uninstall.exe</UNINSTALL_STRING>
+      <VERSION>2.3.8-I001</VERSION>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <FROM>registry</FROM>
+      <GUID>{90140000-003D-0000-1000-0000000FF1CE}_Office14.SingleImage_{8C0FFF5F-4CC1-48F5-9B3F-8DE7DA2E116F}</GUID>
+      <HELPLINK>http://support.microsoft.com/kb/2553140</HELPLINK>
+      <INSTALLDATE>10/05/2017</INSTALLDATE>
+      <NAME>Update for Microsoft Office 2010 (KB2553140) 64-Bit Edition</NAME>
+      <NO_REMOVE>0</NO_REMOVE>
+      <PUBLISHER>Microsoft</PUBLISHER>
+      <UNINSTALL_STRING>"C:\Program Files\Common Files\Microsoft Shared\OFFICE14\Oarpmany.exe" /removereleaseinpatch "{90140000-003D-0000-1000-0000000FF1CE}" "{8C0FFF5F-4CC1-48F5-9B3F-8DE7DA2E116F}" "1036" "0"</UNINSTALL_STRING>
+      <URL_INFO_ABOUT>http://support.microsoft.com/kb/2553140</URL_INFO_ABOUT>
+    </SOFTWARES>
+    <SOFTWARES>
+      <ARCH>x86_64</ARCH>
+      <COMMENTS>Security Update</COMMENTS>
+      <FROM>WMI</FROM>
+      <INSTALLDATE>11/05/2017</INSTALLDATE>
+      <NAME>KB4019215</NAME>
+      <RELEASE_TYPE>Security Update</RELEASE_TYPE>
+    </SOFTWARES>
+    <SOUNDS>
+      <CAPTION>Périphérique High Definition Audio</CAPTION>
+      <DESCRIPTION>Périphérique High Definition Audio</DESCRIPTION>
+      <MANUFACTURER>Microsoft</MANUFACTURER>
+      <NAME>Périphérique High Definition Audio</NAME>
+    </SOUNDS>
+    <SOUNDS>
+      <CAPTION>Périphérique High Definition Audio</CAPTION>
+      <DESCRIPTION>Périphérique High Definition Audio</DESCRIPTION>
+      <MANUFACTURER>Microsoft</MANUFACTURER>
+      <NAME>Périphérique High Definition Audio</NAME>
+    </SOUNDS>
+    <STORAGES>
+      <DESCRIPTION>Disk drive</DESCRIPTION>
+      <DISKSIZE>250059</DISKSIZE>
+      <FIRMWARE>PC2OCH0A</FIRMWARE>
+      <INTERFACE>IDE</INTERFACE>
+      <MANUFACTURER>(Standard disk drives)</MANUFACTURER>
+      <MODEL>Hitachi HTS725025A9A364</MODEL>
+      <NAME>\\.\PHYSICALDRIVE0</NAME>
+      <SCSI_COID>0</SCSI_COID>
+      <SCSI_LUN>0</SCSI_LUN>
+      <SCSI_UNID>0</SCSI_UNID>
+      <SERIAL>101024PCK204VJJVAMYJ</SERIAL>
+      <SERIALNUMBER>101024PCK204VJJVAMYJ</SERIALNUMBER>
+      <TYPE>Fixed hard disk media</TYPE>
+    </STORAGES>
+    <USBDEVICES>
+      <CAPTION>Gobi 2000 Wireless Modem (QDL mode)</CAPTION>
+      <MANUFACTURER>Hewlett-Packard</MANUFACTURER>
+      <NAME>Gobi 2000 Wireless Modem (QDL mode)</NAME>
+      <PRODUCTID>241D</PRODUCTID>
+      <VENDORID>03F0</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CAPTION>Broadcom 2070 Bluetooth Combo</CAPTION>
+      <MANUFACTURER>Hewlett-Packard</MANUFACTURER>
+      <NAME>Broadcom 2070 Bluetooth Combo</NAME>
+      <PRODUCTID>231D</PRODUCTID>
+      <VENDORID>03F0</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CAPTION>HP PR1101U / Primax PMX-KPR1101U Keyboard</CAPTION>
+      <MANUFACTURER>Primax Electronics, Ltd</MANUFACTURER>
+      <NAME>HP PR1101U / Primax PMX-KPR1101U Keyboard</NAME>
+      <PRODUCTID>0010</PRODUCTID>
+      <VENDORID>0461</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CAPTION>Integrated Rate Matching Hub</CAPTION>
+      <MANUFACTURER>Intel Corp.</MANUFACTURER>
+      <NAME>Integrated Rate Matching Hub</NAME>
+      <PRODUCTID>0020</PRODUCTID>
+      <VENDORID>8087</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CAPTION>Integrated Rate Matching Hub</CAPTION>
+      <MANUFACTURER>Intel Corp.</MANUFACTURER>
+      <NAME>Integrated Rate Matching Hub</NAME>
+      <PRODUCTID>0020</PRODUCTID>
+      <VENDORID>8087</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CAPTION>USB Composite Device</CAPTION>
+      <MANUFACTURER>Chicony Electronics Co., Ltd</MANUFACTURER>
+      <NAME>USB Composite Device</NAME>
+      <PRODUCTID>B163</PRODUCTID>
+      <SERIAL>SN0001</SERIAL>
+      <VENDORID>04F2</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CAPTION>Optical Mouse</CAPTION>
+      <MANUFACTURER>Pixart Imaging, Inc.</MANUFACTURER>
+      <NAME>Optical Mouse</NAME>
+      <PRODUCTID>2510</PRODUCTID>
+      <VENDORID>093A</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CAPTION>VFS451 Fingerprint Reader</CAPTION>
+      <MANUFACTURER>Validity Sensors, Inc.</MANUFACTURER>
+      <NAME>VFS451 Fingerprint Reader</NAME>
+      <PRODUCTID>0007</PRODUCTID>
+      <SERIAL>00B0FE47AC85</SERIAL>
+      <VENDORID>138A</VENDORID>
+    </USBDEVICES>
+    <USBDEVICES>
+      <CAPTION>Hub</CAPTION>
+      <MANUFACTURER>Standard Microsystems Corp.</MANUFACTURER>
+      <NAME>Hub</NAME>
+      <PRODUCTID>5434</PRODUCTID>
+      <VENDORID>0424</VENDORID>
+    </USBDEVICES>
+    <USERS>
+      <DOMAIN>CEDRE</DOMAIN>
+      <LOGIN>cvigneron</LOGIN>
+    </USERS>
+    <POWERSUPPLIES>
+      <HOTREPLACEABLE>Yes</HOTREPLACEABLE>
+      <MANUFACTURER>DELL</MANUFACTURER>
+      <NAME>PWR SPLY,750W,RDNT,DELTA</NAME>
+      <PARTNUM>05RHVVA00</PARTNUM>
+      <PLUGGED>Yes</PLUGGED>
+      <POWER_MAX>750 W</POWER_MAX>
+      <SERIALNUMBER>CN179726BLFFQ8</SERIALNUMBER>
+      <STATUS>Present, Unknown</STATUS>
+    </POWERSUPPLIES>
+    <VERSIONCLIENT>FusionInventory-Agent_v2.3.19</VERSIONCLIENT>
+    <VERSIONPROVIDER>
+      <COMMENTS>Provided by Teclib</COMMENTS>
+      <COMMENTS>Installer built with Appveyor on Sat Feb 18 09:34:43 UTC 2017</COMMENTS>
+      <NAME>FusionInventory</NAME>
+      <PERL_CONFIG>gccversion: 4.9.2</PERL_CONFIG>
+      <PERL_CONFIG>defines: use64bitint usedl useithreads uselargefiles usemallocwrap usemultiplicity usemymalloc=n usenm=false useopcode useperlio useposix useshrplib usethreads usevendorprefix usevfork=false</PERL_CONFIG>
+      <PERL_EXE>C:\Program Files\FusionInventory-Agent\perl\bin\perl.exe</PERL_EXE>
+      <PERL_INC>../agent:./bin:C:/Program Files/FusionInventory-Agent/perl/site/lib:C:/Program Files/FusionInventory-Agent/perl/vendor/lib:C:/Program Files/FusionInventory-Agent/perl/lib:.</PERL_INC>
+      <PERL_MODULE>LWP @ 6.15</PERL_MODULE>
+      <PERL_MODULE>LWP::Protocol @ 6.15</PERL_MODULE>
+      <PERL_MODULE>IO::Socket @ 1.38</PERL_MODULE>
+      <PERL_MODULE>IO::Socket::INET @ 1.35</PERL_MODULE>
+      <PERL_MODULE>Net::SSLeay @ 1.74</PERL_MODULE>
+      <PERL_MODULE>Net::SSLeay uses OpenSSL 1.0.2g  1 Mar 2016</PERL_MODULE>
+      <PERL_MODULE>HTTP::Status @ 6.11</PERL_MODULE>
+      <PERL_MODULE>HTTP::Response @ 6.11</PERL_MODULE>
+      <PERL_VERSION>v5.22.2</PERL_VERSION>
+      <PROGRAM>C:\Program Files\FusionInventory-Agent\perl\bin\fusioninventory-win32-service</PROGRAM>
+      <VERSION>2.3.19</VERSION>
+    </VERSIONPROVIDER>
+    <VIDEOS>
+      <CHIPSET>Intel(R) HD Graphics (Core i5)</CHIPSET>
+      <NAME>Intel(R) HD Graphics</NAME>
+      <RESOLUTION>1280x1024</RESOLUTION>
+    </VIDEOS>
+  </CONTENT>
+  <DEVICEID>pc-arg-23.cedre.local-2017-04-18-09-26-44</DEVICEID>
+  <QUERY>INVENTORY</QUERY>
+</REQUEST>
