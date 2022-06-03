@@ -822,6 +822,21 @@ class Converter
             }
         }
 
+        //Fix powersupplies capacities
+        if (isset($data['content']['powersupplies'])) {
+            foreach ($data['content']['powersupplies'] as &$psupply) {
+                if (isset($psupply['power_max'])) {
+                    $value = $this->convertBatteryPower($psupply['power_max']);
+                    if ($value == false) {
+                        unset($psupply['power_max']);
+                    } else {
+                        $psupply['power_max'] = $value;
+                    }
+                }
+            }
+        }
+
+
         //type on ports is required
         if (isset($data['content']['ports'])) {
             foreach ($data['content']['ports'] as &$port) {
