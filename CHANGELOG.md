@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.15] - 2022-06-03
+
+Handle powersupplies max_power conversion
+
 ## [1.1.14] - 2022-04-07
 
 Add more possible values for ports status
