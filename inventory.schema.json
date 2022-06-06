@@ -306,6 +306,15 @@
                 "examples": [
                   "8086"
                 ]
+              },
+              "model": {
+                "type": "string",
+                "examples": [
+                  "099GTM"
+                ]
+              },
+              "serial": {
+                "type": "string"
               }
             },
             "additionalProperties": false
