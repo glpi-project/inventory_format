@@ -2012,8 +2012,7 @@
           "items": {
             "type": "object",
             "required": [
-              "name",
-              "vmtype"
+              "name"
             ],
             "properties": {
               "image": {
