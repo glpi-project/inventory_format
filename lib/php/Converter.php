@@ -59,15 +59,27 @@ class Converter
 {
     public const LAST_VERSION = 0.1;
 
+    /** @var ?double */
     private $target_version;
+
+    /** @var bool */
     private $debug = false;
-    /** XML a different steps. Used for debug only */
+    /**
+     * XML a different steps. Used for debug only
+     * @var array
+     */
     private $steps;
+
+    /** @var array */
     private $mapping = [
         '01'   => 0.1
     ];
+
+    /** @var array */
     private $schema_patterns;
+    /** @var array */
     private $extra_properties;
+    /** @var array */
     private $extra_sub_properties;
 
     /**
@@ -154,12 +166,20 @@ class Converter
         return realpath(__DIR__ . '/../../inventory.schema.json');
     }
 
+    /**
+     * @param array $properties
+     * @return $this
+     */
     public function setExtraProperties(array $properties)
     {
         $this->extra_properties = $properties;
         return $this;
     }
 
+    /**
+     * @param array $properties
+     * @return $this
+     */
     public function setExtraSubProperties(array $properties)
     {
         $this->extra_sub_properties = $properties;
@@ -266,7 +286,7 @@ class Converter
      *
      * @param string $xml Original XML string
      *
-     * @return array
+     * @return string|false
      */
     public function convert($xml)
     {
@@ -289,7 +309,7 @@ class Converter
         //convert SimpleXML object to array, recursively.
         $data = json_decode(
             json_encode((array)$sxml),
-            1
+            true
         );
         $this->loadSchemaPatterns();
 

@@ -58,6 +58,10 @@ class FilesToJSON
     public const TYPE_USB = 'usbid';
     public const TYPE_OUI = 'ouis';
     public const TYPE_IFTYPE = 'iftype';
+
+    /**
+     * @var string
+     */
     private $path = __DIR__ . '/../../data';
 
     /**
