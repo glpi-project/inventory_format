@@ -2074,8 +2074,7 @@
                 "type": "string",
                 "examples": [
                   "libvirt"
-                ],
-                "pattern": "^(physical|xen|virtualbox|virtual machine|vmware|qemu|solaris ?zones?|vserver|openvz|bsdjail|parallels|hyperv|aix_lpar|docker|libvirt|lxd|lxc|virtuozzo|kvm|hpvm|wsl[12])$"
+                ]
               },
               "mac": {
                 "type": "string"
