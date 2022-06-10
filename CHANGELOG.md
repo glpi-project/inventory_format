@@ -3,7 +3,7 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
-## [1.1.16] - 2022-??-??
+## [1.1.16] - 2022-06-10
 
 vmtype is no longer required
 Add missing model and serial on controllers
