@@ -45,7 +45,9 @@
                 "productid": "1904",
                 "rev": "08",
                 "type": "Host bridge",
-                "vendorid": "8086"
+                "vendorid": "8086",
+                "model": "Xeon",
+                "serial": "xyz"
             },
             {
                 "caption": "Skylake GT2 [HD Graphics 520]",

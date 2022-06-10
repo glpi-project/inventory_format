@@ -31,8 +31,7 @@
                 "image": "skydive\/skydive",
                 "name": "skydive-agent_1",
                 "status": "off",
-                "uuid": "5506c9cf948e",
-                "vmtype": "docker"
+                "uuid": "5506c9cf948e"
             },
             {
                 "image": "skydive\/skydive",
