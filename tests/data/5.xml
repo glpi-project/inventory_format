@@ -2,6 +2,20 @@
 <REQUEST>
   <CONTENT>
     <DEVICE>
+      <COMPONENTS>
+        <COMPONENT>
+          <CONTAINEDININDEX>0</CONTAINEDININDEX>
+          <DESCRIPTION>Fabric [MAC address-8c:60:4f:8d:ae:fc]</DESCRIPTION>
+          <FRU>2</FRU>
+          <INDEX>10</INDEX>
+          <MANUFACTURER>Cisco Systems, Inc.</MANUFACTURER>
+          <MODEL>UCS-FI-6248UP</MODEL>
+          <NAME>Fabric [MAC address-8c:60:4f:8d:ae:fc]</NAME>
+          <REVISION>1.0</REVISION>
+          <SERIAL>SSI1912014B</SERIAL>
+          <TYPE>stack</TYPE>
+        </COMPONENT>
+      </COMPONENTS>
       <INFO>
         <COMMENTS>
 Digi TransPort WR11-L700-DE1-XW Ser#:486280

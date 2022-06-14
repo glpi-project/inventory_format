@@ -1458,7 +1458,7 @@ class Converter
 
                     break;
                 case 'components':
-                    $data['content']['network_components'] = is_array($device['components']['component']) ?
+                    $data['content']['network_components'] = isset($device['components']['component'][0]) ?
                         $device['components']['component'] :
                         [$device['components']['component']];
 
