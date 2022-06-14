@@ -506,7 +506,7 @@ class Converter
         ];
 
         foreach ($arrays as $array) {
-            if (isset($data['content'][$array]) && !isset($data['content'][$array][0])) {
+            if (isset($data['content'][$array]) && !array_is_list($data['content'][$array])) {
                 $data['content'][$array] = [$data['content'][$array]];
             }
         }
@@ -1380,14 +1380,14 @@ class Converter
 
                     break;
                 case 'ports':
-                    $data['content']['network_ports'] = isset($device['ports']['port'][0]) ?
+                    $data['content']['network_ports'] = array_is_list($device['ports']['port']) ?
                         $device['ports']['port'] :
                         [$device['ports']['port']];
 
                     //check for arrays
                     foreach ($data['content']['network_ports'] as &$netport) {
                         if (isset($netport['vlans'])) {
-                            $netport['vlans'] = isset($netport['vlans']['vlan'][0]) ?
+                            $netport['vlans'] = array_is_list($netport['vlans']['vlan']) ?
                                 $netport['vlans']['vlan'] :
                                 [$netport['vlans']['vlan']];
                         }
@@ -1411,12 +1411,12 @@ class Converter
                         }
 
                         if (isset($netport['connections'])) {
-                            $netport['connections'] = isset($netport['connections']['connection'][0]) ?
+                            $netport['connections'] = array_is_list($netport['connections']['connection']) ?
                                 $netport['connections']['connection'] :
                                 [$netport['connections']['connection']];
                         }
                         if (isset($netport['aggregate'])) {
-                            $netport['aggregate'] = isset($netport['aggregate']['port'][0]) ?
+                            $netport['aggregate'] = array_is_list($netport['aggregate']['port']) ?
                                 $netport['aggregate']['port'] :
                                 [$netport['aggregate']['port']];
                             $netport['aggregate'] = array_map('intval', $netport['aggregate']);
@@ -1441,13 +1441,13 @@ class Converter
                 case 'simcards':
                     //first, retrieve data from device
                     $elements = $device[$key];
-                    if (!isset($elements[0])) {
+                    if (!array_is_list($elements)) {
                         $elements = [$elements];
                     }
 
                     //second, append them to data
                     if (isset($data['content'][$key])) {
-                        if (!isset($data['content'][$key][0])) {
+                        if (!array_is_list($data['content'][$key])) {
                             $data['content'][$key] = [$data['content'][$key]];
                         }
                     }
@@ -1458,7 +1458,7 @@ class Converter
 
                     break;
                 case 'components':
-                    $data['content']['network_components'] = isset($device['components']['component'][0]) ?
+                    $data['content']['network_components'] = array_is_list($device['components']['component']) ?
                         $device['components']['component'] :
                         [$device['components']['component']];
 
