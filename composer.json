@@ -16,7 +16,8 @@
     },
     "require": {
         "seld/jsonlint": "^1.7",
-        "swaggest/json-schema": "^0.12.31"
+        "swaggest/json-schema": "^0.12.31",
+        "symfony/polyfill-php81": "^1.26"
     },
     "autoload": {
         "files": ["lib/php/Converter.php", "lib/php/FilesToJSON.php"]
