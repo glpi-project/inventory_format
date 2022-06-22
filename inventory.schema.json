@@ -1288,7 +1288,7 @@
                 ]
               },
               "mtu": {
-                "type": "integer"
+                "type": "integer",
                 "title": "MTU size in bytes",
               },
               "slaves": {
@@ -2009,7 +2009,7 @@
                 "type": "string"
               },
               "memory": {
-                "type": "integer"
+                "type": "integer",
                 "title": "Memory size in MB",
               },
               "resolution": {
