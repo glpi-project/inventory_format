@@ -357,6 +357,7 @@
               },
               "external_clock": {
                 "type": "integer",
+                "title": "Frequency in MHz",
                 "examples": [
                   "100"
                 ]
@@ -868,6 +869,7 @@
               },
               "pv_pe_count": {
                 "type": "integer",
+                "title": "Number of physical elements",
                 "examples": [
                   "60923"
                 ]
@@ -924,12 +926,14 @@
               },
               "lv_count": {
                 "type": "integer",
+                "title": "Number of logical volumes",
                 "examples": [
                   "3"
                 ]
               },
               "pv_count": {
                 "type": "integer",
+                "title": "Number of physical elements",
                 "examples": [
                   "1"
                 ]
@@ -993,6 +997,7 @@
               },
               "seg_count": {
                 "type": "integer",
+                "title": "Number of segments",
                 "examples": [
                   "1"
                 ]
@@ -1283,7 +1288,8 @@
                 ]
               },
               "mtu": {
-                "type": "integer"
+                "type": "integer",
+                "title": "MTU size in bytes"
               },
               "slaves": {
                 "type": "string",
@@ -1602,6 +1608,7 @@
               },
               "virtualmemory": {
                 "type": "integer",
+                "title": "Virtual memory size in KiB",
                 "examples": [
                   "215324"
                 ]
@@ -1698,6 +1705,7 @@
               },
               "filesize": {
                 "type": "integer",
+                "title": "Installed size in bytes",
                 "examples": [
                   "1373517"
                 ]
@@ -2001,7 +2009,8 @@
                 "type": "string"
               },
               "memory": {
-                "type": "integer"
+                "type": "integer",
+                "title": "Memory size in MB"
               },
               "resolution": {
                 "type": "string",
