@@ -766,7 +766,7 @@ class Converter
         }
 
         if (isset($data['content']['accountinfo'])) {
-            $ainfos = $data['content']['accountinfo']['keyname'];
+            $ainfos = $data['content']['accountinfo'];
 
             if (
                 isset($ainfos['keyname'])
