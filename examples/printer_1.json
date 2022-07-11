@@ -27,7 +27,8 @@
             "ram": 512,
             "serial": "PHCVN191TG",
             "type": "Printer",
-            "uptime": "7 days, 01:26:41.98"
+            "uptime": "7 days, 01:26:41.98",
+            "credentials": 4
         },
         "pagecounters": {
             "rectoverso": 831,
