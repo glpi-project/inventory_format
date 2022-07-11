@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.18] - 2022-07-11
+
+Update examples
+
 ## [1.1.17] - 2022-06-29
 
 Propely handle standalone components
