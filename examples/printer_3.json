@@ -77,7 +77,7 @@
             "iflastchange": "0.00 seconds",
             "ifmtu": 1500,
             "ifname": "CANNON ETHERNET MULTI-ENVIRONMENT,ROM none,JETDIRECT",
-            "ifnumber": 2,
+            "ifnumber": 3,
             "ifouterrors": 0,
             "ifoutbytes": 514488,
             "ifspeed": 1000000000,
