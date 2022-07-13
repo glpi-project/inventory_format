@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.19] - 2022-07-13
+
+Add new examples
+
 ## [1.1.18] - 2022-07-11
 
 Update examples
