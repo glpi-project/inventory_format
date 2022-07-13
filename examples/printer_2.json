@@ -69,7 +69,7 @@
                ],
                "mac": "00:87:eb:f2:be:31"
            }
-       ],
+       ]
    },
    "action": "netinventory",
    "deviceid": "CanonMX5970-2020-12-31-11-28-51",
