@@ -1,0 +1,78 @@
+{
+   "content": {
+       "cartridges": [
+           {
+               "tonerblack": "85"
+           }
+       ],
+       "firmwares": [
+           {
+               "date": "2018-09-16",
+               "description": "device firmware",
+               "manufacturer": "Canon",
+               "name": "CanonMX5970",
+               "type": "device",
+               "version": "8745213_951236"
+           }
+       ],
+       "network_device": {
+           "firmware": "8745213_951236",
+           "ips": [
+               "10.59.29.176"
+           ],
+           "mac": "00:85:eb:f4:be:20",
+           "manufacturer": "Canon",
+           "model": "Canon MX 5970",
+           "name": "MX5970",
+           "ram": 256,
+           "serial": "SDFSDF9874",
+           "type": "Printer",
+           "uptime": "8 days, 01:26:41.98",
+           "credentials": 4
+       },
+       "pagecounters": {
+           "rectoverso": 500,
+           "total": 800
+       },
+       "network_ports": [
+           {
+               "ifdescr": "CANNON ETHERNET MULTI-ENVIRONMENT,ROM none,JETDIRECT",
+               "ifinerrors": 0,
+               "ifinbytes": 0,
+               "ifinternalstatus": 1,
+               "iflastchange": "0.00 seconds",
+               "ifmtu": 1536,
+               "ifname": "CANNON ETHERNET MULTI-ENVIRONMENT,ROM none,JETDIRECT",
+               "ifnumber": 1,
+               "ifouterrors": 0,
+               "ifoutbytes": 0,
+               "ifspeed": 0,
+               "ifstatus": 1,
+               "iftype": 24
+           },
+           {
+               "ifdescr": "CANNON ETHERNET MULTI-ENVIRONMENT,ROM none,JETDIRECT",
+               "ifinerrors": 0,
+               "ifinbytes": 68906858,
+               "ifinternalstatus": 1,
+               "iflastchange": "0.00 seconds",
+               "ifmtu": 1500,
+               "ifname": "CANNON ETHERNET MULTI-ENVIRONMENT,ROM none,JETDIRECT",
+               "ifnumber": 2,
+               "ifouterrors": 0,
+               "ifoutbytes": 514488,
+               "ifspeed": 1000000000,
+               "ifstatus": 1,
+               "iftype": 6,
+               "ips": [
+                   "10.59.29.175"
+               ],
+               "mac": "00:87:eb:f2:be:31"
+           }
+       ],
+       "versionclient": "missing"
+   },
+   "action": "netinventory",
+   "deviceid": "CanonMX5970-2020-12-31-11-28-51",
+   "itemtype": "Printer"
+}
