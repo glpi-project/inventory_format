@@ -1852,8 +1852,7 @@
                 "type": "string",
                 "examples": [
                   "IDE"
-                ],
-                "pattern": "^(SCSI|HDC|IDE|USB|1394|SATA|SAS|ATAPI)$"
+                ]
               },
               "manufacturer": {
                 "type": "string",
