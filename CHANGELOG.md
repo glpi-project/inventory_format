@@ -3,6 +3,11 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.20] - 2022-09-23
+
+Drop storage interface pattern
+Remove unneeded files from release
+
 ## [1.1.19] - 2022-07-13
 
 Add new examples
