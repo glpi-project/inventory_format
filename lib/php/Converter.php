@@ -634,7 +634,7 @@ class Converter
 
         if (isset($data['content']['operatingsystem']['boot_time'])) {
             $convertedDate = $this->convertDate($data['content']['operatingsystem']['boot_time'] ?? '', 'Y-m-d H:i:s');
-            if (($convertedDate !== null) {
+            if ($convertedDate !== null) {
                 $data['content']['operatingsystem']['boot_time'] = $convertedDate;
             } else {
                 unset($data['content']['operatingsystem']['boot_time']);
@@ -1179,6 +1179,7 @@ class Converter
             'D M d H:i:s Y', //Thu Mar 14 15:05:41 2013
             'Y-m-d\TH:i:sZ',
             'd/m/Y H:i:s',
+            'Y-d-m H:i:s',
             'Y-m-d H:i:s',
             'd/m/Y H:i',
             'Y-m-d H:i',
