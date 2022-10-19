@@ -633,11 +633,11 @@ class Converter
         }
 
         if (isset($data['content']['operatingsystem']['boot_time'])) {
-            //convert to 'Y-m-d H:i:s' if format = 'Y-d-m H:i:s' if needed
+            //convert to 'Y-m-d H:i:s' if format = 'Y-d-m H:i:s'
             $boot_time  = $data['content']['operatingsystem']['boot_time'];
             $boot_datetime =  \DateTime::createFromFormat('Y-d-m H:i:s', $boot_time);
-            //check if create from 'Y-d-m H:i:s' format is OK (ie: 2022-21-09 05:21:23) and
-            //but can return a new DateTime instead of false for '2022-10-04 05:21:23'
+            //check if create from 'Y-d-m H:i:s' format is OK (ie: 2022-21-09 05:21:23)
+            //but he can return a new DateTime instead of false for '2022-10-04 05:21:23'
             //so check return value from strtotime because he only knows / handle 'English textual datetime'
             //https://www.php.net/manual/en/function.strtotime.php
             //if strtotime return false it's already Y-m-d H:i:s format
