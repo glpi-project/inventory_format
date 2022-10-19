@@ -642,7 +642,7 @@ class Converter
             //https://www.php.net/manual/en/function.strtotime.php
             //if strtotime return false it's already Y-m-d H:i:s format
             if ($boot_datetime !== false && strtotime($boot_time) === false) {
-                $boot_time = $boot_time_date->format('Y-m-d H:i:s');
+                $boot_time = $boot_datetime->format('Y-m-d H:i:s');
                 $data['content']['operatingsystem']['boot_time'] = $boot_time;
             }
 
