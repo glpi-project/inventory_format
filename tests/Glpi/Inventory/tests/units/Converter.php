@@ -454,7 +454,7 @@ class Converter extends \atoum {
         $this->string($json->itemtype)->isIdenticalTo('Computer');
 
         $expected = "2022-09-21 05:21:23";
-        $this->array((array)$json->content->operatingsystem->boot_time[0])->isIdenticalTo($expected);
+        $this->string($json->content->operatingsystem->boot_time)->isIdenticalTo($expected);
     }
 
         /**
@@ -476,7 +476,7 @@ class Converter extends \atoum {
         $this->string($json->itemtype)->isIdenticalTo('Computer');
 
         $expected = "2022-10-04 05:21:23";
-        $this->array((array)$json->content->operatingsystem->boot_time[0])->isIdenticalTo($expected);
+        $this->string($json->content->operatingsystem->boot_time)->isIdenticalTo($expected);
     }
 
     /**
