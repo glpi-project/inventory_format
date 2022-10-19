@@ -436,6 +436,50 @@ class Converter extends \atoum {
     }
 
     /**
+     * Test a full conversion and check boot time
+     *
+     * @return void
+     */
+    public function testFrBootTimeDateConvert()
+    {
+        $this->string($xml_path = realpath(TU_DIR . '/data/13.xml'));
+        $this
+            ->given($this->newTestedInstance())
+            ->then
+                ->string($json_str = $this->testedInstance->convert(file_get_contents($xml_path)))
+                ->isNotEmpty();
+
+        $this->object($json = json_decode($json_str));
+        $this->string($json->deviceid)->isIdenticalTo('android-5a30d8711bbadc9d-2022-10-19-08-08-46');
+        $this->string($json->itemtype)->isIdenticalTo('Computer');
+
+        $expected = "2022-09-21 05:21:23";
+        $this->array((array)$json->content->operatingsystem->boot_time)->isIdenticalTo($expected);
+    }
+
+        /**
+     * Test a full conversion and check boot time
+     *
+     * @return void
+     */
+    public function testEnBootTimeDateConvert()
+    {
+        $this->string($xml_path = realpath(TU_DIR . '/data/14.xml'));
+        $this
+            ->given($this->newTestedInstance())
+            ->then
+                ->string($json_str = $this->testedInstance->convert(file_get_contents($xml_path)))
+                ->isNotEmpty();
+
+        $this->object($json = json_decode($json_str));
+        $this->string($json->deviceid)->isIdenticalTo('android-5a30d8711bbadc9d-2022-10-19-08-08-46');
+        $this->string($json->itemtype)->isIdenticalTo('Computer');
+
+        $expected = "2022-10-04 05:21:23";
+        $this->array((array)$json->content->operatingsystem->boot_time)->isIdenticalTo($expected);
+    }
+
+    /**
      * Test simcards and firmwares conversions
      *
      * @return void
