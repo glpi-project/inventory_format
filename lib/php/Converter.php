@@ -632,6 +632,14 @@ class Converter
             }
         }
 
+        if (isset($data['content']['operatingsystem']['boot_time'])) {
+            if (($convertedDate = $this->convertDate($data['content']['operatingsystem']['boot_time'] ?? '', 'Y-m-d H:i:s')) !== null) {
+                $data['content']['operatingsystem']['boot_time'] = $convertedDate;
+            } else {
+                unset($data['content']['operatingsystem']['boot_time']);
+            }
+        }
+
         if (isset($data['content']['antivirus'])) {
             foreach ($data['content']['antivirus'] as &$av) {
                 //expiration date format
