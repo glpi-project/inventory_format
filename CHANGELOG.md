@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.21] - 2022-10-21
+
+Fix last boot date format
+
 ## [1.1.20] - 2022-09-23
 
 Drop storage interface pattern
