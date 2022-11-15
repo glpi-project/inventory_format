@@ -1438,7 +1438,8 @@ class Converter
                                 [$netport['connections']['connection']];
                         }
                         if (isset($netport['aggregate'])) {
-                            $netport['aggregate'] = is_array($netport['aggregate']['port']) && array_is_list($netport['aggregate']['port']) ?
+                            $netport['aggregate'] =
+                              is_array($netport['aggregate']['port']) && array_is_list($netport['aggregate']['port']) ?
                                 $netport['aggregate']['port'] :
                                 [$netport['aggregate']['port']];
                             $netport['aggregate'] = array_map('intval', $netport['aggregate']);
