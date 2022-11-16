@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<REQUEST>
+  <CONTENT>
+    <DEVICE>
+      <FIRMWARES>
+        <DESCRIPTION>device firmware</DESCRIPTION>
+        <MANUFACTURER>Juniper</MANUFACTURER>
+        <NAME>EX6210</NAME>
+        <TYPE>device</TYPE>
+        <VERSION>12.3R3.4</VERSION>
+      </FIRMWARES>
+      <PORTS>
+        <PORT>
+          <AGGREGATE>
+            <PORT>1092</PORT>
+          </AGGREGATE>
+          <IFALIAS>sw-ex8208-tmk</IFALIAS>
+          <IFDESCR>ae27</IFDESCR>
+          <IFINERRORS>0</IFINERRORS>
+          <IFINOCTETS>2843220484</IFINOCTETS>
+          <IFINTERNALSTATUS>1</IFINTERNALSTATUS>
+          <IFLASTCHANGE>0:00:09.45</IFLASTCHANGE>
+          <IFMTU>1514</IFMTU>
+          <IFNAME>ae27</IFNAME>
+          <IFNUMBER>1317</IFNUMBER>
+          <IFOUTERRORS>0</IFOUTERRORS>
+          <IFOUTOCTETS>3178610497</IFOUTOCTETS>
+          <IFSPEED>20000000000</IFSPEED>
+          <IFSTATUS>1</IFSTATUS>
+          <IFTYPE>161</IFTYPE>
+          <MAC>88:e0:f3:b0:68:1e</MAC>
+        </PORT>
+      </PORTS>
+    </DEVICE>
+    <MODULEVERSION>4.1</MODULEVERSION>
+    <PROCESSNUMBER>1</PROCESSNUMBER>
+  </CONTENT>
+  <DEVICEID>foo</DEVICEID>
+  <QUERY>SNMPQUERY</QUERY>
+</REQUEST>
