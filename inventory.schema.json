@@ -2976,7 +2976,7 @@
     "itemtype": {
       "type": "string",
       "title": "Item type",
-      "default": "Computer",
+      "default": "Unmanaged",
       "pattern": "^(Unmanaged|Computer|Phone|NetworkEquipment|Printer)$"
     },
     "partial": {
