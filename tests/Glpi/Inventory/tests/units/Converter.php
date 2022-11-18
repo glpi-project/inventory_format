@@ -646,8 +646,8 @@ class Converter extends \atoum {
         $this->string($json->action)->isIdenticalTo('netdiscovery');
         $device = $json->content->network_device;
         $this->string($device->name)->isIdenticalTo('homeassistant');
-        $this->string($device->type)->isIdenticalTo('Computer');
-        $this->string($json->itemtype)->isIdenticalTo('Computer');
+        $this->string($device->type)->isIdenticalTo('Unmanaged');
+        $this->string($json->itemtype)->isIdenticalTo('Unmanaged');
 
         //example from old specs documentation
         $this->string($xml_path = realpath(TU_DIR . '/data/10.xml'));
