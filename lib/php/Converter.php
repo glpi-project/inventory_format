@@ -1384,6 +1384,7 @@ class Converter
                                 case 'Computer':
                                 case 'Phone':
                                 case 'Printer':
+                                case 'Unmanaged':
                                     $itemtype = $device_info['type'];
                                     break;
                                 case 'Networking':
@@ -1538,7 +1539,7 @@ class Converter
 
         $device = &$data['content']['device'];
         if (!isset($device['info'])) {
-            $device['info'] = ['type' => 'Computer'];
+            $device['info'] = ['type' => 'Unmanaged'];
         }
         $device_info = &$data['content']['device']['info'];
 
