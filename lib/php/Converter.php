@@ -1340,6 +1340,9 @@ class Converter
                     if (isset($device_info['id'])) {
                         $device_info['id'] = (int)$device_info['id'];
                     }
+                    if (isset($device_info['comments'])) {
+                        $device_info['description'] = $device_info['comments'];
+                    }
 
                     //Fix network inventory type
                     if (isset($device_info['type'])) {
