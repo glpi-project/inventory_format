@@ -513,7 +513,11 @@ class Converter extends \atoum {
             'name' => 'WR21',
             'serial' => '486280',
             'type' => 'Networking',
-            'uptime' => '(12078) 0:02:00.78'
+            'uptime' => '(12078) 0:02:00.78',
+            'description' => "
+Digi TransPort WR11-L700-DE1-XW Ser#:486280
+Software Build Ver5.2.17.12.  Mar  8 2017 13:55:20  1W
+ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         ]);
         $this->array($json->content->network_ports)->hasSize(18);
         //$this->array($json->content->network_components)->hasSize(66);
@@ -548,7 +552,11 @@ class Converter extends \atoum {
             'name' => 'WR21',
             'serial' => '486280',
             'type' => 'Networking',
-            'uptime' => '(12078) 0:02:00.78'
+            'uptime' => '(12078) 0:02:00.78',
+            'description' => "
+Digi TransPort WR11-L700-DE1-XW Ser#:486280
+Software Build Ver5.2.17.12.  Mar  8 2017 13:55:20  1W
+ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         ]);
         $this->array($json->content->network_ports)->hasSize(18);
         //$this->array($json->content->network_components)->hasSize(66);
@@ -588,7 +596,8 @@ class Converter extends \atoum {
             'name' => "ucs6248up-cluster-pa3-B",
             'serial' => "SSI1912014B",
             'type' => "Networking",
-            'uptime' => "482 days, 05:42:18.50"
+            'uptime' => "482 days, 05:42:18.50",
+            'description' => "Cisco NX-OS(tm) ucs, Software (ucs-6100-k9-system), Version 5.0(3)N2(4.02b), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc.   Compiled 1/16/2019 18:00:00"
         ]);
         $this->array($json->content->network_ports)->hasSize(183);
         $this->array($json->content->network_components)->hasSize(66);
@@ -627,7 +636,8 @@ class Converter extends \atoum {
             'name' => "ucs6248up-cluster-pa3-B",
             'serial' => "SSI1912014B",
             'type' => "Networking",
-            'uptime' => "482 days, 05:42:18.50"
+            'uptime' => "482 days, 05:42:18.50",
+            'description' => "Cisco NX-OS(tm) ucs, Software (ucs-6100-k9-system), Version 5.0(3)N2(4.02b), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc.   Compiled 1/16/2019 18:00:00"
         ]);
         $this->array($json->content->network_ports)->hasSize(1);
     }
