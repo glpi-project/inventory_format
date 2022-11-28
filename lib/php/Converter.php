@@ -1148,7 +1148,7 @@ class Converter
                 return (bool)$value;
             case 'integer':
                 $casted = (int)$value;
-                if ($value == $casted) {
+                if ($value == $casted && is_numeric($value)) {
                     return $casted;
                 } else {
                     return null;
