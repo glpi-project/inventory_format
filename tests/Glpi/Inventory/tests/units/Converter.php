@@ -131,7 +131,8 @@ class Converter extends \atoum {
             [10, 'integer', 10],
             ['10', 'integer', 10],
             ['abcde', 'integer', null],
-            ['8c:60:4f:8d:ae:a1', 'integer', null]
+            ['8c:60:4f:8d:ae:a1', 'integer', null],
+            [42.42, 'integer', null],
         ];
     }
 
