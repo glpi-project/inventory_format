@@ -1147,7 +1147,12 @@ class Converter
             case 'boolean':
                 return (bool)$value;
             case 'integer':
-                return (int)$value;
+                $casted = (int)$value;
+                if ($value == $casted && is_numeric($value)) {
+                    return $casted;
+                } else {
+                    return null;
+                }
             default:
                 throw new \UnexpectedValueException('Type ' . $type . ' not known.');
         }

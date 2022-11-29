@@ -130,7 +130,9 @@ class Converter extends \atoum {
             //integers
             [10, 'integer', 10],
             ['10', 'integer', 10],
-            ['abcde', 'integer', 0]
+            ['abcde', 'integer', null],
+            ['8c:60:4f:8d:ae:a1', 'integer', null],
+            [42.42, 'integer', null],
         ];
     }
 
@@ -263,7 +265,8 @@ class Converter extends \atoum {
                 'cpus/enabled'
             ],
             'integer'   => [
-                'one/two'
+                'one/two',
+                'one/three'
             ]
         ]);
 
@@ -284,7 +287,8 @@ class Converter extends \atoum {
                     ]
                 ],
                 'one'   => [
-                    'two'  => '42'
+                    'two'  => '42',
+                    'three' => '8c:60:4f:8d:ae:a1'
                 ]
             ]
         ];
@@ -307,7 +311,8 @@ class Converter extends \atoum {
                     ]
                 ],
                 'one'   => [
-                    'two'  => 42
+                    'two'  => 42,
+                    'three' => null
                 ]
             ]
         ]);
