@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.25] - 2022-11-29
+
+Fix integers conversion from XML
+
 ## [1.1.24] - 2022-11-24
 
 Fix sysdescr handling
