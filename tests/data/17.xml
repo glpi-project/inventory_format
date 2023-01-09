@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REQUEST>
+  <CONTENT>
+    <DEVICE>
+      <FIRMWARES>
+        <DESCRIPTION>device firmware</DESCRIPTION>
+        <MANUFACTURER>Hewlett-Packard</MANUFACTURER>
+        <NAME>1810-24G</NAME>
+        <TYPE>device</TYPE>
+        <VERSION>1_12_8-customized-h</VERSION>
+      </FIRMWARES>
+      <FIRMWARES>
+        <DESCRIPTION>HP Web Management Software version</DESCRIPTION>
+        <MANUFACTURER>HP</MANUFACTURER>
+        <NAME>HP-HttpMg-Version</NAME>
+        <TYPE>system</TYPE>
+        <VERSION>PL.2.10</VERSION>
+      </FIRMWARES>
+      <INFO>
+        <COMMENTS>HP 1810-24G, PL.2.10, eCos-3.0, 1_12_8-customized-h</COMMENTS>
+        <CONTACT>Teclib</CONTACT>
+        <FIRMWARE>1_12_8-customized-h</FIRMWARE>
+        <ID>0</ID>
+        <IPS>
+          <IP>192.168.1.9</IP>
+        </IPS>
+        <LOCATION>Agence Teclib</LOCATION>
+        <MAC>d5:c9:gh:81:cf:80</MAC>
+        <MANUFACTURER>Hewlett-Packard</MANUFACTURER>
+        <ASSETTAG>asset</ASSETTAG>
+        <MODEL>1810-24G</MODEL>
+        <NAME>J9803A</NAME>
+        <SERIAL>cn3afrt37n</SERIAL>
+        <TYPE>NETWORKING</TYPE>
+        <UPTIME>78 days, 14:56:50.69</UPTIME>
+      </INFO>
+      <PORTS>
+        <PORT>
+          <CONNECTIONS>
+            <CONNECTION>
+              <MAC>83:fc:8f:6f:aa:20</MAC>
+              <MAC>d4:f8:ff:65:cc:dd</MAC>
+            </CONNECTION>
+          </CONNECTIONS>
+          <IFALIAS> 1</IFALIAS>
+          <IFDESCR>Port:  1 Gigabit - Level</IFDESCR>
+          <IFINERRORS>0</IFINERRORS>
+          <IFINOCTETS>2860835686</IFINOCTETS>
+          <IFINTERNALSTATUS>1</IFINTERNALSTATUS>
+          <IFLASTCHANGE>10.18 seconds</IFLASTCHANGE>
+          <IFMTU>1518</IFMTU>
+          <IFNAME>Port  1</IFNAME>
+          <IFNUMBER>1</IFNUMBER>
+          <IFOUTERRORS>0</IFOUTERRORS>
+          <IFOUTOCTETS>4134117414</IFOUTOCTETS>
+          <IFPORTDUPLEX>3</IFPORTDUPLEX>
+          <IFSPEED>1000000000</IFSPEED>
+          <IFSTATUS>1</IFSTATUS>
+          <IFTYPE>6</IFTYPE>
+          <MAC>d5:c9:gh:81:cf:80</MAC>
+          <VLANS>
+            <VLAN>
+              <NAME>default</NAME>
+              <NUMBER>1</NUMBER>
+              <TAGGED>0</TAGGED>
+            </VLAN>
+          </VLANS>
+        </PORT>
+      </PORTS>
+    </DEVICE>
+    <MODULEVERSION>6.0</MODULEVERSION>
+    <PROCESSNUMBER>1</PROCESSNUMBER>
+  </CONTENT>
+  <DEVICEID>foo</DEVICEID>
+  <QUERY>SNMPQUERY</QUERY>
+</REQUEST>
+

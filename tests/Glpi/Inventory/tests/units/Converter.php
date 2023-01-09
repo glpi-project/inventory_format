@@ -850,4 +850,79 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
             ->withMessage('Property unknown does not exists in schema.')
             ->exists();
     }
+
+    public function testAssetTagFromDiscovery()
+    {
+        $this->string($xml_path = realpath(TU_DIR . '/data/16.xml'));
+        $xml = file_get_contents($xml_path);
+        $this
+            ->given($this->newTestedInstance())
+            ->then
+                ->string($json_str = $this->testedInstance->convert($xml))
+                ->isNotEmpty();
+
+        $this->object($json = json_decode($json_str));
+        $this->string($json->deviceid)->isIdenticalTo('foo');
+        $this->integer($json->jobid)->isIdenticalTo(1);
+        $this->string($json->action)->isIdenticalTo('netdiscovery');
+        $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
+
+        $device = $json->content->network_device;
+        $this->array((array)$device)->isIdenticalTo([
+            "type" => "Networking" ,
+            "credentials" => 1,
+            "contact" => "Teclib",
+            "description" => "HP 1810-24G, PL.2.10, eCos-3.0, 1_12_8-customized-h",
+            "firmware" => "1_12_8-customized-h",
+            "ips" => [
+                "192.168.1.9"
+            ],
+            "location" => "Agence Teclib",
+            "mac" => "d5:c9:gh:81:cf:80",
+            "manufacturer" => "Hewlett-Packard",
+            "model" => "1810-24G",
+            "serial" => "cn3afrt37n",
+            "name" => "J9803A",
+            "assettag" => "assettag",
+            "uptime" => "78 days, 14:36:51.25",
+        ]);
+    }
+
+    public function testAssetTagFromInventory()
+    {
+        $this->string($xml_path = realpath(TU_DIR . '/data/17.xml'));
+        $xml = file_get_contents($xml_path);
+        $this
+            ->given($this->newTestedInstance())
+            ->then
+                ->string($json_str = $this->testedInstance->convert($xml))
+                ->isNotEmpty();
+
+        $this->object($json = json_decode($json_str));
+        $this->string($json->deviceid)->isIdenticalTo('foo');
+        $this->integer($json->jobid)->isIdenticalTo(1);
+        $this->string($json->action)->isIdenticalTo('netinventory');
+        $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
+
+        $device = $json->content->network_device;
+        $this->array((array)$device)->isIdenticalTo([
+            "contact" => "Teclib",
+            "firmware" => "1_12_8-customized-h",
+            "ips" => [
+                "192.168.1.9"
+            ],
+            "location" => "Agence Teclib",
+            "mac" => "d5:c9:gh:81:cf:80",
+            "manufacturer" => "Hewlett-Packard",
+            "assettag" => "asset",
+            "model" => "1810-24G",
+            "name" => "J9803A",
+            "serial" => "cn3afrt37n",
+            "type" => "Networking" ,
+            "uptime" => "78 days, 14:56:50.69",
+            "description" => "HP 1810-24G, PL.2.10, eCos-3.0, 1_12_8-customized-h",
+        ]);
+        $this->array($json->content->network_ports)->hasSize(1);
+    }
+
 }
