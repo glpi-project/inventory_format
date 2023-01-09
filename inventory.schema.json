@@ -2837,6 +2837,9 @@
             "name": {
               "type": "string"
             },
+            "assettag": {
+              "type": "string"
+            },
             "ram": {
               "type": "integer",
               "title": "Volatile memory memory in Mio",

@@ -15,6 +15,7 @@
       <MODEL>Officejet Pro 8600 N911g</MODEL>
       <SNMPHOSTNAME>myprinter</SNMPHOSTNAME>
       <TYPE>PRINTER</TYPE>
+      <ASSETTAG>assettag</ASSETTAG>
       <UPTIME>3 hours, 45:24.76</UPTIME>
     </DEVICE>
     <MODULEVERSION>4.2</MODULEVERSION>
