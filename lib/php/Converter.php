@@ -1577,7 +1577,6 @@ class Converter
             if (!isset($device['ips'])) {
                 $device['ips']['ip'] = [$device['ip']];
             }
-            unset($device['ip']);
         }
 
         foreach ($device as $key => $device_data) {
@@ -1595,6 +1594,10 @@ class Converter
                 case 'usersession':
                     unset($device[$key]);
                     //not used
+                    break;
+                case 'ip':
+                    $device_info['ip'] = $device[$key];
+                    unset($device[$key]);
                     break;
                 case 'ips':
                     $device_info['ips'] = $device[$key];

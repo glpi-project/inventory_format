@@ -551,6 +551,7 @@
         "network_device": {
             "contact": "noc@glpi-project.org",
             "firmware": "1.50B032",
+            "ip": "192.168.16.51",
             "ips": [
                 "192.168.16.51"
             ],

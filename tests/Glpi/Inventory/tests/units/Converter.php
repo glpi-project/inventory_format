@@ -508,6 +508,7 @@ class Converter extends \atoum {
         $this->array((array)$device)->isIdenticalTo([
             'contact' => 'test@glpi-project.org',
             'firmware' => '5.2.17.12',
+            'ip' => '172.21.255.102',
             'ips' => [
                 '172.21.255.102'
             ],
@@ -547,6 +548,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->array((array)$device)->isIdenticalTo([
             'contact' => 'test@glpi-project.org',
             'firmware' => '5.2.17.12',
+            'ip' => '172.21.255.102',
             'ips' => [
                 '172.21.255.102'
             ],
@@ -686,6 +688,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
             'contact' => 'anyone@glpi-project.org',
             'description' => 'Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(5), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 6/27/2013 16:00:00',
             'firmware' => 'CW_VERSION$5.2(1)N1(5)$',
+            'ip' => '192.168.0.8',
             'ips' => [
                 '192.168.0.8',
             ],
