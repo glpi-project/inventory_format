@@ -547,7 +547,6 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->array((array)$device)->isIdenticalTo([
             'contact' => 'test@glpi-project.org',
             'firmware' => '5.2.17.12',
-            'ip' => '172.21.255.102',
             'ips' => [
                 '172.21.255.102'
             ],
