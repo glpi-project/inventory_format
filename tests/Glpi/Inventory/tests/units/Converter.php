@@ -508,7 +508,6 @@ class Converter extends \atoum {
         $this->array((array)$device)->isIdenticalTo([
             'contact' => 'test@glpi-project.org',
             'firmware' => '5.2.17.12',
-            'ip' => '172.21.255.102',
             'ips' => [
                 '172.21.255.102'
             ],
