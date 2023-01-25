@@ -3,6 +3,11 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.26] - 2023-01-25
+
+Keep network equipments IP node out of IPS
+Fix LLDP connections ifnumber cast
+
 ## [1.1.25] - 2022-11-29
 
 Fix integers conversion from XML
