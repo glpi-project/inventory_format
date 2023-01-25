@@ -2790,10 +2790,6 @@
             },
             "ip": {
               "type": "string",
-              "oneOf": [
-                  { "format": "ipv4" },
-                  { "format": "ipv6" }
-              ],
               "title": "Remote device management IP address"
             },
             "ips": {
