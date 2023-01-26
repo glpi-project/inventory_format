@@ -1613,6 +1613,7 @@ class Converter
                 case 'type':
                 case 'description':
                 case 'serial':
+                case 'assettag':
                     $device_info[$key] = $device[$key];
                     unset($device[$key]);
                     break;
