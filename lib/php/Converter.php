@@ -1574,7 +1574,7 @@ class Converter
         }
 
         if (isset($device['ip'])) {
-            //set IP as remot_addr from discovery
+            //set IP as remote_addr from discovery
             $device['remote_addr'] = $device['ip'];
             if (!isset($device['ips'])) {
                 $device['ips']['ip'] = [$device['ip']];
