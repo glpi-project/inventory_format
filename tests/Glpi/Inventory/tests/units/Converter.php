@@ -873,7 +873,6 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
             "contact" => "Teclib",
             "description" => "HP 1810-24G, PL.2.10, eCos-3.0, 1_12_8-customized-h",
             "firmware" => "1_12_8-customized-h",
-            "remote_addr" => "192.168.1.9",
             "ips" => [
                 "192.168.1.9"
             ],
@@ -885,6 +884,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
             "name" => "J9803A",
             "assettag" => "assettag",
             "uptime" => "78 days, 14:36:51.25",
+            "remote_addr" => "192.168.1.9",
         ]);
     }
 
