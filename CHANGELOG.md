@@ -3,7 +3,12 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
-## [1.1.26] - 2023-01-25
+## [1.1.27] - 2023-02-02
+
+Refactor management IP
+Manage assettag
+
+## [1.1.26] - 2023-0-1-25
 
 Keep network equipments IP node out of IPS
 Fix LLDP connections ifnumber cast
