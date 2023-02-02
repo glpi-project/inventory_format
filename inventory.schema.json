@@ -2788,9 +2788,9 @@
             "firmware": {
               "type": "string"
             },
-            "ip": {
+            "remote_addr": {
               "type": "string",
-              "title": "Remote device management IP address"
+              "title": "Remote device IP address on which the agent communicates"
             },
             "ips": {
               "type": "array",

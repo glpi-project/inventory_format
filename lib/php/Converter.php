@@ -1574,9 +1574,12 @@ class Converter
         }
 
         if (isset($device['ip'])) {
+            //set IP as remote_addr from discovery
+            $device['remote_addr'] = $device['ip'];
             if (!isset($device['ips'])) {
                 $device['ips']['ip'] = [$device['ip']];
             }
+            unset($device['ip']);
         }
 
         foreach ($device as $key => $device_data) {
@@ -1595,8 +1598,8 @@ class Converter
                     unset($device[$key]);
                     //not used
                     break;
-                case 'ip':
-                    $device_info['ip'] = $device[$key];
+                case 'remote_addr':
+                    $device_info['remote_addr'] = $device[$key];
                     unset($device[$key]);
                     break;
                 case 'ips':
