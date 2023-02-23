@@ -2788,10 +2788,6 @@
             "firmware": {
               "type": "string"
             },
-            "ip": {
-              "type": "string",
-              "title": "Remote device management IP address"
-            },
             "ips": {
               "type": "array",
               "title": "IP addresses",
