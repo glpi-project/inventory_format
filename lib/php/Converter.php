@@ -1574,8 +1574,6 @@ class Converter
         }
 
         if (isset($device['ip'])) {
-            //set IP as remote_addr from discovery
-            $device['remote_addr'] = $device['ip'];
             if (!isset($device['ips'])) {
                 $device['ips']['ip'] = [$device['ip']];
             }
@@ -1597,10 +1595,6 @@ class Converter
                 case 'usersession':
                     unset($device[$key]);
                     //not used
-                    break;
-                case 'remote_addr':
-                    $device_info['remote_addr'] = $device[$key];
-                    unset($device[$key]);
                     break;
                 case 'ips':
                     $device_info['ips'] = $device[$key];

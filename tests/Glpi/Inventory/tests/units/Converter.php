@@ -686,7 +686,6 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
             'contact' => 'anyone@glpi-project.org',
             'description' => 'Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(5), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 6/27/2013 16:00:00',
             'firmware' => 'CW_VERSION$5.2(1)N1(5)$',
-            'remote_addr' => '192.168.0.8',
             'ips' => [
                 '192.168.0.8',
             ],
@@ -884,7 +883,6 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
             "name" => "J9803A",
             "assettag" => "assettag",
             "uptime" => "78 days, 14:36:51.25",
-            "remote_addr" => "192.168.1.9",
         ]);
     }
 

@@ -2788,10 +2788,6 @@
             "firmware": {
               "type": "string"
             },
-            "remote_addr": {
-              "type": "string",
-              "title": "Remote device IP address on which the agent communicates"
-            },
             "ips": {
               "type": "array",
               "title": "IP addresses",
