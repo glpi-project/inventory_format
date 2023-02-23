@@ -3,6 +3,11 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.28] - 2023-02-23
+
+Revert management IP refactoring
+Revert keep network equipments IP node out of IPS
+
 ## [1.1.27] - 2023-02-02
 
 Refactor management IP
