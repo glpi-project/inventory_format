@@ -24,6 +24,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88</COMMENTS>
         <CONTACT>test@glpi-project.org</CONTACT>
         <FIRMWARE>5.2.17.12</FIRMWARE>
         <ID>0</ID>
+        <IP>172.21.255.102</IP>
         <IPS>
           <IP>172.21.255.102</IP>
         </IPS>
