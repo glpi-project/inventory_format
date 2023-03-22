@@ -59,10 +59,24 @@ class FilesToJSON
     public const TYPE_OUI = 'ouis';
     public const TYPE_IFTYPE = 'iftype';
 
+    private const SOURCES = [
+        self::TYPE_PCI    => 'https://pci-ids.ucw.cz/v2.2/pci.ids',
+        self::TYPE_USB    => 'http://www.linux-usb.org/usb.ids',
+        self::TYPE_OUI    => 'https://standards-oui.ieee.org/oui/oui.txt',
+        self::TYPE_IFTYPE => 'https://www.iana.org/assignments/smi-numbers/smi-numbers-5.csv',
+    ];
+
     /**
+     * Path of data files (JSON files).
      * @var string
      */
-    private $path = __DIR__ . '/../../data';
+    private $data_path = __DIR__ . '/../../data';
+
+    /**
+     * Path of source files (JSON files).
+     * @var string
+     */
+    private $sources_path = __DIR__ . '/../../source_files';
 
     /**
      * Get JSON file path
@@ -73,26 +87,7 @@ class FilesToJSON
      */
     public function getJsonFilePath($type)
     {
-        return $this->path . '/' . $type . '.json';
-    }
-
-    /**
-     * Clean all files
-     *
-     * @return void
-     */
-    public function cleanFiles()
-    {
-        $types = [
-            self::TYPE_PCI,
-            self::TYPE_USB,
-            self::TYPE_OUI,
-            self::TYPE_IFTYPE
-        ];
-        foreach ($types as $type) {
-            @unlink($this->getJsonFilePath($type));
-            @unlink($this->getSourceFilePath($type));
-        }
+        return $this->data_path . '/' . $type . '.json';
     }
 
     /**
@@ -100,12 +95,16 @@ class FilesToJSON
      *
      * @return void
      */
-    public function downloadSources()
+    public function refreshSources()
     {
-        $this->getSourceFile(self::TYPE_PCI, true);
-        $this->getSourceFile(self::TYPE_USB, true);
-        $this->getSourceFile(self::TYPE_OUI, true);
-        $this->getSourceFile(self::TYPE_IFTYPE, true);
+        foreach (self::SOURCES as $type => $uri) {
+            $contents = $this->callCurl($uri);
+
+            file_put_contents(
+                $this->getSourceFilePath($type),
+                $contents
+            );
+        }
     }
 
     /**
@@ -145,26 +144,11 @@ class FilesToJSON
      */
     public function getSourceFilePath($type)
     {
-        $path = $this->path . '/';
-
-        switch ($type) {
-            case self::TYPE_PCI:
-                $path .= 'pci.ids';
-                break;
-            case self::TYPE_USB:
-                $path .= 'usb.ids';
-                break;
-            case self::TYPE_OUI:
-                $path .= 'oui.txt';
-                break;
-            case self::TYPE_IFTYPE:
-                $path .= 'iftype.csv';
-                break;
-            default:
-                throw new \RuntimeException('Unknown type ' . $type);
+        if (!array_key_exists($type, self::SOURCES)) {
+            throw new \RuntimeException('Unknown type ' . $type);
         }
 
-        return $path;
+        return $this->sources_path . '/' . basename(self::SOURCES[$type]);
     }
 
     /**
@@ -178,42 +162,6 @@ class FilesToJSON
     protected function getSourceFile($type, $download = false)
     {
         $path = $this->getSourceFilePath($type);
-        $uri = null;
-
-        switch ($type) {
-            case self::TYPE_PCI:
-                $uri = 'https://pci-ids.ucw.cz/v2.2/pci.ids';
-                break;
-            case self::TYPE_USB:
-                $uri = 'http://www.linux-usb.org/usb.ids';
-                break;
-            case self::TYPE_OUI:
-                $uri = 'https://standards-oui.ieee.org/oui/oui.txt';
-                break;
-            case self::TYPE_IFTYPE:
-                $uri = 'https://www.iana.org/assignments/smi-numbers/smi-numbers-5.csv';
-                break;
-            default:
-                throw new \RuntimeException('Unknown type ' . $type);
-        }
-
-        $interval = strtotime('-1 week');
-        if (!file_exists($path) || filemtime($path) <= $interval) {
-            if ($download === true) {
-                $contents = $this->callCurl($uri);
-            } else {
-                $contents = file_get_contents(__DIR__ . '/../../source_files/' . basename($uri));
-            }
-
-            if ($contents == '') {
-                throw new \RuntimeException('Empty content');
-            }
-
-            file_put_contents(
-                $path,
-                $contents
-            );
-        }
         return fopen($path, 'r');
     }
 
@@ -324,34 +272,18 @@ class FilesToJSON
     /**
      * Executes a curl call
      *
-     * @param string $url        URL to retrieve
-     * @param array  $eopts      Extra curl opts
-     * @param string $msgerr     human readable error string on error or empty content
-     * @param string $curl_error will contains original curl error string if an error occurs
+     * @param string $url   URL to retrieve
      *
      * @return string
      */
-    public function callCurl($url, array $eopts = [], &$msgerr = null, &$curl_error = null)
+    public function callCurl($url): string
     {
-        $content = '';
-        $taburl  = parse_url($url);
-
-        $defaultport = 80;
-
-        // Manage standard HTTPS port : scheme detection or port 443
-        if (
-            (isset($taburl["scheme"]) && $taburl["scheme"] == 'https')
-            || (isset($taburl["port"]) && $taburl["port"] == '443')
-        ) {
-            $defaultport = 443;
-        }
-
         $ch = curl_init($url);
         $opts = [
             CURLOPT_URL             => $url,
             CURLOPT_USERAGENT       => "GLPI/Inventory format 1.0",
             CURLOPT_RETURNTRANSFER  => 1,
-        ] + $eopts;
+        ];
 
         curl_setopt_array($ch, $opts);
         $content = curl_exec($ch);
@@ -359,18 +291,11 @@ class FilesToJSON
         curl_close($ch);
 
         if ($curl_error !== null) {
-            $content = '';
+            throw new \RuntimeException($curl_error);
         }
 
         if (empty($content)) {
-            $msgerr = sprintf(
-                'No data available on %s',
-                $url
-            );
-        }
-
-        if (!empty($msgerr)) {
-            throw new \RuntimeException($msgerr);
+            throw new \RuntimeException(sprintf('No data available on %s', $url));
         }
 
         return $content;
