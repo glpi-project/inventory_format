@@ -188,7 +188,7 @@ class FilesToJSON
                 $uri = 'http://www.linux-usb.org/usb.ids';
                 break;
             case self::TYPE_OUI:
-                $uri = 'http://standards-oui.ieee.org/oui/oui.txt';
+                $uri = 'https://standards-oui.ieee.org/oui/oui.txt';
                 break;
             case self::TYPE_IFTYPE:
                 $uri = 'https://www.iana.org/assignments/smi-numbers/smi-numbers-5.csv';
