@@ -1,0 +1,48 @@
+name: "Refresh sources"
+
+on:
+  schedule:
+    - cron: "0 1,15 * * *"
+  workflow_dispatch:
+
+jobs:
+  refresh-sources:
+    permissions:
+      contents: "write"
+      pull-requests: "write"
+    name: "Refresh sources"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@v3"
+      - name: "Refresh sources"
+        id: "refresh"
+        run: |
+          composer install --ansi --no-dev --no-interaction --no-progress --prefer-dist
+          bin/refresh_hw_sources
+          bin/build_hw_jsons
+          if [ ! -z "$(git status --porcelain)" ]; then
+            BRANCH="task/refresh-sources-$(date +'%Y%m%d%H%M%S')"
+            git config --local user.email "bot@glpi-project.org"
+            git config --local user.name "GLPI Project bot"
+            git checkout -b $BRANCH
+            git add .
+            git commit -m "Refresh source files"
+            git push origin $BRANCH
+            echo "create_pr=yes" >> $GITHUB_OUTPUT
+            echo "branch=${BRANCH}" >> $GITHUB_OUTPUT
+          fi
+      - name: "Create pull request"
+        if: ${{ steps.refresh.outputs.create_pr == 'yes' }}
+        uses: "actions/github-script@v6"
+        with:
+          script: |
+            const { repo, owner } = context.repo;
+            const result = await github.rest.pulls.create({
+              title: 'Refresh source files',
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              head: '${{ steps.refresh.outputs.branch }}',
+              base: '${{ github.ref_name }}',
+              body: 'Automatic refresh of source files'
+            });

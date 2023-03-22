@@ -2,3 +2,4 @@
 -!/data/README.md
 -/tests/code-coverage/
 -/vendor/
+/composer.lock
