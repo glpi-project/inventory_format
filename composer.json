@@ -24,7 +24,7 @@
     },
     "bin": ["bin/convert", "bin/build_hw_jsons", "bin/refresh_hw_sources","bin/validate"],
     "require-dev": {
-        "atoum/atoum": "^4.0",
+        "atoum/atoum": "^4.1",
         "squizlabs/php_codesniffer": "^3.5"
     },
     "extra": {
