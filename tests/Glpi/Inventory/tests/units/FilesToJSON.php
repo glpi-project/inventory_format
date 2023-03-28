@@ -56,6 +56,22 @@ class FilesToJSON extends TestCase
 {
     private $path = __DIR__ . '/../../../../../data/';
 
+    protected function setUp(): void
+    {
+        $this->clean();
+    }
+
+    protected function tearDown(): void
+    {
+        $this->clean();
+    }
+
+    private function clean()
+    {
+        $json_files = glob($this->path . '*.json');
+        array_map('unlink', $json_files);
+    }
+
     /**
      * Files provider
      *
@@ -73,7 +89,10 @@ class FilesToJSON extends TestCase
             ], [
                 'filename' => 'ouis',
                 'method'   => 'convertOUIFile'
-            ]
+            ], [
+                'filename' => 'iftype',
+                'method'   => 'convertIftypeFile'
+            ],
         ];
     }
 
@@ -87,16 +106,43 @@ class FilesToJSON extends TestCase
      *
      * @return void
      */
-    public function testConvertPciFile($filename, $method)
+    public function testConvertFile($filename, $method)
     {
+        $instance = new \Glpi\Inventory\FilesToJSON();
+
         $file = $this->path . '/' . $filename . '.json';
 
         //checks file exists
         $this->assertFalse(file_exists($file), 'JSON file already exists');
 
-        $instance = new \Glpi\Inventory\FilesToJSON();
-        $this->assertGreaterThan(0, $instance->$method());
+        $method = new \ReflectionMethod($instance, $method);
+        $method->setAccessible(true);
+        $method->invoke($instance);
 
         $this->assertTrue(file_exists($file), 'JSON file has not been generated');
+    }
+
+    public function testRun()
+    {
+        $instance = new \Glpi\Inventory\FilesToJSON();
+
+        $types = [
+            'pciid'  => $this->path . 'pciid.json',
+            'usbid'  => $this->path . 'usbid.json',
+            'ouis'   => $this->path . 'ouis.json',
+            'iftype' => $this->path . 'iftype.json',
+        ];
+
+        // Ensure files are not existing
+        foreach ($types as $type => $filepath) {
+            $this->assertFalse(file_exists($filepath), sprintf('JSON file "%s" already exists', $type));
+        }
+
+        $instance->run();
+
+        // Ensure files are generated
+        foreach ($types as $type => $filepath) {
+            $this->assertTrue(file_exists($filepath), sprintf('JSON file "%s" has not been generated', $type));
+        }
     }
 }

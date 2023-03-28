@@ -48,16 +48,23 @@ namespace Glpi\Inventory;
  * @category  Inventory
  * @package   Glpi
  * @author    Johan Cwiklinski <jcwiklinski@teclib.com>
- * @copyright 2018 GLPI Team and Contributors
+ * @copyright 2018-2023 GLPI Team and Contributors
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL License 3.0 or (at your option) any later version
  * @link      https://glpi-project.org
  */
-class FilesToJSON
+final class FilesToJSON
 {
     public const TYPE_PCI = 'pciid';
     public const TYPE_USB = 'usbid';
     public const TYPE_OUI = 'ouis';
     public const TYPE_IFTYPE = 'iftype';
+
+    private const SOURCES_URLS = [
+        self::TYPE_PCI    => 'https://pci-ids.ucw.cz/v2.2/pci.ids',
+        self::TYPE_USB    => 'http://www.linux-usb.org/usb.ids',
+        self::TYPE_OUI    => 'https://standards-oui.ieee.org/oui/oui.txt',
+        self::TYPE_IFTYPE => 'https://www.iana.org/assignments/smi-numbers/smi-numbers-5.csv',
+    ];
 
     /**
      * @var string
@@ -71,69 +78,71 @@ class FilesToJSON
      *
      * @return string
      */
-    public function getJsonFilePath($type)
+    public function getJsonFilePath(string $type): string
     {
         return $this->path . '/' . $type . '.json';
     }
 
     /**
-     * Clean all files
-     *
-     * @return void
-     */
-    public function cleanFiles()
-    {
-        $types = [
-            self::TYPE_PCI,
-            self::TYPE_USB,
-            self::TYPE_OUI,
-            self::TYPE_IFTYPE
-        ];
-        foreach ($types as $type) {
-            @unlink($this->getJsonFilePath($type));
-            @unlink($this->getSourceFilePath($type));
-        }
-    }
-
-    /**
      * Download new sources
      *
+     * @throws \RuntimeException
      * @return void
      */
-    public function downloadSources()
+    public function refreshSources()
     {
-        $this->getSourceFile(self::TYPE_PCI, true);
-        $this->getSourceFile(self::TYPE_USB, true);
-        $this->getSourceFile(self::TYPE_OUI, true);
-        $this->getSourceFile(self::TYPE_IFTYPE, true);
+        foreach (self::SOURCES_URLS as $type => $uri) {
+            $path     = $this->getSourceFilePath($type);
+            $contents = $this->callCurl($uri);
+
+            if (file_put_contents($path, $contents) !== strlen($contents)) {
+                throw new \RuntimeException(sprintf('Unable to write content in %s.', $path));
+            }
+        }
     }
 
     /**
      * Runs all conversions
      *
+     * @throws \RuntimeException
      * @return void
      */
-    public function run()
+    public function run(): void
     {
-        $pci = $this->convertPciFile();
-        if ($pci === false) {
-            throw new \RuntimeException('PCI JSON file has not been written!');
+        $this->convertPciFile();
+        $this->convertUsbFile();
+        $this->convertOUIFile();
+        $this->convertIftypeFile();
+    }
+
+    /**
+     * Return source file name for given type.
+     *
+     * @param string $type
+     * @return string
+     */
+    private function getSourceFilename(string $type): string
+    {
+        $basename = null;
+
+        switch ($type) {
+            case self::TYPE_PCI:
+                $basename = 'pci.ids';
+                break;
+            case self::TYPE_USB:
+                $basename = 'usb.ids';
+                break;
+            case self::TYPE_OUI:
+                $basename = 'oui.txt';
+                break;
+            case self::TYPE_IFTYPE:
+                $basename = 'iftype.csv';
+                break;
+            default:
+                throw new \RuntimeException('Unknown type ' . $type);
         }
 
-        $usb = $this->convertUsbFile();
-        if ($usb === false) {
-            throw new \RuntimeException('USB JSON file has not been written!');
-        }
-
-        $oui = $this->convertOUIFile();
-        if ($oui === false) {
-            throw new \RuntimeException('OUI JSON file has not been written!');
-        }
-
-        $iftype = $this->convertIftypeFile();
-        if ($iftype === false) {
-            throw new \RuntimeException('IFtype JSON file has not been written!');
-        }
+        return $basename;
     }
 
     /**
@@ -143,93 +152,52 @@ class FilesToJSON
      *
      * @return string
      */
-    public function getSourceFilePath($type)
+    private function getSourceFilePath(string $type): string
     {
-        $path = $this->path . '/';
-
-        switch ($type) {
-            case self::TYPE_PCI:
-                $path .= 'pci.ids';
-                break;
-            case self::TYPE_USB:
-                $path .= 'usb.ids';
-                break;
-            case self::TYPE_OUI:
-                $path .= 'oui.txt';
-                break;
-            case self::TYPE_IFTYPE:
-                $path .= 'iftype.csv';
-                break;
-            default:
-                throw new \RuntimeException('Unknown type ' . $type);
-        }
-
-        return $path;
+        return $this->path . '/' . $this->getSourceFilename($type);
     }
 
     /**
      * Get file for type
      *
      * @param string  $type     Type
-     * @param boolean $download Whether to download source files from upstream oor use provided ones
-     *
+     * @throws \RuntimeException
      * @return resource
      */
-    protected function getSourceFile($type, $download = false)
+    private function getSourceFile(string $type)
     {
         $path = $this->getSourceFilePath($type);
-        $uri = null;
 
-        switch ($type) {
-            case self::TYPE_PCI:
-                $uri = 'https://pci-ids.ucw.cz/v2.2/pci.ids';
-                break;
-            case self::TYPE_USB:
-                $uri = 'http://www.linux-usb.org/usb.ids';
-                break;
-            case self::TYPE_OUI:
-                $uri = 'https://standards-oui.ieee.org/oui/oui.txt';
-                break;
-            case self::TYPE_IFTYPE:
-                $uri = 'https://www.iana.org/assignments/smi-numbers/smi-numbers-5.csv';
-                break;
-            default:
-                throw new \RuntimeException('Unknown type ' . $type);
+        if (!file_exists($path)) {
+            // Fallback to default source file
+            $path = __DIR__ . '/../../source_files/' . $this->getSourceFilename($type);
+
+            if (!file_exists($path)) {
+                throw new \RuntimeException(sprintf('Source file %s not found.', $this->getSourceFilename($type)));
+            }
         }
 
-        $interval = strtotime('-1 week');
-        if (!file_exists($path) || filemtime($path) <= $interval) {
-            if ($download === true) {
-                $contents = $this->callCurl($uri);
-            } else {
-                $contents = file_get_contents(__DIR__ . '/../../source_files/' . basename($uri));
-            }
+        $file = fopen($path, 'r');
 
-            if ($contents == '') {
-                throw new \RuntimeException('Empty content');
-            }
-
-            file_put_contents(
-                $path,
-                $contents
-            );
+        if ($file === false) {
+            throw new \RuntimeException(sprintf('Unable to open source file %s.', $path));
         }
-        return fopen($path, 'r');
+
+        return $file;
     }
 
     /**
      * Convert PCI file from IDS to JSON
      *
-     * @return int|false
+     * @throws \RuntimeException
+     * @return void
      */
-    public function convertPciFile()
+    private function convertPciFile(): void
     {
         $pciFile = $this->getSourceFile(self::TYPE_PCI);
         $pci_ids = [];
 
-        while (!feof($pciFile)) {
-            $buffer = fgets($pciFile, 4096);
-
+        while ($buffer = fgets($pciFile)) {
             $stack = [];
             if (preg_match("/^(\w+)\s*(.+)/i", $buffer, $stack)) {
                 $vendorId = $stack[1];
@@ -243,22 +211,26 @@ class FilesToJSON
             }
         }
 
-        return file_put_contents($this->getJsonFilePath(self::TYPE_PCI), json_encode($pci_ids, JSON_PRETTY_PRINT));
+        if (!feof($pciFile)) {
+            // Ensure source file reading reach end of file.
+            throw new \RuntimeException('Error while reading PCI source file.');
+        }
+
+        $this->writeJsonFile(self::TYPE_PCI, $pci_ids);
     }
 
     /**
      * Convert USB file from IDS to JSON
      *
-     * @return int|false
+     * @throws \RuntimeException
+     * @return void
      */
-    public function convertUsbFile()
+    private function convertUsbFile(): void
     {
         $usbFile = $this->getSourceFile(self::TYPE_USB);
         $usb_ids = [];
 
-        while (!feof($usbFile)) {
-            $buffer = fgets($usbFile, 4096);
-
+        while ($buffer = fgets($usbFile)) {
             $stack = [];
             if (preg_match("/^(\w+)\s*(.+)/i", $buffer, $stack)) {
                 $vendorId = $stack[1];
@@ -272,23 +244,27 @@ class FilesToJSON
             }
         }
 
-        return file_put_contents($this->getJsonFilePath(self::TYPE_USB), json_encode($usb_ids, JSON_PRETTY_PRINT));
+        if (!feof($usbFile)) {
+            // Ensure source file reading reach end of file.
+            throw new \RuntimeException('Error while reading USB source file.');
+        }
+
+        $this->writeJsonFile(self::TYPE_USB, $usb_ids);
     }
 
 
     /**
      * Convert OUI file from TXT to JSON
      *
-     * @return int|false
+     * @throws \RuntimeException
+     * @return void
      */
-    public function convertOUIFile()
+    private function convertOUIFile(): void
     {
         $ouiFile = $this->getSourceFile(self::TYPE_OUI);
         $ouis = [];
 
-        while (!feof($ouiFile)) {
-            $buffer = fgets($ouiFile, 4096);
-
+        while ($buffer = fgets($ouiFile)) {
             $stack = [];
             if (preg_match("/^(\S+)\s*\(hex\)\t{2}(.+)/i", $buffer, $stack)) {
                 $mac = strtr($stack[1], '-', ':');
@@ -296,20 +272,26 @@ class FilesToJSON
             }
         }
 
-        return file_put_contents($this->getJsonFilePath(self::TYPE_OUI), json_encode($ouis, JSON_PRETTY_PRINT));
+        if (!feof($ouiFile)) {
+            // Ensure source file reading reach end of file.
+            throw new \RuntimeException('Error while reading OUI source file.');
+        }
+
+        $this->writeJsonFile(self::TYPE_OUI, $ouis);
     }
 
     /**
      * Convert iftype file from CSV to JSON
      *
-     * @return int|false
+     * @throws \RuntimeException
+     * @return void
      */
-    public function convertIftypeFile()
+    private function convertIftypeFile(): void
     {
         $iftypeFile = $this->getSourceFile(self::TYPE_IFTYPE);
         $iftypes = [];
 
-        while (($line = fgetcsv($iftypeFile)) !== false) {
+        while ($line = fgetcsv($iftypeFile)) {
             $iftypes[] = [
                 'decimal'     => $line[0],
                 'name'        => $line[1],
@@ -318,17 +300,44 @@ class FilesToJSON
             ];
         }
 
-        return file_put_contents($this->getJsonFilePath(self::TYPE_IFTYPE), json_encode($iftypes, JSON_PRETTY_PRINT));
+        if (!feof($iftypeFile)) {
+            // Ensure source file reading reach end of file.
+            throw new \RuntimeException('Error while reading IFtype source file.');
+        }
+
+        $this->writeJsonFile(self::TYPE_IFTYPE, $iftypes);
+    }
+
+    /**
+     * Write converted source into corresponding file.
+     *
+     * @param string $type
+     * @param array $data
+     * @throws \RuntimeException
+     * @return void
+     */
+    private function writeJsonFile(string $type, array $data): void
+    {
+        $path     = $this->getJsonFilePath($type);
+        $contents = json_encode($data, JSON_PRETTY_PRINT);
+
+        if ($contents === false) {
+            throw new \RuntimeException(sprintf('Error while encoding "%s" data to JSON.', $type));
+        }
+
+        if (!file_put_contents($path, $contents) === strlen($contents)) {
+            throw new \RuntimeException(sprintf('Unable to write "%s" JSON into "%s".', $type, $path));
+        }
     }
 
     /**
      * Executes a curl call
      *
      * @param string $url   URL to retrieve
-     *
+     * @throws \RuntimeException
      * @return string
      */
-    protected function callCurl($url): string
+    private function callCurl($url): string
     {
         $ch = curl_init($url);
 
