@@ -1,5 +1,5 @@
-vendor/
-tests/code-coverage/
-data/*.json
-data/*.txt
-data/*.ids
+/data/*
+!/data/README.md
+/tests/code-coverage/
+/vendor/
+/composer.lock
