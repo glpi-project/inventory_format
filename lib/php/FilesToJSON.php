@@ -324,53 +324,44 @@ class FilesToJSON
     /**
      * Executes a curl call
      *
-     * @param string $url        URL to retrieve
-     * @param array  $eopts      Extra curl opts
-     * @param string $msgerr     human readable error string on error or empty content
-     * @param string $curl_error will contains original curl error string if an error occurs
+     * @param string $url   URL to retrieve
      *
      * @return string
      */
-    public function callCurl($url, array $eopts = [], &$msgerr = null, &$curl_error = null)
+    protected function callCurl($url): string
     {
-        $content = '';
-        $taburl  = parse_url($url);
-
-        $defaultport = 80;
-
-        // Manage standard HTTPS port : scheme detection or port 443
-        if (
-            (isset($taburl["scheme"]) && $taburl["scheme"] == 'https')
-            || (isset($taburl["port"]) && $taburl["port"] == '443')
-        ) {
-            $defaultport = 443;
-        }
-
         $ch = curl_init($url);
+
         $opts = [
             CURLOPT_URL             => $url,
             CURLOPT_USERAGENT       => "GLPI/Inventory format 1.0",
             CURLOPT_RETURNTRANSFER  => true,
             CURLOPT_FOLLOWLOCATION  => true,
-        ] + $eopts;
-
+        ];
         curl_setopt_array($ch, $opts);
+
         $content = curl_exec($ch);
         $curl_error = curl_error($ch) ?: null;
+        $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
 
+        $msgerr = null;
         if ($curl_error !== null) {
-            $content = '';
-        }
-
-        if (empty($content)) {
+            $msgerr = $curl_error;
+        } elseif ($status_code !== 200) {
+            $msgerr = sprintf(
+                'HTTP code %s received from %s',
+                $status_code,
+                $url
+            );
+        } elseif (empty($content)) {
             $msgerr = sprintf(
                 'No data available on %s',
                 $url
             );
         }
 
-        if (!empty($msgerr)) {
+        if ($msgerr !== null) {
             throw new \RuntimeException($msgerr);
         }
 
