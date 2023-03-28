@@ -45,6 +45,7 @@ jobs:
       - name: XML well formed
         run: |
           sudo apt update
+          sudo apt --fix-broken install
           sudo apt-get install expat
           xmlwf tests/data/*.xml
 
