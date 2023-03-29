@@ -746,56 +746,22 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0']]));
         $instance = new \Glpi\Inventory\Converter();
         $this->assertInstanceOf(\Glpi\Inventory\Converter::class, $instance->setExtraProperties($extra_prop));
+        $this->assertTrue($instance->validate($json));
 
-        /*$this->when(
-            function () {
-                $extra_prop = ['accesslog' => ['type' => 'string']];
-                $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0']]));
-                $this
-                    ->given($this->newTestedInstance())
-                    ->if($this->testedInstance->setExtraProperties($extra_prop))
-                    ->then
-                    ->boolean($this->testedInstance->validate($json))->isTrue();
-            }
-        )
-            ->error()
-            ->withType(E_USER_WARNING)
-            ->withMessage('Property accesslog already exists in schema.')
-            ->exists();*/
 
         //try add extra sub node already existing
-        /*$this->when(
-            function () {
-                $extra_sub_prop = ['hardware' => ['chassis_type' => ['type' => 'string']]];
-                $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0']]));
-                $this
-                    ->given($this->newTestedInstance())
-                    ->if($this->testedInstance->setExtraSubProperties($extra_sub_prop))
-                    ->then
-                    ->boolean($this->testedInstance->validate($json))->isTrue();
-            }
-        )
-            ->error()
-            ->withType(E_USER_WARNING)
-            ->withMessage('Property hardware/chassis_type already exists in schema.')
-            ->exists();*/
+        $extra_sub_prop = ['hardware' => ['chassis_type' => ['type' => 'string']]];
+        $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0']]));
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertInstanceOf(\Glpi\Inventory\Converter::class, $instance->setExtraSubProperties($extra_sub_prop));
+        $this->assertTrue($instance->validate($json));
 
         //try add extra sub node with missing parent
-        /*$this->when(
-            function () {
-                $extra_sub_prop = ['unknown' => ['chassis_type' => ['type' => 'string']]];
-                $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0']]));
-                $this
-                    ->given($this->newTestedInstance())
-                    ->if($this->testedInstance->setExtraSubProperties($extra_sub_prop))
-                    ->then
-                    ->boolean($this->testedInstance->validate($json))->isTrue();
-            }
-        )
-            ->error()
-            ->withType(E_USER_WARNING)
-            ->withMessage('Property unknown does not exists in schema.')
-            ->exists();*/
+        $extra_sub_prop = ['unknown' => ['chassis_type' => ['type' => 'string']]];
+        $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0']]));
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertInstanceOf(\Glpi\Inventory\Converter::class, $instance->setExtraSubProperties($extra_sub_prop));
+        $this->assertTrue($instance->validate($json));
     }
 
     public function testAssetTagFromDiscovery()
