@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.29] - 2023-03-29
+Update third party dependencies
+Rework hardware JSON file build
+
 ## [1.1.28] - 2023-02-23
 
 Revert management IP refactoring
