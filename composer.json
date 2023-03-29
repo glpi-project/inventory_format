@@ -15,6 +15,7 @@
         "issues": "https://github.com/glpi-project/inventory_format/issues"
     },
     "require": {
+        "php": ">=7.4",
         "seld/jsonlint": "^1.9",
         "swaggest/json-schema": "^0.12.41",
         "symfony/polyfill-php81": "^1.26"
@@ -24,12 +25,19 @@
     },
     "bin": ["bin/convert", "bin/build_hw_jsons", "bin/refresh_hw_sources","bin/validate"],
     "require-dev": {
-        "atoum/atoum": "^4.1",
+        "phpunit/phpunit": "^9.6",
         "squizlabs/php_codesniffer": "^3.7"
     },
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"
         }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "7.4.99"
+        },
+        "sort-packages": true
     }
 }
