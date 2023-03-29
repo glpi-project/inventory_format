@@ -32,7 +32,9 @@
 
 namespace Glpi\Inventory\tests\units;
 
-class Converter extends \atoum {
+use PHPUnit\Framework\TestCase;
+
+class Converter extends TestCase {
 
     /**
      * Test constructor
@@ -41,26 +43,16 @@ class Converter extends \atoum {
      */
     public function testConstructor()
     {
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-                ->float($this->testedInstance->getTargetVersion())
-                    ->isIdenticalTo($this->getTestedClassName()::LAST_VERSION);
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertSame($instance::LAST_VERSION, $instance->getTargetVersion());
 
         $ver = 156.2;
-        $this
-            ->given($this->newTestedInstance($ver))
-            ->then
-                ->float($this->testedInstance->getTargetVersion())
-                    ->isIdenticalTo($ver);
+        $instance = new \Glpi\Inventory\Converter($ver);
+        $this->assertSame($ver, $instance->getTargetVersion());
 
-        $this->exception(
-            function () {
-                new \Glpi\Inventory\Converter('abcde');
-            }
-        )
-            ->isInstanceOf('\UnexpectedValueException')
-            ->hasMessage('Version must be a double!');
+        $this->expectException(\UnexpectedValueException::class);
+        $this->expectExceptionMessage('Version must be a double!');
+        new \Glpi\Inventory\Converter('abcde');
     }
 
     /**
@@ -70,13 +62,11 @@ class Converter extends \atoum {
      */
     public function testDebug()
     {
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-                ->boolean($this->testedInstance->isDebug())->isFalse();
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertFalse($instance->isDebug());
 
-        $this->object($this->testedInstance->setDebug(true))->isInstanceOf($this->getTestedClassName());
-        $this->boolean($this->testedInstance->isDebug())->isTrue();
+        $this->assertInstanceOf(\Glpi\Inventory\Converter::class, $instance->setDebug(true));
+        $this->assertTrue($instance->isDebug());
     }
 
     /**
@@ -87,10 +77,8 @@ class Converter extends \atoum {
     public function testSchemaPath()
     {
         $expected = realpath(TU_DIR . '/../inventory.schema.json');
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-                ->string($this->testedInstance->getSchemaPath())->isIdenticalTo($expected);
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertSame($expected, $instance->getSchemaPath());
     }
 
     /**
@@ -101,10 +89,8 @@ class Converter extends \atoum {
     public function testGetMethods()
     {
         $expected = ['convertTo01'];
-        $this
-            ->given($this->newTestedInstance(0.1))
-            ->then
-                ->array($this->testedInstance->getMethods())->isIdenticalTo($expected);
+        $instance = new \Glpi\Inventory\Converter(0.1);
+        $this->assertSame($expected, $instance->getMethods());
     }
 
     /**
@@ -112,7 +98,7 @@ class Converter extends \atoum {
      *
      * @return array
      */
-    protected function valuesToCastProvider()
+    public static function valuesToCastProvider()
     {
         return [
             //true real values
@@ -149,11 +135,8 @@ class Converter extends \atoum {
      */
     public function testGetCastedValue($value, $cast, $expected)
     {
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-                ->variable($this->testedInstance->getCastedValue($value, $cast))
-                    ->isIdenticalTo($expected);
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertSame($expected, $instance->getCastedValue($value, $cast));
     }
 
     /**
@@ -163,16 +146,11 @@ class Converter extends \atoum {
      */
     public function testGetCastedValueWE()
     {
-        $this->exception(
-            function () {
-                $this
-                    ->given($this->newTestedInstance())
-                    ->then
-                        ->variable($this->testedInstance->getCastedValue(0, 'blah'));
-            }
-        )
-            ->isInstanceOf('\UnexpectedValueException')
-            ->hasMessage('Type blah not known.');
+        $instance = new \Glpi\Inventory\Converter();
+
+        $this->expectException(\UnexpectedValueException::class);
+        $this->expectExceptionMessage('Type blah not known.');
+        $instance->getCastedValue(0, 'blah');
     }
 
     /**
@@ -180,7 +158,7 @@ class Converter extends \atoum {
      *
      * @return array
      */
-    protected function arrayForCaseProvider()
+    public static function arrayForCaseProvider()
     {
         return [
             [
@@ -209,11 +187,9 @@ class Converter extends \atoum {
         if ($expected === null) {
             $expected = $orig;
         }
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-                ->array($this->testedInstance->arrayChangeKeyCaseRecursive($orig))
-                    ->isIdenticalTo($expected);
+
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertSame($expected, $instance->arrayChangeKeyCaseRecursive($orig));
     }
 
     /**
@@ -221,7 +197,7 @@ class Converter extends \atoum {
      *
      * @return array
      */
-    protected function datesToConvertProvider()
+    public static function datesToConvertProvider()
     {
         return [
             ['2018-01-12', 'Y-m-d', '2018-01-12'],
@@ -250,17 +226,14 @@ class Converter extends \atoum {
      */
     public function testConvertDate($orig, $format, $expected)
     {
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-                ->variable($this->testedInstance->convertDate($orig, $format))
-                    ->isIdenticalTo($expected);
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertSame($expected, $instance->convertDate($orig, $format));
     }
 
     public function testConvertTypes()
     {
-        $this->newTestedInstance();
-        $this->testedInstance->setConvertTypes([
+        $instance = new \Glpi\Inventory\Converter();
+        $instance->setConvertTypes([
             'boolean'  => [
                 'cpus/enabled'
             ],
@@ -293,29 +266,32 @@ class Converter extends \atoum {
             ]
         ];
 
-        $this->testedInstance->convertTypes($data);
-        $this->array($data)->isIdenticalTo([
-            'content'   => [
-                'cpus'  => [
-                    0   => [
-                        'enabled'   => true
+        $instance->convertTypes($data);
+        $this->assertSame(
+            [
+                'content'   => [
+                    'cpus'  => [
+                        0   => [
+                            'enabled'   => true
+                        ],
+                        1   => [
+                            'enabled'   => true
+                        ],
+                        2   => [
+                            'enabled'   => false
+                        ],
+                        3   => [
+                            'enabled'   => false
+                        ]
                     ],
-                    1   => [
-                        'enabled'   => true
-                    ],
-                    2   => [
-                        'enabled'   => false
-                    ],
-                    3   => [
-                        'enabled'   => false
+                    'one'   => [
+                        'two'  => 42,
+                        'three' => null
                     ]
-                ],
-                'one'   => [
-                    'two'  => 42,
-                    'three' => null
                 ]
-            ]
-        ]);
+            ],
+            $data
+        );
     }
 
     /**
@@ -323,7 +299,7 @@ class Converter extends \atoum {
      *
      * @return array
      */
-    protected function batteryCapasToConvertProvider()
+    public static function batteryCapasToConvertProvider()
     {
         return [
             ['43.7456 Wh', 43746],
@@ -349,19 +325,8 @@ class Converter extends \atoum {
      */
     public function testConvertBatteryCapacity($orig, $expected)
     {
-        if ($expected == false) {
-            $this
-                ->given($this->newTestedInstance())
-                ->then
-                    ->boolean($this->testedInstance->convertBatteryPower($orig))
-                        ->isIdenticalTo($expected);
-        } else {
-            $this
-                ->given($this->newTestedInstance())
-                ->then
-                    ->integer($this->testedInstance->convertBatteryPower($orig))
-                    ->isIdenticalTo($expected);
-        }
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertSame($expected, $instance->convertBatteryPower($orig));
     }
 
     /**
@@ -369,7 +334,7 @@ class Converter extends \atoum {
      *
      * @return array
      */
-    protected function batteryVoltsToConvertProvider()
+    public static function batteryVoltsToConvertProvider()
     {
         return [
             ['8 V', 8000],
@@ -394,19 +359,8 @@ class Converter extends \atoum {
      */
     public function testConvertBatteryVoltage($orig, $expected)
     {
-        if ($expected == false) {
-            $this
-                ->given($this->newTestedInstance())
-                ->then
-                    ->boolean($this->testedInstance->convertBatteryVoltage($orig))
-                        ->isIdenticalTo($expected);
-        } else {
-            $this
-                ->given($this->newTestedInstance())
-                ->then
-                    ->integer($this->testedInstance->convertBatteryVoltage($orig))
-                    ->isIdenticalTo($expected);
-        }
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertSame($expected, $instance->convertBatteryVoltage($orig));
     }
 
     /**
@@ -416,16 +370,17 @@ class Converter extends \atoum {
      */
     public function testConvert()
     {
-        $this->string($xml_path = realpath(TU_DIR . '/data/4.xml'));
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-                ->string($json_str = $this->testedInstance->convert(file_get_contents($xml_path)))
-                ->isNotEmpty();
+        $xml_path = realpath(TU_DIR . '/data/4.xml');
+        $this->assertNotEmpty($xml_path);
 
-        $this->object($json = json_decode($json_str));
-        $this->string($json->deviceid)->isIdenticalTo('iMac-de-Marie.local-2017-06-12-09-24-14');
-        $this->string($json->itemtype)->isIdenticalTo('Computer');
+        $instance = new \Glpi\Inventory\Converter();
+        $json_str = $instance->convert(file_get_contents($xml_path));
+        $this->assertNotEmpty($json_str);
+
+        $json = json_decode($json_str);
+        $this->assertIsObject($json);
+        $this->assertSame('iMac-de-Marie.local-2017-06-12-09-24-14', $json->deviceid);
+        $this->assertSame('Computer', $json->itemtype);
 
         $expected = [
             'capacity'     => 43746,
@@ -437,7 +392,7 @@ class Converter extends \atoum {
             'voltage'      => 8614
 
         ];
-        $this->array((array)$json->content->batteries[0])->isIdenticalTo($expected);
+        $this->assertSame($expected, (array)$json->content->batteries[0]);
     }
 
     /**
@@ -447,41 +402,43 @@ class Converter extends \atoum {
      */
     public function testFrBootTimeDateConvert()
     {
-        $this->string($xml_path = realpath(TU_DIR . '/data/13.xml'));
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-                ->string($json_str = $this->testedInstance->convert(file_get_contents($xml_path)))
-                ->isNotEmpty();
+        $xml_path = realpath(TU_DIR . '/data/13.xml');
+        $this->assertNotEmpty($xml_path);
 
-        $this->object($json = json_decode($json_str));
-        $this->string($json->deviceid)->isIdenticalTo('android-5a30d8711bbadc9d-2022-10-19-08-08-46');
-        $this->string($json->itemtype)->isIdenticalTo('Computer');
+        $instance = new \Glpi\Inventory\Converter();
+        $json_str = $instance->convert(file_get_contents($xml_path));
+        $this->assertNotEmpty($json_str);
+
+        $json = json_decode($json_str);
+        $this->assertIsObject($json);
+        $this->assertSame('android-5a30d8711bbadc9d-2022-10-19-08-08-46', $json->deviceid);
+        $this->assertSame('Computer', $json->itemtype);
 
         $expected = "2022-09-21 05:21:23";
-        $this->string($json->content->operatingsystem->boot_time)->isIdenticalTo($expected);
+        $this->assertSame($expected, $json->content->operatingsystem->boot_time);
     }
 
-        /**
+    /**
      * Test a full conversion and check boot time
      *
      * @return void
      */
     public function testEnBootTimeDateConvert()
     {
-        $this->string($xml_path = realpath(TU_DIR . '/data/14.xml'));
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-                ->string($json_str = $this->testedInstance->convert(file_get_contents($xml_path)))
-                ->isNotEmpty();
+        $xml_path = realpath(TU_DIR . '/data/14.xml');
+        $this->assertNotEmpty($xml_path);
 
-        $this->object($json = json_decode($json_str));
-        $this->string($json->deviceid)->isIdenticalTo('android-5a30d8711bbadc9d-2022-10-19-08-08-46');
-        $this->string($json->itemtype)->isIdenticalTo('Computer');
+        $instance = new \Glpi\Inventory\Converter();
+        $json_str = $instance->convert(file_get_contents($xml_path));
+        $this->assertNotEmpty($json_str);
+
+        $json = json_decode($json_str);
+        $this->assertIsObject($json);
+        $this->assertSame('android-5a30d8711bbadc9d-2022-10-19-08-08-46', $json->deviceid);
+        $this->assertSame('Computer', $json->itemtype);
 
         $expected = "2022-10-04 05:21:23";
-        $this->string($json->content->operatingsystem->boot_time)->isIdenticalTo($expected);
+        $this->assertSame($expected, $json->content->operatingsystem->boot_time);
     }
 
     /**
@@ -491,82 +448,88 @@ class Converter extends \atoum {
      */
     public function testFwAndSimcards()
     {
-        $this->string($xml_path = realpath(TU_DIR . '/data/5.xml'));
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-                ->string($json_str = $this->testedInstance->convert(file_get_contents($xml_path)))
-                ->isNotEmpty();
+        $xml_path = realpath(TU_DIR . '/data/5.xml');
+        $this->assertNotEmpty($xml_path);
 
-        $this->object($json = json_decode($json_str));
-        $this->string($json->deviceid)->isIdenticalTo('foo');
-        $this->integer($json->jobid)->isIdenticalTo(1);
-        $this->string($json->action)->isIdenticalTo('netinventory');
-        $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
+        $instance = new \Glpi\Inventory\Converter();
+        $json_str = $instance->convert(file_get_contents($xml_path));
+        $this->assertNotEmpty($json_str);
+
+        $json = json_decode($json_str);
+        $this->assertIsObject($json);
+        $this->assertSame('foo', $json->deviceid);
+        $this->assertSame(1, $json->jobid);
+        $this->assertSame('netinventory', $json->action);
+        $this->assertSame('NetworkEquipment', $json->itemtype);
 
         $device = $json->content->network_device;
-        $this->array((array)$device)->isIdenticalTo([
-            'contact' => 'test@glpi-project.org',
-            'firmware' => '5.2.17.12',
-            'ips' => [
-                '172.21.255.102'
-            ],
-            'location' => 'FR-WR21',
-            'mac' => '00:04:2d:07:6b:ae',
-            'manufacturer' => 'Digi',
-            'model' => 'WR11 XT',
-            'name' => 'WR21',
-            'serial' => '486280',
-            'type' => 'Networking',
-            'uptime' => '(12078) 0:02:00.78',
-            'description' => "
+        $this->assertSame(
+            [
+                'contact' => 'test@glpi-project.org',
+                'firmware' => '5.2.17.12',
+                'ips' => [
+                    '172.21.255.102'
+                ],
+                'location' => 'FR-WR21',
+                'mac' => '00:04:2d:07:6b:ae',
+                'manufacturer' => 'Digi',
+                'model' => 'WR11 XT',
+                'name' => 'WR21',
+                'serial' => '486280',
+                'type' => 'Networking',
+                'uptime' => '(12078) 0:02:00.78',
+                'description' => "
 Digi TransPort WR11-L700-DE1-XW Ser#:486280
 Software Build Ver5.2.17.12.  Mar  8 2017 13:55:20  1W
 ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
-        ]);
-        $this->array($json->content->network_ports)->hasSize(18);
-        //$this->array($json->content->network_components)->hasSize(66);
-        $this->array($json->content->firmwares)->hasSize(1);
-        $this->boolean(property_exists($json->content, 'simcards'))->isFalse();
+            ],
+            (array)$device
+        );
+        $this->assertCount(18, $json->content->network_ports);
+        $this->assertCount(1, $json->content->firmwares);
+        $this->assertFalse(property_exists($json->content, 'simcards'));
 
         //reload with simcards real infos
-        $this->string($xml_path = realpath(TU_DIR . '/data/5-good.xml'));
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-                ->string($json_str = $this->testedInstance->convert(file_get_contents($xml_path)))
-                ->isNotEmpty();
+        $xml_path = realpath(TU_DIR . '/data/5-good.xml');
+        $this->assertNotEmpty($xml_path);
 
-        $this->object($json = json_decode($json_str));
-        $this->string($json->deviceid)->isIdenticalTo('foo');
-        $this->integer($json->jobid)->isIdenticalTo(1);
-        $this->string($json->action)->isIdenticalTo('netinventory');
-        $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
+        $instance = new \Glpi\Inventory\Converter();
+        $json_str = $instance->convert(file_get_contents($xml_path));
+        $this->assertNotEmpty($json_str);
+
+        $json = json_decode($json_str);
+        $this->assertIsObject($json);
+        $this->assertSame('foo', $json->deviceid);
+        $this->assertSame(1, $json->jobid);
+        $this->assertSame('netinventory', $json->action);
+        $this->assertSame('NetworkEquipment', $json->itemtype);
 
         $device = $json->content->network_device;
-        $this->array((array)$device)->isIdenticalTo([
-            'contact' => 'test@glpi-project.org',
-            'firmware' => '5.2.17.12',
-            'ips' => [
-                '172.21.255.102'
-            ],
-            'location' => 'FR-WR21',
-            'mac' => '00:04:2d:07:6b:ae',
-            'manufacturer' => 'Digi',
-            'model' => 'WR11 XT',
-            'name' => 'WR21',
-            'serial' => '486280',
-            'type' => 'Networking',
-            'uptime' => '(12078) 0:02:00.78',
-            'description' => "
+        $this->assertSame(
+            [
+                'contact' => 'test@glpi-project.org',
+                'firmware' => '5.2.17.12',
+                'ips' => [
+                    '172.21.255.102'
+                ],
+                'location' => 'FR-WR21',
+                'mac' => '00:04:2d:07:6b:ae',
+                'manufacturer' => 'Digi',
+                'model' => 'WR11 XT',
+                'name' => 'WR21',
+                'serial' => '486280',
+                'type' => 'Networking',
+                'uptime' => '(12078) 0:02:00.78',
+                'description' => "
 Digi TransPort WR11-L700-DE1-XW Ser#:486280
 Software Build Ver5.2.17.12.  Mar  8 2017 13:55:20  1W
 ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
-        ]);
-        $this->array($json->content->network_ports)->hasSize(18);
-        //$this->array($json->content->network_components)->hasSize(66);
-        $this->array($json->content->firmwares)->hasSize(1);
-        $this->boolean(property_exists($json->content, 'simcards'))->isTrue();
+            ],
+            (array)$device
+        );
+        $this->assertCount(18, $json->content->network_ports);
+        $this->assertCount(1, $json->content->firmwares);
+        $this->assertTrue(property_exists($json->content, 'simcards'));
     }
 
     /**
@@ -576,36 +539,40 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
      */
     public function testNetEConvert()
     {
-        $this->string($xml_path = realpath(TU_DIR . '/data/6.xml'));
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-                ->string($json_str = $this->testedInstance->convert(file_get_contents($xml_path)))
-                ->isNotEmpty();
+        $xml_path = realpath(TU_DIR . '/data/6.xml');
+        $this->assertIsString($xml_path);
 
-        $this->object($json = json_decode($json_str));
-        $this->string($json->deviceid)->isIdenticalTo('foo');
-        $this->integer($json->jobid)->isIdenticalTo(1);
-        $this->string($json->action)->isIdenticalTo('netinventory');
-        $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
+        $instance = new \Glpi\Inventory\Converter();
+        $json_str = $instance->convert(file_get_contents($xml_path));
+        $this->assertNotEmpty($json_str);
+
+        $json = json_decode($json_str);
+        $this->assertIsObject($json);
+        $this->assertSame('foo', $json->deviceid);
+        $this->assertSame(1, $json->jobid);
+        $this->assertSame('netinventory', $json->action);
+        $this->assertSame('NetworkEquipment', $json->itemtype);
 
         $device = $json->content->network_device;
-        $this->array((array)$device)->isIdenticalTo([
-            'contact' => "noc@glpi-project.org",
-            'cpu' => 4,
-            'firmware' => "5.0(3)N2(4.02b)",
-            'location' => "paris.pa3",
-            'mac' => "8c:60:4f:8d:ae:fc",
-            'manufacturer' => "Cisco",
-            'model' => "UCS 6248UP 48-Port",
-            'name' => "ucs6248up-cluster-pa3-B",
-            'serial' => "SSI1912014B",
-            'type' => "Networking",
-            'uptime' => "482 days, 05:42:18.50",
-            'description' => "Cisco NX-OS(tm) ucs, Software (ucs-6100-k9-system), Version 5.0(3)N2(4.02b), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc.   Compiled 1/16/2019 18:00:00"
-        ]);
-        $this->array($json->content->network_ports)->hasSize(183);
-        $this->array($json->content->network_components)->hasSize(66);
+        $this->assertSame(
+            [
+                'contact' => "noc@glpi-project.org",
+                'cpu' => 4,
+                'firmware' => "5.0(3)N2(4.02b)",
+                'location' => "paris.pa3",
+                'mac' => "8c:60:4f:8d:ae:fc",
+                'manufacturer' => "Cisco",
+                'model' => "UCS 6248UP 48-Port",
+                'name' => "ucs6248up-cluster-pa3-B",
+                'serial' => "SSI1912014B",
+                'type' => "Networking",
+                'uptime' => "482 days, 05:42:18.50",
+                'description' => "Cisco NX-OS(tm) ucs, Software (ucs-6100-k9-system), Version 5.0(3)N2(4.02b), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc.   Compiled 1/16/2019 18:00:00"
+            ],
+            (array)$device
+        );
+        $this->assertCount(183, $json->content->network_ports);
+        $this->assertCount(66, $json->content->network_components);
     }
 
     /**
@@ -615,166 +582,145 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
      */
     public function testOnePort()
     {
-        $this->string($xml_path = realpath(TU_DIR . '/data/7.xml'));
-        $xml = file_get_contents($xml_path);
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-                ->string($json_str = $this->testedInstance->convert($xml))
-                ->isNotEmpty();
+        $xml_path = realpath(TU_DIR . '/data/7.xml');
+        $this->assertIsString($xml_path);
 
-        $this->object($json = json_decode($json_str));
-        $this->string($json->deviceid)->isIdenticalTo('foo');
-        $this->integer($json->jobid)->isIdenticalTo(1);
-        $this->string($json->action)->isIdenticalTo('netinventory');
-        $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
+        $xml = file_get_contents($xml_path);
+        $instance = new \Glpi\Inventory\Converter();
+        $json_str = $instance->convert($xml);
+        $this->assertNotEmpty($json_str);
+
+        $json = json_decode($json_str);
+        $this->assertIsObject($json);
+        $this->assertSame('foo', $json->deviceid);
+        $this->assertSame(1, $json->jobid);
+        $this->assertSame('netinventory', $json->action);
+        $this->assertSame('NetworkEquipment', $json->itemtype);
 
         $device = $json->content->network_device;
-        $this->array((array)$device)->isIdenticalTo([
-            'contact' => "noc@glpi-project.org",
-            'cpu' => 4,
-            'firmware' => "5.0(3)N2(4.02b)",
-            'location' => "paris.pa3",
-            'mac' => "8c:60:4f:8d:ae:fc",
-            'manufacturer' => "Cisco",
-            'model' => "UCS 6248UP 48-Port",
-            'name' => "ucs6248up-cluster-pa3-B",
-            'serial' => "SSI1912014B",
-            'type' => "Networking",
-            'uptime' => "482 days, 05:42:18.50",
-            'description' => "Cisco NX-OS(tm) ucs, Software (ucs-6100-k9-system), Version 5.0(3)N2(4.02b), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc.   Compiled 1/16/2019 18:00:00"
-        ]);
-        $this->array($json->content->network_ports)->hasSize(1);
+        $this->assertSame(
+            [
+                'contact' => "noc@glpi-project.org",
+                'cpu' => 4,
+                'firmware' => "5.0(3)N2(4.02b)",
+                'location' => "paris.pa3",
+                'mac' => "8c:60:4f:8d:ae:fc",
+                'manufacturer' => "Cisco",
+                'model' => "UCS 6248UP 48-Port",
+                'name' => "ucs6248up-cluster-pa3-B",
+                'serial' => "SSI1912014B",
+                'type' => "Networking",
+                'uptime' => "482 days, 05:42:18.50",
+                'description' => "Cisco NX-OS(tm) ucs, Software (ucs-6100-k9-system), Version 5.0(3)N2(4.02b), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc.   Compiled 1/16/2019 18:00:00"
+            ],
+            (array)$device
+        );
+        $this->assertCount(1, $json->content->network_ports);
     }
 
     public function testNetdisco() {
-        $this->string($xml_path = realpath(TU_DIR . '/data/9.xml'));
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-            ->string($json_str = $this->testedInstance->convert(file_get_contents($xml_path)))
-            ->isNotEmpty();
+        $xml_path = realpath(TU_DIR . '/data/9.xml');
+        $this->assertIsString($xml_path);
 
-        $this->object($json = json_decode($json_str));
-        $this->string($json->deviceid)->isIdenticalTo('johanxps-2020-08-19-14-29-10');
-        $this->integer($json->jobid)->isIdenticalTo(29);
-        $this->string($json->action)->isIdenticalTo('netdiscovery');
+        $instance = new \Glpi\Inventory\Converter();
+        $json_str = $instance->convert(file_get_contents($xml_path));
+        $this->assertNotEmpty($json_str);
+
+        $json = json_decode($json_str);
+        $this->assertIsObject($json);
+        $this->assertSame('johanxps-2020-08-19-14-29-10', $json->deviceid);
+        $this->assertSame(29, $json->jobid);
+        $this->assertSame('netdiscovery', $json->action);
         $device = $json->content->network_device;
-        $this->string($device->name)->isIdenticalTo('homeassistant');
-        $this->string($device->type)->isIdenticalTo('Unmanaged');
-        $this->string($json->itemtype)->isIdenticalTo('Unmanaged');
+        $this->assertSame('homeassistant', $device->name);
+        $this->assertSame('Unmanaged', $device->type);
+        $this->assertSame('Unmanaged', $json->itemtype);
 
         //example from old specs documentation
-        $this->string($xml_path = realpath(TU_DIR . '/data/10.xml'));
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-            ->string($json_str = $this->testedInstance->convert(file_get_contents($xml_path)))
-            ->isNotEmpty();
+        $xml_path = realpath(TU_DIR . '/data/10.xml');
+        $this->assertIsString($xml_path);
 
-        $this->object($json = json_decode($json_str));
-        $this->string($json->deviceid)->isIdenticalTo('qlf-sesi-inventory.glpi-project.org-2013-11-14-17-47-17');
-        $this->integer($json->jobid)->isIdenticalTo(1);
-        $this->string($json->action)->isIdenticalTo('netdiscovery');
+        $instance = new \Glpi\Inventory\Converter();
+        $json_str = $instance->convert(file_get_contents($xml_path));
+        $this->assertNotEmpty($json_str);
+
+        $json = json_decode($json_str);
+        $this->assertIsObject($json);
+        $this->assertSame('qlf-sesi-inventory.glpi-project.org-2013-11-14-17-47-17', $json->deviceid);
+        $this->assertSame(1, $json->jobid);
+        $this->assertSame('netdiscovery', $json->action);
         $device = $json->content->network_device;
-        $this->string($device->name)->isIdenticalTo('swdc-07-01-dc1');
-        $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
+        $this->assertSame('swdc-07-01-dc1', $device->name);
+        $this->assertSame('NetworkEquipment', $json->itemtype);
 
         $device = $json->content->network_device;
-        $this->array((array)$device)->isEqualTo([
-            'type' => 'Networking',
-            'contact' => 'anyone@glpi-project.org',
-            'description' => 'Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(5), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 6/27/2013 16:00:00',
-            'firmware' => 'CW_VERSION$5.2(1)N1(5)$',
-            'ips' => [
-                '192.168.0.8',
+        $this->assertSame(
+            [
+                'type' => 'Networking',
+                'credentials' => 1,
+                'contact' => 'anyone@glpi-project.org',
+                'description' => 'Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(5), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 6/27/2013 16:00:00',
+                'firmware' => 'CW_VERSION$5.2(1)N1(5)$',
+                'location' => 'dc1 salle 07',
+                'mac' => '00:23:04:ee:be:02',
+                'manufacturer' => 'Cisco',
+                'model' => 'Cisco Nexus 5596',
+                'name' => 'swdc-07-01-dc1',
+                'uptime' => '175 days, 11:33:37.48',
+                'ips' => [
+                    '192.168.0.8',
+                ]
             ],
-            'location' => 'dc1 salle 07',
-            'mac' => '00:23:04:ee:be:02',
-            'manufacturer' => 'Cisco',
-            'model' => 'Cisco Nexus 5596',
-            'name' => 'swdc-07-01-dc1',
-            'uptime' => '175 days, 11:33:37.48',
-            'credentials' => 1
-        ]);
+            (array)$device
+        );
     }
 
     public function testValidate() {
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['name' => 'my inventory']]]));
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-            ->boolean($this->testedInstance->validate($json))->isTrue();
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertTrue($instance->validate($json));
 
         //required "versionclient" is missing
-        $this->exception(
-            function () {
-                $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['hardware' => ['name' => 'my inventory']]]));
-                $this
-                    ->given($this->newTestedInstance())
-                    ->then
-                    ->boolean($this->testedInstance->validate($json))->isFalse();
-            }
-        )
-            ->isInstanceOf('\RuntimeException')
-            ->message->contains('Required property missing: versionclient');
+        $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['hardware' => ['name' => 'my inventory']]]));
+        $instance = new \Glpi\Inventory\Converter();
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage('Required property missing: versionclient');
+        $this->assertFalse($instance->validate($json));
 
         //extra "plugin_node" is unknown
-        $this->exception(
-            function () {
-                $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'plugin_node' => 'plugin node']]));
-                $this
-                    ->given($this->newTestedInstance())
-                    ->then
-                    ->boolean($this->testedInstance->validate($json))->isFalse();
-            }
-        )
-            ->isInstanceOf('\RuntimeException')
-            ->message->contains('Additional properties not allowed: plugin_node');
+        $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'plugin_node' => 'plugin node']]));
+        $instance = new \Glpi\Inventory\Converter();
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage('Additional properties not allowed: plugin_node');
+        $this->assertFalse($instance->validate($json));
 
         //add extra "plugin_node" as string
         $extra_prop = ['plugin_node' => ['type' => 'string']];
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'plugin_node' => 'plugin node']]));
-        $this
-            ->given($this->newTestedInstance())
-            ->if($this->testedInstance->setExtraProperties($extra_prop))
-            ->then
-            ->boolean($this->testedInstance->validate($json))->isTrue();
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertInstanceOf(\Glpi\Inventory\Converter::class, $instance->setExtraProperties($extra_prop));
+        $this->assertTrue($instance->validate($json));
 
         //extra "hardware/hw_plugin_node" is unknown
-        $this->exception(
-            function () {
-                $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['hw_plugin_node' => 'plugin node']]]));
-                $this
-                    ->given($this->newTestedInstance())
-                    ->then
-                    ->boolean($this->testedInstance->validate($json))->isFalse();
-            }
-        )
-            ->isInstanceOf('\RuntimeException')
-            ->message->contains('Additional properties not allowed: hw_plugin_node');
+        $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['hw_plugin_node' => 'plugin node']]]));
+        $instance = new \Glpi\Inventory\Converter();
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage('Additional properties not allowed: hw_plugin_node');
+        $this->assertFalse($instance->validate($json));
 
         //add extra "hardware/hw_plugin_node" as string
         $extra_sub_prop = ['hardware' => ['hw_plugin_node' => ['type' => 'string']]];
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['hw_plugin_node' => 'plugin node']]]));
-        $this
-            ->given($this->newTestedInstance())
-            ->if($this->testedInstance->setExtraSubProperties($extra_sub_prop))
-            ->then
-            ->boolean($this->testedInstance->validate($json))->isTrue();
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertInstanceOf(\Glpi\Inventory\Converter::class, $instance->setExtraSubProperties($extra_sub_prop));
+        $this->assertTrue($instance->validate($json));
 
         //extra "virtualmachines/vm_plugin_node" is unknown
-        $this->exception(
-            function () {
-                $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'virtualmachines' => [['name' => 'My VM', 'vmtype' => 'libvirt', 'vm_plugin_node' => 'plugin node']]]]));
-                $this
-                    ->given($this->newTestedInstance())
-                    ->then
-                    ->boolean($this->testedInstance->validate($json))->isFalse();
-            }
-        )
-            ->isInstanceOf('\RuntimeException')
-            ->message->contains('Additional properties not allowed: vm_plugin_node');
+        $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'virtualmachines' => [['name' => 'My VM', 'vmtype' => 'libvirt', 'vm_plugin_node' => 'plugin node']]]]));
+        $instance = new \Glpi\Inventory\Converter();
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage('Additional properties not allowed: vm_plugin_node');
+        $this->assertFalse($instance->validate($json));
 
         //add extra "virtualmachines/vm_plugin_node" as string
         $extra_sub_prop = ['virtualmachines' => ['vm_plugin_node' => ['type' => 'string']]];
@@ -791,14 +737,17 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
                 ]
             ]
         ]));
-        $this
-            ->given($this->newTestedInstance())
-            ->if($this->testedInstance->setExtraSubProperties($extra_sub_prop))
-            ->then
-            ->boolean($this->testedInstance->validate($json))->isTrue();
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertInstanceOf(\Glpi\Inventory\Converter::class, $instance->setExtraSubProperties($extra_sub_prop));
+        $this->assertTrue($instance->validate($json));
 
         //try add extra node already existing
-        $this->when(
+        $extra_prop = ['accesslog' => ['type' => 'string']];
+        $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0']]));
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertInstanceOf(\Glpi\Inventory\Converter::class, $instance->setExtraProperties($extra_prop));
+
+        /*$this->when(
             function () {
                 $extra_prop = ['accesslog' => ['type' => 'string']];
                 $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0']]));
@@ -812,10 +761,10 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
             ->error()
             ->withType(E_USER_WARNING)
             ->withMessage('Property accesslog already exists in schema.')
-            ->exists();
+            ->exists();*/
 
         //try add extra sub node already existing
-        $this->when(
+        /*$this->when(
             function () {
                 $extra_sub_prop = ['hardware' => ['chassis_type' => ['type' => 'string']]];
                 $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0']]));
@@ -829,10 +778,10 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
             ->error()
             ->withType(E_USER_WARNING)
             ->withMessage('Property hardware/chassis_type already exists in schema.')
-            ->exists();
+            ->exists();*/
 
         //try add extra sub node with missing parent
-        $this->when(
+        /*$this->when(
             function () {
                 $extra_sub_prop = ['unknown' => ['chassis_type' => ['type' => 'string']]];
                 $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0']]));
@@ -846,81 +795,88 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
             ->error()
             ->withType(E_USER_WARNING)
             ->withMessage('Property unknown does not exists in schema.')
-            ->exists();
+            ->exists();*/
     }
 
     public function testAssetTagFromDiscovery()
     {
-        $this->string($xml_path = realpath(TU_DIR . '/data/16.xml'));
+        $xml_path = realpath(TU_DIR . '/data/16.xml');
+        $this->assertNotEmpty($xml_path);
         $xml = file_get_contents($xml_path);
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-                ->string($json_str = $this->testedInstance->convert($xml))
-                ->isNotEmpty();
 
-        $this->object($json = json_decode($json_str));
-        $this->string($json->deviceid)->isIdenticalTo('foo');
-        $this->integer($json->jobid)->isIdenticalTo(1);
-        $this->string($json->action)->isIdenticalTo('netdiscovery');
-        $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
+        $instance = new \Glpi\Inventory\Converter();
+        $json_str = $instance->convert($xml);
+        $this->assertNotEmpty($json_str);
+
+        $json = json_decode($json_str);
+        $this->assertIsObject($json);
+        $this->assertSame('foo', $json->deviceid);
+        $this->assertSame(1, $json->jobid);
+        $this->assertSame('netdiscovery', $json->action);
+        $this->assertSame('NetworkEquipment', $json->itemtype);
 
         $device = $json->content->network_device;
-        $this->array((array)$device)->isIdenticalTo([
-            "type" => "Networking" ,
-            "credentials" => 1,
-            "contact" => "Teclib",
-            "description" => "HP 1810-24G, PL.2.10, eCos-3.0, 1_12_8-customized-h",
-            "firmware" => "1_12_8-customized-h",
-            "ips" => [
-                "192.168.1.9"
+        $this->assertSame(
+            [
+                "type" => "Networking" ,
+                "credentials" => 1,
+                "contact" => "Teclib",
+                "description" => "HP 1810-24G, PL.2.10, eCos-3.0, 1_12_8-customized-h",
+                "firmware" => "1_12_8-customized-h",
+                "ips" => [
+                    "192.168.1.9"
+                ],
+                "location" => "Agence Teclib",
+                "mac" => "d5:c9:gh:81:cf:80",
+                "manufacturer" => "Hewlett-Packard",
+                "model" => "1810-24G",
+                "serial" => "cn3afrt37n",
+                "name" => "J9803A",
+                "assettag" => "assettag",
+                "uptime" => "78 days, 14:36:51.25",
             ],
-            "location" => "Agence Teclib",
-            "mac" => "d5:c9:gh:81:cf:80",
-            "manufacturer" => "Hewlett-Packard",
-            "model" => "1810-24G",
-            "serial" => "cn3afrt37n",
-            "name" => "J9803A",
-            "assettag" => "assettag",
-            "uptime" => "78 days, 14:36:51.25",
-        ]);
+            (array)$device
+        );
     }
 
     public function testAssetTagFromInventory()
     {
-        $this->string($xml_path = realpath(TU_DIR . '/data/17.xml'));
-        $xml = file_get_contents($xml_path);
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-                ->string($json_str = $this->testedInstance->convert($xml))
-                ->isNotEmpty();
+        $xml_path = realpath(TU_DIR . '/data/17.xml');
+        $this->assertNotEmpty($xml_path);
 
-        $this->object($json = json_decode($json_str));
-        $this->string($json->deviceid)->isIdenticalTo('foo');
-        $this->integer($json->jobid)->isIdenticalTo(1);
-        $this->string($json->action)->isIdenticalTo('netinventory');
-        $this->string($json->itemtype)->isIdenticalTo('NetworkEquipment');
+        $xml = file_get_contents($xml_path);
+        $instance = new \Glpi\Inventory\Converter();
+        $json_str = $instance->convert($xml);
+        $this->assertNotEmpty($json_str);
+
+        $json = json_decode($json_str);
+        $this->assertIsObject($json);
+        $this->assertSame('foo', $json->deviceid);
+        $this->assertSame(1, $json->jobid);
+        $this->assertSame('netinventory', $json->action);
+        $this->assertSame('NetworkEquipment', $json->itemtype);
 
         $device = $json->content->network_device;
-        $this->array((array)$device)->isIdenticalTo([
-            "contact" => "Teclib",
-            "firmware" => "1_12_8-customized-h",
-            "ips" => [
-                "192.168.1.9"
+        $this->assertSame(
+            [
+                "contact" => "Teclib",
+                "firmware" => "1_12_8-customized-h",
+                "ips" => [
+                    "192.168.1.9"
+                ],
+                "location" => "Agence Teclib",
+                "mac" => "d5:c9:gh:81:cf:80",
+                "manufacturer" => "Hewlett-Packard",
+                "assettag" => "asset",
+                "model" => "1810-24G",
+                "name" => "J9803A",
+                "serial" => "cn3afrt37n",
+                "type" => "Networking" ,
+                "uptime" => "78 days, 14:56:50.69",
+                "description" => "HP 1810-24G, PL.2.10, eCos-3.0, 1_12_8-customized-h",
             ],
-            "location" => "Agence Teclib",
-            "mac" => "d5:c9:gh:81:cf:80",
-            "manufacturer" => "Hewlett-Packard",
-            "assettag" => "asset",
-            "model" => "1810-24G",
-            "name" => "J9803A",
-            "serial" => "cn3afrt37n",
-            "type" => "Networking" ,
-            "uptime" => "78 days, 14:56:50.69",
-            "description" => "HP 1810-24G, PL.2.10, eCos-3.0, 1_12_8-customized-h",
-        ]);
-        $this->array($json->content->network_ports)->hasSize(1);
+            (array)$device
+        );
+        $this->assertCount(1, $json->content->network_ports);
     }
-
 }

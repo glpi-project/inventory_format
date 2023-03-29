@@ -40,8 +40,10 @@
 
 namespace Glpi\Inventory\tests\units;
 
+use PHPUnit\Framework\TestCase;
+
 /**
- * Tests for hardwre file conversions
+ * Tests for hardware file conversions
  *
  * @category  Inventory
  * @package   GlpiTests
@@ -50,7 +52,7 @@ namespace Glpi\Inventory\tests\units;
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL License 3.0 or (at your option) any later version
  * @link      https://glpi-project.org
  */
-class FilesToJSON extends \atoum
+class FilesToJSON extends TestCase
 {
     private $path = __DIR__ . '/../../../../../data/';
 
@@ -59,7 +61,7 @@ class FilesToJSON extends \atoum
      *
      * @return array
      */
-    protected function filesProvider()
+    public static function filesProvider()
     {
         return [
             [
@@ -90,14 +92,11 @@ class FilesToJSON extends \atoum
         $file = $this->path . '/' . $filename . '.json';
 
         //checks file exists
-        $this->boolean(file_exists($file))->isFalse('JSON file already exists');
+        $this->assertFalse(file_exists($file), 'JSON file already exists');
 
-        $this
-            ->given($this->newTestedInstance())
-            ->then
-                ->integer($this->testedInstance->$method())
-                    ->isGreaterThan(0);
+        $instance = new \Glpi\Inventory\FilesToJSON();
+        $this->assertGreaterThan(0, $instance->$method());
 
-        $this->boolean(file_exists($file))->isTrue('JSON file has not been generated');
+        $this->assertTrue(file_exists($file), 'JSON file has not been generated');
     }
 }
