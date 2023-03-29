@@ -15,7 +15,7 @@
         "issues": "https://github.com/glpi-project/inventory_format/issues"
     },
     "require": {
-        "seld/jsonlint": "^1.7",
+        "seld/jsonlint": "^1.9",
         "swaggest/json-schema": "^0.12.41",
         "symfony/polyfill-php81": "^1.26"
     },
