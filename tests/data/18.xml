@@ -1,0 +1,1099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REQUEST>
+   <CONTENT>
+      <VERSIONCLIENT>SCCM-v2.4.1</VERSIONCLIENT>
+      <ACCESSLOG>
+         <LOGDATE>2023-05-15 02:23:05</LOGDATE>
+         <USERID>xxxxxxx</USERID>
+      </ACCESSLOG>
+      <ACCOUNTINFO>
+         <KEYNAME>TAG</KEYNAME>
+         <KEYVALUE>SCCM</KEYVALUE>
+      </ACCOUNTINFO>
+      <HARDWARE>
+         <NAME>PCVANALITICA</NAME>
+         <LASTLOGGEDUSER>xxxxxxx</LASTLOGGEDUSER>
+         <UUID>47FA051E-17D7-49D7-A3FF-D393B9FA97EB</UUID>
+         <USERID>xxxxxxx</USERID>
+         <WORKGROUP>ds.ga.local</WORKGROUP>
+         <OSNAME>Microsoft Windows 10 Pro</OSNAME>
+         <OSCOMMENTS/>
+         <OSVERSION>10.0.18362</OSVERSION>
+      </HARDWARE>
+      <OPERATINGSYSTEM>
+         <NAME>Microsoft Windows 10 Pro</NAME>
+         <FULL_NAME>Microsoft Windows 10 Pro</FULL_NAME>
+         <ARCH>x64-based PC</ARCH>
+         <VERSION>10.0.18362</VERSION>
+         <SERVICE_PACK/>
+      </OPERATINGSYSTEM>
+      <BIOS>
+         <SMODEL>System Product Name</SMODEL>
+         <TYPE>Workstation</TYPE>
+         <MMANUFACTURER>System manufacturer</MMANUFACTURER>
+         <SMANUFACTURER>System manufacturer</SMANUFACTURER>
+         <SSN>T2351476</SSN>
+         <BDATE>09/10/2018</BDATE>
+         <BMANUFACTURER>American Megatrends Inc.</BMANUFACTURER>
+         <BVERSION>1404</BVERSION>
+         <SKUNUMBER>ALASKA - 1072009</SKUNUMBER>
+      </BIOS>
+      <CPUS>
+         <DESCRIPTION>Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz</DESCRIPTION>
+         <MANUFACTURER>GenuineIntel</MANUFACTURER>
+         <NAME>Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz</NAME>
+         <SPEED>3600</SPEED>
+         <TYPE>64</TYPE>
+         <CORE>4</CORE>
+         <THREAD>4</THREAD>
+      </CPUS>
+      <SOFTWARES>
+         <NAME><![CDATA[N/A]]></NAME>
+         <VERSION>1.01.0000</VERSION>
+         <PUBLISHER>Intel Corporation</PUBLISHER>
+         <INSTALLDATE>16/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[N/A]]></NAME>
+         <VERSION>1.02.0000</VERSION>
+         <PUBLISHER>Intel Corporation</PUBLISHER>
+         <INSTALLDATE>16/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[7-Zip 18.05 (x64)]]></NAME>
+         <VERSION>18.05</VERSION>
+         <PUBLISHER>Igor Pavlov</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[7-Zip 22.01 (x64 edition)]]></NAME>
+         <VERSION>22.01.00.0</VERSION>
+         <PUBLISHER>Igor Pavlov</PUBLISHER>
+         <INSTALLDATE>10/02/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Actualización de NVIDIA 31.2.0.0]]></NAME>
+         <VERSION>31.2.0.0</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Adobe Acrobat Reader - Español]]></NAME>
+         <VERSION>23.001.20174</VERSION>
+         <PUBLISHER>Adobe Systems Incorporated</PUBLISHER>
+         <INSTALLDATE>10/05/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Adobe Refresh Manager]]></NAME>
+         <VERSION>1.8.0</VERSION>
+         <PUBLISHER>Adobe Systems Incorporated</PUBLISHER>
+         <INSTALLDATE>12/04/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[AMD Catalyst Install Manager]]></NAME>
+         <VERSION>8.0.916.0</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[AMD Drag and Drop Transcoding]]></NAME>
+         <VERSION>2.00.0000</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[AMD Wireless Display v3.0]]></NAME>
+         <VERSION>1.0.0.15</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Catalyst Control Center Graphics Previews Common]]></NAME>
+         <VERSION>2015.0804.21.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Catalyst Control Center InstallProxy]]></NAME>
+         <VERSION>2015.1104.1643.30033</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>30/09/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Catalyst Control Center Localization All]]></NAME>
+         <VERSION>2015.0804.21.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Chinese Standard]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Chinese Traditional]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Czech]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Danish]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Dutch]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help English]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Finnish]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help French]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help German]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Greek]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Hungarian]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Italian]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Japanese]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Korean]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Norwegian]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Polish]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Portuguese]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Russian]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Spanish]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Swedish]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Thai]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CCC Help Turkish]]></NAME>
+         <VERSION>2015.0804.0020.41908</VERSION>
+         <PUBLISHER>Advanced Micro Devices, Inc.</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Configuration Manager Client]]></NAME>
+         <VERSION>5.00.9096.1000</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>01/03/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CrowdStrike Device Control]]></NAME>
+         <VERSION>6.13.12753.0</VERSION>
+         <PUBLISHER>CrowdStrike, Inc.</PUBLISHER>
+         <INSTALLDATE>10/03/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CrowdStrike Firmware Analysis]]></NAME>
+         <VERSION>6.14.12866.0</VERSION>
+         <PUBLISHER>CrowdStrike, Inc.</PUBLISHER>
+         <INSTALLDATE>10/03/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CrowdStrike Sensor Platform]]></NAME>
+         <VERSION>6.18.13213.0</VERSION>
+         <PUBLISHER>CrowdStrike, Inc.</PUBLISHER>
+         <INSTALLDATE>10/03/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CrowdStrike Windows Sensor]]></NAME>
+         <VERSION>6.18.13213.0</VERSION>
+         <PUBLISHER>CrowdStrike, Inc.</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[DisplayDriverAnalyzer]]></NAME>
+         <VERSION>398.11</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[ffdshow [rev 3154] [2009-12-09]]]></NAME>
+         <VERSION>1.0</VERSION>
+         <INSTALLDATE>04/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Foxit Reader]]></NAME>
+         <VERSION>3.1.4.1125</VERSION>
+         <PUBLISHER>Foxit Software Company</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[GDR 5343 para SQL Server 2012 (KB3045321)]]></NAME>
+         <VERSION>11.2.5343.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/09/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[GDR 5388 para SQL Server 2012 (KB3194719)]]></NAME>
+         <VERSION>11.2.5388.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/09/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Google Chrome]]></NAME>
+         <VERSION>112.0.5615.138</VERSION>
+         <PUBLISHER>Google LLC</PUBLISHER>
+         <INSTALLDATE>25/04/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Google Update Helper]]></NAME>
+         <VERSION>1.3.34.11</VERSION>
+         <PUBLISHER>Google LLC</PUBLISHER>
+         <INSTALLDATE>30/09/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[HCWebControl]]></NAME>
+         <VERSION>2.0.0.0</VERSION>
+         <PUBLISHER>Hangzhou Hikvision Digital Technology Co., Ltd.</PUBLISHER>
+         <INSTALLDATE>11/06/2021</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[HikCentral Professional Control Client]]></NAME>
+         <VERSION>1.7.1</VERSION>
+         <PUBLISHER>Hangzhou Hikvision Digital Technology Co., Ltd.</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Intel(R) Network Connections 23.4.0.19]]></NAME>
+         <VERSION>23.4.0.19</VERSION>
+         <PUBLISHER>Intel</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Intel(R) Processor Graphics]]></NAME>
+         <VERSION>10.18.10.4276</VERSION>
+         <PUBLISHER>Intel Corporation</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[iVMS-4200(V2.8.1.4_ML)]]></NAME>
+         <VERSION>2.8.1.4</VERSION>
+         <PUBLISHER>hikvision</PUBLISHER>
+         <INSTALLDATE>27/06/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[K-Lite Codec Pack 9.7.0 (Basic)]]></NAME>
+         <VERSION>9.7.0</VERSION>
+         <INSTALLDATE>04/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft .NET Framework 1.1]]></NAME>
+         <VERSION>1.1.4322</VERSION>
+         <PUBLISHER>Microsoft</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft .NET Framework 4 Multi-Targeting Pack]]></NAME>
+         <VERSION>4.0.30319</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft .NET Framework 4.7.2]]></NAME>
+         <VERSION>4.7.03062</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>17/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft .NET Framework 4.7.2 (ESN)]]></NAME>
+         <VERSION>4.7.03062</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>17/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Application Error Reporting]]></NAME>
+         <VERSION>12.0.6012.5000</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Help Viewer 1.1]]></NAME>
+         <VERSION>1.1.40219</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Help Viewer 1.1]]></NAME>
+         <VERSION>1.1.40219</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Policy Platform]]></NAME>
+         <VERSION>68.1.1010.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>10/02/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Report Viewer 2012 Runtime]]></NAME>
+         <VERSION>11.0.2100.60</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Security Client]]></NAME>
+         <VERSION>4.10.0209.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>17/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Silverlight]]></NAME>
+         <VERSION>5.1.50918.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/09/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft SQL Server 2008 R2 Management Objects]]></NAME>
+         <VERSION>10.51.2500.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft SQL Server 2008 Setup Support Files]]></NAME>
+         <VERSION>10.1.2731.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft SQL Server 2012]]></NAME>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft SQL Server 2012]]></NAME>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft SQL Server 2012 Native Client]]></NAME>
+         <VERSION>11.2.5388.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/09/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft SQL Server 2012 Policies]]></NAME>
+         <VERSION>11.2.5058.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft SQL Server 2012 RsFx Driver]]></NAME>
+         <VERSION>11.2.5058.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft SQL Server 2012 Setup (English)]]></NAME>
+         <VERSION>11.2.5388.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/09/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft SQL Server 2012 Transact-SQL Compiler Service]]></NAME>
+         <VERSION>11.2.5058.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft SQL Server 2012 Transact-SQL ScriptDom]]></NAME>
+         <VERSION>11.2.5058.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft SQL Server System CLR Types]]></NAME>
+         <VERSION>10.51.2500.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft System CLR Types for SQL Server 2012]]></NAME>
+         <VERSION>11.2.5058.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2005 Redistributable]]></NAME>
+         <VERSION>8.0.61001</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729]]></NAME>
+         <VERSION>9.0.30729</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.6161]]></NAME>
+         <VERSION>9.0.30729.6161</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.6161]]></NAME>
+         <VERSION>9.0.30729.6161</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2010  x64 Redistributable - 10.0.40219]]></NAME>
+         <VERSION>10.0.40219</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219]]></NAME>
+         <VERSION>10.0.40219</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/09/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2010  x86 Runtime - 10.0.40219]]></NAME>
+         <VERSION>10.0.40219</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.50727]]></NAME>
+         <VERSION>11.0.50727.1</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.50727]]></NAME>
+         <VERSION>11.0.50727.1</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2012 x64 Additional Runtime - 11.0.50727]]></NAME>
+         <VERSION>11.0.50727</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2012 x64 Minimum Runtime - 11.0.50727]]></NAME>
+         <VERSION>11.0.50727</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2012 x86 Additional Runtime - 11.0.50727]]></NAME>
+         <VERSION>11.0.50727</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2012 x86 Minimum Runtime - 11.0.50727]]></NAME>
+         <VERSION>11.0.50727</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.30501]]></NAME>
+         <VERSION>12.0.30501.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.30501]]></NAME>
+         <VERSION>12.0.30501.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.21005]]></NAME>
+         <VERSION>12.0.21005</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.21005]]></NAME>
+         <VERSION>12.0.21005</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.21005]]></NAME>
+         <VERSION>12.0.21005</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.21005]]></NAME>
+         <VERSION>12.0.21005</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>26/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2015-2019 Redistributable (x64) - 14.28.29914]]></NAME>
+         <VERSION>14.28.29914.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2015-2019 Redistributable (x86) - 14.28.29914]]></NAME>
+         <VERSION>14.28.29914.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2019 X64 Additional Runtime - 14.28.29914]]></NAME>
+         <VERSION>14.28.29914</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>10/02/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2019 X64 Minimum Runtime - 14.28.29914]]></NAME>
+         <VERSION>14.28.29914</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>10/02/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2019 X86 Additional Runtime - 14.28.29914]]></NAME>
+         <VERSION>14.28.29914</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>10/02/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2019 X86 Minimum Runtime - 14.28.29914]]></NAME>
+         <VERSION>14.28.29914</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>10/02/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual Studio 2010 Shell (Isolated) - ENU]]></NAME>
+         <VERSION>10.0.40219</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/09/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft VSS Writer for SQL Server 2012]]></NAME>
+         <VERSION>11.2.5058.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Netskope Client]]></NAME>
+         <VERSION>99.0.7.1144</VERSION>
+         <PUBLISHER>Netskope, Inc.</PUBLISHER>
+         <INSTALLDATE>04/05/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Ansel]]></NAME>
+         <VERSION>5.1.453.0</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Backend]]></NAME>
+         <VERSION>31.2.0.0</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Container]]></NAME>
+         <VERSION>1.11</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Controlador de 3D Vision 398.11]]></NAME>
+         <VERSION>398.11</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>31/03/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Controlador de audio HD 1.3.37.4]]></NAME>
+         <VERSION>1.3.37.4</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>31/03/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Controlador de gráficos 398.11]]></NAME>
+         <VERSION>398.11</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>31/03/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Controlador de la controladora 3D Vision 390.41]]></NAME>
+         <VERSION>390.41</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Display Container]]></NAME>
+         <VERSION>1.11</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>31/03/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Display Container LS]]></NAME>
+         <VERSION>1.11</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>31/03/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Display Session Container]]></NAME>
+         <VERSION>1.11</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>31/03/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Display Watchdog Plugin]]></NAME>
+         <VERSION>1.11</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>31/03/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA GeForce Experience 3.14.0.139]]></NAME>
+         <VERSION>3.14.0.139</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Install Application]]></NAME>
+         <VERSION>2.1002.291.0</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>31/03/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA LocalSystem Container]]></NAME>
+         <VERSION>1.11</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Message Bus for NvContainer]]></NAME>
+         <VERSION>1.11</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA NetworkService Container]]></NAME>
+         <VERSION>1.11</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA NodeJS]]></NAME>
+         <VERSION>3.14.0.139</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Optimus Update 31.2.0.0]]></NAME>
+         <VERSION>31.2.0.0</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Session Container]]></NAME>
+         <VERSION>1.11</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA ShadowPlay 3.14.0.139]]></NAME>
+         <VERSION>3.14.0.139</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Nvidia Share]]></NAME>
+         <VERSION>3.14.0.139</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA SHIELD Streaming]]></NAME>
+         <VERSION>7.1.0406</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA SHIELD Wireless Controller Driver]]></NAME>
+         <VERSION>3.14.0.117</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Software del sistema PhysX 9.17.0524]]></NAME>
+         <VERSION>9.17.0524</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Stereoscopic 3D Driver]]></NAME>
+         <VERSION>7.17.13.9640</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Telemetry Client]]></NAME>
+         <VERSION>9.3.14.0</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Telemetry Container]]></NAME>
+         <VERSION>9.3.14.0</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA TelemetryApi helper for NvContainer]]></NAME>
+         <VERSION>1.11</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Update Core]]></NAME>
+         <VERSION>31.2.0.0</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA User Container]]></NAME>
+         <VERSION>1.11</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Virtual Audio 4.06.0]]></NAME>
+         <VERSION>4.06.0</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Virtual Host Controller]]></NAME>
+         <VERSION>2.02.0.5</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[NVIDIA Watchdog Plugin for NvContainer]]></NAME>
+         <VERSION>1.11</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>21/10/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Panel de control de NVIDIA 398.11]]></NAME>
+         <VERSION>398.11</VERSION>
+         <PUBLISHER>NVIDIA Corporation</PUBLISHER>
+         <INSTALLDATE>31/03/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Realtek High Definition Audio Driver]]></NAME>
+         <VERSION>6.0.1.7548</VERSION>
+         <PUBLISHER>Realtek Semiconductor Corp.</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Service Pack 2 for SQL Server 2012 (KB2958429)]]></NAME>
+         <VERSION>11.2.5058.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[SQL Server 2012 Client Tools]]></NAME>
+         <VERSION>11.2.5058.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[SQL Server 2012 Common Files]]></NAME>
+         <VERSION>11.2.5058.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[SQL Server 2012 Common Files]]></NAME>
+         <VERSION>11.2.5058.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/09/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[SQL Server 2012 Database Engine Services]]></NAME>
+         <VERSION>11.2.5058.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[SQL Server 2012 Database Engine Services]]></NAME>
+         <VERSION>11.2.5058.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/09/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[SQL Server 2012 Database Engine Shared]]></NAME>
+         <VERSION>11.2.5058.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[SQL Server 2012 Management Studio]]></NAME>
+         <VERSION>11.2.5058.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[SQL Server 2012 Management Studio]]></NAME>
+         <VERSION>11.2.5058.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/09/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[SQL Server Browser for SQL Server 2012]]></NAME>
+         <VERSION>11.2.5058.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Sql Server Customer Experience Improvement Program]]></NAME>
+         <VERSION>11.2.5058.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Surveillance Viewer IPC NB version 0.2.6.3]]></NAME>
+         <VERSION>0.2.6.3</VERSION>
+         <PUBLISHER>Surveillance Viewer</PUBLISHER>
+         <INSTALLDATE>19/08/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Surveillance Viewer IPC UN version 0.2.1.6]]></NAME>
+         <VERSION>0.2.1.6</VERSION>
+         <PUBLISHER>Surveillance Viewer</PUBLISHER>
+         <INSTALLDATE>24/06/2021</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[TeamViewer 14]]></NAME>
+         <VERSION>14.6.4835</VERSION>
+         <PUBLISHER>TeamViewer</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Visual Studio 2010 Prerequisites - English]]></NAME>
+         <VERSION>10.0.40219</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Web Components]]></NAME>
+         <VERSION>3.0.7.27</VERSION>
+         <INSTALLDATE>24/01/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[ZDServer]]></NAME>
+         <VERSION>1.0.1.4</VERSION>
+         <PUBLISHER>ZTE Corporation</PUBLISHER>
+         <INSTALLDATE>31/03/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[ZTE MF823 - Modem USB]]></NAME>
+         <VERSION>1.0.0.1</VERSION>
+         <PUBLISHER>ZTE</PUBLISHER>
+         <INSTALLDATE>31/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[ZTE Mobile Broadband Device Drivers 1.0.0.30]]></NAME>
+         <PUBLISHER>ZTE</PUBLISHER>
+         <INSTALLDATE>31/07/2018</INSTALLDATE>
+      </SOFTWARES>
+      <MEMORIES>
+         <CAPACITY>8192</CAPACITY>
+         <CAPTION>Memoria física</CAPTION>
+         <DESCRIPTION>Memoria física</DESCRIPTION>
+         <FORMFACTOR>8</FORMFACTOR>
+         <REMOVABLE/>
+         <PURPOSE/>
+         <SPEED>2400</SPEED>
+         <TYPE>BANK 3</TYPE>
+         <NUMSLOTS>4</NUMSLOTS>
+         <SERIALNUMBER/>
+         <MANUFACTURER>075D</MANUFACTURER>
+      </MEMORIES>
+      <VIDEOS>
+         <CHIPSET>GeForce GT 1030</CHIPSET>
+         <MEMORY>2048</MEMORY>
+         <NAME>NVIDIA GeForce GT 1030</NAME>
+         <RESOLUTION>1280x1024</RESOLUTION>
+         <PCISLOT>1</PCISLOT>
+      </VIDEOS>
+      <SOUNDS>
+         <DESCRIPTION>High Definition Audio Device</DESCRIPTION>
+         <MANUFACTURER>Microsoft</MANUFACTURER>
+         <NAME>High Definition Audio Device</NAME>
+      </SOUNDS>
+      <SOUNDS>
+         <DESCRIPTION>NVIDIA High Definition Audio</DESCRIPTION>
+         <MANUFACTURER>NVIDIA</MANUFACTURER>
+         <NAME>NVIDIA High Definition Audio</NAME>
+      </SOUNDS>
+      <SOUNDS>
+         <DESCRIPTION>NVIDIA Virtual Audio Device (Wave Extensible) (WDM)</DESCRIPTION>
+         <MANUFACTURER>Microsoft</MANUFACTURER>
+         <NAME>NVIDIA Virtual Audio Device (Wave Extensible) (WDM)</NAME>
+      </SOUNDS>
+      <USERS>
+         <LOGIN>xxxxxxx</LOGIN>
+      </USERS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (IP)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>66:A7:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (IP)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>6E:E3:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (IP)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>7E:09:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (IPv6)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>66:A7:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (IPv6)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>6E:E3:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (IPv6)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>7E:09:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (Network Monitor)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>66:A7:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (Network Monitor)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>6E:E3:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (Network Monitor)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>7E:09:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <IPADDRESS>169.254.41.148</IPADDRESS>
+         <IPADDRESS>192.168.0.225</IPADDRESS>
+         <IPADDRESS>10.50.78.89</IPADDRESS>
+         <IPADDRESS6>fe80::c0b2:cf62:cba8:8d8</IPADDRESS6>
+         <DESCRIPTION>Intel(R) Ethernet Connection (7) I219-V</DESCRIPTION>
+         <IPMASK>255.255.255.0, 255.255.255.0, 255.255.255.128, 64</IPMASK>
+         <IPDHCP/>
+         <IPGATEWAY>10.50.78.19</IPGATEWAY>
+         <MACADDR>04:92:26:D7:AC:51</MACADDR>
+      </NETWORKS>
+      <DRIVES>
+         <DESCRIPTION>Disco fijo local</DESCRIPTION>
+         <FILESYSTEM>NTFS</FILESYSTEM>
+         <FREE>309229568</FREE>
+         <LABEL>WD Blue SN570 500GB</LABEL>
+         <LETTER/>
+         <TOTAL>487755776</TOTAL>
+         <VOLUMN>C:</VOLUMN>
+      </DRIVES>
+   </CONTENT>
+   <DEVICEID>16823975</DEVICEID>
+   <QUERY>INVENTORY</QUERY>
+   <PROLOG/>
+</REQUEST>

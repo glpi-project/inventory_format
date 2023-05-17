@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REQUEST>
+   <CONTENT>
+      <VERSIONCLIENT>SCCM-v2.4.1</VERSIONCLIENT>
+      <ACCESSLOG>
+         <LOGDATE>2023-05-15 02:22:53</LOGDATE>
+         <USERID>xxxxxxx</USERID>
+      </ACCESSLOG>
+      <ACCOUNTINFO>
+         <KEYNAME>TAG</KEYNAME>
+         <KEYVALUE>SCCM</KEYVALUE>
+      </ACCOUNTINFO>
+      <HARDWARE>
+         <NAME>EMUPC69</NAME>
+         <LASTLOGGEDUSER>xxxxxxx</LASTLOGGEDUSER>
+         <UUID>B649C417-24A2-48D5-B38B-AA4D7E9257ED</UUID>
+         <USERID>xxxxxxx</USERID>
+         <WORKGROUP>ds.ga.local</WORKGROUP>
+         <OSNAME>Microsoft Windows 10 Enterprise</OSNAME>
+         <OSCOMMENTS/>
+         <OSVERSION>10.0.19044</OSVERSION>
+      </HARDWARE>
+      <OPERATINGSYSTEM>
+         <NAME>Microsoft Windows 10 Enterprise</NAME>
+         <FULL_NAME>Microsoft Windows 10 Enterprise</FULL_NAME>
+         <ARCH>x64-based PC</ARCH>
+         <VERSION>10.0.19044</VERSION>
+         <SERVICE_PACK/>
+      </OPERATINGSYSTEM>
+      <BIOS>
+         <SMODEL>HP ProDesk 600 G5 SFF</SMODEL>
+         <TYPE>Workstation</TYPE>
+         <MMANUFACTURER>HP</MMANUFACTURER>
+         <SMANUFACTURER>HP</SMANUFACTURER>
+         <SSN>CZC946B8WD</SSN>
+         <BDATE>01/04/2021</BDATE>
+         <BMANUFACTURER>HP</BMANUFACTURER>
+         <BVERSION>R07 Ver. 02.08.00</BVERSION>
+         <SKUNUMBER>HPQOEM - 0</SKUNUMBER>
+      </BIOS>
+      <CPUS>
+         <DESCRIPTION>Intel(R) Core(TM) i5-9500 CPU @ 3.00GHz</DESCRIPTION>
+         <MANUFACTURER>GenuineIntel</MANUFACTURER>
+         <NAME>Intel(R) Core(TM) i5-9500 CPU @ 3.00GHz</NAME>
+         <SPEED>3000</SPEED>
+         <TYPE>64</TYPE>
+         <CORE>6</CORE>
+         <THREAD>6</THREAD>
+      </CPUS>
+      <SOFTWARES>
+         <NAME><![CDATA[N/A]]></NAME>
+         <VERSION>255.255.65535.0</VERSION>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[7-Zip 22.01 (x64 edition)]]></NAME>
+         <VERSION>22.01.00.0</VERSION>
+         <PUBLISHER>Igor Pavlov</PUBLISHER>
+         <INSTALLDATE>30/09/2022</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[ADSelfService Plus Client Software]]></NAME>
+         <VERSION>5.0.2</VERSION>
+         <PUBLISHER>ZOHO Corp</PUBLISHER>
+         <INSTALLDATE>16/03/2020</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Cisco Jabber]]></NAME>
+         <VERSION>12.5.2.39445</VERSION>
+         <PUBLISHER>Cisco Systems, Inc</PUBLISHER>
+         <INSTALLDATE>10/10/2020</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Configuration Manager Client]]></NAME>
+         <VERSION>5.00.9096.1000</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>02/03/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CrowdStrike Device Control]]></NAME>
+         <VERSION>6.35.14960.0</VERSION>
+         <PUBLISHER>CrowdStrike, Inc.</PUBLISHER>
+         <INSTALLDATE>08/05/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CrowdStrike Firmware Analysis]]></NAME>
+         <VERSION>6.32.14651.0</VERSION>
+         <PUBLISHER>CrowdStrike, Inc.</PUBLISHER>
+         <INSTALLDATE>08/05/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CrowdStrike Sensor Platform]]></NAME>
+         <VERSION>6.51.16510.0</VERSION>
+         <PUBLISHER>CrowdStrike, Inc.</PUBLISHER>
+         <INSTALLDATE>08/05/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[CrowdStrike Windows Sensor]]></NAME>
+         <VERSION>6.51.16510.0</VERSION>
+         <PUBLISHER>CrowdStrike, Inc.</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Dynamic Application Loader Host Interface Service]]></NAME>
+         <VERSION>1.0.0.0</VERSION>
+         <PUBLISHER>Intel Corporation</PUBLISHER>
+         <INSTALLDATE>14/11/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[GlobalProtect]]></NAME>
+         <VERSION>5.2.8</VERSION>
+         <PUBLISHER>Palo Alto Networks</PUBLISHER>
+         <INSTALLDATE>23/11/2021</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Google Chrome]]></NAME>
+         <VERSION>112.0.5615.138</VERSION>
+         <PUBLISHER>Google LLC</PUBLISHER>
+         <INSTALLDATE>28/12/2021</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[HP Connection Optimizer]]></NAME>
+         <VERSION>2.0.15.0</VERSION>
+         <PUBLISHER>HP Inc.</PUBLISHER>
+         <INSTALLDATE>14/11/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[HP Hotkey Support]]></NAME>
+         <VERSION>6.2.52.1</VERSION>
+         <PUBLISHER>HP Inc.</PUBLISHER>
+         <INSTALLDATE>14/11/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[HP PC Hardware Diagnostics UEFI]]></NAME>
+         <VERSION>7.6.0.0</VERSION>
+         <PUBLISHER>HP</PUBLISHER>
+         <INSTALLDATE>11/06/2020</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[HP System Default Settings]]></NAME>
+         <VERSION>1.4.8.2</VERSION>
+         <PUBLISHER>HP Inc.</PUBLISHER>
+         <INSTALLDATE>14/11/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Intel(R) Chipset Device Software]]></NAME>
+         <VERSION>10.1.18019.8144</VERSION>
+         <PUBLISHER>Intel Corporation</PUBLISHER>
+         <INSTALLDATE>14/11/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Intel(R) Icls]]></NAME>
+         <VERSION>1.0.0.0</VERSION>
+         <PUBLISHER>Intel Corporation</PUBLISHER>
+         <INSTALLDATE>14/11/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Intel(R) LMS]]></NAME>
+         <VERSION>1.0.0.0</VERSION>
+         <PUBLISHER>Intel Corporation</PUBLISHER>
+         <INSTALLDATE>14/11/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Intel(R) Management Engine Components]]></NAME>
+         <VERSION>1932.12.0.1298</VERSION>
+         <PUBLISHER>Intel Corporation</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Intel(R) Management Engine Components]]></NAME>
+         <VERSION>1.0.0.0</VERSION>
+         <PUBLISHER>Intel Corporation</PUBLISHER>
+         <INSTALLDATE>14/11/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Intel(R) Management Engine Driver]]></NAME>
+         <VERSION>1.0.0.0</VERSION>
+         <PUBLISHER>Intel Corporation</PUBLISHER>
+         <INSTALLDATE>14/11/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Intel(R) OEM Extension]]></NAME>
+         <VERSION>1.0.0.0</VERSION>
+         <PUBLISHER>Intel Corporation</PUBLISHER>
+         <INSTALLDATE>14/11/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Intel(R) Processor Graphics]]></NAME>
+         <VERSION>26.20.100.7157</VERSION>
+         <PUBLISHER>Intel Corporation</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Intel(R) Wireless Manageability Driver]]></NAME>
+         <VERSION>1.0.0.0</VERSION>
+         <PUBLISHER>Intel Corporation</PUBLISHER>
+         <INSTALLDATE>14/11/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Intel(R) Wireless Manageability Driver Extension]]></NAME>
+         <VERSION>1.0.0.0</VERSION>
+         <PUBLISHER>Intel Corporation</PUBLISHER>
+         <INSTALLDATE>14/11/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Edge]]></NAME>
+         <VERSION>112.0.1722.46</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>21/04/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Edge Update]]></NAME>
+         <VERSION>1.3.175.27</VERSION>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Policy Platform]]></NAME>
+         <VERSION>68.1.1010.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>14/03/2020</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Silverlight]]></NAME>
+         <VERSION>5.1.50907.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>21/03/2020</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft VC++ redistributables repacked.]]></NAME>
+         <VERSION>12.0.0.0</VERSION>
+         <PUBLISHER>Intel Corporation</PUBLISHER>
+         <INSTALLDATE>14/11/2019</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.40660]]></NAME>
+         <VERSION>12.0.40660.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.40660]]></NAME>
+         <VERSION>12.0.40660.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.40660]]></NAME>
+         <VERSION>12.0.40660</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>14/03/2020</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.40660]]></NAME>
+         <VERSION>12.0.40660</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>14/03/2020</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.40660]]></NAME>
+         <VERSION>12.0.40660</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>14/03/2020</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.40660]]></NAME>
+         <VERSION>12.0.40660</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>14/03/2020</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2015-2019 Redistributable (x64) - 14.28.29914]]></NAME>
+         <VERSION>14.28.29914.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2015-2019 Redistributable (x86) - 14.28.29914]]></NAME>
+         <VERSION>14.28.29914.0</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2019 X64 Additional Runtime - 14.28.29914]]></NAME>
+         <VERSION>14.28.29914</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/09/2021</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2019 X64 Minimum Runtime - 14.28.29914]]></NAME>
+         <VERSION>14.28.29914</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/09/2021</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2019 X86 Additional Runtime - 14.28.29914]]></NAME>
+         <VERSION>14.28.29914</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/09/2021</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Microsoft Visual C++ 2019 X86 Minimum Runtime - 14.28.29914]]></NAME>
+         <VERSION>14.28.29914</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>30/09/2021</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Netskope Client]]></NAME>
+         <VERSION>99.0.7.1144</VERSION>
+         <PUBLISHER>Netskope, Inc.</PUBLISHER>
+         <INSTALLDATE>13/05/2023</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[PDFCreator]]></NAME>
+         <VERSION>3.1.2</VERSION>
+         <PUBLISHER>pdfforge GmbH</PUBLISHER>
+         <INSTALLDATE>14/03/2020</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Software para dispositivos de chipset Intel®]]></NAME>
+         <VERSION>10.1.18019.8144</VERSION>
+         <PUBLISHER>Intel(R) Corporation</PUBLISHER>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Swivel Taskbar Client]]></NAME>
+         <VERSION>1.6.6.1</VERSION>
+         <PUBLISHER>Swivel Secure</PUBLISHER>
+         <INSTALLDATE>16/03/2020</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[Teams Machine-Wide Installer]]></NAME>
+         <VERSION>1.3.0.3564</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>14/03/2020</INSTALLDATE>
+      </SOFTWARES>
+      <SOFTWARES>
+         <NAME><![CDATA[WebView2 Runtime de Microsoft Edge]]></NAME>
+         <VERSION>113.0.1774.42</VERSION>
+         <PUBLISHER>Microsoft Corporation</PUBLISHER>
+         <INSTALLDATE>14/05/2023</INSTALLDATE>
+      </SOFTWARES>
+      <MEMORIES>
+         <CAPACITY>8192</CAPACITY>
+         <CAPTION>Memoria física</CAPTION>
+         <DESCRIPTION>Memoria física</DESCRIPTION>
+         <FORMFACTOR>8</FORMFACTOR>
+         <REMOVABLE/>
+         <PURPOSE/>
+         <SPEED>2667</SPEED>
+         <TYPE>ChannelB</TYPE>
+         <NUMSLOTS>1</NUMSLOTS>
+         <SERIALNUMBER/>
+         <MANUFACTURER>Hynix/Hyundai</MANUFACTURER>
+      </MEMORIES>
+      <VIDEOS>
+         <CHIPSET>Intel(R) UHD Graphics Family</CHIPSET>
+         <MEMORY>1024</MEMORY>
+         <NAME>Intel(R) UHD Graphics 630</NAME>
+         <RESOLUTION>1920x1080</RESOLUTION>
+         <PCISLOT>1</PCISLOT>
+      </VIDEOS>
+      <SOUNDS>
+         <DESCRIPTION>Sonido Intel(R) para pantallas</DESCRIPTION>
+         <MANUFACTURER>Intel(R) Corporation</MANUFACTURER>
+         <NAME>Sonido Intel(R) para pantallas</NAME>
+      </SOUNDS>
+      <SOUNDS>
+         <DESCRIPTION>Synaptics HD Audio</DESCRIPTION>
+         <MANUFACTURER>Synaptics</MANUFACTURER>
+         <NAME>Synaptics HD Audio</NAME>
+      </SOUNDS>
+      <USERS>
+         <LOGIN>xxxxxxx</LOGIN>
+      </USERS>
+      <NETWORKS>
+         <IPADDRESS>192.168.1.133</IPADDRESS>
+         <IPADDRESS6>fe80::9bbb:c6ae:3cd5:d9fb</IPADDRESS6>
+         <IPADDRESS6>2a0c:5a80:140d:4400:c480:da92:e839:ec9d</IPADDRESS6>
+         <IPADDRESS6>2a0c:5a80:140d:4400:70f7:45d7:71fd:4d85</IPADDRESS6>
+         <IPADDRESS6>2a0c:5a80:140d:4400:c3a:ccfe:ecdc:42b4</IPADDRESS6>
+         <IPADDRESS6>2a0c:5a80:140d:4400:89d2:18f3:d43:2dfb</IPADDRESS6>
+         <DESCRIPTION>Intel(R) Ethernet Connection (7) I219-LM</DESCRIPTION>
+         <IPMASK>255.255.255.0, 64, 128, 128, 128, 64</IPMASK>
+         <IPDHCP>192.168.1.1</IPDHCP>
+         <IPGATEWAY>192.168.1.1, fe80::1</IPGATEWAY>
+         <MACADDR>9C:7B:EF:B3:50:96</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <IPADDRESS>172.27.192.8</IPADDRESS>
+         <DESCRIPTION>PANGP Virtual Ethernet Adapter #2</DESCRIPTION>
+         <IPMASK>255.255.255.255</IPMASK>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>02:50:41:00:00:01</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (IP)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>A8:79:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (IP)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>AA:DF:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (IP)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>AC:32:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (IPv6)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>A8:79:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (IPv6)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>AA:DF:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (IPv6)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>AC:32:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (Network Monitor)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>A8:79:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (Network Monitor)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>AA:DF:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <NETWORKS>
+         <DESCRIPTION>WAN Miniport (Network Monitor)</DESCRIPTION>
+         <IPMASK/>
+         <IPDHCP/>
+         <IPGATEWAY/>
+         <MACADDR>AC:32:20:52:41:53</MACADDR>
+      </NETWORKS>
+      <DRIVES>
+         <DESCRIPTION>Disco fijo local</DESCRIPTION>
+         <FILESYSTEM>NTFS</FILESYSTEM>
+         <FREE>169840640</FREE>
+         <LABEL>KBG30ZMV256G KIOXIA</LABEL>
+         <LETTER>Windows</LETTER>
+         <TOTAL>249083904</TOTAL>
+         <VOLUMN>C:</VOLUMN>
+      </DRIVES>
+   </CONTENT>
+   <DEVICEID>16811420</DEVICEID>
+   <QUERY>INVENTORY</QUERY>
+   <PROLOG/>
+</REQUEST>

@@ -1,0 +1,437 @@
+{
+    "content": {
+        "versionclient": "SCCM-v2.4.1",
+        "accesslog": {
+            "logdate": "2023-05-15 02:22:53",
+            "userid": "xxxxxxx"
+        },
+        "hardware": {
+            "name": "EMUPC69",
+            "lastloggeduser": "xxxxxxx",
+            "uuid": "B649C417-24A2-48D5-B38B-AA4D7E9257ED",
+            "workgroup": "ds.ga.local"
+        },
+        "operatingsystem": {
+            "name": "Microsoft Windows 10 Enterprise",
+            "full_name": "Microsoft Windows 10 Enterprise",
+            "arch": "x64-based PC",
+            "version": "10.0.19044"
+        },
+        "bios": {
+            "smodel": "HP ProDesk 600 G5 SFF",
+            "mmanufacturer": "HP",
+            "smanufacturer": "HP",
+            "ssn": "CZC946B8WD",
+            "bdate": "2021-04-01",
+            "bmanufacturer": "HP",
+            "bversion": "R07 Ver. 02.08.00",
+            "skunumber": "HPQOEM - 0"
+        },
+        "cpus": [
+            {
+                "description": "Intel(R) Core(TM) i5-9500 CPU @ 3.00GHz",
+                "manufacturer": "GenuineIntel",
+                "name": "Intel(R) Core(TM) i5-9500 CPU @ 3.00GHz",
+                "speed": 3000,
+                "core": 6,
+                "thread": 6
+            }
+        ],
+        "softwares": [
+            {
+                "name": "N\/A",
+                "version": "255.255.65535.0"
+            },
+            {
+                "name": "7-Zip 22.01 (x64 edition)",
+                "version": "22.01.00.0",
+                "publisher": "Igor Pavlov",
+                "install_date": "2022-09-30"
+            },
+            {
+                "name": "ADSelfService Plus Client Software",
+                "version": "5.0.2",
+                "publisher": "ZOHO Corp",
+                "install_date": "2020-03-16"
+            },
+            {
+                "name": "Cisco Jabber",
+                "version": "12.5.2.39445",
+                "publisher": "Cisco Systems, Inc",
+                "install_date": "2020-10-10"
+            },
+            {
+                "name": "Configuration Manager Client",
+                "version": "5.00.9096.1000",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2023-03-02"
+            },
+            {
+                "name": "CrowdStrike Device Control",
+                "version": "6.35.14960.0",
+                "publisher": "CrowdStrike, Inc.",
+                "install_date": "2023-05-08"
+            },
+            {
+                "name": "CrowdStrike Firmware Analysis",
+                "version": "6.32.14651.0",
+                "publisher": "CrowdStrike, Inc.",
+                "install_date": "2023-05-08"
+            },
+            {
+                "name": "CrowdStrike Sensor Platform",
+                "version": "6.51.16510.0",
+                "publisher": "CrowdStrike, Inc.",
+                "install_date": "2023-05-08"
+            },
+            {
+                "name": "CrowdStrike Windows Sensor",
+                "version": "6.51.16510.0",
+                "publisher": "CrowdStrike, Inc."
+            },
+            {
+                "name": "Dynamic Application Loader Host Interface Service",
+                "version": "1.0.0.0",
+                "publisher": "Intel Corporation",
+                "install_date": "2019-11-14"
+            },
+            {
+                "name": "GlobalProtect",
+                "version": "5.2.8",
+                "publisher": "Palo Alto Networks",
+                "install_date": "2021-11-23"
+            },
+            {
+                "name": "Google Chrome",
+                "version": "112.0.5615.138",
+                "publisher": "Google LLC",
+                "install_date": "2021-12-28"
+            },
+            {
+                "name": "HP Connection Optimizer",
+                "version": "2.0.15.0",
+                "publisher": "HP Inc.",
+                "install_date": "2019-11-14"
+            },
+            {
+                "name": "HP Hotkey Support",
+                "version": "6.2.52.1",
+                "publisher": "HP Inc.",
+                "install_date": "2019-11-14"
+            },
+            {
+                "name": "HP PC Hardware Diagnostics UEFI",
+                "version": "7.6.0.0",
+                "publisher": "HP",
+                "install_date": "2020-06-11"
+            },
+            {
+                "name": "HP System Default Settings",
+                "version": "1.4.8.2",
+                "publisher": "HP Inc.",
+                "install_date": "2019-11-14"
+            },
+            {
+                "name": "Intel(R) Chipset Device Software",
+                "version": "10.1.18019.8144",
+                "publisher": "Intel Corporation",
+                "install_date": "2019-11-14"
+            },
+            {
+                "name": "Intel(R) Icls",
+                "version": "1.0.0.0",
+                "publisher": "Intel Corporation",
+                "install_date": "2019-11-14"
+            },
+            {
+                "name": "Intel(R) LMS",
+                "version": "1.0.0.0",
+                "publisher": "Intel Corporation",
+                "install_date": "2019-11-14"
+            },
+            {
+                "name": "Intel(R) Management Engine Components",
+                "version": "1932.12.0.1298",
+                "publisher": "Intel Corporation"
+            },
+            {
+                "name": "Intel(R) Management Engine Components",
+                "version": "1.0.0.0",
+                "publisher": "Intel Corporation",
+                "install_date": "2019-11-14"
+            },
+            {
+                "name": "Intel(R) Management Engine Driver",
+                "version": "1.0.0.0",
+                "publisher": "Intel Corporation",
+                "install_date": "2019-11-14"
+            },
+            {
+                "name": "Intel(R) OEM Extension",
+                "version": "1.0.0.0",
+                "publisher": "Intel Corporation",
+                "install_date": "2019-11-14"
+            },
+            {
+                "name": "Intel(R) Processor Graphics",
+                "version": "26.20.100.7157",
+                "publisher": "Intel Corporation"
+            },
+            {
+                "name": "Intel(R) Wireless Manageability Driver",
+                "version": "1.0.0.0",
+                "publisher": "Intel Corporation",
+                "install_date": "2019-11-14"
+            },
+            {
+                "name": "Intel(R) Wireless Manageability Driver Extension",
+                "version": "1.0.0.0",
+                "publisher": "Intel Corporation",
+                "install_date": "2019-11-14"
+            },
+            {
+                "name": "Microsoft Edge",
+                "version": "112.0.1722.46",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2023-04-21"
+            },
+            {
+                "name": "Microsoft Edge Update",
+                "version": "1.3.175.27"
+            },
+            {
+                "name": "Microsoft Policy Platform",
+                "version": "68.1.1010.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2020-03-14"
+            },
+            {
+                "name": "Microsoft Silverlight",
+                "version": "5.1.50907.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2020-03-21"
+            },
+            {
+                "name": "Microsoft VC++ redistributables repacked.",
+                "version": "12.0.0.0",
+                "publisher": "Intel Corporation",
+                "install_date": "2019-11-14"
+            },
+            {
+                "name": "Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.40660",
+                "version": "12.0.40660.0",
+                "publisher": "Microsoft Corporation"
+            },
+            {
+                "name": "Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.40660",
+                "version": "12.0.40660.0",
+                "publisher": "Microsoft Corporation"
+            },
+            {
+                "name": "Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.40660",
+                "version": "12.0.40660",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2020-03-14"
+            },
+            {
+                "name": "Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.40660",
+                "version": "12.0.40660",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2020-03-14"
+            },
+            {
+                "name": "Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.40660",
+                "version": "12.0.40660",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2020-03-14"
+            },
+            {
+                "name": "Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.40660",
+                "version": "12.0.40660",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2020-03-14"
+            },
+            {
+                "name": "Microsoft Visual C++ 2015-2019 Redistributable (x64) - 14.28.29914",
+                "version": "14.28.29914.0",
+                "publisher": "Microsoft Corporation"
+            },
+            {
+                "name": "Microsoft Visual C++ 2015-2019 Redistributable (x86) - 14.28.29914",
+                "version": "14.28.29914.0",
+                "publisher": "Microsoft Corporation"
+            },
+            {
+                "name": "Microsoft Visual C++ 2019 X64 Additional Runtime - 14.28.29914",
+                "version": "14.28.29914",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2021-09-30"
+            },
+            {
+                "name": "Microsoft Visual C++ 2019 X64 Minimum Runtime - 14.28.29914",
+                "version": "14.28.29914",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2021-09-30"
+            },
+            {
+                "name": "Microsoft Visual C++ 2019 X86 Additional Runtime - 14.28.29914",
+                "version": "14.28.29914",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2021-09-30"
+            },
+            {
+                "name": "Microsoft Visual C++ 2019 X86 Minimum Runtime - 14.28.29914",
+                "version": "14.28.29914",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2021-09-30"
+            },
+            {
+                "name": "Netskope Client",
+                "version": "99.0.7.1144",
+                "publisher": "Netskope, Inc.",
+                "install_date": "2023-05-13"
+            },
+            {
+                "name": "PDFCreator",
+                "version": "3.1.2",
+                "publisher": "pdfforge GmbH",
+                "install_date": "2020-03-14"
+            },
+            {
+                "name": "Software para dispositivos de chipset Intel\u00ae",
+                "version": "10.1.18019.8144",
+                "publisher": "Intel(R) Corporation"
+            },
+            {
+                "name": "Swivel Taskbar Client",
+                "version": "1.6.6.1",
+                "publisher": "Swivel Secure",
+                "install_date": "2020-03-16"
+            },
+            {
+                "name": "Teams Machine-Wide Installer",
+                "version": "1.3.0.3564",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2020-03-14"
+            },
+            {
+                "name": "WebView2 Runtime de Microsoft Edge",
+                "version": "113.0.1774.42",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2023-05-14"
+            }
+        ],
+        "memories": [
+            {
+                "capacity": 8192,
+                "caption": "Memoria f\u00edsica",
+                "description": "Memoria f\u00edsica",
+                "formfactor": "8",
+                "speed": "2667",
+                "type": "ChannelB",
+                "numslots": 1,
+                "manufacturer": "Hynix\/Hyundai"
+            }
+        ],
+        "videos": [
+            {
+                "chipset": "Intel(R) UHD Graphics Family",
+                "memory": 1024,
+                "name": "Intel(R) UHD Graphics 630",
+                "resolution": "1920x1080",
+                "pcislot": "1"
+            }
+        ],
+        "sounds": [
+            {
+                "description": "Sonido Intel(R) para pantallas",
+                "manufacturer": "Intel(R) Corporation",
+                "name": "Sonido Intel(R) para pantallas"
+            },
+            {
+                "description": "Synaptics HD Audio",
+                "manufacturer": "Synaptics",
+                "name": "Synaptics HD Audio"
+            }
+        ],
+        "users": [
+            {
+                "login": "xxxxxxx"
+            }
+        ],
+        "networks": [
+            {
+                "ipaddress": "192.168.1.133",
+                "ipaddress6": [
+                    "fe80::9bbb:c6ae:3cd5:d9fb",
+                    "2a0c:5a80:140d:4400:c480:da92:e839:ec9d",
+                    "2a0c:5a80:140d:4400:70f7:45d7:71fd:4d85",
+                    "2a0c:5a80:140d:4400:c3a:ccfe:ecdc:42b4",
+                    "2a0c:5a80:140d:4400:89d2:18f3:d43:2dfb"
+                ],
+                "description": "Intel(R) Ethernet Connection (7) I219-LM",
+                "ipmask": "255.255.255.0, 64, 128, 128, 128, 64",
+                "ipdhcp": "192.168.1.1",
+                "ipgateway": "192.168.1.1, fe80::1",
+                "mac": "9C:7B:EF:B3:50:96"
+            },
+            {
+                "ipaddress": "172.27.192.8",
+                "description": "PANGP Virtual Ethernet Adapter #2",
+                "ipmask": "255.255.255.255",
+                "mac": "02:50:41:00:00:01"
+            },
+            {
+                "description": "WAN Miniport (IP)",
+                "mac": "A8:79:20:52:41:53"
+            },
+            {
+                "description": "WAN Miniport (IP)",
+                "mac": "AA:DF:20:52:41:53"
+            },
+            {
+                "description": "WAN Miniport (IP)",
+                "mac": "AC:32:20:52:41:53"
+            },
+            {
+                "description": "WAN Miniport (IPv6)",
+                "mac": "A8:79:20:52:41:53"
+            },
+            {
+                "description": "WAN Miniport (IPv6)",
+                "mac": "AA:DF:20:52:41:53"
+            },
+            {
+                "description": "WAN Miniport (IPv6)",
+                "mac": "AC:32:20:52:41:53"
+            },
+            {
+                "description": "WAN Miniport (Network Monitor)",
+                "mac": "A8:79:20:52:41:53"
+            },
+            {
+                "description": "WAN Miniport (Network Monitor)",
+                "mac": "AA:DF:20:52:41:53"
+            },
+            {
+                "description": "WAN Miniport (Network Monitor)",
+                "mac": "AC:32:20:52:41:53"
+            }
+        ],
+        "drives": [
+            {
+                "description": "Disco fijo local",
+                "filesystem": "NTFS",
+                "free": 169840640,
+                "label": "KBG30ZMV256G KIOXIA",
+                "letter": "Windows",
+                "total": 249083904,
+                "volumn": "C:"
+            }
+        ]
+    },
+    "deviceid": "16811420",
+    "action": "inventory",
+    "tag": "SCCM",
+    "itemtype": "Computer"
+}

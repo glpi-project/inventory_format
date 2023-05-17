@@ -1,0 +1,1074 @@
+{
+    "content": {
+        "versionclient": "SCCM-v2.4.1",
+        "accesslog": {
+            "logdate": "2023-05-15 02:23:05",
+            "userid": "xxxxxxx"
+        },
+        "hardware": {
+            "name": "PCVANALITICA",
+            "lastloggeduser": "xxxxxxx",
+            "uuid": "47FA051E-17D7-49D7-A3FF-D393B9FA97EB",
+            "workgroup": "ds.ga.local"
+        },
+        "operatingsystem": {
+            "name": "Microsoft Windows 10 Pro",
+            "full_name": "Microsoft Windows 10 Pro",
+            "arch": "x64-based PC",
+            "version": "10.0.18362"
+        },
+        "bios": {
+            "smodel": "System Product Name",
+            "mmanufacturer": "System manufacturer",
+            "smanufacturer": "System manufacturer",
+            "ssn": "T2351476",
+            "bdate": "2018-10-09",
+            "bmanufacturer": "American Megatrends Inc.",
+            "bversion": "1404",
+            "skunumber": "ALASKA - 1072009"
+        },
+        "cpus": [
+            {
+                "description": "Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz",
+                "manufacturer": "GenuineIntel",
+                "name": "Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz",
+                "speed": 3600,
+                "core": 4,
+                "thread": 4
+            }
+        ],
+        "softwares": [
+            {
+                "name": "N\/A",
+                "version": "1.01.0000",
+                "publisher": "Intel Corporation",
+                "install_date": "2018-07-16"
+            },
+            {
+                "name": "N\/A",
+                "version": "1.02.0000",
+                "publisher": "Intel Corporation",
+                "install_date": "2018-07-16"
+            },
+            {
+                "name": "7-Zip 18.05 (x64)",
+                "version": "18.05",
+                "publisher": "Igor Pavlov"
+            },
+            {
+                "name": "7-Zip 22.01 (x64 edition)",
+                "version": "22.01.00.0",
+                "publisher": "Igor Pavlov",
+                "install_date": "2023-02-10"
+            },
+            {
+                "name": "Actualizaci\u00f3n de NVIDIA 31.2.0.0",
+                "version": "31.2.0.0",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "Adobe Acrobat Reader - Espa\u00f1ol",
+                "version": "23.001.20174",
+                "publisher": "Adobe Systems Incorporated",
+                "install_date": "2023-05-10"
+            },
+            {
+                "name": "Adobe Refresh Manager",
+                "version": "1.8.0",
+                "publisher": "Adobe Systems Incorporated",
+                "install_date": "2023-04-12"
+            },
+            {
+                "name": "AMD Catalyst Install Manager",
+                "version": "8.0.916.0",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "AMD Drag and Drop Transcoding",
+                "version": "2.00.0000",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "AMD Wireless Display v3.0",
+                "version": "1.0.0.15",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "Catalyst Control Center Graphics Previews Common",
+                "version": "2015.0804.21.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "Catalyst Control Center InstallProxy",
+                "version": "2015.1104.1643.30033",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2019-09-30"
+            },
+            {
+                "name": "Catalyst Control Center Localization All",
+                "version": "2015.0804.21.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Chinese Standard",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Chinese Traditional",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Czech",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Danish",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Dutch",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help English",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Finnish",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help French",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help German",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Greek",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Hungarian",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Italian",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Japanese",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Korean",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Norwegian",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Polish",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Portuguese",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Russian",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Spanish",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Swedish",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Thai",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "CCC Help Turkish",
+                "version": "2015.0804.0020.41908",
+                "publisher": "Advanced Micro Devices, Inc.",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "Configuration Manager Client",
+                "version": "5.00.9096.1000",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2023-03-01"
+            },
+            {
+                "name": "CrowdStrike Device Control",
+                "version": "6.13.12753.0",
+                "publisher": "CrowdStrike, Inc.",
+                "install_date": "2023-03-10"
+            },
+            {
+                "name": "CrowdStrike Firmware Analysis",
+                "version": "6.14.12866.0",
+                "publisher": "CrowdStrike, Inc.",
+                "install_date": "2023-03-10"
+            },
+            {
+                "name": "CrowdStrike Sensor Platform",
+                "version": "6.18.13213.0",
+                "publisher": "CrowdStrike, Inc.",
+                "install_date": "2023-03-10"
+            },
+            {
+                "name": "CrowdStrike Windows Sensor",
+                "version": "6.18.13213.0",
+                "publisher": "CrowdStrike, Inc."
+            },
+            {
+                "name": "DisplayDriverAnalyzer",
+                "version": "398.11",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "ffdshow [rev 3154] [2009-12-09]",
+                "version": "1.0",
+                "install_date": "2019-10-04"
+            },
+            {
+                "name": "Foxit Reader",
+                "version": "3.1.4.1125",
+                "publisher": "Foxit Software Company"
+            },
+            {
+                "name": "GDR 5343 para SQL Server 2012 (KB3045321)",
+                "version": "11.2.5343.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2019-09-30"
+            },
+            {
+                "name": "GDR 5388 para SQL Server 2012 (KB3194719)",
+                "version": "11.2.5388.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2019-09-30"
+            },
+            {
+                "name": "Google Chrome",
+                "version": "112.0.5615.138",
+                "publisher": "Google LLC",
+                "install_date": "2023-04-25"
+            },
+            {
+                "name": "Google Update Helper",
+                "version": "1.3.34.11",
+                "publisher": "Google LLC",
+                "install_date": "2019-09-30"
+            },
+            {
+                "name": "HCWebControl",
+                "version": "2.0.0.0",
+                "publisher": "Hangzhou Hikvision Digital Technology Co., Ltd.",
+                "install_date": "2021-06-11"
+            },
+            {
+                "name": "HikCentral Professional Control Client",
+                "version": "1.7.1",
+                "publisher": "Hangzhou Hikvision Digital Technology Co., Ltd."
+            },
+            {
+                "name": "Intel(R) Network Connections 23.4.0.19",
+                "version": "23.4.0.19",
+                "publisher": "Intel",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "Intel(R) Processor Graphics",
+                "version": "10.18.10.4276",
+                "publisher": "Intel Corporation"
+            },
+            {
+                "name": "iVMS-4200(V2.8.1.4_ML)",
+                "version": "2.8.1.4",
+                "publisher": "hikvision",
+                "install_date": "2019-06-27"
+            },
+            {
+                "name": "K-Lite Codec Pack 9.7.0 (Basic)",
+                "version": "9.7.0",
+                "install_date": "2019-10-04"
+            },
+            {
+                "name": "Microsoft .NET Framework 1.1",
+                "version": "1.1.4322",
+                "publisher": "Microsoft",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Microsoft .NET Framework 4 Multi-Targeting Pack",
+                "version": "4.0.30319",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Microsoft .NET Framework 4.7.2",
+                "version": "4.7.03062",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-17"
+            },
+            {
+                "name": "Microsoft .NET Framework 4.7.2 (ESN)",
+                "version": "4.7.03062",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-17"
+            },
+            {
+                "name": "Microsoft Application Error Reporting",
+                "version": "12.0.6012.5000",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Microsoft Help Viewer 1.1",
+                "version": "1.1.40219",
+                "publisher": "Microsoft Corporation"
+            },
+            {
+                "name": "Microsoft Help Viewer 1.1",
+                "version": "1.1.40219",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Microsoft Policy Platform",
+                "version": "68.1.1010.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2023-02-10"
+            },
+            {
+                "name": "Microsoft Report Viewer 2012 Runtime",
+                "version": "11.0.2100.60",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Microsoft Security Client",
+                "version": "4.10.0209.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-17"
+            },
+            {
+                "name": "Microsoft Silverlight",
+                "version": "5.1.50918.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2019-09-30"
+            },
+            {
+                "name": "Microsoft SQL Server 2008 R2 Management Objects",
+                "version": "10.51.2500.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Microsoft SQL Server 2008 Setup Support Files",
+                "version": "10.1.2731.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Microsoft SQL Server 2012"
+            },
+            {
+                "name": "Microsoft SQL Server 2012",
+                "publisher": "Microsoft Corporation"
+            },
+            {
+                "name": "Microsoft SQL Server 2012 Native Client",
+                "version": "11.2.5388.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2019-09-30"
+            },
+            {
+                "name": "Microsoft SQL Server 2012 Policies",
+                "version": "11.2.5058.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Microsoft SQL Server 2012 RsFx Driver",
+                "version": "11.2.5058.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Microsoft SQL Server 2012 Setup (English)",
+                "version": "11.2.5388.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2019-09-30"
+            },
+            {
+                "name": "Microsoft SQL Server 2012 Transact-SQL Compiler Service",
+                "version": "11.2.5058.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Microsoft SQL Server 2012 Transact-SQL ScriptDom",
+                "version": "11.2.5058.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Microsoft SQL Server System CLR Types",
+                "version": "10.51.2500.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Microsoft System CLR Types for SQL Server 2012",
+                "version": "11.2.5058.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Microsoft Visual C++ 2005 Redistributable",
+                "version": "8.0.61001",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729",
+                "version": "9.0.30729",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "Microsoft Visual C++ 2008 Redistributable - x64 9.0.30729.6161",
+                "version": "9.0.30729.6161",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.6161",
+                "version": "9.0.30729.6161",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "Microsoft Visual C++ 2010  x64 Redistributable - 10.0.40219",
+                "version": "10.0.40219",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219",
+                "version": "10.0.40219",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2019-09-30"
+            },
+            {
+                "name": "Microsoft Visual C++ 2010  x86 Runtime - 10.0.40219",
+                "version": "10.0.40219",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.50727",
+                "version": "11.0.50727.1",
+                "publisher": "Microsoft Corporation"
+            },
+            {
+                "name": "Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.50727",
+                "version": "11.0.50727.1",
+                "publisher": "Microsoft Corporation"
+            },
+            {
+                "name": "Microsoft Visual C++ 2012 x64 Additional Runtime - 11.0.50727",
+                "version": "11.0.50727",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "Microsoft Visual C++ 2012 x64 Minimum Runtime - 11.0.50727",
+                "version": "11.0.50727",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "Microsoft Visual C++ 2012 x86 Additional Runtime - 11.0.50727",
+                "version": "11.0.50727",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "Microsoft Visual C++ 2012 x86 Minimum Runtime - 11.0.50727",
+                "version": "11.0.50727",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "Microsoft Visual C++ 2013 Redistributable (x64) - 12.0.30501",
+                "version": "12.0.30501.0",
+                "publisher": "Microsoft Corporation"
+            },
+            {
+                "name": "Microsoft Visual C++ 2013 Redistributable (x86) - 12.0.30501",
+                "version": "12.0.30501.0",
+                "publisher": "Microsoft Corporation"
+            },
+            {
+                "name": "Microsoft Visual C++ 2013 x64 Additional Runtime - 12.0.21005",
+                "version": "12.0.21005",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "Microsoft Visual C++ 2013 x64 Minimum Runtime - 12.0.21005",
+                "version": "12.0.21005",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.21005",
+                "version": "12.0.21005",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.21005",
+                "version": "12.0.21005",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-26"
+            },
+            {
+                "name": "Microsoft Visual C++ 2015-2019 Redistributable (x64) - 14.28.29914",
+                "version": "14.28.29914.0",
+                "publisher": "Microsoft Corporation"
+            },
+            {
+                "name": "Microsoft Visual C++ 2015-2019 Redistributable (x86) - 14.28.29914",
+                "version": "14.28.29914.0",
+                "publisher": "Microsoft Corporation"
+            },
+            {
+                "name": "Microsoft Visual C++ 2019 X64 Additional Runtime - 14.28.29914",
+                "version": "14.28.29914",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2023-02-10"
+            },
+            {
+                "name": "Microsoft Visual C++ 2019 X64 Minimum Runtime - 14.28.29914",
+                "version": "14.28.29914",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2023-02-10"
+            },
+            {
+                "name": "Microsoft Visual C++ 2019 X86 Additional Runtime - 14.28.29914",
+                "version": "14.28.29914",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2023-02-10"
+            },
+            {
+                "name": "Microsoft Visual C++ 2019 X86 Minimum Runtime - 14.28.29914",
+                "version": "14.28.29914",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2023-02-10"
+            },
+            {
+                "name": "Microsoft Visual Studio 2010 Shell (Isolated) - ENU",
+                "version": "10.0.40219",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2019-09-30"
+            },
+            {
+                "name": "Microsoft VSS Writer for SQL Server 2012",
+                "version": "11.2.5058.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Netskope Client",
+                "version": "99.0.7.1144",
+                "publisher": "Netskope, Inc.",
+                "install_date": "2023-05-04"
+            },
+            {
+                "name": "NVIDIA Ansel",
+                "version": "5.1.453.0",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA Backend",
+                "version": "31.2.0.0",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA Container",
+                "version": "1.11",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA Controlador de 3D Vision 398.11",
+                "version": "398.11",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2023-03-31"
+            },
+            {
+                "name": "NVIDIA Controlador de audio HD 1.3.37.4",
+                "version": "1.3.37.4",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2023-03-31"
+            },
+            {
+                "name": "NVIDIA Controlador de gr\u00e1ficos 398.11",
+                "version": "398.11",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2023-03-31"
+            },
+            {
+                "name": "NVIDIA Controlador de la controladora 3D Vision 390.41",
+                "version": "390.41",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA Display Container",
+                "version": "1.11",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2023-03-31"
+            },
+            {
+                "name": "NVIDIA Display Container LS",
+                "version": "1.11",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2023-03-31"
+            },
+            {
+                "name": "NVIDIA Display Session Container",
+                "version": "1.11",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2023-03-31"
+            },
+            {
+                "name": "NVIDIA Display Watchdog Plugin",
+                "version": "1.11",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2023-03-31"
+            },
+            {
+                "name": "NVIDIA GeForce Experience 3.14.0.139",
+                "version": "3.14.0.139",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA Install Application",
+                "version": "2.1002.291.0",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2023-03-31"
+            },
+            {
+                "name": "NVIDIA LocalSystem Container",
+                "version": "1.11",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA Message Bus for NvContainer",
+                "version": "1.11",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA NetworkService Container",
+                "version": "1.11",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA NodeJS",
+                "version": "3.14.0.139",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA Optimus Update 31.2.0.0",
+                "version": "31.2.0.0",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA Session Container",
+                "version": "1.11",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA ShadowPlay 3.14.0.139",
+                "version": "3.14.0.139",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "Nvidia Share",
+                "version": "3.14.0.139",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA SHIELD Streaming",
+                "version": "7.1.0406",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA SHIELD Wireless Controller Driver",
+                "version": "3.14.0.117",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA Software del sistema PhysX 9.17.0524",
+                "version": "9.17.0524",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA Stereoscopic 3D Driver",
+                "version": "7.17.13.9640",
+                "publisher": "NVIDIA Corporation"
+            },
+            {
+                "name": "NVIDIA Telemetry Client",
+                "version": "9.3.14.0",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA Telemetry Container",
+                "version": "9.3.14.0",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA TelemetryApi helper for NvContainer",
+                "version": "1.11",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA Update Core",
+                "version": "31.2.0.0",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA User Container",
+                "version": "1.11",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA Virtual Audio 4.06.0",
+                "version": "4.06.0",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA Virtual Host Controller",
+                "version": "2.02.0.5",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "NVIDIA Watchdog Plugin for NvContainer",
+                "version": "1.11",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2019-10-21"
+            },
+            {
+                "name": "Panel de control de NVIDIA 398.11",
+                "version": "398.11",
+                "publisher": "NVIDIA Corporation",
+                "install_date": "2023-03-31"
+            },
+            {
+                "name": "Realtek High Definition Audio Driver",
+                "version": "6.0.1.7548",
+                "publisher": "Realtek Semiconductor Corp."
+            },
+            {
+                "name": "Service Pack 2 for SQL Server 2012 (KB2958429)",
+                "version": "11.2.5058.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "SQL Server 2012 Client Tools",
+                "version": "11.2.5058.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "SQL Server 2012 Common Files",
+                "version": "11.2.5058.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "SQL Server 2012 Common Files",
+                "version": "11.2.5058.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2019-09-30"
+            },
+            {
+                "name": "SQL Server 2012 Database Engine Services",
+                "version": "11.2.5058.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "SQL Server 2012 Database Engine Services",
+                "version": "11.2.5058.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2019-09-30"
+            },
+            {
+                "name": "SQL Server 2012 Database Engine Shared",
+                "version": "11.2.5058.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "SQL Server 2012 Management Studio",
+                "version": "11.2.5058.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "SQL Server 2012 Management Studio",
+                "version": "11.2.5058.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2019-09-30"
+            },
+            {
+                "name": "SQL Server Browser for SQL Server 2012",
+                "version": "11.2.5058.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Sql Server Customer Experience Improvement Program",
+                "version": "11.2.5058.0",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Surveillance Viewer IPC NB version 0.2.6.3",
+                "version": "0.2.6.3",
+                "publisher": "Surveillance Viewer",
+                "install_date": "2019-08-19"
+            },
+            {
+                "name": "Surveillance Viewer IPC UN version 0.2.1.6",
+                "version": "0.2.1.6",
+                "publisher": "Surveillance Viewer",
+                "install_date": "2021-06-24"
+            },
+            {
+                "name": "TeamViewer 14",
+                "version": "14.6.4835",
+                "publisher": "TeamViewer"
+            },
+            {
+                "name": "Visual Studio 2010 Prerequisites - English",
+                "version": "10.0.40219",
+                "publisher": "Microsoft Corporation",
+                "install_date": "2018-07-30"
+            },
+            {
+                "name": "Web Components",
+                "version": "3.0.7.27",
+                "install_date": "2023-01-24"
+            },
+            {
+                "name": "ZDServer",
+                "version": "1.0.1.4",
+                "publisher": "ZTE Corporation",
+                "install_date": "2023-03-31"
+            },
+            {
+                "name": "ZTE MF823 - Modem USB",
+                "version": "1.0.0.1",
+                "publisher": "ZTE",
+                "install_date": "2018-07-31"
+            },
+            {
+                "name": "ZTE Mobile Broadband Device Drivers 1.0.0.30",
+                "publisher": "ZTE",
+                "install_date": "2018-07-31"
+            }
+        ],
+        "memories": [
+            {
+                "capacity": 8192,
+                "caption": "Memoria f\u00edsica",
+                "description": "Memoria f\u00edsica",
+                "formfactor": "8",
+                "speed": "2400",
+                "type": "BANK 3",
+                "numslots": 4,
+                "manufacturer": "075D"
+            }
+        ],
+        "videos": [
+            {
+                "chipset": "GeForce GT 1030",
+                "memory": 2048,
+                "name": "NVIDIA GeForce GT 1030",
+                "resolution": "1280x1024",
+                "pcislot": "1"
+            }
+        ],
+        "sounds": [
+            {
+                "description": "High Definition Audio Device",
+                "manufacturer": "Microsoft",
+                "name": "High Definition Audio Device"
+            },
+            {
+                "description": "NVIDIA High Definition Audio",
+                "manufacturer": "NVIDIA",
+                "name": "NVIDIA High Definition Audio"
+            },
+            {
+                "description": "NVIDIA Virtual Audio Device (Wave Extensible) (WDM)",
+                "manufacturer": "Microsoft",
+                "name": "NVIDIA Virtual Audio Device (Wave Extensible) (WDM)"
+            }
+        ],
+        "users": [
+            {
+                "login": "xxxxxxx"
+            }
+        ],
+        "networks": [
+            {
+                "description": "WAN Miniport (IP)",
+                "mac": "66:A7:20:52:41:53"
+            },
+            {
+                "description": "WAN Miniport (IP)",
+                "mac": "6E:E3:20:52:41:53"
+            },
+            {
+                "description": "WAN Miniport (IP)",
+                "mac": "7E:09:20:52:41:53"
+            },
+            {
+                "description": "WAN Miniport (IPv6)",
+                "mac": "66:A7:20:52:41:53"
+            },
+            {
+                "description": "WAN Miniport (IPv6)",
+                "mac": "6E:E3:20:52:41:53"
+            },
+            {
+                "description": "WAN Miniport (IPv6)",
+                "mac": "7E:09:20:52:41:53"
+            },
+            {
+                "description": "WAN Miniport (Network Monitor)",
+                "mac": "66:A7:20:52:41:53"
+            },
+            {
+                "description": "WAN Miniport (Network Monitor)",
+                "mac": "6E:E3:20:52:41:53"
+            },
+            {
+                "description": "WAN Miniport (Network Monitor)",
+                "mac": "7E:09:20:52:41:53"
+            },
+            {
+                "ipaddress": [
+                    "169.254.41.148",
+                    "192.168.0.225",
+                    "10.50.78.89"
+                ],
+                "ipaddress6": "fe80::c0b2:cf62:cba8:8d8",
+                "description": "Intel(R) Ethernet Connection (7) I219-V",
+                "ipmask": "255.255.255.0, 255.255.255.0, 255.255.255.128, 64",
+                "ipgateway": "10.50.78.19",
+                "mac": "04:92:26:D7:AC:51"
+            }
+        ],
+        "drives": [
+            {
+                "description": "Disco fijo local",
+                "filesystem": "NTFS",
+                "free": 309229568,
+                "label": "WD Blue SN570 500GB",
+                "total": 487755776,
+                "volumn": "C:"
+            }
+        ]
+    },
+    "deviceid": "16823975",
+    "action": "inventory",
+    "tag": "SCCM",
+    "itemtype": "Computer"
+}

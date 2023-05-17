@@ -845,4 +845,74 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         );
         $this->assertCount(1, $json->content->network_ports);
     }
+
+    public function testSeveralIPV4()
+    {
+        $xml_path = realpath(TU_DIR . '/data/18.xml');
+        $this->assertNotEmpty($xml_path);
+
+        $xml = file_get_contents($xml_path);
+        $instance = new \Glpi\Inventory\Converter();
+        $json_str = $instance->convert($xml);
+        $this->assertNotEmpty($json_str);
+
+        $json = json_decode($json_str);
+        $this->assertIsObject($json);
+        $this->assertSame('16823975', $json->deviceid);
+        $this->assertSame('inventory', $json->action);
+        $this->assertSame('Computer', $json->itemtype);
+
+        $ips = $json->content->networks[9];
+        $this->assertSame(
+            [
+                "ipaddress" => [
+                    "169.254.41.148",
+                    "192.168.0.225",
+                    "10.50.78.89",
+                ],
+                "ipaddress6" => "fe80::c0b2:cf62:cba8:8d8",
+                "description" => "Intel(R) Ethernet Connection (7) I219-V",
+                "ipmask" => "255.255.255.0, 255.255.255.0, 255.255.255.128, 64",
+                "ipgateway" => "10.50.78.19",
+                "mac" => "04:92:26:D7:AC:51",
+            ],
+            (array)$ips
+        );
+    }
+
+    public function testSeveralIPV6()
+    {
+        $xml_path = realpath(TU_DIR . '/data/19.xml');
+        $this->assertNotEmpty($xml_path);
+
+        $xml = file_get_contents($xml_path);
+        $instance = new \Glpi\Inventory\Converter();
+        $json_str = $instance->convert($xml);
+        $this->assertNotEmpty($json_str);
+
+        $json = json_decode($json_str);
+        $this->assertIsObject($json);
+        $this->assertSame('16811420', $json->deviceid);
+        $this->assertSame('inventory', $json->action);
+        $this->assertSame('Computer', $json->itemtype);
+        $ips = $json->content->networks[0];
+        $this->assertSame(
+            [
+                "ipaddress" => "192.168.1.133",
+                "ipaddress6" => [
+                    "fe80::9bbb:c6ae:3cd5:d9fb",
+                    "2a0c:5a80:140d:4400:c480:da92:e839:ec9d",
+                    "2a0c:5a80:140d:4400:70f7:45d7:71fd:4d85",
+                    "2a0c:5a80:140d:4400:c3a:ccfe:ecdc:42b4",
+                    "2a0c:5a80:140d:4400:89d2:18f3:d43:2dfb",
+                ],
+                "description" => "Intel(R) Ethernet Connection (7) I219-LM",
+                "ipmask" => "255.255.255.0, 64, 128, 128, 128, 64",
+                "ipdhcp" => "192.168.1.1",
+                "ipgateway" => "192.168.1.1, fe80::1",
+                "mac" => "9C:7B:EF:B3:50:96",
+            ],
+            (array)$ips
+        );
+    }
 }

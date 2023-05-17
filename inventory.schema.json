@@ -1180,14 +1180,21 @@
                 "title": "Wether it is a remote management interface such as HP iLO, Sun SC, HP MP"
               },
               "ipaddress": {
-                "type": "string",
-                "examples": [
-                  "127.0.0.1"
-                ],
+                "type": ["string", "array"],
+                "items": {
+                  "type": "string",
+                  "examples": [
+                    "127.0.0.1"
+                  ],
+                  "format": "ipv4"
+                },
                 "format": "ipv4"
               },
               "ipaddress6": {
-                "type": "string"
+                "type": ["string", "array"],
+                "items": {
+                  "type": "string"
+                }
               },
               "ipdhcp": {
                 "type": "string",
