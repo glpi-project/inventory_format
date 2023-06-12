@@ -1508,10 +1508,10 @@
                 "type": "boolean"
               },
               "port": {
-                "$comment": "Should be an integer?",
                 "type": "string",
                 "examples": [
-                  "Deskjet-2540"
+                  "hp:/net/Deskjet_2540_series?ip=192.168.1.3",
+                  "usb://EPSON/L3150%20Series?serial=5837...3390&amp;interface=1"
                 ]
               },
               "printprocessor": {
