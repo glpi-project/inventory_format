@@ -1652,7 +1652,6 @@
             "type": "object",
             "title": "A physical connection points including ports, motherboard slots and peripherals, and proprietary connection points",
             "required": [
-              "description",
               "name"
             ],
             "properties": {
