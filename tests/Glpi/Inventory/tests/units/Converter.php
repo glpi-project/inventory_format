@@ -309,7 +309,8 @@ class Converter extends TestCase {
             ['43 7456 Wh', false],
             ['43,7456 Wh', false],
             ['43 Wh', 43000],
-            ['2100.0', 2100]
+            ['2100.0', 2100],
+            [42, 42]
         ];
     }
 
