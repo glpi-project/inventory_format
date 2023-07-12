@@ -1264,8 +1264,12 @@ class Converter
             return (int)$matches[1];
         }
 
-        if (ctype_digit($capacity)) {
+        if (is_string($capacity)) {
             return (int)$capacity;
+        }
+
+        if (is_int($capacity)) {
+            return $capacity;
         }
 
         $capa_pattern = '/^([0-9]+)\.0+$/';
