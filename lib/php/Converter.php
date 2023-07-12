@@ -1264,7 +1264,7 @@ class Converter
             return (int)$matches[1];
         }
 
-        if (is_string($capacity)) {
+        if (is_string($capacity) && ctype_digit($capacity)) {
             return (int)$capacity;
         }
 
