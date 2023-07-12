@@ -1252,6 +1252,10 @@ class Converter
      */
     public function convertBatteryPower($capacity)
     {
+        if (is_int($capacity)) {
+            return $capacity;
+        }
+
         $capa_pattern = "/^([0-9]+(\.[0-9]+)?) Wh$/i";
         $matches = [];
         if (preg_match($capa_pattern, $capacity, $matches)) {
@@ -1266,10 +1270,6 @@ class Converter
 
         if (is_string($capacity) && ctype_digit($capacity)) {
             return (int)$capacity;
-        }
-
-        if (is_int($capacity)) {
-            return $capacity;
         }
 
         $capa_pattern = '/^([0-9]+)\.0+$/';
