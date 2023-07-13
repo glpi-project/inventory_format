@@ -509,6 +509,12 @@ class Converter
             if (isset($data['content'][$array]) && !array_is_list($data['content'][$array])) {
                 $data['content'][$array] = [$data['content'][$array]];
             }
+
+            //set empty array for virtualmachine if not set
+            //Inventory->processInventoryData() can handle this key and manage the absence/deletion of VMs.
+            if (!isset($data['content'][$array]) && $array == 'virtualmachines') {
+                $data['content'][$array] = [];
+            }
         }
 
         $sub_arrays = [
