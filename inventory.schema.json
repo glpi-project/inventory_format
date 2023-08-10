@@ -97,8 +97,8 @@
                 "$ref": "#/definitions/date"
               },
               "base_creation": {
-                "$comment": "What type is it? A date?",
-                "type": "string"
+                "title": "Signatures base creation date",
+                "$ref": "#/definitions/date"
               },
               "base_version": {
                 "type": "string",
