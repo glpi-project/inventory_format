@@ -1633,6 +1633,9 @@ class Converter
                     $device_info['credentials'] = $device[$key];
                     unset($device[$key]);
                     break;
+                case '@attributes':
+                    // Just ignore attributes
+                    break;
                 default:
                     throw new \RuntimeException('Key ' . $key . ' is not handled in network discovery conversion');
             }
