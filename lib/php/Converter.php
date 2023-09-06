@@ -987,10 +987,6 @@ class Converter
                 'health',
                 'status'
             ],
-            'simcards' => [
-                'serial',
-                'subscriber_id'
-            ],
             'network_components' => [
                 'ip',
                 'mac'

@@ -2225,6 +2225,9 @@
               },
               "operator_name": {
                 "type": "string"
+              },
+              "subscriber_id": {
+                "type": "string"
               }
             },
             "additionalProperties": false
