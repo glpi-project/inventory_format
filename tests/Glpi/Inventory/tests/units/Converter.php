@@ -457,7 +457,7 @@ class Converter extends TestCase {
             'subscriber_id'     => '2'
 
         ];
-        $this->assertSame($expected, (array)$json->content->simcards[2]);
+        $this->assertSame($expected, (array)$json->content->simcards[1]);
     }
 
     /**
