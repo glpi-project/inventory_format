@@ -755,10 +755,10 @@ Original XML specification
           -->
        <!ELEMENT TYPE (#PCDATA)>
 
-     <!ELEMENT SIMCARDS (IMSI, PHONE_NUMBER, ICCID, STATE, COUNTRY, OPERATOR_CODE,
+     <!ELEMENT SIMCARDS (SERIAL, PHONE_NUMBER, ICCID, STATE, COUNTRY, OPERATOR_CODE,
      OPERATOR_NAME)>
-       <!-- IMSI -->
-       <!ELEMENT IMSI (#PCDATA)>
+       <!-- SERIAL -->
+       <!ELEMENT SERIAL (#PCDATA)>
        <!-- Phone number -->
        <!ELEMENT PHONE_NUMBER (#PCDATA)>
        <!-- ICCID (serial number) -->
