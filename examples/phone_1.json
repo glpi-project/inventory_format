@@ -376,7 +376,7 @@
                 "country": "fr",
                 "operator_code": "20815",
                 "operator_name": "Free",
-                "imsi": "8933150319050352521",
+                "serial": "8933150319050352521",
                 "state": "SIM_STATE_READY",
                 "phone_number": "+33632331095"
             }
