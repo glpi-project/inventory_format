@@ -420,6 +420,51 @@ class Converter extends TestCase {
     }
 
     /**
+     * Test a full conversion and check simcard
+     *
+     * @return void
+     */
+    public function testSimCard()
+    {
+        $xml_path = realpath(TU_DIR . '/data/18.xml');
+        $this->assertNotEmpty($xml_path);
+
+        $instance = new \Glpi\Inventory\Converter();
+        $json_str = $instance->convert(file_get_contents($xml_path));
+        $this->assertNotEmpty($json_str);
+
+        $json = json_decode($json_str);
+        $this->assertIsObject($json);
+        $this->assertSame('android-5a30d8711bbadc9d-2023-09-06-10-28-47', $json->deviceid);
+        $this->assertSame('Computer', $json->itemtype);
+
+
+        $expected = [
+            'country'           => 'fr',
+            'operator_code'     => '20810',
+            'operator_name'     => 'F SFR',
+            'serial'            => '',
+            'state'             => 'SIM_STATE_READY',
+            'line_number'       => '',
+            'subscriber_id'     => 1
+
+        ];
+        $this->assertSame($expected, (array)$json->content->simcards[0]);
+
+        $expected = [
+            'country'           => 'fr',
+            'operator_code'     => '20810',
+            'operator_name'     => 'F SFR',
+            'serial'            => '',
+            'state'             => 'SIM_STATE_READY',
+            'line_number'       => '',
+            'subscriber_id'     => 2
+
+        ];
+        $this->assertSame($expected, (array)$json->content->simcards[2]);
+    }
+
+    /**
      * Test a full conversion and check boot time
      *
      * @return void
