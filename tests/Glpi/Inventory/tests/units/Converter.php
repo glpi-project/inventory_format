@@ -443,10 +443,8 @@ class Converter extends TestCase {
             'country'           => 'fr',
             'operator_code'     => '20810',
             'operator_name'     => 'F SFR',
-            'serial'            => '',
             'state'             => 'SIM_STATE_READY',
-            'line_number'       => '',
-            'subscriber_id'     => 1
+            'subscriber_id'     => '1'
 
         ];
         $this->assertSame($expected, (array)$json->content->simcards[0]);
@@ -455,10 +453,8 @@ class Converter extends TestCase {
             'country'           => 'fr',
             'operator_code'     => '20810',
             'operator_name'     => 'F SFR',
-            'serial'            => '',
             'state'             => 'SIM_STATE_READY',
-            'line_number'       => '',
-            'subscriber_id'     => 2
+            'subscriber_id'     => '2'
 
         ];
         $this->assertSame($expected, (array)$json->content->simcards[2]);
