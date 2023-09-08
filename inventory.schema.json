@@ -108,6 +108,19 @@
             "additionalProperties": false
           }
         },
+        "error": {
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "message": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          }
+        },
         "batteries": {
           "type": "array",
           "items": {
