@@ -3,6 +3,13 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.31] - 2023-09-08
+No longer required description property on slots
+Fix battery power conversion issues
+Some clarification in examples and descriptions in schema
+Add susbscriber_id property on simacrd for smartphones inventory
+Handle old ERROR node from netinventory
+
 ## [1.1.30] - 2023-03-30
 Several fixes
 
