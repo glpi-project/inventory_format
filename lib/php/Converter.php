@@ -1527,6 +1527,7 @@ class Converter
                     break;
                 case "cartridges":
                 case "pagecounters":
+                case "error":
                     $data['content'][$key] = $device[$key];
                     break;
                 default:
