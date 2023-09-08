@@ -2205,7 +2205,7 @@
           "items": {
             "type": "object",
             "properties": {
-              "imsi": {
+              "serial": {
                 "type": "string"
               },
               "phone_number": {
@@ -2224,6 +2224,9 @@
                 "type": "string"
               },
               "operator_name": {
+                "type": "string"
+              },
+              "subscriber_id": {
                 "type": "string"
               }
             },
