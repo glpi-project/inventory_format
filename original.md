@@ -757,8 +757,8 @@ Original XML specification
 
      <!ELEMENT SIMCARDS (IMSI, PHONE_NUMBER, ICCID, STATE, COUNTRY, OPERATOR_CODE,
      OPERATOR_NAME)>
-       <!-- SERIAL -->
-       <!ELEMENT SERIAL (#PCDATA)>
+       <!-- IMSI -->
+       <!ELEMENT IMSI (#PCDATA)>
        <!-- Phone number -->
        <!ELEMENT PHONE_NUMBER (#PCDATA)>
        <!-- ICCID (serial number) -->
