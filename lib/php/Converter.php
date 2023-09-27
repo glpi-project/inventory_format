@@ -1526,6 +1526,9 @@ class Converter
                 case "error":
                     $data['content'][$key] = $device[$key];
                     break;
+                case "drives":
+                    $data['content'][$key] = $device[$key];
+                    break;
                 default:
                     throw new \RuntimeException('Key ' . $key . ' is not handled in network devices conversion');
             }
