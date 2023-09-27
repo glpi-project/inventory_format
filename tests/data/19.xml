@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<REQUEST>
+  <CONTENT>
+    <DEVICE>
+      <DRIVES>
+        <FREE>7144730</FREE>
+        <TOTAL>19195411</TOTAL>
+        <VOLUMN>Volume 1</VOLUMN>
+      </DRIVES>
+      <DRIVES>
+        <FREE>4242469</FREE>
+        <TOTAL>7671155</TOTAL>
+        <VOLUMN>Volume 2</VOLUMN>
+      </DRIVES>
+      <FIRMWARES>
+        <DESCRIPTION>Synology DSM firmware</DESCRIPTION>
+        <MANUFACTURER>Synology</MANUFACTURER>
+        <NAME>Synology DSM</NAME>
+        <TYPE>system</TYPE>
+        <VERSION>DSM 7.2-64570</VERSION>
+      </FIRMWARES>
+      <INFO>
+        <COMMENTS>Linux SYN14 4.4.302+ #64570 SMP</COMMENTS>
+        <CONTACT>TEST</CONTACT>
+        <ID>0</ID>
+        <IPS>
+          <IP>127.0.0.1</IP>
+        </IPS>
+        <LOCATION>TEST</LOCATION>
+        <MAC>00:12:34:56:78:90</MAC>
+        <MANUFACTURER>Synology</MANUFACTURER>
+        <MEMORY>3</MEMORY>
+        <MODEL>DS1821+</MODEL>
+        <NAME>SYN14</NAME>
+        <RAM>3890</RAM>
+        <SERIAL>01234567890AAA</SERIAL>
+        <TYPE>STORAGE</TYPE>
+        <UPTIME>53 days, 03:25:26.94</UPTIME>
+      </INFO>
+    </DEVICE>
+    <MODULEVERSION>5.1</MODULEVERSION>
+    <PROCESSNUMBER>1</PROCESSNUMBER>
+  </CONTENT>
+  <DEVICEID>foo</DEVICEID>
+  <QUERY>SNMPQUERY</QUERY>
+</REQUEST>
