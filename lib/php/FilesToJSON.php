@@ -314,7 +314,7 @@ final class FilesToJSON
      * Write converted source into corresponding file.
      *
      * @param string $type
-     * @param array $data
+     * @param array<string|int, mixed> $data
      * @throws \RuntimeException
      * @return void
      */

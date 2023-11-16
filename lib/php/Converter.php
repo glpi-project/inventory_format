@@ -66,24 +66,24 @@ class Converter
     private $debug = false;
     /**
      * XML a different steps. Used for debug only
-     * @var array
+     * @var array<int, mixed>
      */
     private $steps;
 
-    /** @var array */
+    /** @var array<string, float> */
     private $mapping = [
         '01'   => 0.1
     ];
 
-    /** @var array */
+    /** @var array<string, array<int, string>> */
     private $schema_patterns;
-    /** @var array */
+    /** @var array<string, array<string, string>> */
     private $extra_properties;
-    /** @var array */
+    /** @var array<string, array<string, array<string, string>>> */
     private $extra_sub_properties;
 
     /**
-     * @var array
+     * @var array<string, array<int, string>>
      *
      * A two dimensions array with types as key,
      * and nodes names as values.
@@ -167,7 +167,7 @@ class Converter
     }
 
     /**
-     * @param array $properties
+     * @param array<string, array<string, string>> $properties
      * @return $this
      */
     public function setExtraProperties(array $properties)
@@ -177,7 +177,7 @@ class Converter
     }
 
     /**
-     * @param array $properties
+     * @param array<string, array<string, array<string, string>>> $properties
      * @return $this
      */
     public function setExtraSubProperties(array $properties)
@@ -260,7 +260,7 @@ class Converter
     /**
      * Do validation (against last schema only!)
      *
-     * @param array $json Converted data to validate
+     * @param array<int, mixed> $json Converted data to validate
      *
      * @return boolean
      */
@@ -349,9 +349,9 @@ class Converter
     /**
      * Converts to inventory format 0.1
      *
-     * @param array $data Contents
+     * @param array<string, mixed> $data Contents
      *
-     * @return array
+     * @return array<string, mixed>
      */
     private function convertTo01(array $data)
     {
@@ -1068,7 +1068,7 @@ class Converter
     /**
      * Set convert types
      *
-     * @param array $convert_types Convert types configuration
+     * @param array<string, array<int, string>> $convert_types Convert types configuration
      *
      * @return Converter
      */
@@ -1084,7 +1084,7 @@ class Converter
      * Method must populate $convert_types array.
      * @see Converter::convert_types parameter
      *
-     * @param array $data Input data, will be modified
+     * @param array<string, mixed> $data Input data, will be modified
      *
      * @return void
      */
@@ -1157,9 +1157,9 @@ class Converter
     /**
      * Change array keys case recursively
      *
-     * @param array $array Input array
+     * @param array<string, mixed> $array Input array
      *
-     * @return array
+     * @return array<string, mixed>
      */
     public function arrayChangeKeyCaseRecursive(array $array)
     {
@@ -1308,9 +1308,9 @@ class Converter
     /**
      * Handle network inventory XML format
      *
-     * @param array $data Contents
+     * @param array<string, mixed> $data Contents
      *
-     * @return array
+     * @return array<string, mixed>
      */
     public function convertNetworkInventory(array $data): array
     {
@@ -1545,9 +1545,9 @@ class Converter
     /**
      * Pre-handle network inventory XML format
      *
-     * @param array $data Contents
+     * @param array<string, mixed> $data Contents
      *
-     * @return array
+     * @return array<string, mixed>
      */
     public function convertNetworkDiscovery(array $data): array
     {
@@ -1644,7 +1644,7 @@ class Converter
     /**
      * Explode old pciid to vendorid:productid
      *
-     * @param array $data Node data
+     * @param array<string, mixed> $data Node data
      *
      * @return void
      */
@@ -1667,7 +1667,7 @@ class Converter
     /**
      * Is a network inventory?
      *
-     * @param array $data Data
+     * @param array<string, mixed> $data Data
      *
      * @return boolean
      */
@@ -1679,7 +1679,7 @@ class Converter
     /**
      * Is a network discovery?
      *
-     * @param array $data Data
+     * @param array<string, mixed> $data Data
      *
      * @return boolean
      */
