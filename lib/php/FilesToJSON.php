@@ -69,7 +69,7 @@ final class FilesToJSON
     /**
      * @var string
      */
-    private $path = __DIR__ . '/../../data';
+    private string $path = __DIR__ . '/../../data';
 
     /**
      * Get JSON file path
@@ -339,7 +339,7 @@ final class FilesToJSON
      * @throws \RuntimeException
      * @return string
      */
-    private function callCurl($url): string
+    private function callCurl(string $url): string
     {
         $ch = curl_init($url);
 

@@ -59,28 +59,28 @@ class Converter
 {
     public const LAST_VERSION = 0.1;
 
-    /** @var ?double */
-    private $target_version;
+    /** @var ?float */
+    private ?float $target_version;
 
     /** @var bool */
-    private $debug = false;
+    private bool $debug = false;
     /**
      * XML a different steps. Used for debug only
      * @var array<int, mixed>
      */
-    private $steps;
+    private array $steps;
 
     /** @var array<string, float> */
-    private $mapping = [
+    private array $mapping = [
         '01'   => 0.1
     ];
 
     /** @var array<string, array<int, string>> */
-    private $schema_patterns;
+    private array $schema_patterns;
     /** @var array<string, array<string, string>> */
-    private $extra_properties;
+    private array $extra_properties;
     /** @var array<string, array<string, array<string, string>>> */
-    private $extra_sub_properties;
+    private array $extra_sub_properties;
 
     /**
      * @var array<string, array<int, string>>
@@ -103,14 +103,14 @@ class Converter
      * @see Converter::getCastedValue() for supported types
      * @see Converter::convertTypes() for usage
      */
-    private $convert_types;
+    private array $convert_types;
 
     /**
      * Instantiate converter
      *
-     * @param double|null $target_version JSON schema based version to target. Use last version if null.
+     * @param ?float $target_version JSON schema based version to target. Use last version if null.
      */
-    public function __construct($target_version = null)
+    public function __construct(float $target_version = null)
     {
         if ($target_version === null) {
             $target_version = self::LAST_VERSION;
@@ -126,9 +126,9 @@ class Converter
     /**
      * Get target version
      *
-     * @return double
+     * @return float
      */
-    public function getTargetVersion()
+    public function getTargetVersion(): float
     {
         return $this->target_version;
     }
@@ -140,9 +140,9 @@ class Converter
      *
      * @return Converter
      */
-    public function setDebug($debug)
+    public function setDebug(bool $debug): self
     {
-        $this->debug = (bool)$debug;
+        $this->debug = $debug;
         return $this;
     }
 
@@ -151,7 +151,7 @@ class Converter
      *
      * @return boolean
      */
-    public function isDebug()
+    public function isDebug(): bool
     {
         return $this->debug;
     }
@@ -161,7 +161,7 @@ class Converter
      *
      * @return string
      */
-    public function getSchemaPath()
+    public function getSchemaPath(): string
     {
         return realpath(__DIR__ . '/../../inventory.schema.json');
     }
@@ -170,7 +170,7 @@ class Converter
      * @param array<string, array<string, string>> $properties
      * @return $this
      */
-    public function setExtraProperties(array $properties)
+    public function setExtraProperties(array $properties): self
     {
         $this->extra_properties = $properties;
         return $this;
@@ -180,7 +180,7 @@ class Converter
      * @param array<string, array<string, array<string, string>>> $properties
      * @return $this
      */
-    public function setExtraSubProperties(array $properties)
+    public function setExtraSubProperties(array $properties): self
     {
         $this->extra_sub_properties = $properties;
         return $this;
@@ -264,7 +264,7 @@ class Converter
      *
      * @return boolean
      */
-    public function validate($json)
+    public function validate(array $json): bool
     {
         try {
             $schema = Schema::import($this->buildSchema());
@@ -288,7 +288,7 @@ class Converter
      *
      * @return string|false
      */
-    public function convert($xml)
+    public function convert(string $xml)
     {
         libxml_use_internal_errors(true);
         $sxml = simplexml_load_string($xml);
@@ -331,9 +331,9 @@ class Converter
     /**
      * Get methods names we'll have to call in order to convert
      *
-     * @return string[]
+     * @return array<int, string>
      */
-    public function getMethods()
+    public function getMethods(): array
     {
         $methods = [];
 
@@ -353,7 +353,7 @@ class Converter
      *
      * @return array<string, mixed>
      */
-    private function convertTo01(array $data)
+    private function convertTo01(array $data): array
     {
         //all keys are now lowercase
         $data = $this->arrayChangeKeyCaseRecursive($data);
@@ -1072,7 +1072,7 @@ class Converter
      *
      * @return Converter
      */
-    public function setConvertTypes(array $convert_types)
+    public function setConvertTypes(array $convert_types): self
     {
         $this->convert_types = $convert_types;
         return $this;
@@ -1088,7 +1088,7 @@ class Converter
      *
      * @return void
      */
-    public function convertTypes(&$data)
+    public function convertTypes(array &$data): void
     {
         $types = $this->convert_types;
         foreach ($types as $type => $names) {
@@ -1137,7 +1137,7 @@ class Converter
      *
      * @return mixed
      */
-    public function getCastedValue($value, $type)
+    public function getCastedValue(string $value, string $type)
     {
         switch ($type) {
             case 'boolean':
@@ -1161,7 +1161,7 @@ class Converter
      *
      * @return array<string, mixed>
      */
-    public function arrayChangeKeyCaseRecursive(array $array)
+    public function arrayChangeKeyCaseRecursive(array $array): array
     {
         return array_map(
             function ($item) {
@@ -1182,7 +1182,7 @@ class Converter
      *
      * @return string|null
      */
-    public function convertDate($value, $format = 'Y-m-d'): ?string
+    public function convertDate(string $value, string $format = 'Y-m-d'): ?string
     {
         $nullables = ['n/a', 'boot_time'];
         if (empty($value) || isset(array_flip($nullables)[strtolower($value)])) {
@@ -1224,7 +1224,7 @@ class Converter
      *
      * @return void
      */
-    public function loadSchemaPatterns()
+    public function loadSchemaPatterns(): void
     {
         $string = file_get_contents($this->getSchemaPath());
         $json = json_decode($string, true);
@@ -1284,7 +1284,7 @@ class Converter
      *
      * @return integer|false
      */
-    public function convertBatteryVoltage($voltage)
+    public function convertBatteryVoltage(string $voltage)
     {
         $volt_pattern = "/^([0-9]+(\.[0-9]+)?) ?V$/i";
         $matches = [];
