@@ -53,6 +53,10 @@ jobs:
         run: |
           vendor/bin/phpcs --standard=PSR12 lib/php/*
 
+      - name: Run code static analysis
+        run: |
+          vendor/bin/phpstan analyze --ansi --no-interaction --no-progress
+
       - name: Conversions tests
         run: for i in `ls tests/data/*.xml`; do ./bin/convert $i || exit 1; done
 

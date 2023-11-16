@@ -18,13 +18,20 @@
         "php": ">=7.4",
         "seld/jsonlint": "^1.10",
         "swaggest/json-schema": "^0.12.42",
-        "symfony/polyfill-php81": "^1.28"
+        "symfony/polyfill-php81": "^1.28",
+        "ext-json": "*",
+        "ext-libxml": "*",
+        "ext-simplexml": "*",
+        "ext-ctype": "*",
+        "ext-curl": "*"
     },
     "autoload": {
         "files": ["lib/php/Converter.php", "lib/php/FilesToJSON.php"]
     },
     "bin": ["bin/convert", "bin/build_hw_jsons", "bin/refresh_hw_sources","bin/validate"],
     "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpstan/phpstan-deprecation-rules": "^1.1",
         "phpunit/phpunit": "^9.6",
         "squizlabs/php_codesniffer": "^3.7"
     },
