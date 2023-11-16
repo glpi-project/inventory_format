@@ -134,7 +134,7 @@ class Converter
      */
     public function getTargetVersion(): float
     {
-        return $this->target_version;
+        return $this->target_version ?? self::LAST_VERSION;
     }
 
     /**
@@ -167,7 +167,11 @@ class Converter
      */
     public function getSchemaPath(): string
     {
-        return realpath(__DIR__ . '/../../inventory.schema.json');
+        $schema_path = realpath(__DIR__ . '/../../inventory.schema.json');
+        if ($schema_path === false) {
+            throw new RuntimeException('Schema file not found!');
+        }
+        return $schema_path;
     }
 
     /**
@@ -196,14 +200,18 @@ class Converter
      */
     public function buildSchema()
     {
-        $schema = json_decode(file_get_contents($this->getSchemaPath()));
+        $string = file_get_contents($this->getSchemaPath());
+        if ($string === false) {
+            throw new RuntimeException('Unable to read schema file');
+        }
+        $schema = json_decode($string);
 
         $properties = $schema->properties->content->properties;
 
         if ($this->extra_properties != null) {
             foreach ($this->extra_properties as $extra_property => $extra_config) {
                 if (!property_exists($properties, $extra_property)) {
-                    $properties->$extra_property = json_decode(json_encode($extra_config));
+                    $properties->$extra_property = json_decode((string)json_encode($extra_config));
                 } else {
                     trigger_error(
                         sprintf('Property %1$s already exists in schema.', $extra_property),
@@ -222,7 +230,7 @@ class Converter
                             case 'array':
                                 if (!property_exists($properties->$extra_sub_property->items->properties, $subprop)) {
                                     $properties->$extra_sub_property->items->properties->$subprop =
-                                        json_decode(json_encode($subconfig));
+                                        json_decode((string)json_encode($subconfig));
                                 } else {
                                     trigger_error(
                                         sprintf('Property %1$s already exists in schema.', $subprop),
@@ -233,7 +241,7 @@ class Converter
                             case 'object':
                                 if (!property_exists($properties->$extra_sub_property->properties, $subprop)) {
                                     $properties->$extra_sub_property->properties->$subprop =
-                                        json_decode(json_encode($subconfig));
+                                        json_decode((string)json_encode($subconfig));
                                 } else {
                                     trigger_error(
                                         sprintf(
@@ -312,7 +320,7 @@ class Converter
         }
         //convert SimpleXML object to array, recursively.
         $data = json_decode(
-            json_encode((array)$sxml),
+            (string)json_encode((array)$sxml),
             true
         );
         $this->loadSchemaPatterns();
@@ -1228,6 +1236,9 @@ class Converter
     public function loadSchemaPatterns(): void
     {
         $string = file_get_contents($this->getSchemaPath());
+        if ($string === false) {
+            throw new RuntimeException('Unable to read schema file');
+        }
         $json = json_decode($string, true);
 
         $this->schema_patterns['networks_types'] = explode(

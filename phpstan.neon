@@ -1,6 +1,6 @@
 parameters:
     parallel:
         maximumNumberOfProcesses: 2
-    level: 6
+    level: 8
     paths:
         - lib/php/

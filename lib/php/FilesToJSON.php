@@ -345,6 +345,15 @@ final class FilesToJSON
     {
         $ch = curl_init($url);
 
+        if ($ch === false) {
+            throw new RuntimeException(
+                sprintf(
+                    'Unable to initialize curl for %s',
+                    $url
+                )
+            );
+        }
+
         $opts = [
             CURLOPT_URL             => $url,
             CURLOPT_USERAGENT       => "GLPI/Inventory format 1.0",
@@ -378,6 +387,7 @@ final class FilesToJSON
             throw new RuntimeException($msgerr);
         }
 
-        return $content;
+        //force cast to made phpstan happy, but return is always string here
+        return (string)$content;
     }
 }
