@@ -55,7 +55,7 @@ jobs:
 
       - name: Run code static analysis
         run: |
-          vendor/bin/phpstan analyze --ansi --memory-limit=2G --no-interaction --no-progress
+          vendor/bin/phpstan analyze --ansi --no-interaction --no-progress
 
       - name: Conversions tests
         run: for i in `ls tests/data/*.xml`; do ./bin/convert $i || exit 1; done
