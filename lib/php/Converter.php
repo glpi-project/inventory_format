@@ -41,8 +41,12 @@
 
 namespace Glpi\Inventory;
 
+use DateTime;
+use Exception;
+use RuntimeException;
 use Swaggest\JsonSchema\Context;
 use Swaggest\JsonSchema\Schema;
+use UnexpectedValueException;
 
 /**
  * Converts old FusionInventory XML format to new JSON schema
@@ -117,7 +121,7 @@ class Converter
         }
 
         if (!is_double($target_version)) {
-            throw new \UnexpectedValueException('Version must be a double!');
+            throw new UnexpectedValueException('Version must be a double!');
         }
 
         $this->target_version = $target_version;
@@ -273,11 +277,11 @@ class Converter
             $context->tolerateStrings = (!defined('TU_USER'));
             $schema->in($json, $context);
             return true;
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             $errmsg = "JSON does not validate. Violations:\n";
             $errmsg .= $e->getMessage();
             $errmsg .= "\n";
-            throw new \RuntimeException($errmsg);
+            throw new RuntimeException($errmsg);
         }
     }
 
@@ -297,7 +301,7 @@ class Converter
             foreach (libxml_get_errors() as $error) {
                 $errmsg .= "\n" . $error->message;
             }
-            throw new \RuntimeException($errmsg);
+            throw new RuntimeException($errmsg);
         }
 
         //remove empty nodes
@@ -321,7 +325,7 @@ class Converter
             }
 
             if (!$data = $this->$method($data)) {
-                throw new \RuntimeException('Conversion has failed at ' . $method);
+                throw new RuntimeException('Conversion has failed at ' . $method);
             }
         }
 
@@ -580,9 +584,9 @@ class Converter
                 if (isset($process['started'])) {
                     if (preg_match($ns_pattern, $process['started'])) {
                         try {
-                            $started = new \DateTime($process['started']);
+                            $started = new DateTime($process['started']);
                             $process['started'] = $started->format('Y-m-d H:i:s');
-                        } catch (\Exception $e) {
+                        } catch (Exception $e) {
                             //not valid, drop.
                             unset($process['started']);
                         }
@@ -635,7 +639,7 @@ class Converter
         if (isset($data['content']['operatingsystem']['boot_time'])) {
             //convert to 'Y-m-d H:i:s' if format = 'Y-d-m H:i:s'
             $boot_time  = $data['content']['operatingsystem']['boot_time'];
-            $boot_datetime =  \DateTime::createFromFormat('Y-d-m H:i:s', $boot_time);
+            $boot_datetime =  DateTime::createFromFormat('Y-d-m H:i:s', $boot_time);
             //check if create from 'Y-d-m H:i:s' format is OK (ie: 2022-21-09 05:21:23)
             //but he can return a new DateTime instead of false for '2022-10-04 05:21:23'
             //so check return value from strtotime because he only knows / handle 'English textual datetime'
@@ -1095,7 +1099,7 @@ class Converter
             foreach ($names as $name) {
                 $keys = explode('/', $name);
                 if (count($keys) != 2) {
-                    throw new \RuntimeException($name . ' not supported!');
+                    throw new RuntimeException($name . ' not supported!');
                 }
                 if (isset($data['content'][$keys[0]])) {
                     if (is_array($data['content'][$keys[0]])) {
@@ -1150,7 +1154,7 @@ class Converter
                     return null;
                 }
             default:
-                throw new \UnexpectedValueException('Type ' . $type . ' not known.');
+                throw new UnexpectedValueException('Type ' . $type . ' not known.');
         }
     }
 
@@ -1403,7 +1407,7 @@ class Converter
                                     $itemtype = 'NetworkEquipment';
                                     break;
                                 default:
-                                    throw new \RuntimeException('Unhandled device type: ' . $device_info['type']);
+                                    throw new RuntimeException('Unhandled device type: ' . $device_info['type']);
                             }
                         }
                         $data['itemtype'] = $itemtype;
@@ -1530,7 +1534,7 @@ class Converter
                     $data['content'][$key] = $device[$key];
                     break;
                 default:
-                    throw new \RuntimeException('Key ' . $key . ' is not handled in network devices conversion');
+                    throw new RuntimeException('Key ' . $key . ' is not handled in network devices conversion');
             }
         }
 
@@ -1634,7 +1638,7 @@ class Converter
                     unset($device[$key]);
                     break;
                 default:
-                    throw new \RuntimeException('Key ' . $key . ' is not handled in network discovery conversion');
+                    throw new RuntimeException('Key ' . $key . ' is not handled in network discovery conversion');
             }
         }
 
