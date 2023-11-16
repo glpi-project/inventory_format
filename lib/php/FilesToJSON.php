@@ -197,6 +197,7 @@ final class FilesToJSON
         $pciFile = $this->getSourceFile(self::TYPE_PCI);
         $pci_ids = [];
 
+        $vendorId = null;
         while ($buffer = fgets($pciFile)) {
             $stack = [];
             if (preg_match("/^(\w+)\s*(.+)/i", $buffer, $stack)) {
@@ -230,6 +231,7 @@ final class FilesToJSON
         $usbFile = $this->getSourceFile(self::TYPE_USB);
         $usb_ids = [];
 
+        $vendorId = null;
         while ($buffer = fgets($usbFile)) {
             $stack = [];
             if (preg_match("/^(\w+)\s*(.+)/i", $buffer, $stack)) {
@@ -325,7 +327,7 @@ final class FilesToJSON
             throw new \RuntimeException(sprintf('Error while encoding "%s" data to JSON.', $type));
         }
 
-        if (!file_put_contents($path, $contents) === strlen($contents)) {
+        if (file_put_contents($path, $contents) !== strlen($contents)) {
             throw new \RuntimeException(sprintf('Unable to write "%s" JSON into "%s".', $type, $path));
         }
     }

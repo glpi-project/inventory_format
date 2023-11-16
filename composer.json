@@ -25,6 +25,7 @@
     },
     "bin": ["bin/convert", "bin/build_hw_jsons", "bin/refresh_hw_sources","bin/validate"],
     "require-dev": {
+        "phpstan/phpstan": "^1.10",
         "phpunit/phpunit": "^9.6",
         "squizlabs/php_codesniffer": "^3.7"
     },

@@ -1242,7 +1242,7 @@ class Converter
     /**
      * Convert battery capacity
      *
-     * @param string $capacity Inventoried capacity
+     * @param integer|string $capacity Inventoried capacity
      *
      * @return integer|false
      */
