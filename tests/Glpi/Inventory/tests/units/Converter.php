@@ -98,7 +98,7 @@ class Converter extends TestCase {
      *
      * @return array
      */
-    public static function valuesToCastProvider()
+    public static function valuesToCastProvider(): array
     {
         return [
             //true real values

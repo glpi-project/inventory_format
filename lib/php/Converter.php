@@ -82,9 +82,9 @@ class Converter
     /** @var array<string, array<int, string>> */
     private array $schema_patterns;
     /** @var array<string, array<string, string>> */
-    private array $extra_properties;
+    private array $extra_properties = [];
     /** @var array<string, array<string, array<string, string>>> */
-    private array $extra_sub_properties;
+    private array $extra_sub_properties = [];
 
     /**
      * @var array<string, array<int, string>>
@@ -114,7 +114,7 @@ class Converter
      *
      * @param ?float $target_version JSON schema based version to target. Use last version if null.
      */
-    public function __construct(float $target_version = null)
+    public function __construct($target_version = null)
     {
         if ($target_version === null) {
             $target_version = self::LAST_VERSION;
@@ -264,11 +264,11 @@ class Converter
     /**
      * Do validation (against last schema only!)
      *
-     * @param array<int, mixed> $json Converted data to validate
+     * @param mixed $json Converted data to validate
      *
      * @return boolean
      */
-    public function validate(array $json): bool
+    public function validate($json): bool
     {
         try {
             $schema = Schema::import($this->buildSchema());
