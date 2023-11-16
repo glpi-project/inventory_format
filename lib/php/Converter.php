@@ -808,7 +808,7 @@ class Converter
         }
 
         //missing hour in timezone offset
-        if (isset($data['content']['operatingsystem']) && isset($data['content']['operatingsystem']['timezone'])) {
+        if (isset($data['content']['operatingsystem']['timezone'])) {
             $timezone = &$data['content']['operatingsystem']['timezone'];
 
             if (preg_match('/^[+-][0-9]{2}$/', $timezone['offset'])) {
@@ -849,7 +849,7 @@ class Converter
                 foreach ($powers as $power) {
                     if (isset($battery[$power])) {
                         $value = $this->convertBatteryPower($battery[$power]);
-                        if ($value == false) {
+                        if (!$value) {
                             unset($battery[$power]);
                         } else {
                             $battery[$power] = $value;
@@ -859,7 +859,7 @@ class Converter
 
                 if (isset($battery['voltage'])) {
                     $voltage = $this->convertBatteryVoltage($battery['voltage']);
-                    if ($voltage == false) {
+                    if (!$voltage) {
                         unset($battery['voltage']);
                     } else {
                         $battery['voltage'] = $voltage;
@@ -873,7 +873,7 @@ class Converter
             foreach ($data['content']['powersupplies'] as &$psupply) {
                 if (isset($psupply['power_max'])) {
                     $value = $this->convertBatteryPower($psupply['power_max']);
-                    if ($value == false) {
+                    if (!$value) {
                         unset($psupply['power_max']);
                     } else {
                         $psupply['power_max'] = $value;
@@ -1122,7 +1122,7 @@ class Converter
                         }
                     }
                 }
-                if (isset($data['content'][$keys[0]]) && isset($data['content'][$keys[0]][$keys[1]])) {
+                if (isset($data['content'][$keys[0]][$keys[1]])) {
                     $data['content'][$keys[0]][$keys[1]] = $this->getCastedValue(
                         $data['content'][$keys[0]][$keys[1]],
                         $type
@@ -1148,7 +1148,7 @@ class Converter
                 return (bool)$value;
             case 'integer':
                 $casted = (int)$value;
-                if ($value == $casted && is_numeric($value)) {
+                if (is_numeric($value) && $value == $casted) {
                     return $casted;
                 } else {
                     return null;
@@ -1206,21 +1206,18 @@ class Converter
             'd.m.Y',
             'Ymd'
         ];
-        try {
-            while ($current = array_shift($formats)) {
-                $d = \DateTime::createFromFormat($current, $value);
-                if ($d !== false) {
-                    break;
-                }
-            }
 
+        while ($current = array_shift($formats)) {
+            $d = DateTime::createFromFormat($current, $value);
             if ($d !== false) {
-                return $d->format($format);
+                break;
             }
-            return $value;
-        } catch (\Exception $e) {
-            throw $e;
         }
+
+        if ($d !== false) {
+            return $d->format($format);
+        }
+        return $value;
     }
 
     /**
@@ -1483,7 +1480,7 @@ class Converter
                 case 'modems':
                 case 'simcards':
                     //first, retrieve data from device
-                    $elements = $device[$key];
+                    $elements = $device_data;
                     if (!array_is_list($elements)) {
                         $elements = [$elements];
                     }
@@ -1527,11 +1524,9 @@ class Converter
                     break;
                 case "cartridges":
                 case "pagecounters":
-                case "error":
-                    $data['content'][$key] = $device[$key];
-                    break;
                 case "drives":
-                    $data['content'][$key] = $device[$key];
+                case "error":
+                    $data['content'][$key] = $device_data;
                     break;
                 default:
                     throw new RuntimeException('Key ' . $key . ' is not handled in network devices conversion');
@@ -1566,7 +1561,7 @@ class Converter
         }
         $device_info = &$data['content']['device']['info'];
 
-        if (isset($device['snmphostname']) && !empty($device['snmphostname'])) {
+        if (!empty($device['snmphostname'])) {
             //SNMP hostname has precedence
             if (isset($device['dnshostname'])) {
                 unset($device['dnshostname']);
@@ -1576,7 +1571,7 @@ class Converter
             }
         }
 
-        if (isset($device['netbiosname']) && !empty($device['netbiosname']) && isset($device['dnshostname'])) {
+        if (!empty($device['netbiosname']) && isset($device['dnshostname'])) {
             //NETBIOS name has precedence
             unset($device['dnshostname']);
         }
@@ -1596,7 +1591,7 @@ class Converter
                 case 'dnshostname':
                 case 'snmphostname':
                 case 'netbiosname':
-                    $device_info['name'] = $device[$key];
+                    $device_info['name'] = $device_data;
                     unset($device[$key]);
                     break;
                 case 'entity':
@@ -1605,7 +1600,7 @@ class Converter
                     //not used
                     break;
                 case 'ips':
-                    $device_info['ips'] = $device[$key];
+                    $device_info['ips'] = $device_data;
                     unset($device[$key]);
                     break;
                 case 'mac':
@@ -1619,22 +1614,22 @@ class Converter
                 case 'description':
                 case 'serial':
                 case 'assettag':
-                    $device_info[$key] = $device[$key];
+                    $device_info[$key] = $device_data;
                     unset($device[$key]);
                     break;
                 case 'netportvendor':
                     //translate as manufacturer - if not present
                     if (!isset($device['manufacturer'])) {
-                        $device_info['manufacturer'] = $device[$key];
+                        $device_info['manufacturer'] = $device_data;
                     }
                     unset($device[$key]);
                     break;
                 case 'workgroup':
-                    $data['content']['hardware']['workgroup'] = $device[$key];
+                    $data['content']['hardware']['workgroup'] = $device_data;
                     unset($device[$key]);
                     break;
                 case 'authsnmp':
-                    $device_info['credentials'] = $device[$key];
+                    $device_info['credentials'] = $device_data;
                     unset($device[$key]);
                     break;
                 default:
