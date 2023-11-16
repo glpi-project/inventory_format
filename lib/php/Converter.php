@@ -1068,7 +1068,7 @@ class Converter
     /**
      * Set convert types
      *
-     * @param array $convert_types COnvert types cnfiguration
+     * @param array $convert_types Convert types configuration
      *
      * @return Converter
      */
