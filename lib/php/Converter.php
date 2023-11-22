@@ -1409,9 +1409,10 @@ class Converter
                     //check for arrays
                     foreach ($data['content']['network_ports'] as &$netport) {
                         if (isset($netport['vlans'])) {
-                            $netport['vlans'] = array_is_list($netport['vlans']['vlan']) ?
-                                $netport['vlans']['vlan'] :
-                                [$netport['vlans']['vlan']];
+                            $netport['vlans'] = is_array($netport['vlans']['vlan'])
+                                &&  array_is_list($netport['vlans']['vlan'])
+                                ? $netport['vlans']['vlan']
+                                : [$netport['vlans']['vlan']];
                         }
                         if (isset($netport['connections']['cdp'])) {
                             $netport['lldp'] = (bool)$netport['connections']['cdp'];
