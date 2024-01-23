@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.32] - 2024-01-23
+
+Drive keyword for SNMP devices
+
 ## [1.1.31] - 2023-09-08
 No longer required description property on slots
 Fix battery power conversion issues
