@@ -420,8 +420,6 @@ class Converter
                 'drives/free',
                 'drives/total',
                 'hardware/etime',
-                'hardware/memory',
-                'hardware/swap',
                 'storages/disksize',
                 'physical_volumes/free',
                 'physical_volumes/pe_size',
@@ -433,16 +431,12 @@ class Converter
                 'volume_groups/size',
                 'logical_volumes/seg_count',
                 'logical_volumes/size',
-                'memories/capacity',
                 'memories/numslots',
                 'processes/pid',
                 'processes/virtualmemory',
                 'networks/mtu',
                 'softwares/filesize',
-                'virtualmachines/memory',
                 'virtualmachines/vcpu',
-                'videos/memory',
-                'batteries/real_capacity',
                 'network_ports/ifinerrors',
                 'network_ports/ifinoctets',
                 'network_ports/ifinbytes',
@@ -458,8 +452,6 @@ class Converter
                 'network_ports/iftype',
                 'network_components/fru',
                 'network_components/index',
-                'network_device/ram',
-                'network_device/memory',
                 'network_device/credentials',
                 'pagecounters/total',
                 'pagecounters/black',
@@ -845,7 +837,6 @@ class Converter
             }
         }
 
-
         //Fix batteries capacities & voltages
         if (isset($data['content']['batteries'])) {
             foreach ($data['content']['batteries'] as &$battery) {
@@ -890,7 +881,6 @@ class Converter
             }
         }
 
-
         //type on ports is required
         if (isset($data['content']['ports'])) {
             foreach ($data['content']['ports'] as &$port) {
@@ -913,6 +903,45 @@ class Converter
                         $network['mac'] = $network['macaddr'];
                     }
                     unset($network['macaddr']);
+                }
+            }
+        }
+
+        //fix memories that can have a unit
+        if (isset($data['content']['hardware']['memory'])) {
+            $data['content']['hardware']['memory'] = $this->convertMemory($data['content']['hardware']['memory']);
+        }
+        if (isset($data['content']['hardware']['swap'])) {
+            $data['content']['hardware']['swap'] = $this->convertMemory($data['content']['hardware']['swap']);
+        }
+        if (isset($data['content']['memories'])) {
+            foreach ($data['content']['memories'] as &$memory) {
+                if (isset($memory['capacity'])) {
+                    $memory['capacity'] = $this->convertMemory($memory['capacity']);
+                }
+            }
+        }
+        if (isset($data['content']['videos'])) {
+            foreach ($data['content']['videos'] as &$video) {
+                if (isset($video['memory'])) {
+                    $video['memory'] = $this->convertMemory($video['memory']);
+                }
+            }
+        }
+        if (isset($data['content']['virtualmachines'])) {
+            foreach ($data['content']['virtualmachines'] as &$vm) {
+                if (isset($vm['memory'])) {
+                    $vm['memory'] = $this->convertMemory($vm['memory']);
+                }
+            }
+        }
+        if (isset($data['content']['network_device'])) {
+            foreach ($data['content']['network_device'] as &$netdev) {
+                if (isset($netdev['memory'])) {
+                    $netdev['memory'] = $this->convertMemory($netdev['memory']);
+                }
+                if (isset($netdev['ram'])) {
+                    $netdev['ram'] = $this->convertMemory($netdev['ram']);
                 }
             }
         }
@@ -1315,6 +1344,54 @@ class Converter
         }
 
         return false;
+    }
+
+    /**
+     * Convert memory capacity
+     *
+     * @param string $capacity Inventoried capacity
+     *
+     * @return ?integer
+     */
+    public function convertMemory(string $capacity)
+    {
+        if (is_int($casted_capa = $this->getCastedValue($capacity, 'integer'))) {
+            return $casted_capa;
+        }
+
+        $mem_pattern = "/^([0-9]+([\.|,][0-9])?) ?(.?B)$/i";
+
+        $matches = [];
+        if (preg_match($mem_pattern, $capacity, $matches)) {
+            //we got a memory with a unit. first, convert to bytes
+            $real_value = $this->getCastedValue($matches[1], 'integer');
+            switch (strtolower($matches[3])) {
+                case 'pb':
+                    $real_value *= 1024;
+                    //no break, continue to next
+                case 'tb':
+                    $real_value *= 1024;
+                    //no break, continue to next
+                case 'gb':
+                    $real_value *= 1024;
+                    //no break, continue to next
+                case 'mb':
+                    $real_value *= 1024;
+                    //no break, continue to next
+                case 'kb':
+                    $real_value *= 1024;
+                    //no break, continue to next
+                case 'b':
+                    break;
+                default:
+                    return null;
+            }
+
+            //then return as Mb.
+            return $real_value / 1024 / 1024;
+        }
+
+        return null;
     }
 
     /**
