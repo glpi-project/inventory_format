@@ -887,4 +887,42 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         );
         $this->assertCount(1, $json->content->network_ports);
     }
+
+    /**
+     * Memory capacities convert provider
+     *
+     * @return array
+     */
+    public static function memoryCapasToConvertProvider()
+    {
+        return [
+            ['2048', 2048],
+            ['2048Mb', 2048],
+            ['2048MB', 2048],
+            ['2048 Mb', 2048],
+            ['2097152Kb', 2048],
+            ['2147483648b', 2048],
+            ['2.0Gb', 2048],
+            ['5Tb', 5242880],
+            ['3Pb', 3221225472]
+        ];
+    }
+
+    /**
+     * Test memory capacity conversion
+     *
+     * @dataProvider memoryCapasToConvertProvider
+     *
+     * @param string $orig     Original data
+     * @param string $expected Expected result
+     *
+     * @return void
+     */
+    public function testConvertMemoryCapacity($orig, $expected)
+    {
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertSame($expected, $instance->convertMemory($orig));
+    }
+
+
 }
