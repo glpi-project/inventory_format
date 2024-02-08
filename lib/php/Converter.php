@@ -936,13 +936,12 @@ class Converter
             }
         }
         if (isset($data['content']['network_device'])) {
-            foreach ($data['content']['network_device'] as &$netdev) {
-                if (isset($netdev['memory'])) {
-                    $netdev['memory'] = $this->convertMemory($netdev['memory']);
-                }
-                if (isset($netdev['ram'])) {
-                    $netdev['ram'] = $this->convertMemory($netdev['ram']);
-                }
+            $netdev = &$data['content']['network_device'];
+            if (isset($netdev['memory'])) {
+                $netdev['memory'] = $this->convertMemory($netdev['memory']);
+            }
+            if (isset($netdev['ram'])) {
+                $netdev['ram'] = $this->convertMemory($netdev['ram']);
             }
         }
 
