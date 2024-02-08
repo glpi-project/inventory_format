@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.34] - 2024-02-08
+
+Fix network equipments memory conversion
+
 ## [1.1.33] - 2024-02-06
 
 Handle units with memories
