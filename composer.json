@@ -30,7 +30,7 @@
     },
     "bin": ["bin/convert", "bin/build_hw_jsons", "bin/refresh_hw_sources","bin/validate"],
     "require-dev": {
-        "phpstan/extension-installer": "^1.3",
+        "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan": "^1.11",
         "phpstan/phpstan-deprecation-rules": "^1.2",
         "phpunit/phpunit": "^9.6",
