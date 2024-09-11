@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.1.35] - 2024-09-11
+
+Capacity to add new itemtypes on schema
+
 ## [1.1.34] - 2024-02-08
 
 Fix network equipments memory conversion
