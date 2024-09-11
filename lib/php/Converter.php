@@ -220,16 +220,18 @@ class Converter
 
         $known_itemtypes = [];
         preg_match('/\^\((.+)\)\$/', $schema->properties->itemtype->pattern, $known_itemtypes);
-        $known_itemtypes = explode('|', $known_itemtypes[1]);
-        foreach ($this->extra_itemtypes as $extra_itemtype) {
-            if (!in_array($extra_itemtype, $known_itemtypes)) {
-                $known_itemtypes[] = addslashes($extra_itemtype);
+        if (isset($known_itemtypes[1])) {
+            $known_itemtypes = explode('|', $known_itemtypes[1]);
+            foreach ($this->extra_itemtypes as $extra_itemtype) {
+                if (!in_array($extra_itemtype, $known_itemtypes)) {
+                    $known_itemtypes[] = addslashes($extra_itemtype);
+                }
             }
+            $schema->properties->itemtype->pattern = sprintf(
+                '^(%s)$',
+                implode('|', $known_itemtypes)
+            );
         }
-        $schema->properties->itemtype->pattern = sprintf(
-            '^(%s)$',
-            implode('|', $known_itemtypes)
-        );
 
         $properties = $schema->properties->content->properties;
 
