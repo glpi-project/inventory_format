@@ -717,25 +717,56 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         );
     }
 
-    public function testValidate() {
+    public function testValidateOK()
+    {
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['name' => 'my inventory']]]));
         $instance = new \Glpi\Inventory\Converter();
         $this->assertTrue($instance->validate($json));
+    }
 
+    public function testValidateVersionClient()
+    {
         //required "versionclient" is missing
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['hardware' => ['name' => 'my inventory']]]));
         $instance = new \Glpi\Inventory\Converter();
         $this->expectException(\RuntimeException::class);
         $this->expectExceptionMessage('Required property missing: versionclient');
         $this->assertFalse($instance->validate($json));
+    }
 
+    public function testValidateUnknownItemtype()
+    {
+        //itemtype \Glpi\Custom\Asset\Mine is unknown
+        $itemtype = '\Glpi\Custom\Asset\Mine';
+        $json = json_decode(json_encode(['deviceid' => 'myid', 'itemtype' => $itemtype, 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['name' => 'my inventory']]]));
+        $instance = new \Glpi\Inventory\Converter();
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage('\\\\Glpi\\\\Custom\\\\Asset\\\\Mine" does not match to ^(Unmanaged|Computer|Phone|NetworkEquipment|Printer)$');
+        $this->assertFalse($instance->validate($json));
+    }
+
+    public function testValidateNewItemtype()
+    {
+        //itemtype \Glpi\Custom\Asset\Mine is unknown
+        $itemtype = '\Glpi\Custom\Asset\Mine';
+        $json = json_decode(json_encode(['deviceid' => 'myid', 'itemtype' => $itemtype, 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['name' => 'my inventory']]]));
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertInstanceOf(\Glpi\Inventory\Converter::class, $instance->setExtraItemtypes([$itemtype]));
+        $this->assertTrue($instance->validate($json));
+    }
+
+    public function testValidateUnknownExtraPlugin_node()
+    {
         //extra "plugin_node" is unknown
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'plugin_node' => 'plugin node']]));
         $instance = new \Glpi\Inventory\Converter();
         $this->expectException(\RuntimeException::class);
         $this->expectExceptionMessage('Additional properties not allowed: plugin_node');
         $this->assertFalse($instance->validate($json));
+    }
 
+    public function testValidateExtraPlugin_node()
+    {
         //add extra "plugin_node" as string
         $extra_prop = ['plugin_node' => ['type' => 'string']];
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'plugin_node' => 'plugin node']]));
@@ -743,27 +774,40 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->assertInstanceOf(\Glpi\Inventory\Converter::class, $instance->setExtraProperties($extra_prop));
         $this->assertTrue($instance->validate($json));
 
+    }
+
+    public function testValidateUnknownHwPlugin_node()
+    {
         //extra "hardware/hw_plugin_node" is unknown
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['hw_plugin_node' => 'plugin node']]]));
         $instance = new \Glpi\Inventory\Converter();
         $this->expectException(\RuntimeException::class);
         $this->expectExceptionMessage('Additional properties not allowed: hw_plugin_node');
         $this->assertFalse($instance->validate($json));
+    }
 
+    public function testValidateHwPlugin_node()
+    {
         //add extra "hardware/hw_plugin_node" as string
         $extra_sub_prop = ['hardware' => ['hw_plugin_node' => ['type' => 'string']]];
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['hw_plugin_node' => 'plugin node']]]));
         $instance = new \Glpi\Inventory\Converter();
         $this->assertInstanceOf(\Glpi\Inventory\Converter::class, $instance->setExtraSubProperties($extra_sub_prop));
         $this->assertTrue($instance->validate($json));
+    }
 
+    public function testValidateUnknownVmPlugin_node()
+    {
         //extra "virtualmachines/vm_plugin_node" is unknown
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'virtualmachines' => [['name' => 'My VM', 'vmtype' => 'libvirt', 'vm_plugin_node' => 'plugin node']]]]));
         $instance = new \Glpi\Inventory\Converter();
         $this->expectException(\RuntimeException::class);
         $this->expectExceptionMessage('Additional properties not allowed: vm_plugin_node');
         $this->assertFalse($instance->validate($json));
+    }
 
+    public function testValidateVmPlugin_node()
+    {
         //add extra "virtualmachines/vm_plugin_node" as string
         $extra_sub_prop = ['virtualmachines' => ['vm_plugin_node' => ['type' => 'string']]];
         $json = json_decode(json_encode([
@@ -782,28 +826,41 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $instance = new \Glpi\Inventory\Converter();
         $this->assertInstanceOf(\Glpi\Inventory\Converter::class, $instance->setExtraSubProperties($extra_sub_prop));
         $this->assertTrue($instance->validate($json));
+    }
 
+    public function testValidateAlreadyExistingExtraNode()
+    {
         //try add extra node already existing
         $extra_prop = ['accesslog' => ['type' => 'string']];
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0']]));
         $instance = new \Glpi\Inventory\Converter();
         $this->assertInstanceOf(\Glpi\Inventory\Converter::class, $instance->setExtraProperties($extra_prop));
-        $this->assertTrue($instance->validate($json));
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage('Property accesslog already exists in schema.');
+        $this->assertFalse($instance->validate($json));
+    }
 
-
+    public function testValidateUAlreadyExistingExtraSubNode()
+    {
         //try add extra sub node already existing
         $extra_sub_prop = ['hardware' => ['chassis_type' => ['type' => 'string']]];
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0']]));
         $instance = new \Glpi\Inventory\Converter();
         $this->assertInstanceOf(\Glpi\Inventory\Converter::class, $instance->setExtraSubProperties($extra_sub_prop));
-        $this->assertTrue($instance->validate($json));
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage('Property hardware/chassis_type already exists in schema.');
+        $this->assertFalse($instance->validate($json));
+    }
 
+    public function testValidateMissingParentSubNode() {
         //try add extra sub node with missing parent
         $extra_sub_prop = ['unknown' => ['chassis_type' => ['type' => 'string']]];
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0']]));
         $instance = new \Glpi\Inventory\Converter();
         $this->assertInstanceOf(\Glpi\Inventory\Converter::class, $instance->setExtraSubProperties($extra_sub_prop));
-        $this->assertTrue($instance->validate($json));
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage('Property unknown does not exists in schema.');
+        $this->assertFalse($instance->validate($json));
     }
 
     public function testAssetTagFromDiscovery()

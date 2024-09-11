@@ -85,6 +85,8 @@ class Converter
     private array $extra_properties = [];
     /** @var array<string, array<string, array<string, string>>> */
     private array $extra_sub_properties = [];
+    /** @var array<string> */
+    private array $extra_itemtypes = [];
 
     /**
      * @var array<string, array<int, string>>
@@ -195,6 +197,16 @@ class Converter
     }
 
     /**
+     * @param array<string> $itemtypes
+     * @return $this
+     */
+    public function setExtraItemtypes(array $itemtypes): self
+    {
+        $this->extra_itemtypes = $itemtypes;
+        return $this;
+    }
+
+    /**
      * Build (extended) JSON schema
      * @return mixed
      */
@@ -206,63 +218,74 @@ class Converter
         }
         $schema = json_decode($string);
 
+        $known_itemtypes = [];
+        preg_match('/\^\((.+)\)\$/', $schema->properties->itemtype->pattern, $known_itemtypes);
+        if (isset($known_itemtypes[1])) {
+            $known_itemtypes = explode('|', $known_itemtypes[1]);
+            foreach ($this->extra_itemtypes as $extra_itemtype) {
+                if (!in_array($extra_itemtype, $known_itemtypes)) {
+                    $known_itemtypes[] = addslashes($extra_itemtype);
+                }
+            }
+            $schema->properties->itemtype->pattern = sprintf(
+                '^(%s)$',
+                implode('|', $known_itemtypes)
+            );
+        }
+
         $properties = $schema->properties->content->properties;
 
-        if ($this->extra_properties != null) {
-            foreach ($this->extra_properties as $extra_property => $extra_config) {
-                if (!property_exists($properties, $extra_property)) {
-                    $properties->$extra_property = json_decode((string)json_encode($extra_config));
-                } else {
-                    trigger_error(
-                        sprintf('Property %1$s already exists in schema.', $extra_property),
-                        E_USER_WARNING
-                    );
-                }
+        foreach ($this->extra_properties as $extra_property => $extra_config) {
+            if (!property_exists($properties, $extra_property)) {
+                $properties->$extra_property = json_decode((string)json_encode($extra_config));
+            } else {
+                trigger_error(
+                    sprintf('Property %1$s already exists in schema.', $extra_property),
+                    E_USER_WARNING
+                );
             }
         }
 
-        if ($this->extra_sub_properties != null) {
-            foreach ($this->extra_sub_properties as $extra_sub_property => $extra_sub_config) {
-                if (property_exists($properties, $extra_sub_property)) {
-                    foreach ($extra_sub_config as $subprop => $subconfig) {
-                        $type = $properties->$extra_sub_property->type;
-                        switch ($type) {
-                            case 'array':
-                                if (!property_exists($properties->$extra_sub_property->items->properties, $subprop)) {
-                                    $properties->$extra_sub_property->items->properties->$subprop =
-                                        json_decode((string)json_encode($subconfig));
-                                } else {
-                                    trigger_error(
-                                        sprintf('Property %1$s already exists in schema.', $subprop),
-                                        E_USER_WARNING
-                                    );
-                                }
-                                break;
-                            case 'object':
-                                if (!property_exists($properties->$extra_sub_property->properties, $subprop)) {
-                                    $properties->$extra_sub_property->properties->$subprop =
-                                        json_decode((string)json_encode($subconfig));
-                                } else {
-                                    trigger_error(
-                                        sprintf(
-                                            'Property %1$s/%2$s already exists in schema.',
-                                            $extra_sub_property,
-                                            $subprop
-                                        ),
-                                        E_USER_WARNING
-                                    );
-                                }
-                                break;
-                            default:
-                                trigger_error('Unknown type ' . $type, E_USER_WARNING);
-                        }
+        foreach ($this->extra_sub_properties as $extra_sub_property => $extra_sub_config) {
+            if (property_exists($properties, $extra_sub_property)) {
+                foreach ($extra_sub_config as $subprop => $subconfig) {
+                    $type = $properties->$extra_sub_property->type;
+                    switch ($type) {
+                        case 'array':
+                            if (!property_exists($properties->$extra_sub_property->items->properties, $subprop)) {
+                                $properties->$extra_sub_property->items->properties->$subprop =
+                                    json_decode((string)json_encode($subconfig));
+                            } else {
+                                trigger_error(
+                                    sprintf('Property %1$s already exists in schema.', $subprop),
+                                    E_USER_WARNING
+                                );
+                            }
+                            break;
+                        case 'object':
+                            if (!property_exists($properties->$extra_sub_property->properties, $subprop)) {
+                                $properties->$extra_sub_property->properties->$subprop =
+                                    json_decode((string)json_encode($subconfig));
+                            } else {
+                                trigger_error(
+                                    sprintf(
+                                        'Property %1$s/%2$s already exists in schema.',
+                                        $extra_sub_property,
+                                        $subprop
+                                    ),
+                                    E_USER_WARNING
+                                );
+                            }
+                            break;
+                        default:
+                            trigger_error('Unknown type ' . $type, E_USER_WARNING);
                     }
-                } else {
-                    trigger_error(
-                        sprintf('Property %1$s does not exists in schema.', $extra_sub_property),
-                        E_USER_WARNING
-                    );
                 }
+            } else {
+                trigger_error(
+                    sprintf('Property %1$s does not exists in schema.', $extra_sub_property),
+                    E_USER_WARNING
+                );
             }
         }
 
