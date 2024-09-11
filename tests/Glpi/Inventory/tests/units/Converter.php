@@ -734,6 +734,27 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->assertFalse($instance->validate($json));
     }
 
+    public function testValidateUnknownItemtype()
+    {
+        //itemtype \Glpi\Custom\Asset\Mine is unknown
+        $itemtype = '\Glpi\Custom\Asset\Mine';
+        $json = json_decode(json_encode(['deviceid' => 'myid', 'itemtype' => $itemtype, 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['name' => 'my inventory']]]));
+        $instance = new \Glpi\Inventory\Converter();
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage('\\\\Glpi\\\\Custom\\\\Asset\\\\Mine" does not match to ^(Unmanaged|Computer|Phone|NetworkEquipment|Printer)$');
+        $this->assertFalse($instance->validate($json));
+    }
+
+    public function testValidateNewItemtype()
+    {
+        //itemtype \Glpi\Custom\Asset\Mine is unknown
+        $itemtype = '\Glpi\Custom\Asset\Mine';
+        $json = json_decode(json_encode(['deviceid' => 'myid', 'itemtype' => $itemtype, 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['name' => 'my inventory']]]));
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertInstanceOf(\Glpi\Inventory\Converter::class, $instance->setExtraItemtypes([$itemtype]));
+        $this->assertTrue($instance->validate($json));
+    }
+
     public function testValidateUnknownExtraPlugin_node()
     {
         //extra "plugin_node" is unknown
