@@ -2046,7 +2046,7 @@
             "properties": {
               "image": {
                 "type": "string",
-                "ttile": "Image used for creation (Docker image for instance)",
+                "title": "Image used for creation (Docker image for instance)",
                 "examples": [
                   "redash/redash"
                 ]
