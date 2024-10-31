@@ -2051,6 +2051,10 @@
                   "redash/redash"
                 ]
               },
+              "ipaddress": {
+                "type": "string",
+                "title": "Virtualmachine ip"
+              },
               "memory": {
                 "type": "integer",
                 "title": "Memory size in MB",
@@ -2063,6 +2067,9 @@
                 "examples": [
                   "centos7.0"
                 ]
+              },
+              "operatingsystem": {
+                "$ref": "#/properties/content/properties/operatingsystem"
               },
               "status": {
                 "type": "string",
