@@ -2052,8 +2052,17 @@
                 ]
               },
               "ipaddress": {
-                "type": "string",
-                "title": "Virtualmachine ip"
+                "title": "Virtualmachine ip",
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "format": "ipv4"
+                  },
+                  {
+                    "type": "string",
+                    "format": "ipv6"
+                  }
+                ]
               },
               "memory": {
                 "type": "integer",
