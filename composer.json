@@ -17,7 +17,7 @@
     "require": {
         "php": ">=7.4",
         "seld/jsonlint": "^1.11",
-        "swaggest/json-schema": "^0.12.42",
+        "swaggest/json-schema": "^0.12.43",
         "symfony/polyfill-php81": "^1.31",
         "ext-json": "*",
         "ext-libxml": "*",
