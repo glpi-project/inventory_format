@@ -961,5 +961,17 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->assertSame($expected, $instance->convertMemory($orig));
     }
 
+    public function testFlexibleSchema(): void
+    {
+        $json_additionnal = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'additional' => ['name' => 'my extra data']]]));
+        $instance = new \Glpi\Inventory\Converter();
+        $instance->setFlexibleSchema();
+        $this->assertTrue($instance->validate($json_additionnal));
 
+        //tests same JSON fails with strict schema
+        $instance->setStrictSchema();
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage('Additional properties not allowed: additional');
+        $this->assertTrue($instance->validate($json_additionnal));
+    }
 }
