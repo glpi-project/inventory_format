@@ -52,6 +52,8 @@ class Converter
     private array $extra_sub_properties = [];
     /** @var array<string> */
     private array $extra_itemtypes = [];
+    /** @var bool */
+    private bool $strict_schema = true;
 
     /**
      * @var array<string, array<int, string>>
@@ -259,6 +261,10 @@ class Converter
                     E_USER_WARNING
                 );
             }
+        }
+
+        if ($this->strict_schema === false) {
+            $this->buildFlexibleSchema($schema->properties->content);
         }
 
         return $schema;
@@ -1767,5 +1773,47 @@ class Converter
     private function isNetworkDiscovery(array $data): bool
     {
         return isset($data['content']['device']) && $data['action'] == 'netdiscovery';
+    }
+
+    /**
+     * Set schema validation strict (no additional properties allowed anywhere)
+     *
+     * @return self
+     */
+    public function setStrictSchema(): self
+    {
+        $this->strict_schema = true;
+        return $this;
+    }
+
+    /**
+     * Set schema validation strict (no additional properties allowed anywhere)
+     *
+     * @return self
+     */
+    public function setFlexibleSchema(): self
+    {
+        $this->strict_schema = false;
+        return $this;
+    }
+
+    /**
+     * Build schema flexible (remove all additionalProperties)
+     *
+     * @param mixed $schemapart
+     *
+     * @return void
+     */
+    private function buildFlexibleSchema(&$schemapart)
+    {
+        foreach ($schemapart as $key => $value) {
+            if (is_object($value) || is_array($value)) {
+                $this->buildFlexibleSchema($value);
+            } else {
+                if ($key == 'additionalProperties') {
+                    unset($schemapart->$key);
+                }
+            }
+        }
     }
 }
