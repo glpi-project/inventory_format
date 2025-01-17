@@ -41,7 +41,7 @@ class Converter extends TestCase {
      *
      * @return void
      */
-    public function testConstructor()
+    public function testConstructor(): void
     {
         $instance = new \Glpi\Inventory\Converter();
         $this->assertSame($instance::LAST_VERSION, $instance->getTargetVersion());
@@ -52,7 +52,7 @@ class Converter extends TestCase {
 
         $this->expectException(\UnexpectedValueException::class);
         $this->expectExceptionMessage('Version must be a double!');
-        new \Glpi\Inventory\Converter('abcde');
+        new \Glpi\Inventory\Converter('abcde'); //@phpstan-ignore-line
     }
 
     /**
@@ -60,7 +60,7 @@ class Converter extends TestCase {
      *
      * @return void
      */
-    public function testDebug()
+    public function testDebug(): void
     {
         $instance = new \Glpi\Inventory\Converter();
         $this->assertFalse($instance->isDebug());
@@ -74,7 +74,7 @@ class Converter extends TestCase {
      *
      * @return void
      */
-    public function testSchemaPath()
+    public function testSchemaPath(): void
     {
         $expected = realpath(TU_DIR . '/../inventory.schema.json');
         $instance = new \Glpi\Inventory\Converter();
@@ -86,7 +86,7 @@ class Converter extends TestCase {
      *
      * @return void
      */
-    public function testGetMethods()
+    public function testGetMethods(): void
     {
         $expected = ['convertTo01'];
         $instance = new \Glpi\Inventory\Converter(0.1);
@@ -96,7 +96,7 @@ class Converter extends TestCase {
     /**
      * Values to cast provider
      *
-     * @return array
+     * @return array<int, array<string|int|float|bool|null>>
      */
     public static function valuesToCastProvider(): array
     {
@@ -129,11 +129,11 @@ class Converter extends TestCase {
      *
      * @param mixed  $value    Value to cast
      * @param string $cast     Type to cast to
-     * @param mixed  $expected Expected casted value
+     * @param mixed  $expected Expected cast value
      *
      * @return void
      */
-    public function testGetCastedValue($value, $cast, $expected)
+    public function testGetCastedValue($value, $cast, $expected): void
     {
         $instance = new \Glpi\Inventory\Converter();
         $this->assertSame($expected, $instance->getCastedValue($value, $cast));
@@ -144,7 +144,7 @@ class Converter extends TestCase {
      *
      * @return void
      */
-    public function testGetCastedValueWE()
+    public function testGetCastedValueWE(): void
     {
         $instance = new \Glpi\Inventory\Converter();
 
@@ -156,9 +156,9 @@ class Converter extends TestCase {
     /**
      * Array case change provider
      *
-     * @return array
+     * @return array<int, array<int, array<string, array<string, int>|int>|null>>
      */
-    public static function arrayForCaseProvider()
+    public static function arrayForCaseProvider(): array
     {
         return [
             [
@@ -177,12 +177,12 @@ class Converter extends TestCase {
      *
      * @dataProvider arrayForCaseProvider
      *
-     * @param array $orig     Original array
-     * @param array $expected Expected result
+     * @param array  $orig     Original array
+     * @param ?array $expected Expected result
      *
      * @return void
      */
-    public function testArrayChangeKeyCaseRecursive($orig, $expected)
+    public function testArrayChangeKeyCaseRecursive(array $orig, ?array $expected): void
     {
         if ($expected === null) {
             $expected = $orig;
@@ -195,9 +195,9 @@ class Converter extends TestCase {
     /**
      * Date to convert provider
      *
-     * @return array
+     * @return array<int, array<int, ?string>>
      */
-    public static function datesToConvertProvider()
+    public static function datesToConvertProvider(): array
     {
         return [
             ['2018-01-12', 'Y-m-d', '2018-01-12'],
@@ -218,19 +218,19 @@ class Converter extends TestCase {
      *
      * @dataProvider datesToConvertProvider
      *
-     * @param string $orig     Original date
-     * @param string $format   Format to apply
-     * @param string $expected Expected formatted date
+     * @param string  $orig     Original date
+     * @param string  $format   Format to apply
+     * @param ?string $expected Expected formatted date
      *
      * @return void
      */
-    public function testConvertDate($orig, $format, $expected)
+    public function testConvertDate(string $orig, string $format, ?string $expected): void
     {
         $instance = new \Glpi\Inventory\Converter();
         $this->assertSame($expected, $instance->convertDate($orig, $format));
     }
 
-    public function testConvertTypes()
+    public function testConvertTypes(): void
     {
         $instance = new \Glpi\Inventory\Converter();
         $instance->setConvertTypes([
@@ -297,9 +297,9 @@ class Converter extends TestCase {
     /**
      * Batteries capacities convert provider
      *
-     * @return array
+     * @return array<int, array<string|int|bool>>
      */
-    public static function batteryCapasToConvertProvider()
+    public static function batteryCapasToConvertProvider(): array
     {
         return [
             ['43.7456 Wh', 43746],
@@ -319,12 +319,12 @@ class Converter extends TestCase {
      *
      * @dataProvider batteryCapasToConvertProvider
      *
-     * @param string $orig     Original data
-     * @param string $expected Expected result
+     * @param string|int $orig     Original data
+     * @param int|false $expected Expected result
      *
      * @return void
      */
-    public function testConvertBatteryCapacity($orig, $expected)
+    public function testConvertBatteryCapacity($orig, $expected): void
     {
         $instance = new \Glpi\Inventory\Converter();
         $this->assertSame($expected, $instance->convertBatteryPower($orig));
@@ -333,9 +333,9 @@ class Converter extends TestCase {
     /**
      * Batteries voltages convert provider
      *
-     * @return array
+     * @return array<int, array<string|int|bool>>
      */
-    public static function batteryVoltsToConvertProvider()
+    public static function batteryVoltsToConvertProvider(): array
     {
         return [
             ['8 V', 8000],
@@ -353,12 +353,12 @@ class Converter extends TestCase {
      *
      * @dataProvider batteryVoltsToConvertProvider
      *
-     * @param string $orig     Original data
-     * @param string $expected Expected result
+     * @param string    $orig     Original data
+     * @param int|false $expected Expected result
      *
      * @return void
      */
-    public function testConvertBatteryVoltage($orig, $expected)
+    public function testConvertBatteryVoltage(string $orig, $expected): void
     {
         $instance = new \Glpi\Inventory\Converter();
         $this->assertSame($expected, $instance->convertBatteryVoltage($orig));
@@ -369,7 +369,7 @@ class Converter extends TestCase {
      *
      * @return void
      */
-    public function testConvert()
+    public function testConvert(): void
     {
         $xml_path = realpath(TU_DIR . '/data/4.xml');
         $this->assertNotEmpty($xml_path);
@@ -401,7 +401,7 @@ class Converter extends TestCase {
      *
      * @return void
      */
-    public function testFrBootTimeDateConvert()
+    public function testFrBootTimeDateConvert(): void
     {
         $xml_path = realpath(TU_DIR . '/data/13.xml');
         $this->assertNotEmpty($xml_path);
@@ -424,7 +424,7 @@ class Converter extends TestCase {
      *
      * @return void
      */
-    public function testSimCard()
+    public function testSimCard(): void
     {
         $xml_path = realpath(TU_DIR . '/data/18.xml');
         $this->assertNotEmpty($xml_path);
@@ -465,7 +465,7 @@ class Converter extends TestCase {
      *
      * @return void
      */
-    public function testEnBootTimeDateConvert()
+    public function testEnBootTimeDateConvert(): void
     {
         $xml_path = realpath(TU_DIR . '/data/14.xml');
         $this->assertNotEmpty($xml_path);
@@ -488,7 +488,7 @@ class Converter extends TestCase {
      *
      * @return void
      */
-    public function testFwAndSimcards()
+    public function testFwAndSimcards(): void
     {
         $xml_path = realpath(TU_DIR . '/data/5.xml');
         $this->assertNotEmpty($xml_path);
@@ -579,7 +579,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
      *
      * @return void
      */
-    public function testNetEConvert()
+    public function testNetEConvert(): void
     {
         $xml_path = realpath(TU_DIR . '/data/6.xml');
         $this->assertIsString($xml_path);
@@ -622,7 +622,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
      *
      * @return void
      */
-    public function testOnePort()
+    public function testOnePort(): void
     {
         $xml_path = realpath(TU_DIR . '/data/7.xml');
         $this->assertIsString($xml_path);
@@ -660,7 +660,8 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->assertCount(1, $json->content->network_ports);
     }
 
-    public function testNetdisco() {
+    public function testNetdisco(): void
+    {
         $xml_path = realpath(TU_DIR . '/data/9.xml');
         $this->assertIsString($xml_path);
 
@@ -717,14 +718,14 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         );
     }
 
-    public function testValidateOK()
+    public function testValidateOK(): void
     {
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['name' => 'my inventory']]]));
         $instance = new \Glpi\Inventory\Converter();
         $this->assertTrue($instance->validate($json));
     }
 
-    public function testValidateVersionClient()
+    public function testValidateVersionClient(): void
     {
         //required "versionclient" is missing
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['hardware' => ['name' => 'my inventory']]]));
@@ -734,7 +735,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->assertFalse($instance->validate($json));
     }
 
-    public function testValidateUnknownItemtype()
+    public function testValidateUnknownItemtype(): void
     {
         //itemtype \Glpi\Custom\Asset\Mine is unknown
         $itemtype = '\Glpi\Custom\Asset\Mine';
@@ -745,7 +746,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->assertFalse($instance->validate($json));
     }
 
-    public function testValidateNewItemtype()
+    public function testValidateNewItemtype(): void
     {
         //itemtype \Glpi\Custom\Asset\Mine is unknown
         $itemtype = '\Glpi\Custom\Asset\Mine';
@@ -755,7 +756,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->assertTrue($instance->validate($json));
     }
 
-    public function testValidateUnknownExtraPlugin_node()
+    public function testValidateUnknownExtraPlugin_node(): void
     {
         //extra "plugin_node" is unknown
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'plugin_node' => 'plugin node']]));
@@ -765,7 +766,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->assertFalse($instance->validate($json));
     }
 
-    public function testValidateExtraPlugin_node()
+    public function testValidateExtraPlugin_node(): void
     {
         //add extra "plugin_node" as string
         $extra_prop = ['plugin_node' => ['type' => 'string']];
@@ -776,7 +777,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
 
     }
 
-    public function testValidateUnknownHwPlugin_node()
+    public function testValidateUnknownHwPlugin_node(): void
     {
         //extra "hardware/hw_plugin_node" is unknown
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['hw_plugin_node' => 'plugin node']]]));
@@ -786,7 +787,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->assertFalse($instance->validate($json));
     }
 
-    public function testValidateHwPlugin_node()
+    public function testValidateHwPlugin_node(): void
     {
         //add extra "hardware/hw_plugin_node" as string
         $extra_sub_prop = ['hardware' => ['hw_plugin_node' => ['type' => 'string']]];
@@ -796,7 +797,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->assertTrue($instance->validate($json));
     }
 
-    public function testValidateUnknownVmPlugin_node()
+    public function testValidateUnknownVmPlugin_node(): void
     {
         //extra "virtualmachines/vm_plugin_node" is unknown
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'virtualmachines' => [['name' => 'My VM', 'vmtype' => 'libvirt', 'vm_plugin_node' => 'plugin node']]]]));
@@ -806,7 +807,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->assertFalse($instance->validate($json));
     }
 
-    public function testValidateVmPlugin_node()
+    public function testValidateVmPlugin_node(): void
     {
         //add extra "virtualmachines/vm_plugin_node" as string
         $extra_sub_prop = ['virtualmachines' => ['vm_plugin_node' => ['type' => 'string']]];
@@ -828,7 +829,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->assertTrue($instance->validate($json));
     }
 
-    public function testValidateAlreadyExistingExtraNode()
+    public function testValidateAlreadyExistingExtraNode(): void
     {
         //try add extra node already existing
         $extra_prop = ['accesslog' => ['type' => 'string']];
@@ -840,7 +841,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->assertFalse($instance->validate($json));
     }
 
-    public function testValidateUAlreadyExistingExtraSubNode()
+    public function testValidateUAlreadyExistingExtraSubNode(): void
     {
         //try add extra sub node already existing
         $extra_sub_prop = ['hardware' => ['chassis_type' => ['type' => 'string']]];
@@ -852,7 +853,8 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->assertFalse($instance->validate($json));
     }
 
-    public function testValidateMissingParentSubNode() {
+    public function testValidateMissingParentSubNode(): void
+    {
         //try add extra sub node with missing parent
         $extra_sub_prop = ['unknown' => ['chassis_type' => ['type' => 'string']]];
         $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0']]));
@@ -863,7 +865,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->assertFalse($instance->validate($json));
     }
 
-    public function testAssetTagFromDiscovery()
+    public function testAssetTagFromDiscovery(): void
     {
         $xml_path = realpath(TU_DIR . '/data/16.xml');
         $this->assertNotEmpty($xml_path);
@@ -904,7 +906,7 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         );
     }
 
-    public function testAssetTagFromInventory()
+    public function testAssetTagFromInventory(): void
     {
         $xml_path = realpath(TU_DIR . '/data/17.xml');
         $this->assertNotEmpty($xml_path);
@@ -948,9 +950,9 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
     /**
      * Memory capacities convert provider
      *
-     * @return array
+     * @return array<int, array<int, string|int>>
      */
-    public static function memoryCapasToConvertProvider()
+    public static function memoryCapasToConvertProvider(): array
     {
         return [
             ['2048', 2048],
@@ -971,11 +973,11 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
      * @dataProvider memoryCapasToConvertProvider
      *
      * @param string $orig     Original data
-     * @param string $expected Expected result
+     * @param int    $expected Expected result
      *
      * @return void
      */
-    public function testConvertMemoryCapacity($orig, $expected)
+    public function testConvertMemoryCapacity(string $orig, int $expected): void
     {
         $instance = new \Glpi\Inventory\Converter();
         $this->assertSame($expected, $instance->convertMemory($orig));

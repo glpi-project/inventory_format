@@ -3,7 +3,7 @@
 /**
  * ---------------------------------------------------------------------
  * GLPI - Gestionnaire Libre de Parc Informatique
- * Copyright (C) 2015-2018 Teclib' and contributors.
+ * Copyright (C) 2015-2025 Teclib' and contributors.
  *
  * http://glpi-project.org
  *
@@ -55,7 +55,7 @@ use UnexpectedValueException;
  * @category  Inventory
  * @package   Glpi
  * @author    Johan Cwiklinski <jcwiklinski@teclib.com>
- * @copyright 2018-2022 GLPI Team and Contributors
+ * @copyright 2018-2025 GLPI Team and Contributors
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GPL License 3.0 or (at your option) any later version
  * @link      https://glpi-project.org
  */
@@ -177,6 +177,8 @@ class Converter
     }
 
     /**
+     * Add extra properties to schema
+     *
      * @param array<string, array<string, string>> $properties
      * @return $this
      */
@@ -187,6 +189,8 @@ class Converter
     }
 
     /**
+     * Add extra sub-properties to schema
+     *
      * @param array<string, array<string, array<string, string>>> $properties
      * @return $this
      */
@@ -197,6 +201,8 @@ class Converter
     }
 
     /**
+     * Add new supported item types
+     *
      * @param array<string> $itemtypes
      * @return $this
      */
@@ -208,6 +214,7 @@ class Converter
 
     /**
      * Build (extended) JSON schema
+     *
      * @return mixed
      */
     public function buildSchema()
@@ -1198,7 +1205,7 @@ class Converter
      * @param string $value Original value
      * @param string $type  Requested type
      *
-     * @return mixed
+     * @return bool|int|null
      */
     public function getCastedValue(string $value, string $type)
     {
