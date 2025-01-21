@@ -3,7 +3,7 @@
   "$id": "https://glpi-project.org/inventory.json",
   "type": "object",
   "title": "GLPI Inventory Schema",
-  "version": "0.1",
+  "version": 1.0,
   "definitions": {
     "datetime": {
       "type": "string",

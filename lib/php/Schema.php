@@ -22,8 +22,6 @@ use Swaggest\JsonSchema\Context;
  */
 class Schema
 {
-    public const LAST_VERSION = 0.1;
-
     /** @var array<string, array<int, string>> */
     private array $patterns;
     /** @var array<string, array<string, string>> */
@@ -275,5 +273,15 @@ class Schema
                 )
             );
         }
+    }
+
+    /**
+     * Get current schema version
+     *
+     * @return float
+     */
+    public function getVersion(): float
+    {
+        return $this->build()->version; //@phpstan-ignore-line: version does exist.
     }
 }
