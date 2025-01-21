@@ -23,15 +23,11 @@ class Converter extends TestCase
     public function testConstructor(): void
     {
         $instance = new \Glpi\Inventory\Converter();
-        $this->assertSame($instance::LAST_VERSION, $instance->getTargetVersion());
+        $this->assertSame($instance->getSchema()->getVersion(), $instance->getTargetVersion());
 
         $ver = 156.2;
         $instance = new \Glpi\Inventory\Converter($ver);
         $this->assertSame($ver, $instance->getTargetVersion());
-
-        $this->expectException(\UnexpectedValueException::class);
-        $this->expectExceptionMessage('Version must be a double!');
-        new \Glpi\Inventory\Converter('abcde'); //@phpstan-ignore-line
     }
 
     /**
@@ -56,7 +52,7 @@ class Converter extends TestCase
     public function testGetMethods(): void
     {
         $expected = ['convertTo01'];
-        $instance = new \Glpi\Inventory\Converter(0.1);
+        $instance = new \Glpi\Inventory\Converter(1.0);
         $this->assertSame($expected, $instance->getMethods());
     }
 
@@ -801,5 +797,14 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
     {
         $instance = new \Glpi\Inventory\Converter();
         $this->assertSame($expected, $instance->convertMemory($orig));
+    }
+
+    public function testHasLatestVersion(): void
+    {
+        $instance = new \Glpi\Inventory\Converter();
+        $this->assertContains(
+            $instance->getSchema()->getVersion(),
+            $instance->getMappings()
+        );
     }
 }

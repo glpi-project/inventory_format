@@ -24,10 +24,8 @@ use UnexpectedValueException;
  */
 class Converter
 {
-    public const LAST_VERSION = 0.1;
-
-    /** @var ?float */
-    private ?float $target_version;
+    /** @var float */
+    private float $target_version;
 
     private Schema $schema;
     /** @var bool */
@@ -40,7 +38,7 @@ class Converter
 
     /** @var array<string, float> */
     private array $mapping = [
-        '01'   => 0.1
+        '01'   => 1.0
     ];
 
     /**
@@ -71,18 +69,10 @@ class Converter
      *
      * @param ?float $target_version JSON schema based version to target. Use last version if null.
      */
-    public function __construct($target_version = null)
+    public function __construct(?float $target_version = null)
     {
         $this->schema = new Schema();
-        if ($target_version === null) {
-            $target_version = self::LAST_VERSION;
-        }
-
-        if (!is_double($target_version)) {
-            throw new UnexpectedValueException('Version must be a double!');
-        }
-
-        $this->target_version = $target_version;
+        $this->target_version = $target_version ?? $this->schema->getVersion();
     }
 
     /**
@@ -92,7 +82,7 @@ class Converter
      */
     public function getTargetVersion(): float
     {
-        return $this->target_version ?? self::LAST_VERSION;
+        return $this->target_version;
     }
 
     /**
@@ -204,7 +194,17 @@ class Converter
     }
 
     /**
-     * Converts to inventory format 0.1
+     * Get versions mapping
+     *
+     * @return array<string, float>
+     */
+    public function getMappings(): array
+    {
+        return $this->mapping;
+    }
+
+    /**
+     * Converts to inventory format 1.0
      *
      * @param array<string, mixed> $data Contents
      *

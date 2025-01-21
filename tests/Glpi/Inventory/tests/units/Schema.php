@@ -186,4 +186,10 @@ class Schema extends TestCase
         $this->expectExceptionMessage('Additional properties not allowed: additional');
         $this->assertTrue($instance->validate($json_additionnal));
     }
+
+    public function testVersion(): void
+    {
+        $instance = new \Glpi\Inventory\Schema();
+        $this->assertIsFloat($instance->getVersion());
+    }
 }
