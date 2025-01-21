@@ -3,6 +3,12 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.2.0] - 2025-01-21
+
+Add method to make schema validation more flexible (allowing additional properties in content and all child nodes).
+Create Schema class instead of doing everything in Convert
+Bump schema version and use JSON file one
+
 ## [1.1.36] - 2024-11-05
 
 Support ofr IPs and Operating System in virtual machines
