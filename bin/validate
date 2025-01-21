@@ -33,10 +33,10 @@ if (!file_exists($json_path)) {
 }
 
 try {
-    $converter = new Glpi\Inventory\Converter;
+    $schema = new \Glpi\Inventory\Schema();
 
     $json_str = file_get_contents($json_path);
-    $converter->validate(json_decode($json_str));
+    $schema->validate(json_decode($json_str));
 } catch (\Exception $e) {
     echo "File: $json_path\n";
     echo $e->getMessage();

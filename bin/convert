@@ -57,7 +57,7 @@ try {
     }
 
     $json = $converter->convert($xml->asXML());
-    $converter->validate(json_decode($json));
+    $converter->getSchema()->validate(json_decode($json));
 
     if ($json_path !== null) {
         file_put_contents($json_path, $json);

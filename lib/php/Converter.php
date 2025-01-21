@@ -14,15 +14,13 @@ namespace Glpi\Inventory;
 use DateTime;
 use Exception;
 use RuntimeException;
-use Swaggest\JsonSchema\Context;
-use Swaggest\JsonSchema\Schema;
 use UnexpectedValueException;
 
 /**
  * Converts old FusionInventory XML format to new JSON schema
  * for automatic inventory.
  *
- * @author    Johan Cwiklinski <jcwiklinski@teclib.com>
+ * @author Johan Cwiklinski <jcwiklinski@teclib.com>
  */
 class Converter
 {
@@ -31,29 +29,19 @@ class Converter
     /** @var ?float */
     private ?float $target_version;
 
+    private Schema $schema;
     /** @var bool */
     private bool $debug = false;
     /**
      * XML a different steps. Used for debug only
      * @var array<int, mixed>
      */
-    private array $steps;
+    private array $steps; //@phpstan-ignore-line
 
     /** @var array<string, float> */
     private array $mapping = [
         '01'   => 0.1
     ];
-
-    /** @var array<string, array<int, string>> */
-    private array $schema_patterns;
-    /** @var array<string, array<string, string>> */
-    private array $extra_properties = [];
-    /** @var array<string, array<string, array<string, string>>> */
-    private array $extra_sub_properties = [];
-    /** @var array<string> */
-    private array $extra_itemtypes = [];
-    /** @var bool */
-    private bool $strict_schema = true;
 
     /**
      * @var array<string, array<int, string>>
@@ -85,6 +73,7 @@ class Converter
      */
     public function __construct($target_version = null)
     {
+        $this->schema = new Schema();
         if ($target_version === null) {
             $target_version = self::LAST_VERSION;
         }
@@ -130,168 +119,23 @@ class Converter
     }
 
     /**
-     * Get path to schema
+     * Get Schema instance
      *
-     * @return string
+     * @return Schema
      */
-    public function getSchemaPath(): string
+    public function getSchema(): Schema
     {
-        $schema_path = realpath(__DIR__ . '/../../inventory.schema.json');
-        if ($schema_path === false) {
-            throw new RuntimeException('Schema file not found!');
-        }
-        return $schema_path;
+        return $this->schema;
     }
 
     /**
-     * Add extra properties to schema
+     * Get JSON schema
      *
-     * @param array<string, array<string, string>> $properties
-     * @return $this
+     * @return object
      */
-    public function setExtraProperties(array $properties): self
+    public function getJSONSchema(): object
     {
-        $this->extra_properties = $properties;
-        return $this;
-    }
-
-    /**
-     * Add extra sub-properties to schema
-     *
-     * @param array<string, array<string, array<string, string>>> $properties
-     * @return $this
-     */
-    public function setExtraSubProperties(array $properties): self
-    {
-        $this->extra_sub_properties = $properties;
-        return $this;
-    }
-
-    /**
-     * Add new supported item types
-     *
-     * @param array<string> $itemtypes
-     * @return $this
-     */
-    public function setExtraItemtypes(array $itemtypes): self
-    {
-        $this->extra_itemtypes = $itemtypes;
-        return $this;
-    }
-
-    /**
-     * Build (extended) JSON schema
-     *
-     * @return mixed
-     */
-    public function buildSchema()
-    {
-        $string = file_get_contents($this->getSchemaPath());
-        if ($string === false) {
-            throw new RuntimeException('Unable to read schema file');
-        }
-        $schema = json_decode($string);
-
-        $known_itemtypes = [];
-        preg_match('/\^\((.+)\)\$/', $schema->properties->itemtype->pattern, $known_itemtypes);
-        if (isset($known_itemtypes[1])) {
-            $known_itemtypes = explode('|', $known_itemtypes[1]);
-            foreach ($this->extra_itemtypes as $extra_itemtype) {
-                if (!in_array($extra_itemtype, $known_itemtypes)) {
-                    $known_itemtypes[] = addslashes($extra_itemtype);
-                }
-            }
-            $schema->properties->itemtype->pattern = sprintf(
-                '^(%s)$',
-                implode('|', $known_itemtypes)
-            );
-        }
-
-        $properties = $schema->properties->content->properties;
-
-        foreach ($this->extra_properties as $extra_property => $extra_config) {
-            if (!property_exists($properties, $extra_property)) {
-                $properties->$extra_property = json_decode((string)json_encode($extra_config));
-            } else {
-                trigger_error(
-                    sprintf('Property %1$s already exists in schema.', $extra_property),
-                    E_USER_WARNING
-                );
-            }
-        }
-
-        foreach ($this->extra_sub_properties as $extra_sub_property => $extra_sub_config) {
-            if (property_exists($properties, $extra_sub_property)) {
-                foreach ($extra_sub_config as $subprop => $subconfig) {
-                    $type = $properties->$extra_sub_property->type;
-                    switch ($type) {
-                        case 'array':
-                            if (!property_exists($properties->$extra_sub_property->items->properties, $subprop)) {
-                                $properties->$extra_sub_property->items->properties->$subprop =
-                                    json_decode((string)json_encode($subconfig));
-                            } else {
-                                trigger_error(
-                                    sprintf('Property %1$s already exists in schema.', $subprop),
-                                    E_USER_WARNING
-                                );
-                            }
-                            break;
-                        case 'object':
-                            if (!property_exists($properties->$extra_sub_property->properties, $subprop)) {
-                                $properties->$extra_sub_property->properties->$subprop =
-                                    json_decode((string)json_encode($subconfig));
-                            } else {
-                                trigger_error(
-                                    sprintf(
-                                        'Property %1$s/%2$s already exists in schema.',
-                                        $extra_sub_property,
-                                        $subprop
-                                    ),
-                                    E_USER_WARNING
-                                );
-                            }
-                            break;
-                        default:
-                            trigger_error('Unknown type ' . $type, E_USER_WARNING);
-                    }
-                }
-            } else {
-                trigger_error(
-                    sprintf('Property %1$s does not exists in schema.', $extra_sub_property),
-                    E_USER_WARNING
-                );
-            }
-        }
-
-        if ($this->strict_schema === false) {
-            $this->buildFlexibleSchema($schema->properties->content);
-        }
-
-        return $schema;
-    }
-
-    /**
-     * Do validation (against last schema only!)
-     *
-     * @param mixed $json Converted data to validate
-     *
-     * @return boolean
-     */
-    public function validate($json): bool
-    {
-        try {
-            $schema = Schema::import($this->buildSchema());
-
-            $context = new Context();
-            $context->tolerateStrings = (!defined('TU_USER'));
-            $schema->in($json, $context);
-            return true;
-        } catch (Exception $e) {
-            $errmsg = "JSON does not validate. Violations:\n";
-            $errmsg .= $e->getMessage();
-            $errmsg .= "\n";
-            throw new RuntimeException($errmsg);
-        }
+        return $this->schema->build();
     }
 
     /**
@@ -324,7 +168,7 @@ class Converter
             (string)json_encode((array)$sxml),
             true
         );
-        $this->loadSchemaPatterns();
+        $this->schema->loadPatterns();
 
         $methods = $this->getMethods();
         foreach ($methods as $method) {
@@ -548,7 +392,7 @@ class Converter
                     if ($network['type'] == 'local') {
                         $network['type'] = 'loopback';
                     }
-                    if (!in_array($network['type'], $this->schema_patterns['networks_types'])) {
+                    if (!in_array($network['type'], $this->schema->getPatterns()['networks_types'])) {
                         unset($network['type']);
                     }
                 }
@@ -1169,7 +1013,6 @@ class Converter
         }
     }
 
-
     /**
      * Get value casted
      *
@@ -1255,29 +1098,6 @@ class Converter
             return $d->format($format);
         }
         return $value;
-    }
-
-    /**
-     * Load schema patterns that will be used to validate
-     *
-     * @return void
-     */
-    public function loadSchemaPatterns(): void
-    {
-        $string = file_get_contents($this->getSchemaPath());
-        if ($string === false) {
-            throw new RuntimeException('Unable to read schema file');
-        }
-        $json = json_decode($string, true);
-
-        $this->schema_patterns['networks_types'] = explode(
-            '|',
-            str_replace(
-                ['^(', ')$'],
-                ['', ''],
-                $json['properties']['content']['properties']['networks']['items']['properties']['type']['pattern']
-            )
-        );
     }
 
     /**
@@ -1773,47 +1593,5 @@ class Converter
     private function isNetworkDiscovery(array $data): bool
     {
         return isset($data['content']['device']) && $data['action'] == 'netdiscovery';
-    }
-
-    /**
-     * Set schema validation strict (no additional properties allowed anywhere)
-     *
-     * @return self
-     */
-    public function setStrictSchema(): self
-    {
-        $this->strict_schema = true;
-        return $this;
-    }
-
-    /**
-     * Set schema validation strict (no additional properties allowed anywhere)
-     *
-     * @return self
-     */
-    public function setFlexibleSchema(): self
-    {
-        $this->strict_schema = false;
-        return $this;
-    }
-
-    /**
-     * Build schema flexible (remove all additionalProperties)
-     *
-     * @param mixed $schemapart
-     *
-     * @return void
-     */
-    private function buildFlexibleSchema(&$schemapart)
-    {
-        foreach ($schemapart as $key => $value) {
-            if (is_object($value) || is_array($value)) {
-                $this->buildFlexibleSchema($value);
-            } else {
-                if ($key == 'additionalProperties') {
-                    unset($schemapart->$key);
-                }
-            }
-        }
     }
 }

@@ -26,7 +26,7 @@
         "ext-curl": "*"
     },
     "autoload": {
-        "files": ["lib/php/Converter.php", "lib/php/FilesToJSON.php"]
+        "files": ["lib/php/Schema.php", "lib/php/Converter.php", "lib/php/FilesToJSON.php"]
     },
     "bin": ["bin/convert", "bin/build_hw_jsons", "bin/refresh_hw_sources","bin/validate"],
     "require-dev": {
