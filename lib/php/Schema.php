@@ -30,8 +30,6 @@ class Schema
     private array $extra_sub_properties = [];
     /** @var array<string> */
     private array $extra_itemtypes = [];
-    /** @var bool */
-    private bool $strict_schema = true;
 
     /**
      * Add new supported item types
@@ -129,10 +127,6 @@ class Schema
             }
         }
 
-        if ($this->strict_schema === false) {
-            $this->buildFlexibleSchema($schema->properties->content);
-        }
-
         return $schema;
     }
 
@@ -205,48 +199,6 @@ class Schema
     public function getPatterns(): array
     {
         return $this->patterns;
-    }
-
-    /**
-     * Set schema validation strict (no additional properties allowed anywhere)
-     *
-     * @return self
-     */
-    public function setStrict(): self
-    {
-        $this->strict_schema = true;
-        return $this;
-    }
-
-    /**
-     * Set schema validation strict (no additional properties allowed anywhere)
-     *
-     * @return self
-     */
-    public function setFlexible(): self
-    {
-        $this->strict_schema = false;
-        return $this;
-    }
-
-    /**
-     * Build schema flexible (remove all additionalProperties)
-     *
-     * @param mixed $schemapart
-     *
-     * @return void
-     */
-    private function buildFlexibleSchema(&$schemapart)
-    {
-        foreach ($schemapart as $key => $value) {
-            if (is_object($value) || is_array($value)) {
-                $this->buildFlexibleSchema($value);
-            } else {
-                if ($key == 'additionalProperties') {
-                    unset($schemapart->$key);
-                }
-            }
-        }
     }
 
     /**

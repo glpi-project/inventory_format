@@ -65,16 +65,6 @@ class Schema extends TestCase
         $this->assertTrue($instance->validate($json));
     }
 
-    public function testValidateUnknownExtraPlugin_node(): void
-    {
-        //extra "plugin_node" is unknown
-        $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'plugin_node' => 'plugin node']]));
-        $instance = new \Glpi\Inventory\Schema();
-        $this->expectException(\RuntimeException::class);
-        $this->expectExceptionMessage('Additional properties not allowed: plugin_node');
-        $this->assertFalse($instance->validate($json));
-    }
-
     public function testValidateExtraPlugin_node(): void
     {
         //add extra "plugin_node" as string
@@ -85,16 +75,6 @@ class Schema extends TestCase
         $this->assertTrue($instance->validate($json));
     }
 
-    public function testValidateUnknownHwPlugin_node(): void
-    {
-        //extra "hardware/hw_plugin_node" is unknown
-        $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['hw_plugin_node' => 'plugin node']]]));
-        $instance = new \Glpi\Inventory\Schema();
-        $this->expectException(\RuntimeException::class);
-        $this->expectExceptionMessage('Additional properties not allowed: hw_plugin_node');
-        $this->assertFalse($instance->validate($json));
-    }
-
     public function testValidateHwPlugin_node(): void
     {
         //add extra "hardware/hw_plugin_node" as string
@@ -103,16 +83,6 @@ class Schema extends TestCase
         $instance = new \Glpi\Inventory\Schema();
         $this->assertInstanceOf(\Glpi\Inventory\Schema::class, $instance->setExtraSubProperties($extra_sub_prop));
         $this->assertTrue($instance->validate($json));
-    }
-
-    public function testValidateUnknownVmPlugin_node(): void
-    {
-        //extra "virtualmachines/vm_plugin_node" is unknown
-        $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'virtualmachines' => [['name' => 'My VM', 'vmtype' => 'libvirt', 'vm_plugin_node' => 'plugin node']]]]));
-        $instance = new \Glpi\Inventory\Schema();
-        $this->expectException(\RuntimeException::class);
-        $this->expectExceptionMessage('Additional properties not allowed: vm_plugin_node');
-        $this->assertFalse($instance->validate($json));
     }
 
     public function testValidateVmPlugin_node(): void
@@ -177,13 +147,6 @@ class Schema extends TestCase
     {
         $json_additionnal = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'additional' => ['name' => 'my extra data']]]));
         $instance = new \Glpi\Inventory\Schema();
-        $instance->setFlexible();
-        $this->assertTrue($instance->validate($json_additionnal));
-
-        //tests same JSON fails with strict schema
-        $instance->setStrict();
-        $this->expectException(\RuntimeException::class);
-        $this->expectExceptionMessage('Additional properties not allowed: additional');
         $this->assertTrue($instance->validate($json_additionnal));
     }
 
