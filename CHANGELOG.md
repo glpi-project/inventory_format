@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.2.1] - 2025-02-10
+
+Always allow additional properties under content and all child nodes, no longer as an option.
+
 ## [1.2.0] - 2025-01-21
 
 Add method to make schema validation more flexible (allowing additional properties in content and all child nodes).
