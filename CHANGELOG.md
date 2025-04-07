@@ -3,6 +3,11 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.2.2] - 2025-04-07
+
+Add stack_number on network equipments components
+PHP 8.4 compatibility
+
 ## [1.2.1] - 2025-02-10
 
 Always allow additional properties under content and all child nodes, no longer as an option.

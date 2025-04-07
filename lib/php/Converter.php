@@ -297,6 +297,7 @@ class Converter
                 'network_ports/iftype',
                 'network_components/fru',
                 'network_components/index',
+                'network_components/stack_number',
                 'network_device/credentials',
                 'pagecounters/total',
                 'pagecounters/black',
