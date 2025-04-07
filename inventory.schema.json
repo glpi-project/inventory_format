@@ -2536,6 +2536,9 @@
               "serial": {
                 "type": "string"
               },
+              "stack_number": {
+                "type": "integer"
+              },
               "type": {
                 "type": "string"
               },
