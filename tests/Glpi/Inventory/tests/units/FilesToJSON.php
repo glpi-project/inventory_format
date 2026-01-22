@@ -109,6 +109,12 @@ class FilesToJSON extends TestCase
         // Ensure files are generated
         foreach ($types as $type => $filepath) {
             $this->assertTrue(file_exists($filepath), sprintf('JSON file "%s" has not been generated', $type));
+            if ($type === 'iftype') {
+                //check CSV header is not part of the JSON generated file
+                $contents = file_get_contents($filepath);
+                $this->assertNotFalse($contents, sprintf('JSON file "%s" not readable', $filepath));
+                $this->assertStringNotContainsString('"decimal": "Decimal"', $contents, 'CSV header found in generated JSON file');
+            }
         }
     }
 }

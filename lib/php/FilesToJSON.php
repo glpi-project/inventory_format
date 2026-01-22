@@ -260,7 +260,12 @@ final class FilesToJSON
         $iftypeFile = $this->getSourceFile(self::TYPE_IFTYPE);
         $iftypes = [];
 
+        $first_row = true;
         while ($line = fgetcsv($iftypeFile, 0, ',', '"', '')) {
+            if ($first_row) {
+                $first_row = false;
+                continue;
+            }
             $iftypes[] = [
                 'decimal'     => $line[0],
                 'name'        => $line[1],
