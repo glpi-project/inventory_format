@@ -1303,6 +1303,7 @@ class Converter
                                 case 'Phone':
                                 case 'Printer':
                                 case 'Unmanaged':
+                                case 'Pdu':
                                     $itemtype = $device_info['type'];
                                     break;
                                 case 'Networking':

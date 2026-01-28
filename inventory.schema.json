@@ -2838,7 +2838,7 @@
             },
             "type": {
               "type": "string",
-              "pattern": "^(Unmanaged|Computer|Networking|Printer|Storage|Power|Phone|Video|KVM)$"
+              "pattern": "^(Unmanaged|Computer|Networking|Printer|Storage|Power|Phone|Video|KVM|Pdu)$"
             },
             "uptime": {
               "type": "string",
@@ -2850,6 +2850,33 @@
                 "Cisco"
               ]
             },
+          "pdu": {
+            "type": "object",
+            "title": "Power Distribution Unit inventory",
+            "properties": {
+              "type": {
+                "type": "string",
+                "title": "PDU type"
+              },
+              "plugs": {
+                "title": "List of plugs of pdu",
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "name"
+                  ],
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": false
+          },
             "contact": {
               "type": "string"
             },
@@ -2967,7 +2994,7 @@
       "type": "string",
       "title": "Item type",
       "default": "Unmanaged",
-      "pattern": "^(Unmanaged|Computer|Phone|NetworkEquipment|Printer)$"
+      "pattern": "^(Unmanaged|Computer|Phone|NetworkEquipment|Printer|Pdu)$"
     },
     "partial": {
       "type": "boolean",
