@@ -2850,33 +2850,33 @@
                 "Cisco"
               ]
             },
-          "pdu": {
-            "type": "object",
-            "title": "Power Distribution Unit inventory",
-            "properties": {
-              "type": {
-                "type": "string",
-                "title": "PDU type"
-              },
-              "plugs": {
-                "title": "List of plugs of pdu",
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "required": [
-                    "name"
-                  ],
-                  "properties": {
-                    "name": {
-                      "type": "string"
-                    }
-                  }
+            "pdu": {
+              "type": "object",
+              "title": "Power Distribution Unit inventory",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "title": "PDU type"
                 },
-                "additionalProperties": false
-              }
+                "plugs": {
+                  "title": "List of plugs of pdu",
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "name"
+                    ],
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
             },
-            "additionalProperties": false
-          },
             "contact": {
               "type": "string"
             },
