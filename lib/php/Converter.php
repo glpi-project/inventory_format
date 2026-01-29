@@ -352,7 +352,7 @@ class Converter
             'remote_mgmt',
             'cartridges',
             'cameras',
-            'user'
+            'user',
         ];
 
         foreach ($arrays as $array) {
@@ -366,7 +366,7 @@ class Converter
             'versionprovider/comments',
             'cameras/resolution',
             'cameras/imageformats',
-            'cameras/resolutionvideo'
+            'cameras/resolutionvideo',
         ];
 
         foreach ($sub_arrays as $array) {
