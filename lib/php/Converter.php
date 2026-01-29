@@ -1436,6 +1436,7 @@ class Converter
                 case "pagecounters":
                 case "drives":
                 case "error":
+                case "pdu":
                     $data['content'][$key] = $device_data;
                     break;
                 default:
