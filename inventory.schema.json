@@ -2876,7 +2876,16 @@
                 ],
                 "properties": {
                   "name": {
-                    "type": "string"
+                    "type": "string",
+                    "title": "Plug name"
+                  },
+                  "number": {
+                    "type": "string",
+                    "title": "Plug number"
+                  },
+                  "type": {
+                    "type": "string",
+                    "title": "Plug type"
                   }
                 }
               },
