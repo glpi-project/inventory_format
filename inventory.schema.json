@@ -2880,7 +2880,7 @@
                     "title": "Plug name"
                   },
                   "number": {
-                    "type": "string",
+                    "type": "integer",
                     "title": "Plug number"
                   },
                   "type": {
