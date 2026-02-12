@@ -1436,9 +1436,11 @@ class Converter
                 case "pagecounters":
                 case "drives":
                 case "error":
-                case "pdu":
                     $data['content'][$key] = $device_data;
                     break;
+               case "pdu":
+                    // put pdu into network_device
+                    $data['content']['network_device'][$key] = $device_data;
                 default:
                     throw new RuntimeException('Key ' . $key . ' is not handled in network devices conversion');
             }

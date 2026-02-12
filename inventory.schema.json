@@ -2855,44 +2855,44 @@
             },
             "credentials": {
               "type": "integer"
-            }
-          }
-        },
-        "pdu": {
-          "type": "object",
-          "title": "Power Distribution Unit inventory",
-          "properties": {
-            "type": {
-              "type": "string",
-              "title": "PDU type"
             },
-            "plugs": {
-              "title": "List of plugs of pdu",
-              "type": "array",
-              "items": {
-                "type": "object",
-                "required": [
-                  "name"
-                ],
-                "properties": {
-                  "name": {
-                    "type": "string",
-                    "title": "Plug name"
+            "pdu": {
+              "type": "object",
+              "title": "Power Distribution Unit inventory",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "title": "PDU type"
+                },
+                "plugs": {
+                  "title": "List of plugs of pdu",
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "name"
+                    ],
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "title": "Plug name"
+                      },
+                      "number": {
+                        "type": "integer",
+                        "title": "Plug number"
+                      },
+                      "type": {
+                        "type": "string",
+                        "title": "Plug type"
+                      }
+                    }
                   },
-                  "number": {
-                    "type": "integer",
-                    "title": "Plug number"
-                  },
-                  "type": {
-                    "type": "string",
-                    "title": "Plug type"
-                  }
+                  "additionalProperties": false
                 }
               },
               "additionalProperties": false
             }
-          },
-          "additionalProperties": false
+          }
         },
         "databases_services": {
           "type": "array",
