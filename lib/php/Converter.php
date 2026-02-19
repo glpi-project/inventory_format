@@ -342,6 +342,7 @@ class Converter
             'volume_groups',
             'memories',
             'processes',
+            'services',
             'softwares',
             'virtualmachines',
             'firmwares',

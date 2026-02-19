@@ -1635,6 +1635,44 @@
             }
           }
         },
+        "services": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "examples": [
+                  "wuauserv"
+                ]
+              },
+              "displayname": {
+                "type": "string",
+                "examples": [
+                  "Windows Update"
+                ]
+              },
+              "description": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string",
+                "examples": [
+                  "Running"
+                ]
+              },
+              "pathname": {
+                "type": "string",
+                "examples": [
+                  "C:\\WINDOWS\\system32\\svchost.exe -k netsvcs -p"
+                ]
+              }
+            }
+          }
+        },
         "slots": {
           "type": "array",
           "items": {
