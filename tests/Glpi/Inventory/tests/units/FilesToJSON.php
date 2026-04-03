@@ -82,7 +82,10 @@ class FilesToJSON extends TestCase
         $this->assertFalse(file_exists($file), 'JSON file already exists');
 
         $method = new \ReflectionMethod($instance, $method);
-        $method->setAccessible(true);
+        // filter on php version to avoid deprecation warning on setAccessible() in php 8.5
+        // `PHPUnit\Framework\Exception: Deprecated: Method ReflectionMethod::setAccessible() is deprecated since 8.5, as it has no effect since PHP 8.1`
+        $_php_version_lower_than_81 = version_compare(PHP_VERSION, '8.1', '<');
+        $_php_version_lower_than_81 && $method->setAccessible(true);
         $method->invoke($instance);
 
         $this->assertTrue(file_exists($file), 'JSON file has not been generated');

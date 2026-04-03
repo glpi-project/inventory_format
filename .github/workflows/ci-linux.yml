@@ -27,6 +27,7 @@ jobs:
           php-version: ${{ matrix.php-versions }}
           tools: composer
           coverage: ${{ matrix.coverage }}
+          ini-file: 'development'
 
       - name: Checkout
         uses: actions/checkout@v6
