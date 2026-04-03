@@ -36,6 +36,26 @@
         "phpunit/phpunit": "^9.6",
         "squizlabs/php_codesniffer": "^4.0"
     },
+    "scripts": {
+        "build-hardware-jsons": "bin/build_hw_jsons && rm data/*.json && echo 'Hardware JSONs built and moved to data/'",
+        "schema-lint": "vendor/bin/jsonlint inventory.schema.json",
+        "xml-well-formed": "xmlwf tests/data/*.xml && echo 'All XML files are well-formed'",
+        "psr12": "vendor/bin/phpcs --standard=PSR12 lib/php/* && echo 'PSR-12 check passed'",
+        "static-analysis": "vendor/bin/phpstan analyze  --memory-limit 512M --ansi --no-interaction --no-progress && echo 'Static analysis passed'",
+        "conversions-test": "for i in tests/data/*.xml; do ./bin/convert $i || exit 1; done && echo 'All conversions passed'",
+        "examples-validation": "for i in examples/*.json; do ./bin/validate $i || exit 1; done && echo 'All example JSON files are valid'",
+        "unit-tests": "vendor/bin/phpunit --process-isolation --test-suffix=.php --bootstrap tests/bootstrap.php tests/Glpi",
+        "ci": [
+            "@build-hardware-jsons",
+            "@schema-lint",
+            "@xml-well-formed",
+            "@psr12",
+            "@static-analysis",
+            "@conversions-test",
+            "@examples-validation",
+            "@unit-tests"
+        ]
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "1.x-dev"
