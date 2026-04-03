@@ -223,7 +223,7 @@ class Schema
             throw new RuntimeException(
                 sprintf(
                     "JSON does not validate. Violations:\n%1\$s\n",
-                    $rawSchema !== null ? $this->improveErrorMessage($e, $rawSchema) : $e->getMessage()
+                    $this->improveErrorMessage($e, $rawSchema)
                 )
             );
         } catch (Exception $e) {
