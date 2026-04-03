@@ -210,13 +210,22 @@ class Schema
      */
     public function validate($json): bool
     {
+        $rawSchema = null;
         try {
-            $schema = \Swaggest\JsonSchema\Schema::import($this->build());
+            $rawSchema = $this->build();
+            $schema = \Swaggest\JsonSchema\Schema::import($rawSchema);
 
             $context = new Context();
             $context->tolerateStrings = (!defined('TU_USER'));
             $schema->in($json, $context);
             return true;
+        } catch (\Swaggest\JsonSchema\InvalidValue $e) {
+            throw new RuntimeException(
+                sprintf(
+                    "JSON does not validate. Violations:\n%1\$s\n",
+                    $rawSchema !== null ? $this->improveErrorMessage($e, $rawSchema) : $e->getMessage()
+                )
+            );
         } catch (Exception $e) {
             throw new RuntimeException(
                 sprintf(
@@ -225,6 +234,32 @@ class Schema
                 )
             );
         }
+    }
+
+    /**
+     * Translate a swaggest InvalidValue exception into a human-readable message.
+     * Handles the case where a property is forbidden by an if/then conditional rule.
+     *
+     * @param \Swaggest\JsonSchema\InvalidValue $e
+     * @param object $rawSchema The raw (decoded) schema object
+     * @return string
+     */
+    private function improveErrorMessage(\Swaggest\JsonSchema\InvalidValue $e, object $rawSchema): string
+    {
+        $path = $e->path ?? '';
+        // Pattern: "->then->properties:PROP->not" means PROP is forbidden by a conditional rule
+        if (preg_match('/->then->properties:(\w+)->not$/', $path, $matches)) {
+            $property = $matches[1];
+            if (isset($rawSchema->{'if'}->properties->action->const)) {
+                return sprintf(
+                    'Property "%s" is not allowed when action is "%s"',
+                    $property,
+                    $rawSchema->{'if'}->properties->action->const
+                );
+            }
+            return sprintf('Property "%s" is not allowed in this context', $property);
+        }
+        return $e->getMessage();
     }
 
     /**

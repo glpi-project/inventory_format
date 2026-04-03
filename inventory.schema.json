@@ -2983,5 +2983,16 @@
       "type": "string"
     }
   },
+  "if": {
+    "properties": {
+      "action": { "const": "netdiscovery" }
+    },
+    "required": ["action"]
+  },
+  "then": {
+    "properties": {
+      "tag": false
+    }
+  },
   "additionalProperties": false
 }

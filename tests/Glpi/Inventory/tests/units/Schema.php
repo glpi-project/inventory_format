@@ -29,7 +29,7 @@ class Schema extends TestCase
 
     public function testValidateOK(): void
     {
-        $json = json_decode(json_encode(['deviceid' => 'myid', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['name' => 'my inventory']]]));
+        $json = json_decode(json_encode(['deviceid' => 'myid', 'tag' => 'mytag', 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['name' => 'my inventory']]]));
         $instance = new \Glpi\Inventory\Schema();
         $this->assertTrue($instance->validate($json));
     }
@@ -154,5 +154,32 @@ class Schema extends TestCase
     {
         $instance = new \Glpi\Inventory\Schema();
         $this->assertIsFloat($instance->getVersion());
+    }
+
+    public function testNoTagOnNetdiscoveryRequests(): void
+    {
+        $json = json_decode(json_encode([
+            'content' => [
+                'hardware' => [
+                    'workgroup' => 'WORKGROUP',
+                ],
+                'versionclient' => '5.1',
+                'network_device' => [
+                    'type' => 'Unmanaged',
+                    'mac' => '4c:cc:6a:02:13:a9',
+                    'name' => 'DESKTOP-A3J16LF',
+                    'ips' => ['192.168.1.20'],
+                ],
+            ],
+            'deviceid' => 'asus-desktop-2022-09-20-16-43-09',
+            'action' => 'netdiscovery',
+            'jobid' => 189,
+            'itemtype' => 'Unmanaged',
+            'tag' => 'tag_is_not_allowed_in_netdiscovery',
+        ]));
+        $instance = new \Glpi\Inventory\Schema();
+        $this->expectException(\RuntimeException::class);
+        $this->expectExceptionMessage('Property "tag" is not allowed when action is "netdiscovery"');
+        $instance->validate($json);
     }
 }
