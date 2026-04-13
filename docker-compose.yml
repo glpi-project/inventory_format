@@ -1,0 +1,24 @@
+services:
+  ci:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PHP_VERSION: ${PHP_VERSION:-8.3}
+    working_dir: /workdir
+    volumes:
+      - .:/workdir
+      - composer_cache:/tmp/composer-cache
+    environment:
+      COMPOSER_CACHE_DIR: /tmp/composer-cache
+    command:
+      - /bin/sh
+      - -lc
+      - |
+        git config --global --add safe.directory /workdir
+        composer install --no-progress --no-interaction --ignore-platform-req=php+
+        php --version
+        composer ci
+
+volumes:
+  composer_cache:
