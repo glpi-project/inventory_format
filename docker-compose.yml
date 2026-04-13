@@ -4,7 +4,7 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        PHP_VERSION: ${PHP_VERSION}
+        PHP_VERSION: ${PHP_VERSION:-8.3}
     working_dir: /workdir
     volumes:
       - .:/workdir
