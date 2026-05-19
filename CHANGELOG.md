@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [Unreleased]
+
+Add storages support in virtual machines
+
 ## [1.2.3] - 2026-01-22
 
 Exclude CSV header from iftypes conversion
