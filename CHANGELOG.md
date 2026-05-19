@@ -3,6 +3,10 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [Unreleased]
+
+Add storages support in virtual machines
+
 ## [1.2.4] - UNRELEASED
 
 Add network traffic statistics to NETWORKS node

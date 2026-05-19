@@ -63,11 +63,18 @@
                 "vmtype": "docker"
             },
             {
-                "name": "'T",
-                "owner": "local",
-                "subsystem": "Oracle VM VirtualBox",
-                "vcpu": 1,
-                "vmtype": "virtualbox"
+                "name": "ServerVM01",
+                "subsystem": "microsoft",
+                "vcpu": 4,
+                "memory": 8192,
+                "status": "running",
+                "vmtype": "hyperv",
+                "storages": [
+                    {
+                        "name": "C:\\VMs\\ServerVM01.vhdx",
+                        "disksize": 102400
+                    }
+                ]
             }
         ]
     },

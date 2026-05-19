@@ -2108,6 +2108,9 @@
               },
               "serial": {
                 "type": "string"
+              },
+              "storages": {
+                "$ref": "#/properties/content/properties/storages"
               }
             }
           }
