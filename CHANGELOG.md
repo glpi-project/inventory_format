@@ -5,7 +5,7 @@ The present file will list all changes made to the project; according to the
 
 ## [Unreleased]
 
-Add storages support in virtual machines
+Add drives support in virtual machines
 
 ## [1.2.3] - 2026-01-22
 
