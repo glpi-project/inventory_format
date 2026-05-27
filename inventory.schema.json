@@ -2109,8 +2109,8 @@
               "serial": {
                 "type": "string"
               },
-              "storages": {
-                "$ref": "#/properties/content/properties/storages"
+              "drives": {
+                "$ref": "#/properties/content/properties/drives"
               }
             }
           }

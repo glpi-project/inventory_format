@@ -16,14 +16,14 @@
                 "vcpu": 4,
                 "memory": 8192,
                 "vmtype": "hyperv",
-                "storages": [
+                "drives": [
                     {
-                        "name": "C:\\VMs\\ServerVM01.vhdx",
-                        "disksize": 102400
+                        "volumn": "C:\\VMs\\ServerVM01.vhdx",
+                        "total": 102400
                     },
                     {
-                        "name": "\\\\nas01\\VMs\\ServerVM01-data.vhdx",
-                        "disksize": 512000
+                        "volumn": "\\\\nas01\\VMs\\ServerVM01-data.vhdx",
+                        "total": 512000
                     }
                 ]
             },
@@ -34,10 +34,10 @@
                 "vcpu": 2,
                 "memory": 4096,
                 "vmtype": "hyperv",
-                "storages": [
+                "drives": [
                     {
-                        "name": "C:\\VMs\\ServerVM02.vhdx",
-                        "disksize": 51200
+                        "volumn": "C:\\VMs\\ServerVM02.vhdx",
+                        "total": 51200
                     }
                 ]
             }
