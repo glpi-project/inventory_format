@@ -30,7 +30,7 @@ jobs:
           ini-file: 'development'
 
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Install 3rd party deps
         run: composer install --no-progress --no-interaction --ignore-platform-req=php+
