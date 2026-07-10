@@ -1303,6 +1303,7 @@ class Converter
                                 case 'Phone':
                                 case 'Printer':
                                 case 'Unmanaged':
+                                case 'Pdu':
                                     $itemtype = $device_info['type'];
                                     break;
                                 case 'Networking':
@@ -1436,6 +1437,10 @@ class Converter
                 case "drives":
                 case "error":
                     $data['content'][$key] = $device_data;
+                    break;
+                case "pdu":
+                    // put pdu into network_device
+                    $data['content']['network_device'][$key] = $device_data;
                     break;
                 default:
                     throw new RuntimeException('Key ' . $key . ' is not handled in network devices conversion');
