@@ -2111,6 +2111,27 @@
               },
               "drives": {
                 "$ref": "#/properties/content/properties/drives"
+              },
+              "networks": {
+                "type": "array",
+                "title": "Virtual machine network adapters",
+                "items": {
+                  "type": "object",
+                  "required": ["description"],
+                  "properties": {
+                    "description": {
+                      "type": "string",
+                      "title": "Network adapter name as reported by the hypervisor",
+                      "examples": ["Network Adapter", "Network Adapter 2"]
+                    },
+                    "macaddr": {
+                      "type": "string",
+                      "title": "MAC address in canonical lowercase format (xx:xx:xx:xx:xx:xx)",
+                      "examples": ["00:11:22:aa:bb:cc"],
+                      "pattern": "^([0-9a-f]{2}:){5}[0-9a-f]{2}$"
+                    }
+                  }
+                }
               }
             }
           }
