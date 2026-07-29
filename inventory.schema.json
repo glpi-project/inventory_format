@@ -1305,6 +1305,22 @@
               },
               "wifi_version": {
                 "type": "string"
+              },
+              "ifinbytes": {
+                "type": "integer",
+                "title": "Number of input bytes"
+              },
+              "ifoutbytes": {
+                "type": "integer",
+                "title": "Number of output bytes"
+              },
+              "ifinerrors": {
+                "type": "integer",
+                "title": "Number of input errors"
+              },
+              "ifouterrors": {
+                "type": "integer",
+                "title": "Number of output errors"
               }
             }
           }
