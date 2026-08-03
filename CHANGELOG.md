@@ -3,7 +3,7 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
-## [1.2.4] - 2026-08-03
+## [1.2.4] - UNRELEASED
 
 Add network traffic statistics to NETWORKS node
 
