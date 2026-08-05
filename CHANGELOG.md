@@ -7,6 +7,8 @@ The present file will list all changes made to the project; according to the
 
 Add network traffic statistics to NETWORKS node
 
+Add drives support in virtual machines
+
 ## [1.2.3] - 2026-01-22
 
 Exclude CSV header from iftypes conversion

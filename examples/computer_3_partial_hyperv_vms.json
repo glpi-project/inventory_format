@@ -1,0 +1,50 @@
+{
+    "content": {
+        "hardware": {
+            "chassis_type": "Server",
+            "memory": 65536,
+            "name": "HYPERV-HOST01",
+            "uuid": "A1B2C3D4-1234-5678-ABCD-1234567890AB",
+            "vmsystem": "Physical"
+        },
+        "versionclient": "GLPI-Agent_v1.12",
+        "virtualmachines": [
+            {
+                "name": "ServerVM01",
+                "status": "running",
+                "uuid": "6A257FA0-FA76-4BF4-A3FB-67AEE79316BD",
+                "vcpu": 4,
+                "memory": 8192,
+                "vmtype": "hyperv",
+                "drives": [
+                    {
+                        "volumn": "C:\\VMs\\ServerVM01.vhdx",
+                        "total": 102400
+                    },
+                    {
+                        "volumn": "\\\\nas01\\VMs\\ServerVM01-data.vhdx",
+                        "total": 512000
+                    }
+                ]
+            },
+            {
+                "name": "ServerVM02",
+                "status": "off",
+                "uuid": "7B368GB1-GB87-5CG5-B4GC-78BFF8A427CE",
+                "vcpu": 2,
+                "memory": 4096,
+                "vmtype": "hyperv",
+                "drives": [
+                    {
+                        "volumn": "C:\\VMs\\ServerVM02.vhdx",
+                        "total": 51200
+                    }
+                ]
+            }
+        ]
+    },
+    "deviceid": "hyperv-host-2024-01-15-10-00-00",
+    "action": "inventory",
+    "itemtype": "Computer",
+    "partial": true
+}
