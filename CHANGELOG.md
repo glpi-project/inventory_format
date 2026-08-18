@@ -3,11 +3,11 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
-## [1.2.4] - UNRELEASED
+## [1.2.4] - 2026-08-18
 
 Add network traffic statistics to NETWORKS node
-
 Add drives support in virtual machines
+Add PDU support
 
 ## [1.2.3] - 2026-01-22
 
