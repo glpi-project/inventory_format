@@ -51,7 +51,7 @@ class Schema extends TestCase
         $json = json_decode(json_encode(['deviceid' => 'myid', 'itemtype' => $itemtype, 'content' => ['versionclient' => 'GLPI-Agent_v1.0', 'hardware' => ['name' => 'my inventory']]]));
         $instance = new \Glpi\Inventory\Schema();
         $this->expectException(\RuntimeException::class);
-        $this->expectExceptionMessage('\\\\Glpi\\\\Custom\\\\Asset\\\\Mine" does not match to ^(Unmanaged|Computer|Phone|NetworkEquipment|Printer)$');
+        $this->expectExceptionMessage('\\\\Glpi\\\\Custom\\\\Asset\\\\Mine" does not match to ^(Unmanaged|Computer|Phone|NetworkEquipment|Printer|Pdu)$');
         $this->assertFalse($instance->validate($json));
     }
 

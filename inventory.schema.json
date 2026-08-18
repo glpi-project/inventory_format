@@ -2878,7 +2878,7 @@
             },
             "type": {
               "type": "string",
-              "pattern": "^(Unmanaged|Computer|Networking|Printer|Storage|Power|Phone|Video|KVM)$"
+              "pattern": "^(Unmanaged|Computer|Networking|Printer|Storage|Power|Phone|Video|KVM|Pdu)$"
             },
             "uptime": {
               "type": "string",
@@ -2895,6 +2895,42 @@
             },
             "credentials": {
               "type": "integer"
+            },
+            "pdu": {
+              "type": "object",
+              "title": "Power Distribution Unit inventory",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "title": "PDU type"
+                },
+                "plugs": {
+                  "title": "List of plugs of pdu",
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "name"
+                    ],
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "title": "Plug name"
+                      },
+                      "number": {
+                        "type": "integer",
+                        "title": "Plug number"
+                      },
+                      "type": {
+                        "type": "string",
+                        "title": "Plug type"
+                      }
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
             }
           }
         },
@@ -3007,7 +3043,7 @@
       "type": "string",
       "title": "Item type",
       "default": "Unmanaged",
-      "pattern": "^(Unmanaged|Computer|Phone|NetworkEquipment|Printer)$"
+      "pattern": "^(Unmanaged|Computer|Phone|NetworkEquipment|Printer|Pdu)$"
     },
     "partial": {
       "type": "boolean",
