@@ -3,6 +3,9 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
+## [1.2.5] - 2026-09-01
+Fix PDU conversion
+
 ## [1.2.4] - 2026-08-18
 
 Add network traffic statistics to NETWORKS node
