@@ -1445,7 +1445,7 @@ class Converter
                     }
                     if (isset($device_data['plugs'])) {
                         foreach ($device_data['plugs'] as &$plug) {
-                            $plug['number'] = (int) $plug['number'] ?? 0;
+                            $plug['number'] = (int) $plug['number'];
                         }
                         unset($plug);
                     }
