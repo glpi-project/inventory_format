@@ -1443,6 +1443,12 @@ class Converter
                     if (isset($device_data['plugs']) && !array_is_list($device_data['plugs'])) {
                         $device_data['plugs'] = [$device_data['plugs']];
                     }
+                    if (isset($device_data['plugs'])) {
+                        foreach ($device_data['plugs'] as &$plug) {
+                            $plug['number'] = (int) $plug['number'] ?? 0;
+                        }
+                        unset($plug);
+                    }
                     $data['content']['network_device'][$key] = $device_data;
                     break;
                 default:
