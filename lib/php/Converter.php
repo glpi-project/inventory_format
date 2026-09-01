@@ -1440,6 +1440,17 @@ class Converter
                     break;
                 case "pdu":
                     // put pdu into network_device
+                    if (isset($device_data['plugs']) && !array_is_list($device_data['plugs'])) {
+                        $device_data['plugs'] = [$device_data['plugs']];
+                    }
+                    if (isset($device_data['plugs'])) {
+                        foreach ($device_data['plugs'] as &$plug) {
+                            if (isset($plug['number'])) {
+                                $plug['number'] = (int) $plug['number'];
+                            }
+                        }
+                        unset($plug);
+                    }
                     $data['content']['network_device'][$key] = $device_data;
                     break;
                 default:
