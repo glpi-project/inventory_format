@@ -623,6 +623,69 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
         $this->assertCount(1, $json->content->network_ports);
     }
 
+    public function testPduPlugsCustomName(): void
+    {
+        $xml = <<<XML
+<?xml version="1.0" encoding="UTF-8" ?>
+<REQUEST>
+  <CONTENT>
+    <DEVICE>
+      <INFO>
+        <ID>0</ID>
+        <MANUFACTURER>RNX</MANUFACTURER>
+        <NAME>pdu-rack-01</NAME>
+        <TYPE>PDU</TYPE>
+      </INFO>
+      <PDU>
+        <PLUGS>
+          <CUSTOM_NAME>Web server 01</CUSTOM_NAME>
+          <NAME>A1</NAME>
+          <NUMBER>1</NUMBER>
+          <TYPE>C13</TYPE>
+        </PLUGS>
+        <PLUGS>
+          <CUSTOM_NAME></CUSTOM_NAME>
+          <NAME>A2</NAME>
+          <NUMBER>2</NUMBER>
+          <TYPE>C19</TYPE>
+        </PLUGS>
+        <TYPE>RN3214</TYPE>
+      </PDU>
+    </DEVICE>
+    <MODULEVERSION>4.1</MODULEVERSION>
+    <PROCESSNUMBER>1</PROCESSNUMBER>
+  </CONTENT>
+  <DEVICEID>foo</DEVICEID>
+  <QUERY>SNMPQUERY</QUERY>
+</REQUEST>
+XML;
+
+        $instance = new \Glpi\Inventory\Converter();
+        $json_str = $instance->convert($xml);
+        $this->assertNotEmpty($json_str);
+
+        $json = json_decode($json_str, true);
+        $this->assertIsArray($json);
+        $this->assertSame('Pdu', $json['itemtype']);
+        $this->assertSame(
+            [
+                [
+                    'custom_name' => 'Web server 01',
+                    'name' => 'A1',
+                    'number' => 1,
+                    'type' => 'C13',
+                ],
+                [
+                    'custom_name' => '',
+                    'name' => 'A2',
+                    'number' => 2,
+                    'type' => 'C19',
+                ],
+            ],
+            $json['content']['network_device']['pdu']['plugs']
+        );
+    }
+
     public function testNetdisco(): void
     {
         $xml_path = realpath(TU_DIR . '/data/9.xml');
