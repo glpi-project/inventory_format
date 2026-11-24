@@ -644,7 +644,6 @@ ARM Bios Ver 7.59u v46 454MHz B987-M995-F80-O0,0 MAC:00042d076b88"
           <TYPE>C13</TYPE>
         </PLUGS>
         <PLUGS>
-          <CUSTOM_NAME></CUSTOM_NAME>
           <NAME>A2</NAME>
           <NUMBER>2</NUMBER>
           <TYPE>C19</TYPE>
@@ -676,7 +675,6 @@ XML;
                     'type' => 'C13',
                 ],
                 [
-                    'custom_name' => '',
                     'name' => 'A2',
                     'number' => 2,
                     'type' => 'C19',

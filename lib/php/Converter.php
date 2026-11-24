@@ -147,10 +147,8 @@ class Converter
             throw new RuntimeException($errmsg);
         }
 
-        //remove empty nodes, except PDU plug custom name: an empty one clears the value previously set
-        $empty_nodes = '/child::*//*[not(*) and not(text()[normalize-space()])'
-            . ' and not(self::CUSTOM_NAME[parent::PLUGS])]';
-        while ($removes = $sxml->xpath($empty_nodes)) {
+        //remove empty nodes
+        while ($removes = $sxml->xpath('/child::*//*[not(*) and not(text()[normalize-space()])]')) {
             for ($i = count($removes) - 1; $i >= 0; --$i) {
                 unset($removes[$i][0]);
             }
@@ -1449,9 +1447,6 @@ class Converter
                         foreach ($device_data['plugs'] as &$plug) {
                             if (isset($plug['number'])) {
                                 $plug['number'] = (int) $plug['number'];
-                            }
-                            if (isset($plug['custom_name']) && $plug['custom_name'] === []) {
-                                $plug['custom_name'] = '';
                             }
                         }
                         unset($plug);
