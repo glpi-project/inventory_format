@@ -3,7 +3,7 @@
 The present file will list all changes made to the project; according to the
 [Keep a Changelog](http://keepachangelog.com/) project.
 
-## [Unreleased]
+## [1.2.6] - 2026-11-25
 
 Add custom_name on PDU plugs
 
